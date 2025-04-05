@@ -179,32 +179,17 @@ Let me create a branch for these changes and submit a pull request with the mode
    - GitHub Personal Access Token with appropriate scopes
 
 2. **Installation**:
-   - Clone this repository
-   - Copy the `.roomodes` file to your project root directory
+   - Copy the `.roomodes` file to your project root directory OR save it in your global cline settings.
    - Configure your Perplexity API key in Roo Code settings
    - Configure your GitHub Personal Access Token in Roo Code settings
+   - I find it easiest to use cline to install MCP servers(Perplexity and Github), they have an easy one click button that makes the AI model install it all, then just update your Roo Code's MCP settings when cline is done installing.
+   - Add the symbolic custom coding instructions to Roo Codes Custom Coding instructions for all models.
 
 3. **Configuration**:
    - Modify the `.roomodes` file to fit your specific project needs
    - Adjust the symbolic coding principles for your team's practices
    - Set up appropriate GitHub repository access
 
-## 📊 Performance Impact
-
-Users report significant improvements when using this integrated system:
-
-- **40% reduction** in research time for implementation decisions
-- **65% improvement** in code quality based on evidence-based patterns
-- **70% faster** repository management and issue handling
-- **90% less context loss** between development sessions
-
-## 🤝 Contributing
-
-Contributions to improve the integration are welcome! Please feel free to:
-
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request with your improvements
 
 ## 📜 License
 
