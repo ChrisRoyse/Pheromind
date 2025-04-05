@@ -26,6 +26,8 @@ Traditional AI coding assistants operate with limited context and struggle to ma
 
 ## ⚙️ Key Components
 
+![Roo Image](roo.png)
+
 ### 1. Enhanced RooModes
 
 The `.roomodes` file defines specialized AI personas, each optimized for specific development tasks:
