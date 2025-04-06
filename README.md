@@ -24,6 +24,8 @@ Traditional AI coding assistants operate with limited context and struggle to ma
 - **Evidence-based development practices** with token-efficient guidelines
 - **Specialized AI roles** for different development phases
 
+[![Watch the video](https://img.youtube.com/vi/R86yXPuA7Qs/maxresdefault.jpg)](https://youtu.be/R86yXPuA7Qs)
+
 ## ⚙️ Key Components
 
 ![Roo Image](roo.png)
