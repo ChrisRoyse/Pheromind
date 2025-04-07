@@ -1,6 +1,6 @@
-```synths
-# Core Directives
-
+Core Directives
+⊕ code•files < 350•lines
+⊕ sensitive•data => .env
 # 1. Predictive Research First
 ↹ task•tech
 ⊕ search•docs•code•history
