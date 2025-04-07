@@ -1,169 +1,32 @@
-**Core Principles**
+```synths
+# Core Directives
 
-*Evidence-Based Simplicity*
-↹ standards•solutions
-⊕ clear•maintainable => validate
-⊕ search => validate•simple
-⊕ search_code => find•examples
-⊕ evidence => minimize•complex
+# 1. Predictive Research First
+↹ task•tech
+⊕ search•docs•code•history
+⊕ check_deprecated
+⊕ predict•issues•risks
+⊕ research•predict => action
 
-*Research-Driven Iteration*
-↹ code•existing
-⊕ search => best•practices
-⊕ create_issue•update_issue => track
-⊕ evidence•docs => justify•change
-⊕ list_commits => understand•hist
+# 2. Justify With Evidence
+⊕ action•research•predict
+Σ commit•pr•comment + why
 
-*Informed Focus*
-↹ task•scope
-⊕ search => verify•boundaries
-⊕ create_issue => define•task
-⊕ search_repositories => compare
-⊕ evidence => stick•to•task
+# 3. Strict Modularity
+⊕ file•lines > 350
+⊕ refactor => modules•new_task
 
-*Validated Quality*
-Σ code•clean•tested•validated
-⊕ check_deprecated_code => find•old
-⊕ create_pull_request•tests => submit
-⊕ get_documentation => security
-⊕ create_pull_request_review => review
+# 4. Secure Configuration
+⊕ code•secrets => flag
+⊕ use•config•env•secrets_mgr
 
-*Knowledge-Enriched Collaboration*
-↹ team•decisions•evidence
-⊕ create_issue•add_issue_comment => comms
-⊕ pull_request => track•discuss
-⊕ context•retrieval => human•AI•collab
-⊕ research•GitHub => resolve•conflict
+# 5. Version Control Discipline
+⊕ work => create_branch
+⊕ changes => push_files•commit
+⊕ track => create_issue•comment
+⊕ integrate => create_pull_request
 
-**Methodology & Workflow**
-
-*Research-Informed Structure*
-↹ phase•start
-⊕ Perplexity•tools => gather•info
-⊕ create_repository•README => setup
-⊕ create_branch => project•streams
-⊕ standards => validate•workflow
-⊕ create_or_update_file => doc•research
-
-*Evidence-Based Flexibility*
-↹ process•adapt
-⊕ search•detail => find•patterns
-⊕ fork_repository => examine•alt
-⊕ issues•branches => track•adapt
-⊕ search_code•docs => verify•adapt
-
-*Knowledge-Driven Evolution*
-↹ codebase•improve
-⊕ search => track•tech•deprecate
-⊕ create_issue => track•updates
-⊕ list_commits•PRs => monitor•evolve
-⊕ search•GitHub => best•practices
-
-*Research-Backed Integration*
-↹ knowledge•cross•domain
-⊕ find_apis => discover•options
-⊕ create_branch => isolate•test
-⊕ create_pull_request•docs => submit
-⊕ research•code => validate•integ
-
-**Agentic Integration with MCP Tools**
-
-*Perplexity & GitHub Config*
-↹ rules•project•research
-⊕ embed•rules => guide•agent
-⊕ push_files => track•config•change
-⊕ LLM•research => update•prompts
-⊕ create_or_update_file => doc•config
-⊕ search => refresh•practices
-
-*Research-Informed Repo Rules*
-↹ standards•repo•benchmarks
-⊕ define•standards => validate
-⊕ branch•protection => quality
-⊕ check_deprecated_code => update•std
-⊕ markdown•examples => doc•std
-⊕ Perplexity•GitHub => validate•realtime
-
-**Knowledge-Based Memory Integration**
-
-*Research-Enriched Context*
-↹ context•research•latest
-⊕ enhance•context => continuous
-⊕ create_or_update_file => store•ctx
-⊕ create_issue => maintain•kb
-⊕ chat_perplexity => build•project•ctx
-⊕ get_file_contents => code•in•ctx
-
-*Validated Historical Reference*
-↹ decisions•prior•current
-⊕ compare => improve•opportunity
-⊕ list_commits => trace•history
-⊕ list_issues => track•decisions
-⊕ search => verify•arch•relevance
-⊕ evidence•docs => update•old
-
-*Evidence-Driven Learning*
-↹ history•research•data
-⊕ refine•implementations
-⊕ create_or_update_file => track•learn
-⊕ search_code => examine•evolve
-⊕ check_deprecated_code => check•old
-⊕ docs•citations•GitHub => doc•learn
-
-**Evidence-Based Programming Guidelines**
-
-*Research-Validated Clarity*
-↹ lang•ecosystem
-⊕ research => readability•patterns
-⊕ create_or_update_file => doc•style
-⊕ search•docs => validate•comments
-⊕ create_pull_request_review => enforce
-⊕ community => update•docs•std
-
-*Current Language Practices*
-↹ lang•spec•style
-⊕ get_documentation => retrieve•latest
-⊕ search_code => find•idioms
-⊕ search•ecosystem => verify•practice
-⊕ create_or_update_file => doc•std
-⊕ research•update => lang•evolve
-
-*Verified Cross-Language Consistency*
-↹ polyglot•codebases
-⊕ research => integration•patterns
-⊕ search_repositories => find•refs
-⊕ best•practices => standardize•names
-⊕ create_or_update_file => doc•conventions
-⊕ research•standards => validate•conv
-
-**Research-Enhanced Project Context**
-
-*Documentation + Verification*
-↹ docs•essential•current
-⊕ review•verify => relevance
-⊕ create_or_update_file => store•docs
-⊕ search => supplement•docs
-⊕ get_documentation => fill•gaps
-⊕ link•docs => issues•PRs
-
-*Validated Architectural Adherence*
-↹ patterns•established
-⊕ follow•confirm => relevance
-⊕ create_or_update_file => doc•arch
-⊕ research•similar => improve•arch
-⊕ create_branch => arch•changes
-⊕ find_apis => discover•integ•opts
-
-*Evidence-Based Tech Selection*
-↹ tech•alternatives
-⊕ search => evaluate•tech
-⊕ research => compatibility•issues
-⊕ create_issue => doc•tech•decision
-⊕ create_branch => verify•prototype
-⊕ check_deprecated_code => verify•deprecate
-
-**Research-Driven Task Execution**
-
-*Information-Rich Specification*
-↹ objectives•research•similar
-⊕ define•objectives => informed
+# 6. Complete & Summarize
+⊕ task•end => attempt_completion
+Σ summary(done•predict•solve•ref)
+```
