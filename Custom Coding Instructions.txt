@@ -1,31 +1,119 @@
-Core Directives
-⊕ code•files < 350•lines
-⊕ sensitive•data => .env
-# 1. Predictive Research First
-↹ task•tech
-⊕ search•docs•code•history
-⊕ check_deprecated
-⊕ predict•issues•risks
-⊕ research•predict => action
+**Core Philosophy**
+⊕ clear•maintainable => Σ simple
+⊕ code•enhance => Σ iterate
+⊕ task•scope => Σ focus
+⊕ test•doc•secure•tools => Σ quality
+⊕ human•agent•team => Σ collab
+⊕ collab•perplexity => Σ augment
 
-# 2. Justify With Evidence
-⊕ action•research•predict
-Σ commit•pr•comment + why
+**Methodology & Workflow**
+⊕ spec>deploy•phases => Σ workflow
+⊕ perplexity•(search|get_doc|find_apis)
+⊕ adapt•process => Σ flexible
+⊕ code•improve•symbolic•tools => Σ evolution
+⊕ check_deprecated•search => Σ modernize
+⊕ reflect•validate•tools => Σ conscious•integ
 
-# 3. Strict Modularity
-⊕ file•lines > 350
-⊕ refactor => modules•new_task
+**Agentic Integration**
+↹ .clinerules => ⊕ agent•rules•prompts
+⊕ .clinerules•perplexity•use
+↹ .cursorrules => ⊕ repo•style•test•integ
+⊕ .cursorrules•symbolic•perplexity
 
-# 4. Secure Configuration
-⊕ code•secrets => flag
-⊕ use•config•env•secrets_mgr
+**Memory Bank Integration**
+⊕ context•tool_results => Σ memory•bank
+⊕ memory•review => Σ consistency
+⊕ history•solutions•perplexity => Σ adapt•learn
 
-# 5. Version Control Discipline
-⊕ work => create_branch
-⊕ changes => push_files•commit
-⊕ track => create_issue•comment
-⊕ integrate => create_pull_request
+**General Guidelines (Languages)**
+⊕ code•clear•readable => Σ clarity
+⊕ comments•complex_logic
+⊕ lang•best_practice•(search|get_doc)
+⊕ check_deprecated => Σ modern•code
+⊕ code•conventions•uniform => Σ consistency
 
-# 6. Complete & Summarize
-⊕ task•end => attempt_completion
-Σ summary(done•predict•solve•ref)
+**Project Context & Understanding**
+↹ docs•(prd|readme|arch|spec)
+⊕ docs•review => Σ understand
+⊕ docs•unclear => ⊕ (search|chat) => Σ clarify
+⊕ arch•adhere•modules
+⊕ arch•validate•(search|find_apis)
+⊕ arch•alt => ⊕ research•(chat)
+⊕ tech•patterns•use
+⊕ new•tech => ⊕ justify•(search|get_doc|find_apis)
+
+**Task Execution & Workflow**
+⊕ spec•(obj|req|ux) => Σ define
+⊕ spec•(search|find_apis|chat|symbolic)
+⊕ logic•map => Σ pseudocode
+⊕ pseudo•(search•algo)
+⊕ arch•design•modular•tech
+⊕ arch•(search|get_doc|find_apis)
+⊕ code•optimize•feedback•tools => Σ refine
+⊕ refine•(search|get_doc|check_dep|chat)
+⊕ test•doc•monitor => Σ complete
+⊕ complete•(search|get_doc)
+
+**AI Collaboration & Prompting**
+⊕ instruct•clear•context•tools
+⊕ memory•ref => Σ context
+⊕ ai•(suggest | apply) => Σ clarity
+⊕ agent•output•review => Σ validate
+⊕ ai•task•focused•tools
+⊕ ai•(refactor|symbolic|opt|test|research)
+⊕ human•(logic|arch)
+⊕ task•breakdown•review => Σ incremental
+⊕ check_in•(context|goal|tool|step)
+
+**Advanced Coding Capabilities**
+⊕ ai•state•model => Σ emergent•intel
+⊕ ai•refine•(check_dep|search)
+⊕ ai•pattern•analysis•opt => Σ recog
+⊕ recog•(search•patterns)
+⊕ feedback•loop•refine => Σ adapt•opt
+⊕ adapt•opt•(perplexity•learn)
+
+**Symbolic Reasoning Integration**
+⊕ symbolic•logic + complexity => Σ decision
+⊕ decision•(search|chat)
+⊕ symbolic•math + patterns => Σ implement
+⊕ implement•(search|get_doc)
+⊕ doc•clear•semantic => Σ coherent•doc
+⊕ doc•(get_doc|search)
+
+**Code Quality & Style**
+⊕ ts•strict•types•jsdoc
+⊕ ts•(get_doc)
+⊕ code•modular•scalable•clear => Σ maintain
+⊕ file•size < 300 => ⊕ refactor
+⊕ code•no_repeat•(symbolic|search) => Σ DRY
+⊕ lint•format•(eslint|prettier)
+⊕ file•name•descriptive•std
+⊕ no•commit•temp_scripts
+
+**Refactoring**
+⊕ refactor•(read|DRY|modern|arch)
+⊕ refactor•(search•patterns)
+⊕ refactor•(check_deprecated)
+⊕ consolidate•similar•(symbolic) => Σ holistic
+⊕ code•modify•direct => Σ no_dup
+⊕ integration•verify•validate
+
+**Testing & Validation**
+⊕ test•define•write => Σ TDD
+⊕ TDD•(search|get_doc)
+⊕ test•coverage•(critical|edge)
+⊕ test•fail => ⊕ fix•immediate
+⊕ test•auto + manual•check
+
+**Debugging & Troubleshooting**
+⊕ error•(symbolic|search|get_doc|chat) => Σ root•cause
+⊕ log•precise => Σ debug•eff
+⊕ tools•(perplexity|aider|firecrawl) => Σ research
+
+**Security**
+⊕ logic•data•server_side => Σ secure
+⊕ input•validate•server => Σ sanitize
+⊕ sanitize•(search|get_doc)
+⊕ creds•(env|secrets) => Σ manage
+⊕ creds•no_hardcode•(search
