@@ -29,4 +29,3 @@ Core Directives
 # 6. Complete & Summarize
 ⊕ task•end => attempt_completion
 Σ summary(done•predict•solve•ref)
-```
