@@ -1,106 +1,39 @@
-Core Philosophy
-⊕ clear•maintainable => Σ simple
-⊕ code•enhance => Σ iterate
-⊕ task•scope => Σ focus
-⊕ test•doc•secure•tools•(SAPPO: proactive_checks) => Σ quality
-⊕ human•agent•team => Σ collab
-⊕ collab•(perplexity|SAPPO_concepts) => Σ augment
-Methodology & Workflow
-⊕ spec>deploy•phases => Σ workflow
-⊕ perplexity•(search|get_doc|find_apis) => Σ research•tools
-⊕ adapt•process => Σ flexible
-⊕ code•improve•symbolic•tools•(SAPPO: avoid_problems) => Σ evolution
-⊕ check_deprecated•search•(SAPPO: check_eos) => Σ modernize
-⊕ reflect•validate•tools•(SAPPO: check_risks) => Σ conscious•integ
-Agentic Integration
-↹ .clinerules => ⊕ agent•rules•prompts•(SAPPO: guides)
-⊕ .clinerules•perplexity•use
-↹ .cursorrules => ⊕ repo•style•test•integ•(SAPPO: standards)•(file_limit: 350)•(secrets: .env)
-⊕ .cursorrules•symbolic•perplexity
-Memory Bank Integration
-⊕ context•tool_results•(SAPPO: findings) => Σ memory•bank
-⊕ memory•review => Σ consistency
-⊕ history•solutions•perplexity•(SAPPO: patterns) => Σ adapt•learn
-General Guidelines (Languages)
-⊕ code•clear•readable => Σ clarity
-⊕ comments•complex_logic
-⊕ lang•best_practice•(search|get_doc)•(SAPPO: lang_compat)
-⊕ check_deprecated•(SAPPO: check_eos) => Σ modern•code
-⊕ code•conventions•uniform => Σ consistency
-Project Context & Understanding
-↹ docs•(prd|readme|arch|spec)
-⊕ docs•review => Σ understand
-⊕ docs•unclear => ⊕ (search|chat) => Σ clarify
-⊕ arch•adhere•modules
-⊕ arch•validate•(search|find_apis)•(SAPPO: Pattern_vs_AntiPattern|PlatformCompat)
-⊕ arch•alt => ⊕ research•(chat)•(SAPPO: consider_alternatives)
-⊕ tech•patterns•use
-⊕ new•tech => ⊕ justify•(search|get_doc|find_apis) •⊕ consider•(SAPPO: CompatIssue|DepIssue|SecVuln)
-Task Execution & Workflow
-⊕ spec•(obj|req|ux)•(SAPPO: anticipate_problems) => Σ define
-⊕ spec•(search|find_apis|chat|symbolic)
-⊕ logic•map => Σ pseudocode
-⊕ pseudo•(search•algo)
-⊕ arch•design•modular•tech•(SAPPO: check_anti_patterns)
-⊕ arch•(search|get_doc|find_apis)
-⊕ code•optimize•feedback•tools => Σ refine
-⊕ refine•(search|get_doc|check_dep|chat)•(SAPPO: target_perf_issues)
-⊕ test•doc•monitor•(SAPPO: validate_risks) => Σ complete
-⊕ complete•(search|get_doc)
-AI Collaboration & Prompting
-⊕ instruct•clear•context•tools•(SAPPO: concept_hints)
-⊕ memory•ref => Σ context
-⊕ ai•(suggest | apply) => Σ clarity
-⊕ agent•output•review•(SAPPO: risk_addressed?) => Σ validate
-⊕ ai•task•focused•tools•(SAPPO: targeted_research)
-⊕ ai•(refactor|symbolic|opt|test|research)
-⊕ human•(logic|arch)
-⊕ task•breakdown•review => Σ incremental
-⊕ check_in•(context|goal|tool|step|SAPPO_consideration)
-Advanced Coding Capabilities
-⊕ ai•state•model => Σ emergent•intel
-⊕ ai•refine•(check_dep|search)•(SAPPO: known_problems)
-⊕ ai•pattern•analysis•opt => Σ recog
-⊕ recog•(search•patterns)•(SAPPO: Patterns|AntiPatterns)
-⊕ feedback•loop•refine => Σ adapt•opt
-⊕ adapt•opt•(perplexity•learn)
-Symbolic Reasoning Integration
-⊕ symbolic•logic + complexity => Σ decision
-⊕ decision•(search|chat)•(SAPPO: informed_by_risks)
-⊕ symbolic•math + patterns => Σ implement
-⊕ implement•(search|get_doc)•(SAPPO: avoid_known_issues)
-⊕ doc•clear•semantic•(SAPPO: context_notes?) => Σ coherent•doc
-⊕ doc•(get_doc|search)
-Code Quality & Style
-⊕ ts•strict•types•jsdoc
-⊕ ts•(get_doc)
-⊕ code•modular•scalable•clear => Σ maintain
-⊕ file•size < 350 => ⊕ refactor•proactive
-⊕ code•no_repeat•(symbolic|search) => Σ DRY •(SAPPO: avoid_struct_issues)
-⊕ lint•format•(eslint|prettier)
-⊕ file•name•descriptive•std
-⊕ no•commit•temp_scripts
-Refactoring
-⊕ refactor•(read|DRY|modern|arch|file_size>350)•(SAPPO: fix_ArchIssue|fix_PerfIssue|avoid_EOS)
-⊕ refactor•(search•patterns)
-⊕ refactor•(check_deprecated)
-⊕ consolidate•similar•(symbolic) => Σ holistic
-⊕ code•modify•direct => Σ no_dup
-⊕ integration•verify•validate•(SAPPO: check_new_conflicts)
-Testing & Validation
-⊕ test•define•write => Σ TDD
-⊕ TDD•(search|get_doc)•(SAPPO: target_known_problems)
-⊕ test•coverage•(critical|edge)
-⊕ test•fail => ⊕ fix•immediate
-⊕ test•auto + manual•check
-Debugging & Troubleshooting
-⊕ error•(symbolic|search|get_doc|chat)•(SAPPO: consider_problem_types) => Σ root•cause
-⊕ log•precise => Σ debug•eff
-⊕ tools•(perplexity|aider|firecrawl) => Σ research
-Security
-⊕ logic•data•server_side => Σ secure
-⊕ input•validate•server => Σ sanitize
-⊕ sanitize•(search|get_doc)
-⊕ creds•(api_keys|secrets|tokens) => ⊕ use•.env•file
-⊕ creds•NEVER_HARDCODE
-⊕ check•deps•(SAPPO: check_SecVuln) => Σ secure•deps
+↹ SPARC-Omega•rules  
+⊕ decompose•modes => roles  
+⊕ integrate•ontology + tools  
+Σ workflow + audit  
+
+↹ core•philosophy  
+⊕ simplicity => clear•code  
+⊕ ontology => quality•checks  
+⊕ tools => structured•collab  
+Σ principles + constraints  
+
+↹ methodology  
+⊕ mode-driven => orchestration  
+⊕ modularity => <500•lines  
+⊕ traceability => new_task•attempt  
+Σ process + rules  
+
+↹ ontology•role  
+⊕ proactive => :Problem•:Solution  
+⊕ context => new_task•flow  
+Σ guidance + validation  
+
+↹ MCP•tools  
+⊕ Perplexity => search•docs  
+⊕ GitHub => repo•management  
+⊕ Hyperbrowser => scrape•agents  
+Σ integration + automation  
+
+↹ mode•rules  
+⊕ sparc-omega => orchestrate•tasks  
+⊕ code-omega => github•code  
+⊕ tdd-omega => tests•agents  
+Σ roles + responsibilities  
+
+↹ guidelines  
+⊕ code => DRY•<500•lines  
+⊕ testing => TDD•coverage  
+⊕ security => env•vars  
+Σ best•practices + checks
