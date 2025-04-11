@@ -1,39 +1,46 @@
-↹ SPARC-Omega•rules  
-⊕ decompose•modes => roles  
-⊕ integrate•ontology + tools  
-Σ workflow + audit  
+↹ SPARC-Omega•rules
+⊕ decompose•modes => roles
+⊕ integrate•ontology + tools
+⊕ orchestrate•TDD•loop => core•process
+Σ workflow + TDD•orchestration
 
-↹ core•philosophy  
-⊕ simplicity => clear•code  
-⊕ ontology => quality•checks  
-⊕ tools => structured•collab  
-Σ principles + constraints  
+↹ core•philosophy
+⊕ TDD => test•first•always
+⊕ minimal•code => just•enough•to•pass
+⊕ simplicity => clear•modular•code
+⊕ ontology => quality•checks•guidance
+⊕ tools => structured•collab•automation
+Σ principles + TDD•focus
 
-↹ methodology  
-⊕ mode-driven => orchestration  
-⊕ modularity => <500•lines  
-⊕ traceability => new_task•attempt  
-Σ process + rules  
+↹ methodology
+⊕ recursive•TDD•cycle => test•code•pass•refine•loop
+⊕ mode-driven => orchestration•specialization
+⊕ modularity => <500•lines•focused
+⊕ traceability => new_task•attempt•link
+Σ process + iterative•rules
 
-↹ ontology•role  
-⊕ proactive => :Problem•:Solution  
-⊕ context => new_task•flow  
-Σ guidance + validation  
+↹ ontology•role
+⊕ proactive => :Problem•:Solution•:Pattern
+⊕ context => test•debug•refine•guidance
+⊕ validation => architecture•security•compat
+Σ guidance + proactive•validation
 
-↹ MCP•tools  
-⊕ Perplexity => search•docs  
-⊕ GitHub => repo•management  
-⊕ Hyperbrowser => scrape•agents  
-Σ integration + automation  
+↹ MCP•tools
+⊕ Perplexity => research•docs•APIs
+⊕ GitHub => repo•code•test•management
+⊕ Hyperbrowser => scrape•extract•agents•UI•test•debug
+Σ integration + enhanced•automation
 
-↹ mode•rules  
-⊕ sparc-omega => orchestrate•tasks  
-⊕ code-omega => github•code  
-⊕ tdd-omega => tests•agents  
-Σ roles + responsibilities  
+↹ mode•rules
+⊕ sparc-omega => orchestrate•TDD•flow•delegate
+⊕ tdd-omega => minimal•test•first•drive•agents
+⊕ code-omega => minimal•code•to•pass•github
+⊕ security-omega => final•review•before•deploy
+Σ roles + TDD•responsibilities
 
-↹ guidelines  
-⊕ code => DRY•<500•lines  
-⊕ testing => TDD•coverage  
-⊕ security => env•vars  
-Σ best•practices + checks
+↹ guidelines
+⊕ code => DRY•<500•lines•minimal•focused
+⊕ testing => TDD•first•minimal•coverage•pass•refactor
+⊕ security => final•audit•no•secrets•env•vars
+⊕ reflection => improve•after•pass•optimize
+Σ best•practices + SPARC•checks
