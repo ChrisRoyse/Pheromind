@@ -9,7 +9,7 @@
 
 ## 🎧 What is This? (The SPARC-Omega Vibe Explained)
 
-Forget coding blind. This is **SPARC-Omega Vibe Coding** – a next-level framework for AI-driven development. We fuse Roo Code's multi-agent system with Perplexity's research, GitHub's repository management, and **Hyperbrowser's advanced web scraping and browser automation**. Crucially, the system uses **structured prompts to guide the AI's vast internal knowledge**, orchestrated by the **SPARC-Omega methodology**.
+Forget coding blind. This is **SPARC-Omega Vibe Coding** – a next-level framework for AI-driven development, **inspired by and extending the SPARC methodology and 'Boomerang Tasks' concept originally developed by Reuven Cohen for Roo Code**. I fuse Roo Code's multi-agent system with Perplexity's research, GitHub's repository management, and **Hyperbrowser's advanced web scraping and browser automation**. Crucially, the system uses **structured prompts to guide the AI's vast internal knowledge**, orchestrated by the **SPARC-Omega methodology**.
 
 Here's the flow: You spark an idea. SPARC-Omega kicks in, using **guided prompts to leverage the AI's knowledge for proactive challenge anticipation**. It delegates tasks to a specialized crew of AI agents:
 
@@ -26,7 +26,7 @@ This isn't just autocomplete; it's **proactive, knowledge-guided, research-backe
 
 ## 🔄 NEW: SPARC-Omega Methodology & Guided Knowledge Integration
 
-We've evolved beyond simple prediction. The system now operates on the **SPARC-Omega methodology**, enhanced with **structured prompts that guide the AI's reasoning**:
+We've evolved beyond simple prediction. The system now operates on the **SPARC-Omega methodology**, **an enhancement of the original SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) workflow and 'Boomerang Tasks' concept pioneered by Reuven Cohen**, integrated with **structured prompts that guide the AI's reasoning**:
 
 ### 🏛️ Proactive Guidance via Structured Prompts
 
@@ -170,6 +170,13 @@ Ready to code with foresight and automation?
 1.  Open a Roo Code chat in VS Code.
 2.  Select an Omega mode (e.g., `🌟 SPARC-Omega Orchestrator`) from the mode selector.
 3.  Give it a high-level objective and watch the knowledge-guided, tool-wielding AI agents collaborate!
+
+## 🙏 Acknowledgements
+
+The SPARC-Omega Vibe framework is deeply inspired by the foundational work of Reuven Cohen, particularly his development of the SPARC methodology (Specification, Pseudocode, Architecture, Refinement, Completion) and the 'Boomerang Tasks' concept within the Roo Code ecosystem. His insights into structuring AI-driven development workflows were instrumental in shaping this project.
+
+For more background on the original concepts, please see his article:
+- [🪃 Boomerang Tasks: Automating Code Development with Roo Code and SPARC Orchestration by Reuven Cohen](https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc/)
 
 ## 📜 License
 Licensed under the MIT License—see the `LICENSE` file for details.
