@@ -1,165 +1,159 @@
-# 🚀 SPARC-Omega Vibe Coding: Knowledge-Guided AI + Ontology + Perplexity!
+# 🚀 SPARC-Omega Vibe Coding: Ontology-Guided AI + Perplexity!
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Roo Code Compatible](https://img.shields.io/badge/Roo%20Code-Compatible-brightgreen)](https://roo.ai)
 [![Perplexity API](https://img.shields.io/badge/Perplexity-API-blue)](https://perplexity.ai)
+[![Anthropic Claude](https://img.shields.io/badge/Requires-Claude%203.5%20Sonnet-purple)](https://www.anthropic.com/news/claude-3-5-sonnet)
 [![Ontology-Guided](https://img.shields.io/badge/Ontology-Guided-purple)](.)
 [![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC-orange)](.)
 [![cline MCP Installer](https://img.shields.io/badge/cline-MCP%20Installer-orange)](https://cline.tools)
 
 ## 🎧 What is This? (The SPARC-Omega Vibe Explained)
 
-Forget coding in the dark. This is **SPARC-Omega Vibe Coding** – a sophisticated framework for AI-driven software development. It deeply integrates a **Software Architecture Ontology** conceptual model with the power of Perplexity's AI research capabilities, all orchestrated within the **SPARC-Omega methodology** running on the Roo Code multi-agent platform.
+Step into the future of AI-assisted development with **SPARC-Omega Vibe Coding**. This framework elevates coding beyond simple autocompletion by integrating:
 
-**Inspired by and extending the original SPARC methodology and 'Boomerang Tasks' concept developed by Reuven Cohen for Roo Code**, SPARC-Omega uses structured, Ontology-aware prompts to guide the AI's vast internal knowledge and leverage Perplexity for targeted research. This allows for **proactive problem prediction, adherence to best practices, and creation of robust, maintainable systems.**
+1.  **Ontology-Guided Prompts:** A structured way to leverage the AI's internal knowledge about software architecture concepts (`:Problem` types, `:ArchitecturalPattern`s, `:TechnologyVersion`s, `:Context`).
+2.  **SPARC-Omega Methodology:** An enhanced workflow (Specification, Pseudocode, Architecture, Refinement, Completion), inspired by Reuven Cohen's SPARC and Boomerang Tasks, guiding development lifecycle stages.
+3.  **Perplexity Research:** Real-time knowledge infusion via Perplexity's MCP tools (`search`, `get_documentation`, etc.).
+4.  **Dual-Mode LLM Strategy:** Optimized AI performance using **Anthropic's Claude 3.5 Sonnet** at specific **temperatures** tailored to task types – higher for creativity/planning, lower for precision/execution.
+5.  **Roo Code Multi-Agent System:** The platform hosting specialized AI agents collaborating on your project.
 
-Here's the flow: You have an objective. The SPARC-Omega Orchestrator analyzes it, considering relevant **Ontology concepts** (like `:Problem` types, `:ArchitecturalPattern` choices, `:TechnologyVersion` specifics, `:Context` factors). It then delegates tasks to a specialized crew of AI agents, each guided by Ontology terms and empowered by Perplexity tools:
+You define the goal. The SPARC-Omega Orchestrator, operating in **"Thinking Mode" (Claude 3.7 Sonnet @ Temp 0.7)**, analyzes it using Ontology concepts and delegates tasks to specialized agents. Agents focused on planning, design, and documentation also use Thinking Mode. Agents responsible for concrete implementation, testing, debugging, and operations switch to **"Instruct Mode" (Claude 3.7 Sonnet Instruct @ Temp 0.25)** for high-fidelity execution. All agents leverage Ontology prompts and Perplexity tools as needed.
 
--   🌟 **SPARC Orchestrator (⚡️ SPARC)**: The maestro, breaking down goals using SPARC phases, assigning Ontology-aware tasks, and coordinating Perplexity research.
--   📋 **Specification Writer (spec-pseudocode)**: Captures requirements, defines `:Context`, and drafts modular pseudocode anticipating potential `:Problem` areas. Uses Perplexity (`search`, `get_documentation`) for clarification.
--   🏗️ **Architect (architect)**: Designs scalable architectures using `:ArchitecturalPattern` knowledge, defining `:ComponentRole`s, avoiding `:ArchitecturalAntiPattern`s. Leverages Perplexity (`search`, `find_apis`, `get_documentation`) for pattern/technology research.
--   🧠 **Auto-Coder (code)**: Implements features using specified `:TechnologyVersion`s, guided by architecture, checking for `:DependencyIssue`s or potential `:SecurityVulnerability` hints. Uses Perplexity (`get_documentation`, `check_deprecated_code`, `search`) for implementation details.
--   🧪 **Tester (TDD, tdd)**: Writes tests first, targeting requirements and potential Ontology `:Problem` scenarios (edge cases, vulnerabilities). Uses Perplexity for testing framework details (`get_documentation`, `search`).
--   🛡️ **Security Reviewer (security-review)**: Audits code specifically looking for `:SecurityVulnerability` types (OWASP, env leaks), using Perplexity (`check_deprecated_code`, `search` for CVEs) to inform the review.
--   🚀 **DevOps (devops)**: Manages infrastructure, deployments, and configurations based on `:EnvironmentContext`, avoiding `:ConfigurationIssue`s. Uses Perplexity (`get_documentation`, `search`) for platform specifics.
--   ❓ **Ask (ask)**: Your interactive guide to using SPARC, Ontology terms, Perplexity tools, and effective task delegation.
--   📘 **Tutorial (tutorial)**: Onboards new users to the SPARC-Omega + Ontology + Perplexity way of working.
--   ...and others (Debugging, Docs, Integration, Optimization, Monitoring) – each thinking and operating with an Ontology-aware mindset and utilizing Perplexity for necessary external knowledge.
+This creates a synergistic system where structured architectural thinking, targeted research, and optimized AI reasoning work together for superior results.
 
-This isn't just code generation; it's **proactive, knowledge-guided, Ontology-structured, research-backed development** powered by specialized AI agents collaborating effectively.
+## 🔄 NEW: Dual-Mode LLM Strategy with Claude 3.7 Sonnet
 
-## 🔄 NEW: SPARC-Omega Methodology & Ontology Integration
+This is the core engine optimization. Different tasks require different AI "mindsets." SPARC-Omega leverages this by using **Anthropic's Claude 3.7 Sonnet** with two distinct temperature settings:
 
-This framework uses a **prompt-based, knowledge-guided approach** instead of loading a formal ontology file. Ontology concepts are embedded within the custom instructions (`.roomodes`) of each agent.
+1.  🧠 **Thinking Mode (Temperature: 0.7)**
+    *   **Model:** Claude 3.7 Sonnet
+    *   **Purpose:** Brainstorming, planning, high-level design, creative writing, exploring possibilities, complex reasoning. Higher temperature allows for more diverse and novel outputs.
+    *   **Used By:**
+        *   `⚡️ SPARC Orchestrator (sparc)`
+        *   `📋 Specification Writer (spec-pseudocode)`
+        *   `🏗️ Architect (architect)`
+        *   `📚 Documentation Writer (docs-writer)`
+        *   `❓ Ask (ask)`
+        *   `📘 Tutorial (tutorial)`
 
-### 🏛️ Ontology-Guided Reasoning via Structured Prompts
+2.  🛠️ **Instruct Mode (Temperature: 0.25)**
+    *   **Model:** Claude 3.7 Sonnet
+    *   **Purpose:** Precise code generation, detailed implementation, debugging, testing against specific criteria, following instructions strictly, generating factual and consistent output. Lower temperature reduces randomness and increases focus.
+    *   **Used By:**
+        *   `🧠 Auto-Coder (code)`
+        *   `🧪 Tester (TDD, tdd)`
+        *   `🪲 Debugger (debug)`
+        *   `🛡️ Security Reviewer (security-review)`
+        *   `🔗 System Integrator (integration)`
+        *   `🚀 DevOps (devops)`
+        *   `📈 Deployment Monitor (post-deployment-monitoring-mode)`
+        *   `🧹 Optimizer (refinement-optimization-mode)`
 
-How it works:
+**Why this matters:** Using the right temperature for the job maximizes the AI's effectiveness. You get creative exploration when needed (design) and precise execution when required (coding), leading to better overall quality and efficiency. Implementing this typically requires configuring Roo Code carefully, potentially using tools like **Requestly** to dynamically adjust API call parameters if native switching per mode isn't feasible (see Getting Started).
 
-1.  **Conceptual Labels**: Instructions use terms like `:Problem`, `:Solution`, `:ArchitecturalPattern`, `:TechnologyVersion`, `:EnvironmentContext`, `:SecurityVulnerability`, etc.
-2.  **Focused LLM Knowledge**: These labels act as **structured prompts**, guiding the underlying Large Language Model (LLM) to access relevant parts of its vast internal training data regarding software design, common pitfalls, best practices, and specific technologies.
-3.  **Consistent Analysis**: This ensures the agents consistently consider potential issues (e.g., predicting a `:CompatibilityIssue` between two `:TechnologyVersion`s) and apply relevant patterns (e.g., choosing an appropriate `:ArchitecturalPattern` based on `:ProjectContext`).
-4.  **Targeted Research**: Prompts also guide the *strategic* use of Perplexity MCP tools (like using `check_deprecated_code` when a `:DependencyIssue` is suspected).
+## ✨ Ontology Integration & SPARC-Omega Methodology
 
-### ✨ SPARC-Omega Workflow (Ontology-Infused)
+While leveraging the powerful dual-mode LLM, the framework remains grounded in:
 
-The SPARC phases leverage this guided approach:
+### 🏛️ Ontology-Guided Reasoning
 
-1.  **Specification (⚡️ SPARC -> 📋 spec-pseudocode)**: Clarify objectives, define scope, and critically identify `:ProjectContext` and `:EnvironmentContext`. Use Ontology terms to frame requirements and potential `:Problem` areas. Leverage Perplexity (`search`, `chat_perplexity`) for high-level understanding. Never hard-code environment variables.
-2.  **Pseudocode (📋 spec-pseudocode)**: Define high-level logic with TDD anchors. Frame modules considering potential `:Problem` types (e.g., error handling, edge cases related to `:Context`). Use Perplexity (`get_documentation`, `search`) for API clarifications.
-3.  **Architecture (⚡️ SPARC -> 🏗️ architect)**: Design extensible system diagrams and service boundaries. Explicitly select `:ArchitecturalPattern`s (e.g., `:Microservices`, `:APIGatewayRole`) and choose appropriate `:Technology` stacks, justifying choices based on `:ProjectContext` and proactively avoiding known `:ArchitecturalAntiPattern`s (e.g., `:GodObject`). Use Perplexity (`find_apis`, `get_documentation`, `search`) to evaluate patterns and technologies.
-4.  **Refinement (⚡️ SPARC -> 🧠 code, 🧪 tdd, 🪲 debug, 🛡️ security-review, 🧹 refinement-optimization-mode)**: Implement using TDD, addressing potential Ontology `:Problem`s (e.g., testing for `:SecurityVulnerability` inputs, specific `:CompatibilityIssue` scenarios). Debug failures, identifying the root `:Problem` type. Conduct security audits focusing on Ontology-defined `:SecurityVulnerability` types. Optimize based on performance data (`:PerformanceIssue`) or refactor `:ArchitecturalAntiPattern`s. Use Perplexity tools extensively (`check_deprecated_code`, `get_documentation`, `search`).
-5.  **Completion (⚡️ SPARC -> 🔗 integration, 📚 docs-writer, 🚀 devops, 📈 post-deployment-monitoring-mode)**: Integrate components, verifying compatibility (`:CompatibilityIssue`). Document the system, referencing implemented `:ArchitectureConcept`s and required `:Context`. Deploy using DevOps practices, managing `:EnvironmentContext`. Monitor for runtime `:Problem`s like `:PerformanceIssue`s.
+-   **Prompt-Based:** Uses conceptual labels (`:Problem`, `:Solution`, `:ArchitecturalPattern`, `:Context`, etc.) within agent instructions.
+-   **Guides LLM Focus:** These prompts direct Claude 3.7 Sonnet to access relevant parts of its internal knowledge and structure its thinking around sound software engineering principles.
+-   **Consistent & Proactive:** Ensures agents anticipate issues (e.g., `:CompatibilityIssue`) and apply appropriate patterns (e.g., `:Microservices`).
 
-This **Ontology-guided** approach significantly improves the quality, resilience, and maintainability of the software by embedding structured architectural thinking and proactive risk assessment directly into the AI's workflow.
+### ✨ SPARC-Omega Workflow (Ontology & LLM-Tuned)
 
-## ✨ Why It's a Game Changer (Ontology + Perplexity Edition)
+1.  **Specification (`sparc` -> `spec-pseudocode`, *Thinking Mode*)**: Define goals, `:Context`. Frame requirements using Ontology terms. High-level research via Perplexity.
+2.  **Pseudocode (`spec-pseudocode`, *Thinking Mode*)**: High-level logic, TDD anchors, anticipating `:Problem` areas. API research via Perplexity.
+3.  **Architecture (`sparc` -> `architect`, *Thinking Mode*)**: Design using `:ArchitecturalPattern`s, avoiding `:AntiPattern`s. Technology selection justified via `:Context`. Perplexity research on patterns/tech.
+4.  **Refinement (`sparc` -> various agents, *Instruct Mode primarily*)**:
+    *   `code`: Implement features precisely.
+    *   `tdd`: Write & run specific tests.
+    *   `debug`: Identify & fix bugs methodically.
+    *   `security-review`: Audit against known `:SecurityVulnerability` types.
+    *   `refinement-optimization-mode`: Apply concrete `:Solution`s to `:Problem`s.
+    *   Extensive use of Perplexity tools (`get_documentation`, `check_deprecated_code`, `search`).
+5.  **Completion (`sparc` -> various agents, *Mixed Modes*)**:
+    *   `integration` (*Instruct Mode*): Connect components, resolve `:CompatibilityIssue`.
+    *   `docs-writer` (*Thinking Mode*): Document `:ArchitectureConcept`s, setup.
+    *   `devops` (*Instruct Mode*): Deploy, manage `:EnvironmentContext`.
+    *   `post-deployment-monitoring-mode` (*Instruct Mode*): Observe for `:Problem`s.
 
-Traditional AI coding assistants often lack deep architectural awareness. SPARC-Omega changes the game:
+## ✨ Why It's a Game Changer
 
--   🧠 **Structured Thinking**: The Ontology concepts provide a shared vocabulary and mental model, guiding the AI towards architecturally sound solutions.
--   🎯 **Proactive Risk Management**: Leverages the LLM's internal knowledge, *focused by Ontology prompts*, to anticipate common `:Problem` types (security, compatibility, performance) *before* they get coded.
--   💡 **Deep Research Power**: Perplexity MCP tools (`search`, `get_documentation`, `find_apis`, `check_deprecated_code`) provide targeted, real-time information directly relevant to the task and Ontology context.
--   ✅ **Higher Quality Outputs**: Code is more modular, testable, secure, and aligned with architectural goals due to the integrated Ontology guidance.
--   🔄 **Full Lifecycle Awareness**: Covers the entire development process from conception to deployment and monitoring, all viewed through the lens of the Ontology.
--   🤝 **Improved Collaboration**: The shared Ontology vocabulary enhances communication between human users and the AI agent team.
--   🎓 **Built-in Mentoring**: The `ask` and `tutorial` modes help users learn and apply the SPARC-Omega + Ontology methodology effectively.
+This combination is potent:
+
+-   🧠 **Optimized AI Performance**: Dual-mode temperatures tailor Claude 3.7 Sonnet's output for maximum creativity *or* precision as needed.
+-   🏛️ **Structured Architectural Thinking**: Ontology guidance ensures robust, maintainable designs.
+-   🎯 **Proactive Risk Management**: Anticipate `:Problem` types *before* coding begins.
+-   💡 **Deep Research Power**: Perplexity provides targeted, real-time knowledge.
+-   ✅ **Higher Quality Outputs**: More modular, testable, secure, and aligned code.
+-   🔄 **Full Lifecycle Awareness**: Coherent process from idea to monitoring.
+-   🤝 **Enhanced Collaboration**: Shared Ontology vocabulary + optimized AI reasoning.
 
 ## 🛠️ The Core Components
 
-This framework integrates:
+1.  **SPARC-Omega Agent Army (.roomodes)**: Specialized AI personas defined in the `.roomodes` file, each assigned a default "Thinking" or "Instruct" mode context and relevant Perplexity tools.
+2.  **Ontology-Guided Prompts**: Instructions embedded with Ontology concepts to steer LLM reasoning.
+3.  **Perplexity Research Tools (MCP)**: `search`, `get_documentation`, `find_apis`, `check_deprecated_code`.
+4.  **Dual-Mode LLM Engine**: Requires Claude 3.7 Sonnet access configured for Temperature 0.7 (Thinking) and 0.25 (Instruct).
 
-### 1. The SPARC-Omega Multi-Agent Army (.roomodes) 🤖
+## 🎬 See It In Action (Dual-Mode Examples)
 
-Your specialized AI team defined in the `.roomodes` file (provided), each mode equipped with specific Ontology-aware instructions and Perplexity MCP tools:
+### Example 1: Designing a Feature (Thinking -> Instruct)
 
--   `sparc`: The Ontology-aware orchestrator.
--   `spec-pseudocode`: Context & Problem-focused planning.
--   `architect`: Pattern & Anti-pattern driven design.
--   `code`: TechnologyVersion & Pattern implementation.
--   `tdd`: Problem & Requirement-focused testing.
--   `debug`: Root Problem identification.
--   `security-review`: SecurityVulnerability focused audits.
--   `docs-writer`: Ontology Concept documentation.
--   `integration`: CompatibilityIssue resolution.
--   `post-deployment-monitoring-mode`: Runtime Problem detection.
--   `refinement-optimization-mode`: Problem & Anti-pattern remediation.
--   `devops`: EnvironmentContext & ConfigurationIssue management.
--   `ask`: Your guide to SPARC + Ontology + Perplexity.
--   `tutorial`: Onboarding to the SPARC-Omega system.
+**User**: "Let's design and implement a recommendation feed feature based on user history."
 
-(Review the included `.roomodes` JSON for the full custom instructions and capabilities!)
+**⚡️ SPARC (Thinking Mode: Claude 3.7 Sonnet @ 0.7)**: "Intriguing! Recommendation engine. Assigning `architect`. Task: Design architecture for a recommendation feed. Consider `:Scalability`, `:PerformanceIssue`s (cold start), relevant `:ArchitecturalPattern`s (e.g., Content-Based Filtering, Collaborative Filtering). Research options via Perplexity `search`. Output diagram, component roles, API ideas. `attempt_completion`."
 
-### 2. Ontology-Guided Knowledge Integration 🏛️
+**(Later) 🏗️ Architect (Thinking Mode: Claude 3.7 Sonnet @ 0.7)**: "Designed architecture using a hybrid `:ArchitecturalPattern`. Identified `:Scalability` concern for user history processing, suggesting an async `:ComponentRole`. Researched via Perplexity. Diagram attached. Ready for implementation planning. `attempt_completion`."
 
-As described above, this uses **structured prompts** with Ontology terms embedded within agent instructions to guide the LLM's internal knowledge and structure its reasoning—**no external ontology file is loaded or queried**.
+**⚡️ SPARC (Thinking Mode: Claude 3.7 Sonnet @ 0.7)**: "Architecture approved. Assigning `code`. Task: Implement the core user history tracking API endpoint based on the spec. Use `:NodeJS` v20, `:PostgreSQL`. Ensure data integrity. `attempt_completion`. *Delegate will use Instruct Mode context.*"
 
-### 3. Perplexity Research Power 💡
-
-Integrated via MCP for real-time, context-aware knowledge retrieval:
-
--   `search`: General web search for concepts, errors, examples.
--   `get_documentation`: Fetch specific documentation for APIs, libraries, frameworks.
--   `find_apis`: Discover potential APIs for integration.
--   `check_deprecated_code`: Identify outdated functions or known vulnerabilities in dependencies based on `:TechnologyVersion`.
--   `chat_perplexity`: Engage in conversational Q&A for broader understanding.
-
-## 🎬 See It In Action (Ontology-Guided Examples)
-
-### Example 1: Designing an API with Ontology Awareness
-
-**User**: "Design a REST API for a user profile service using Node.js and PostgreSQL. Needs basic CRUD."
-
-**⚡️ SPARC**: "Okay, kicking off the SPARC flow! 🚀 Assigning to `architect`. Task: Design API structure for user profile service. Technology stack: `:NodeJS` (specify version?), `:PostgreSQL`. Focus on REST principles (`:ArchitecturalPattern`). Define `:ComponentRole`s (e.g., controller, service, repository). Consider potential `:Scalability` issues and `:SecurityVulnerability` points (e.g., input validation). Avoid `:AntiPattern` like direct DB access in controllers. Use Perplexity `search` for REST best practices for NodeJS and `get_documentation` for the chosen Node ORM. Output: Mermaid diagram, data flow description, endpoint definitions. `attempt_completion`."
-
-**(Later) 🏗️ Architect**: "Designed API following REST principles. Chosen `:ArchitecturalPattern` includes layered architecture (Controller, Service, Repository). Defined `:ComponentRole`s. Identified need for strong input validation to mitigate common `:SecurityVulnerability`. Using `:PostgreSQL` via TypeORM (`:Technology`). Research via Perplexity confirmed patterns. Mermaid diagram attached. Endpoints defined. `attempt_completion`"
-
-### Example 2: Coding & Security Review with Ontology Focus
-
-**User**: "Implement the `POST /users` endpoint based on the architecture spec."
-
-**⚡️ SPARC**: "Got it. Assigning to `code`. Task: Implement `POST /users` endpoint for user creation. Follow architecture spec. `:Technology`: NodeJS v18, TypeORM vX. Pay attention to data validation logic to prevent `:SecurityVulnerability` like injection. Use environment variables for DB config (avoid `:ConfigurationIssue`). Ensure code modularity (< 500 lines per file). Use Perplexity `get_documentation` for TypeORM usage examples. `attempt_completion`. Then, assign `security-review`."
-
-**(Later) 🧠 Code**: "Implemented `POST /users` using specified `:TechnologyVersion`s. Added validation layer addressing potential injection `:SecurityVulnerability`. Config loaded via `process.env`. Code is modular. TypeORM docs checked via `get_documentation`. `attempt_completion`"
-
-**⚡️ SPARC**: "Code complete. Assigning to `security-review`. Task: Review the new user creation code. Focus on input validation, potential data leakage, dependency vulnerabilities (use `check_deprecated_code` on used libraries), and adherence to secure coding practices regarding the identified `:SecurityVulnerability` points. `attempt_completion`."
-
-**(Later) 🛡️ Security Reviewer**: "Reviewed code. Input validation looks robust for common injection `:SecurityVulnerability`. Ran `check_deprecated_code` - no known vulnerable dependencies found for specified versions. Confirmed no hardcoded secrets (`:ConfigurationIssue`). Recommend adding rate limiting as a defense-in-depth measure (`:Solution`). `attempt_completion`"
+**(Later) 🧠 Code (Instruct Mode: Claude 3.7 Sonnet @ 0.25)**: "Implemented `/users/{id}/history` POST endpoint precisely as specified. `:TechnologyVersion`s used. Added input validation and database transaction logic. Code follows style guide. `attempt_completion`."
 
 ## 🔧 Get Started (Join the Vibe!)
 
-Ready to code with Ontology-guided AI and deep research power?
+Ready for Ontology-guided, dual-mode AI development with Claude 3.5 Sonnet?
 
 ### Prerequisites
--   VS Code with the Roo Code extension installed.
--   A Perplexity API key.
+1.  **VS Code** with the **Roo Code extension** installed.
+2.  **Anthropic API Key** with access to **Claude 3.7 Sonnet**.
+3.  **Perplexity API Key**.
 
-### Easiest MCP Setup: Use cline!
-1.  Install [cline](https://cline.tools).
-2.  In cline, search for and install the MCP provider: "**Perplexity AI**".
-3.  Follow cline's prompts (it uses AI to set up the Perplexity MCP server, likely asking for your API key).
-4.  Copy the MCP settings (URL, headers/token) cline provides.
+### Configuration: The Dual-Mode Challenge
+Setting up the two different temperature modes using the *same base model* (Claude 3.7 Sonnet) requires careful configuration:
 
-### Configure Roo Code
-1.  Open Roo Code settings in VS Code (Ctrl+Shift+P -> "Roo Code: Open Settings").
-2.  Paste the Perplexity MCP details copied from cline into the "Model Context Protocol (MCP) Settings" section for Perplexity.
+1.  **Perplexity MCP Setup**:
+    *   Use [cline](https://cline.tools) (easiest) or manually set up an MCP server for Perplexity.
+    *   Search for and install the "Perplexity AI" provider in cline.
+    *   Follow prompts, enter your API key, and copy the MCP URL/Header details.
+    *   Paste these into Roo Code's Perplexity MCP settings.
 
-### Install the SPARC-Omega RooModes
-1.  Copy the `.roomodes` JSON content provided earlier into a file named `.roomodes` in the root directory of your project (or a parent directory Roo Code can access). You can also create/paste these modes using the Roo Code UI's "Modes" section.
-2.  Roo Code should automatically detect and load the modes upon restarting VS Code or refreshing Roo Code.
-    *   *Note*: The core Ontology-guided logic, SPARC flow adherence, and Perplexity usage instructions are all embedded within the `customInstructions` of each mode definition in this `.roomodes` file.
+2.  **Claude 3.7 Sonnet Setup (IMPORTANT!)**:
+    *   You need to configure Roo Code to talk to Claude 3.7 Sonnet via the Anthropic API.
+    *   **Crucially, you need a way to apply Temperature 0.7 for 'Thinking' modes and 0.25 for 'Instruct' modes.** Roo Code might not natively support dynamic temperature switching based on the active *mode* easily when using a single model endpoint. Potential solutions:
+        *   **Ideal (Requires Roo Feature/Flexibility):** If Roo Code allows defining multiple configurations *for the same model* pointing to the same Anthropic API endpoint but with different default parameters (like temperature), create two: `claude-3.7-sonnet-thinking` (temp 0.7) and `claude-3.7-sonnet-instruct` (temp 0.25). Then *modify the `.roomodes` definitions* in your JSON to explicitly reference the appropriate configuration slug for each mode. (Check Roo Code documentation if this is possible).
+        *   **Requestly Workaround:** Configure *one* Claude 3.7 Sonnet endpoint in Roo Code. Use a tool like **Requestly** (browser extension/desktop app) to intercept the API calls from VS Code to your Claude endpoint. The rule would need to inspect the request payload (possibly identifying the mode from the prompt or meta-data if Roo includes it) and **modify the `temperature` parameter in the JSON payload** before it's sent to Anthropic. This requires Requestly setup and might be fragile.
+        *   **Manual Selection (Less Ideal):** If you can define the two configurations (`...-thinking`, `...-instruct`) in Roo Code, you might need to manually switch the *active model configuration* in the Roo Code chat UI depending on which *type* of mode (Thinking vs Instruct) you intend to invoke next. This demands user vigilance.
+    *   *Consult Roo Code documentation or community for the best current practice on managing distinct parameter sets for the same base model per mode invocation.*
+
+3.  **Install the SPARC-Omega RooModes**:
+    *   Copy the `.roomodes` JSON content provided earlier into a file named `.roomodes` in your project root (or a parent directory Roo Code checks).
+    *   Alternatively, use the Roo Code UI ("Modes" section) to create/paste each mode definition from the provided JSON. Ensure the `slug`, `name`, `roleDefinition`, and `customInstructions` match exactly.
+    *   Restart VS Code or refresh Roo Code.
 
 ### Start Vibing!
-1.  Open a Roo Code chat in VS Code (usually accessible via the Roo icon in the activity bar).
-2.  Select a SPARC-Omega mode (e.g., start with `⚡️ SPARC Orchestrator` or `❓Ask`) from the mode selector dropdown at the top of the chat window.
-3.  Give it a high-level objective, referencing Ontology concepts where helpful (e.g., "Design a system considering `:Scalability` for a chat app"). Watch the knowledge-guided, research-enabled AI agents collaborate!
+1.  Open a Roo Code chat.
+2.  Select a SPARC-Omega mode (e.g., `⚡️ SPARC Orchestrator`). **Ensure your environment is correctly configured to apply the appropriate temperature (0.7 for Thinking modes, 0.25 for Instruct modes) when invoking tasks.**
+3.  Provide your objective and watch the Ontology-guided, temperature-tuned agents collaborate! Use `❓Ask` if you need guidance on mode selection or Ontology terms.
 
 ## 🙏 Acknowledgements
 
-The SPARC-Omega Vibe framework is deeply inspired by the foundational work of Reuven Cohen, particularly his development of the SPARC methodology (Specification, Pseudocode, Architecture, Refinement, Completion) and the 'Boomerang Tasks' concept within the Roo Code ecosystem. His insights into structuring AI-driven development workflows were instrumental in shaping this project.
+This framework builds upon the visionary work of Reuven Cohen, especially his SPARC methodology and 'Boomerang Tasks' concept, foundational to structured AI development workflows in Roo Code.
 
-For more background on the original concepts, please see his article:
-- [🪃 Boomerang Tasks: Automating Code Development with Roo Code and SPARC Orchestration by Reuven Cohen](https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc/)
+-   Reference: [🪃 Boomerang Tasks: Automating Code Development with Roo Code and SPARC Orchestration by Reuven Cohen](https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc/)
 
 ## 📜 License
 Licensed under the MIT License—see the `LICENSE` file for details.
@@ -167,9 +161,12 @@ Licensed under the MIT License—see the `LICENSE` file for details.
 ## 🔗 Related Resources
 -   [Roo Code Docs](https://roo.ai/docs)
 -   [Perplexity API Docs](https://docs.perplexity.ai/)
--   [MCP Standard](https://mcp.ai) (Underlying protocol)
--   [cline Setup](https://cline.tools) (Easiest MCP Server Setup for Perplexity)
+-   [Anthropic API Docs](https://docs.anthropic.com/claude/reference/messages_post) (Check `temperature` parameter)
+-   [Claude 3.5 Sonnet Announcement](https://www.anthropic.com/news/claude-3-5-sonnet)
+-   [Requestly](https://requestly.io/) (Potential tool for temperature modification workaround)
+-   [MCP Standard](https://mcp.ai)
+-   [cline Setup](https://cline.tools)
 
 ---
 
-Built with ❤️ by SPARC-Omega vibe coders. Let's automate the future, guided by knowledge and Ontology!
+Code smarter, not just faster. Embrace the Ontology-guided, dual-mode Vibe with Claude 3.5 Sonnet!
