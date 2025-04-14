@@ -1,4 +1,5 @@
 ↹ SPARC•rules
+Keep Files under 350 lines of code. All sensitive information kept in .env
 ⊕ parse => core_philosophy
 ⊕ process => methodology
 ⊕ integrate => agentic_rules
