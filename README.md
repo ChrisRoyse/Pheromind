@@ -1,175 +1,158 @@
-# 🚀 SPARC-Omega Vibe Coding: Knowledge-Guided AI + Perplexity + GitHub + Hyperbrowser!
+# 🚀 SPARC-Omega Vibe Coding: Knowledge-Guided AI + Ontology + Perplexity!
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Roo Code Compatible](https://img.shields.io/badge/Roo%20Code-Compatible-brightgreen)](https://roo.ai)
 [![Perplexity API](https://img.shields.io/badge/Perplexity-API-blue)](https://perplexity.ai)
-[![GitHub Tools](https://img.shields.io/badge/GitHub-Tools-purple)](https://github.com)
-[![Hyperbrowser Tools](https://img.shields.io/badge/Hyperbrowser-Tools-cyan)](https://github.com/hyperbrowserai/mcpglobal)
+[![Ontology-Guided](https://img.shields.io/badge/Ontology-Guided-purple)](.)
+[![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC-orange)](.)
 [![cline MCP Installer](https://img.shields.io/badge/cline-MCP%20Installer-orange)](https://cline.tools)
 
 ## 🎧 What is This? (The SPARC-Omega Vibe Explained)
 
-Forget coding blind. This is **SPARC-Omega Vibe Coding** – a next-level framework for AI-driven development, **inspired by and extending the SPARC methodology and 'Boomerang Tasks' concept originally developed by Reuven Cohen for Roo Code**. I fuse Roo Code's multi-agent system with Perplexity's research, GitHub's repository management, and **Hyperbrowser's advanced web scraping and browser automation**. Crucially, the system uses **structured prompts to guide the AI's vast internal knowledge**, orchestrated by the **SPARC-Omega methodology**.
+Forget coding in the dark. This is **SPARC-Omega Vibe Coding** – a sophisticated framework for AI-driven software development. It deeply integrates a **Software Architecture Ontology** conceptual model with the power of Perplexity's AI research capabilities, all orchestrated within the **SPARC-Omega methodology** running on the Roo Code multi-agent platform.
 
-Here's the flow: You spark an idea. SPARC-Omega kicks in, using **guided prompts to leverage the AI's knowledge for proactive challenge anticipation**. It delegates tasks to a specialized crew of AI agents:
+**Inspired by and extending the original SPARC methodology and 'Boomerang Tasks' concept developed by Reuven Cohen for Roo Code**, SPARC-Omega uses structured, Ontology-aware prompts to guide the AI's vast internal knowledge and leverage Perplexity for targeted research. This allows for **proactive problem prediction, adherence to best practices, and creation of robust, maintainable systems.**
 
--   🌟 **SPARC-Omega Orchestrator**: Runs the show, integrating guided knowledge checks and coordinating MCP tools.
--   🔍 **Research Specialists**: Leverage Perplexity for cutting-edge info and Hyperbrowser (`scrape`, `crawl`, `extract`) for deep web data gathering.
--   🐙 **Git Managers**: Handle GitHub repos, branches, commits like pros.
--   🧠 **Coders & Architects**: Build modular solutions informed by guided knowledge checks, researching examples with Perplexity/Hyperbrowser.
--   🧪 **Testers**: Implement TDD, using guided prompts to target tests based on potential issues, and **Hyperbrowser Agents (`browser_use_agent`, `openai_...`, `claude_...`) for automated UI/E2E testing**.
--   🛡️ **Security Reviewers**: Audit code, focusing on common vulnerability patterns identified through guided prompts.
--   🚀 **DevOps**: Automate infrastructure and deployments, potentially using **Hyperbrowser Agents for complex console interactions** when APIs fall short.
--   ...and many more (Docs, Debugging, Integration, Optimization, Monitoring) – each enhanced with awareness of potential pitfalls via guided prompts and specific MCP tool access.
+Here's the flow: You have an objective. The SPARC-Omega Orchestrator analyzes it, considering relevant **Ontology concepts** (like `:Problem` types, `:ArchitecturalPattern` choices, `:TechnologyVersion` specifics, `:Context` factors). It then delegates tasks to a specialized crew of AI agents, each guided by Ontology terms and empowered by Perplexity tools:
 
-This isn't just autocomplete; it's **proactive, knowledge-guided, research-backed, automated full-lifecycle development** with agents that can *see, interact with, and extract data from the web* like never before.
+-   🌟 **SPARC Orchestrator (⚡️ SPARC)**: The maestro, breaking down goals using SPARC phases, assigning Ontology-aware tasks, and coordinating Perplexity research.
+-   📋 **Specification Writer (spec-pseudocode)**: Captures requirements, defines `:Context`, and drafts modular pseudocode anticipating potential `:Problem` areas. Uses Perplexity (`search`, `get_documentation`) for clarification.
+-   🏗️ **Architect (architect)**: Designs scalable architectures using `:ArchitecturalPattern` knowledge, defining `:ComponentRole`s, avoiding `:ArchitecturalAntiPattern`s. Leverages Perplexity (`search`, `find_apis`, `get_documentation`) for pattern/technology research.
+-   🧠 **Auto-Coder (code)**: Implements features using specified `:TechnologyVersion`s, guided by architecture, checking for `:DependencyIssue`s or potential `:SecurityVulnerability` hints. Uses Perplexity (`get_documentation`, `check_deprecated_code`, `search`) for implementation details.
+-   🧪 **Tester (TDD, tdd)**: Writes tests first, targeting requirements and potential Ontology `:Problem` scenarios (edge cases, vulnerabilities). Uses Perplexity for testing framework details (`get_documentation`, `search`).
+-   🛡️ **Security Reviewer (security-review)**: Audits code specifically looking for `:SecurityVulnerability` types (OWASP, env leaks), using Perplexity (`check_deprecated_code`, `search` for CVEs) to inform the review.
+-   🚀 **DevOps (devops)**: Manages infrastructure, deployments, and configurations based on `:EnvironmentContext`, avoiding `:ConfigurationIssue`s. Uses Perplexity (`get_documentation`, `search`) for platform specifics.
+-   ❓ **Ask (ask)**: Your interactive guide to using SPARC, Ontology terms, Perplexity tools, and effective task delegation.
+-   📘 **Tutorial (tutorial)**: Onboards new users to the SPARC-Omega + Ontology + Perplexity way of working.
+-   ...and others (Debugging, Docs, Integration, Optimization, Monitoring) – each thinking and operating with an Ontology-aware mindset and utilizing Perplexity for necessary external knowledge.
 
-## 🔄 NEW: SPARC-Omega Methodology & Guided Knowledge Integration
+This isn't just code generation; it's **proactive, knowledge-guided, Ontology-structured, research-backed development** powered by specialized AI agents collaborating effectively.
 
-We've evolved beyond simple prediction. The system now operates on the **SPARC-Omega methodology**, **an enhancement of the original SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) workflow and 'Boomerang Tasks' concept pioneered by Reuven Cohen**, integrated with **structured prompts that guide the AI's reasoning**:
+## 🔄 NEW: SPARC-Omega Methodology & Ontology Integration
 
-### 🏛️ Proactive Guidance via Structured Prompts
+This framework uses a **prompt-based, knowledge-guided approach** instead of loading a formal ontology file. Ontology concepts are embedded within the custom instructions (`.roomodes`) of each agent.
 
-Instead of relying on a formal ontology file, this framework uses targeted instructions within each agent's definition. Before coding, agents are prompted to:
+### 🏛️ Ontology-Guided Reasoning via Structured Prompts
 
--   **Identify Risk Patterns**: Leverage the LLM's internal knowledge to anticipate likely issues (e.g., potential security vulnerabilities, common compatibility problems, performance bottlenecks) based on the specific technologies and context of the task. Conceptual labels like `:Problem` or `:SecurityVulnerability` are used in prompts to focus the AI's attention.
--   **Focus on Best Practices**: Utilize prompts to guide the AI towards applying known best practices and common architectural patterns relevant to the task.
--   **Check Against Constraints**: Prompt the AI to consider potential constraints, such as platform incompatibilities or API changes, by accessing its internal knowledge base.
+How it works:
 
-### ✨ SPARC-Omega Workflow
+1.  **Conceptual Labels**: Instructions use terms like `:Problem`, `:Solution`, `:ArchitecturalPattern`, `:TechnologyVersion`, `:EnvironmentContext`, `:SecurityVulnerability`, etc.
+2.  **Focused LLM Knowledge**: These labels act as **structured prompts**, guiding the underlying Large Language Model (LLM) to access relevant parts of its vast internal training data regarding software design, common pitfalls, best practices, and specific technologies.
+3.  **Consistent Analysis**: This ensures the agents consistently consider potential issues (e.g., predicting a `:CompatibilityIssue` between two `:TechnologyVersion`s) and apply relevant patterns (e.g., choosing an appropriate `:ArchitecturalPattern` based on `:ProjectContext`).
+4.  **Targeted Research**: Prompts also guide the *strategic* use of Perplexity MCP tools (like using `check_deprecated_code` when a `:DependencyIssue` is suspected).
 
-The enhanced SPARC flow uses this guided approach for robust development:
+### ✨ SPARC-Omega Workflow (Ontology-Infused)
 
-1.  **Specification**: Clarify goals, *using guiding concepts* in prompts to frame requirements and anticipate risks. Leverage Perplexity/Hyperbrowser for research.
-2.  **Pseudocode**: Request high-level logic with TDD anchors, *informed by initial risk assessment prompts*.
-3.  **Architecture**: Design extensible systems, *checking designs against known architectural patterns* identified via guided prompts. Use Perplexity/Hyperbrowser for architectural research.
-4.  **Refinement**: Employ TDD (including **Hyperbrowser-powered UI tests**), debugging informed by knowledge of common issues, security reviews focused by vulnerability pattern prompts, and optimization flows.
-5.  **Completion**: Integrate (*verifying against known compatibility factors*), document (*referencing key concepts*), monitor (*potentially using Hyperbrowser for synthetic checks*), and deploy.
+The SPARC phases leverage this guided approach:
 
-This proactive, knowledge-guided approach dramatically improves code quality, security, and efficiency from the start by effectively leveraging the LLM's embedded knowledge.
+1.  **Specification (⚡️ SPARC -> 📋 spec-pseudocode)**: Clarify objectives, define scope, and critically identify `:ProjectContext` and `:EnvironmentContext`. Use Ontology terms to frame requirements and potential `:Problem` areas. Leverage Perplexity (`search`, `chat_perplexity`) for high-level understanding. Never hard-code environment variables.
+2.  **Pseudocode (📋 spec-pseudocode)**: Define high-level logic with TDD anchors. Frame modules considering potential `:Problem` types (e.g., error handling, edge cases related to `:Context`). Use Perplexity (`get_documentation`, `search`) for API clarifications.
+3.  **Architecture (⚡️ SPARC -> 🏗️ architect)**: Design extensible system diagrams and service boundaries. Explicitly select `:ArchitecturalPattern`s (e.g., `:Microservices`, `:APIGatewayRole`) and choose appropriate `:Technology` stacks, justifying choices based on `:ProjectContext` and proactively avoiding known `:ArchitecturalAntiPattern`s (e.g., `:GodObject`). Use Perplexity (`find_apis`, `get_documentation`, `search`) to evaluate patterns and technologies.
+4.  **Refinement (⚡️ SPARC -> 🧠 code, 🧪 tdd, 🪲 debug, 🛡️ security-review, 🧹 refinement-optimization-mode)**: Implement using TDD, addressing potential Ontology `:Problem`s (e.g., testing for `:SecurityVulnerability` inputs, specific `:CompatibilityIssue` scenarios). Debug failures, identifying the root `:Problem` type. Conduct security audits focusing on Ontology-defined `:SecurityVulnerability` types. Optimize based on performance data (`:PerformanceIssue`) or refactor `:ArchitecturalAntiPattern`s. Use Perplexity tools extensively (`check_deprecated_code`, `get_documentation`, `search`).
+5.  **Completion (⚡️ SPARC -> 🔗 integration, 📚 docs-writer, 🚀 devops, 📈 post-deployment-monitoring-mode)**: Integrate components, verifying compatibility (`:CompatibilityIssue`). Document the system, referencing implemented `:ArchitectureConcept`s and required `:Context`. Deploy using DevOps practices, managing `:EnvironmentContext`. Monitor for runtime `:Problem`s like `:PerformanceIssue`s.
 
-## ✨ Why It's a Game Changer
+This **Ontology-guided** approach significantly improves the quality, resilience, and maintainability of the software by embedding structured architectural thinking and proactive risk assessment directly into the AI's workflow.
 
-Traditional AI coding tools operate in a vacuum. SPARC-Omega rewrites the rules:
+## ✨ Why It's a Game Changer (Ontology + Perplexity Edition)
 
--   🧠 **Proactive Risk Assessment**: Structured prompts guide the AI to leverage its internal knowledge and anticipate issues before they're coded.
--   🌐 **Full Web Interaction**: Hyperbrowser enables agents to scrape data, crawl sites, extract structured info, and **autonomously drive web browsers** for testing, research, or automation.
--   🐙 **Automated GitHub Workflow**: Seamlessly manage your entire GitHub presence programmatically.
--   💡 **Real-Time Research Power**: Perplexity keeps agents informed with the latest documentation, APIs, and best practices.
--   ✅ **Knowledge-Informed Quality**: Decisions leverage the LLM's vast knowledge base, guided by targeted prompts and supplemented by real-time research, leading to more robust solutions.
--   💻 **True Full Lifecycle Coverage**: From guided design and Hyperbrowser-driven testing to automated deployment and monitoring.
--   💸 **Cost-Effective Power**: Leverage potentially free models (like Gemini Flash/Pro via API when available) with efficient Perplexity/Hyperbrowser usage. GitHub MCP tools remain free.
+Traditional AI coding assistants often lack deep architectural awareness. SPARC-Omega changes the game:
+
+-   🧠 **Structured Thinking**: The Ontology concepts provide a shared vocabulary and mental model, guiding the AI towards architecturally sound solutions.
+-   🎯 **Proactive Risk Management**: Leverages the LLM's internal knowledge, *focused by Ontology prompts*, to anticipate common `:Problem` types (security, compatibility, performance) *before* they get coded.
+-   💡 **Deep Research Power**: Perplexity MCP tools (`search`, `get_documentation`, `find_apis`, `check_deprecated_code`) provide targeted, real-time information directly relevant to the task and Ontology context.
+-   ✅ **Higher Quality Outputs**: Code is more modular, testable, secure, and aligned with architectural goals due to the integrated Ontology guidance.
+-   🔄 **Full Lifecycle Awareness**: Covers the entire development process from conception to deployment and monitoring, all viewed through the lens of the Ontology.
+-   🤝 **Improved Collaboration**: The shared Ontology vocabulary enhances communication between human users and the AI agent team.
+-   🎓 **Built-in Mentoring**: The `ask` and `tutorial` modes help users learn and apply the SPARC-Omega + Ontology methodology effectively.
 
 ## 🛠️ The Core Components
 
-This framework integrates state-of-the-art AI capabilities:
+This framework integrates:
 
 ### 1. The SPARC-Omega Multi-Agent Army (.roomodes) 🤖
 
-A squad of specialized AI personas defined in the `.roomodes` file (included), each using guided prompts and assigned MCP tools:
+Your specialized AI team defined in the `.roomodes` file (provided), each mode equipped with specific Ontology-aware instructions and Perplexity MCP tools:
 
--   🌟 **SPARC-Omega Orchestrator**: The maestro coordinating guided knowledge checks and tools.
--   📋 **Spec Writer (Omega)**: Uses guided prompts + Perplexity/Hyperbrowser (scrape, crawl, extract, *maybe* agents) for deep requirements gathering and risk identification.
--   🏗️ **Architect (Omega)**: Designs systems validated against known patterns + Perplexity/Hyperbrowser research.
--   🧠 **Coder (Omega)**: Writes code informed by risk prompts using GitHub + Perplexity/Hyperbrowser (scrape, extract).
--   🧪 **Tester (TDD, Omega)**: Writes tests targeted by risk prompts, executes **UI/E2E tests via Hyperbrowser Agents**.
--   🪲 **Debugger (Omega)**: Uses prompts to check known issues + Perplexity/Hyperbrowser (scrape, extract, *maybe* agents for reproduction).
--   🛡️ **Security Reviewer (Omega)**: Focuses audits using vulnerability pattern prompts + Perplexity/GitHub Search/Hyperbrowser (scrape, crawl).
--   📚 **Docs Writer (Omega)**: References key concepts + uses GitHub/Hyperbrowser (scrape, extract).
--   🔗 **Integrator (Omega)**: Verifies compatibility factors + uses GitHub, *maybe runs E2E tests via Hyperbrowser Agents*.
--   🚀 **DevOps (Omega)**: Uses platform knowledge prompts + GitHub/Perplexity/Hyperbrowser (scrape, *maybe agents for console automation*).
--   📈 **Monitor (Omega)**: Guided by performance issue prompts, *maybe sets up synthetic monitoring via Hyperbrowser Agents*.
--   🧹 **Optimizer (Omega)**: Guided by anti-pattern/performance prompts + uses GitHub/Perplexity/Hyperbrowser (scrape, extract).
--   ❓ **Ask (Omega Guide)**: Your guide to the SPARC-Omega system!
+-   `sparc`: The Ontology-aware orchestrator.
+-   `spec-pseudocode`: Context & Problem-focused planning.
+-   `architect`: Pattern & Anti-pattern driven design.
+-   `code`: TechnologyVersion & Pattern implementation.
+-   `tdd`: Problem & Requirement-focused testing.
+-   `debug`: Root Problem identification.
+-   `security-review`: SecurityVulnerability focused audits.
+-   `docs-writer`: Ontology Concept documentation.
+-   `integration`: CompatibilityIssue resolution.
+-   `post-deployment-monitoring-mode`: Runtime Problem detection.
+-   `refinement-optimization-mode`: Problem & Anti-pattern remediation.
+-   `devops`: EnvironmentContext & ConfigurationIssue management.
+-   `ask`: Your guide to SPARC + Ontology + Perplexity.
+-   `tutorial`: Onboarding to the SPARC-Omega system.
 
-(Check the included `.roomodes` file for full details and instructions!)
+(Review the included `.roomodes` JSON for the full custom instructions and capabilities!)
 
-### 2. Guided Knowledge Integration Framework 🏛️
+### 2. Ontology-Guided Knowledge Integration 🏛️
 
-**How it works:** This system does **not** load or query formal ontology files (like TTL). Instead, specific instructions and conceptual labels (e.g., `:Problem`, `:Solution`, `:SecurityVulnerability`) within each agent's `.roomodes` definition act as **structured prompts**. These prompts guide the underlying Large Language Model (LLM) to:
-    a. Access relevant parts of its vast internal knowledge base (learned during training) about software pitfalls, patterns, technologies, and best practices.
-    b. Structure its analysis and output around these concepts.
-    c. Focus its external research using tools like Perplexity and Hyperbrowser.
-It's a way to leverage the LLM's embedded knowledge proactively and consistently across the agent team.
+As described above, this uses **structured prompts** with Ontology terms embedded within agent instructions to guide the LLM's internal knowledge and structure its reasoning—**no external ontology file is loaded or queried**.
 
 ### 3. Perplexity Research Power 💡
 
-Integrated via MCP for real-time knowledge:
+Integrated via MCP for real-time, context-aware knowledge retrieval:
 
--   `search`, `get_documentation`, `find_apis`, `check_deprecated_code`, `chat_perplexity`.
+-   `search`: General web search for concepts, errors, examples.
+-   `get_documentation`: Fetch specific documentation for APIs, libraries, frameworks.
+-   `find_apis`: Discover potential APIs for integration.
+-   `check_deprecated_code`: Identify outdated functions or known vulnerabilities in dependencies based on `:TechnologyVersion`.
+-   `chat_perplexity`: Engage in conversational Q&A for broader understanding.
 
-### 4. GitHub Sidekick (MCP Tools) 🐙
+## 🎬 See It In Action (Ontology-Guided Examples)
 
-Full programmatic control over your repositories:
+### Example 1: Designing an API with Ontology Awareness
 
--   Repo Ops (`create_repository`, `fork_repository`).
--   File Ops (`create_or_update_file`, `push_files`, `get_file_contents`).
--   Branching/Commits (`create_branch`, `list_commits`).
--   Issues/PRs (`create_issue`, `create_pull_request`).
--   Discovery (`search_code`, `search_repositories`).
+**User**: "Design a REST API for a user profile service using Node.js and PostgreSQL. Needs basic CRUD."
 
-### 5. Hyperbrowser Superpowers (MCP Tools) 🌐
+**⚡️ SPARC**: "Okay, kicking off the SPARC flow! 🚀 Assigning to `architect`. Task: Design API structure for user profile service. Technology stack: `:NodeJS` (specify version?), `:PostgreSQL`. Focus on REST principles (`:ArchitecturalPattern`). Define `:ComponentRole`s (e.g., controller, service, repository). Consider potential `:Scalability` issues and `:SecurityVulnerability` points (e.g., input validation). Avoid `:AntiPattern` like direct DB access in controllers. Use Perplexity `search` for REST best practices for NodeJS and `get_documentation` for the chosen Node ORM. Output: Mermaid diagram, data flow description, endpoint definitions. `attempt_completion`."
 
-Unlocks advanced web interaction via MCP (from `mcpglobal`):
+**(Later) 🏗️ Architect**: "Designed API following REST principles. Chosen `:ArchitecturalPattern` includes layered architecture (Controller, Service, Repository). Defined `:ComponentRole`s. Identified need for strong input validation to mitigate common `:SecurityVulnerability`. Using `:PostgreSQL` via TypeORM (`:Technology`). Research via Perplexity confirmed patterns. Mermaid diagram attached. Endpoints defined. `attempt_completion`"
 
--   **Data Extraction**:
-    -   `scrape_webpage`: Get content from a single URL.
-    -   `crawl_webpages`: Explore and collect data from multiple linked pages.
-    -   `extract_structured_data`: Pull specific information using prompts/schemas.
--   **Browser Automation Agents**:
-    -   `browser_use_agent`: Fast, cost-effective agent for *explicit, step-by-step* tasks.
-    -   `openai_computer_use_agent`: General-purpose agent using OpenAI for standard web interactions.
-    -   `claude_computer_use_agent`: Advanced agent using Claude for complex, nuanced tasks requiring sophisticated reasoning.
--   **Web Search**:
-    -   `search_with_bing`: Perform web searches directly.
+### Example 2: Coding & Security Review with Ontology Focus
 
-## 🎬 See It In Action (Usage Examples)
+**User**: "Implement the `POST /users` endpoint based on the architecture spec."
 
-### Example 1: Guided Feature Planning with Web Research
+**⚡️ SPARC**: "Got it. Assigning to `code`. Task: Implement `POST /users` endpoint for user creation. Follow architecture spec. `:Technology`: NodeJS v18, TypeORM vX. Pay attention to data validation logic to prevent `:SecurityVulnerability` like injection. Use environment variables for DB config (avoid `:ConfigurationIssue`). Ensure code modularity (< 500 lines per file). Use Perplexity `get_documentation` for TypeORM usage examples. `attempt_completion`. Then, assign `security-review`."
 
-**User**: "Let's spec out a feature to integrate Stripe payments into our Next.js app. Use Supabase for user data."
+**(Later) 🧠 Code**: "Implemented `POST /users` using specified `:TechnologyVersion`s. Added validation layer addressing potential injection `:SecurityVulnerability`. Config loaded via `process.env`. Code is modular. TypeORM docs checked via `get_documentation`. `attempt_completion`"
 
-**🌟 SPARC-Omega Orchestrator**: "Vibing! 🚀 Let's plan this with foresight. Assigning to `spec-pseudocode-omega`. Task: Define requirements for Stripe integration in Next.js/Supabase context. *Use prompts to check internal knowledge for known compatibility issues or security vulnerability patterns* related to Stripe/Supabase auth. Use Perplexity (`search`, `get_documentation`) for latest Stripe API best practices and Hyperbrowser (`crawl_webpages`) on `stripe.com/docs` to gather detailed flow examples. Create modular pseudocode with TDD anchors. `attempt_completion`."
+**⚡️ SPARC**: "Code complete. Assigning to `security-review`. Task: Review the new user creation code. Focus on input validation, potential data leakage, dependency vulnerabilities (use `check_deprecated_code` on used libraries), and adherence to secure coding practices regarding the identified `:SecurityVulnerability` points. `attempt_completion`."
 
-**(Later) 📋 Spec Writer (Omega)**: "Guided knowledge check flagged potential issues with handling webhook secrets securely (common vulnerability pattern) and ensuring transaction atomicity with Supabase (common integration problem). Researched via Perplexity & crawled Stripe docs using Hyperbrowser. Pseudocode includes secure webhook handling via env vars and database transaction logic. Ready! `attempt_completion`."
-
-### Example 2: Automated UI Testing with Hyperbrowser Agent
-
-**User**: "Okay, the login flow is coded. Let's add an E2E test to ensure users can log in via email."
-
-**🌟 SPARC-Omega Orchestrator**: "Solid! 🧪 Assigning to `tdd-omega`. Task: Create and run an E2E test for the email login flow. *Use prompts to consider common login problem types* for edge cases (e.g., invalid password, non-existent user). Use Hyperbrowser's `openai_computer_use_agent` to execute the test steps against the staging URL [provide URL]. Steps: 1. Navigate to login page. 2. Find email input, enter 'test@example.com'. 3. Find password input, enter 'password123'. 4. Click login button. 5. Verify successful redirect to dashboard URL or presence of 'Welcome' text. Report results. `attempt_completion`."
-
-**(Later) 🧪 Tester (TDD, Omega)**: "Prompts guided consideration of email case-insensitivity, added that step. Defined task for `openai_computer_use_agent`. Executing... Agent successfully navigated, entered credentials, clicked login, and verified dashboard access. Test passed! `attempt_completion`."
+**(Later) 🛡️ Security Reviewer**: "Reviewed code. Input validation looks robust for common injection `:SecurityVulnerability`. Ran `check_deprecated_code` - no known vulnerable dependencies found for specified versions. Confirmed no hardcoded secrets (`:ConfigurationIssue`). Recommend adding rate limiting as a defense-in-depth measure (`:Solution`). `attempt_completion`"
 
 ## 🔧 Get Started (Join the Vibe!)
 
-Ready to code with foresight and automation?
+Ready to code with Ontology-guided AI and deep research power?
 
 ### Prerequisites
--   VS Code with the Roo Code extension.
--   Perplexity API key.
--   GitHub Personal Access Token (scopes: repo, workflow, issues, etc.).
--   **Hyperbrowser API Key/Setup**: Access to Hyperbrowser tools (see [Hyperbrowser MCP Global Repo](https://github.com/hyperbrowserai/mcpglobal)).
+-   VS Code with the Roo Code extension installed.
+-   A Perplexity API key.
 
 ### Easiest MCP Setup: Use cline!
 1.  Install [cline](https://cline.tools).
-2.  In cline, search for and install the MCP providers: "Perplexity AI", "GitHub", and "**Hyperbrowser**".
-3.  Follow cline's prompts (it uses AI to set up the servers, likely asking for your API keys/tokens).
-4.  Copy the MCP settings (URLs, headers/tokens) cline provides for each service.
+2.  In cline, search for and install the MCP provider: "**Perplexity AI**".
+3.  Follow cline's prompts (it uses AI to set up the Perplexity MCP server, likely asking for your API key).
+4.  Copy the MCP settings (URL, headers/token) cline provides.
 
 ### Configure Roo Code
 1.  Open Roo Code settings in VS Code (Ctrl+Shift+P -> "Roo Code: Open Settings").
-2.  Paste the Perplexity, GitHub, and **Hyperbrowser** MCP details copied from cline into the corresponding "Model Context Protocol (MCP) Settings" sections.
+2.  Paste the Perplexity MCP details copied from cline into the "Model Context Protocol (MCP) Settings" section for Perplexity.
 
 ### Install the SPARC-Omega RooModes
-1.  Copy the `.roomodes` file from this repository into the root directory of your project (or a parent directory).
-2.  Roo Code will automatically detect and load the modes. (You can also save modes globally via Roo Code's UI/CLI if preferred).
-    *   *Note*: The core logic and instructions, including the knowledge-guiding prompts and tool usage, are embedded within each mode definition in this `.roomodes` file.
+1.  Copy the `.roomodes` JSON content provided earlier into a file named `.roomodes` in the root directory of your project (or a parent directory Roo Code can access). You can also create/paste these modes using the Roo Code UI's "Modes" section.
+2.  Roo Code should automatically detect and load the modes upon restarting VS Code or refreshing Roo Code.
+    *   *Note*: The core Ontology-guided logic, SPARC flow adherence, and Perplexity usage instructions are all embedded within the `customInstructions` of each mode definition in this `.roomodes` file.
 
 ### Start Vibing!
-1.  Open a Roo Code chat in VS Code.
-2.  Select an Omega mode (e.g., `🌟 SPARC-Omega Orchestrator`) from the mode selector.
-3.  Give it a high-level objective and watch the knowledge-guided, tool-wielding AI agents collaborate!
+1.  Open a Roo Code chat in VS Code (usually accessible via the Roo icon in the activity bar).
+2.  Select a SPARC-Omega mode (e.g., start with `⚡️ SPARC Orchestrator` or `❓Ask`) from the mode selector dropdown at the top of the chat window.
+3.  Give it a high-level objective, referencing Ontology concepts where helpful (e.g., "Design a system considering `:Scalability` for a chat app"). Watch the knowledge-guided, research-enabled AI agents collaborate!
 
 ## 🙏 Acknowledgements
 
@@ -183,12 +166,10 @@ Licensed under the MIT License—see the `LICENSE` file for details.
 
 ## 🔗 Related Resources
 -   [Roo Code Docs](https://roo.ai/docs)
--   [Perplexity API Docs](https://perplexity.ai/api)
--   [GitHub API Docs](https://docs.github.com/en/rest)
--   [Hyperbrowser MCP Global Repo](https://github.com/hyperbrowserai/mcpglobal) (For Hyperbrowser tool details)
+-   [Perplexity API Docs](https://docs.perplexity.ai/)
 -   [MCP Standard](https://mcp.ai) (Underlying protocol)
--   [cline Setup](https://cline.tools) (Easiest MCP Server Setup)
+-   [cline Setup](https://cline.tools) (Easiest MCP Server Setup for Perplexity)
 
 ---
 
-Built with ❤️ by SPARC-Omega vibe coders. Let's automate the future, proactively!
+Built with ❤️ by SPARC-Omega vibe coders. Let's automate the future, guided by knowledge and Ontology!
