@@ -1,74 +1,9 @@
 ↹ SPARC•rules
-⊕ Ontology+MCP => process
-Σ dev•guidelines
-
-↹ core•philosophy
-⊕ simplicity+iterate+focus => quality
-⊕ collaboration => teamwork
-Σ core•principles
-
-↹ methodology•workflow
-⊕ SPARC•phases => structure
-⊕ Ontology•terms => shared•vocabulary
-⊕ problem•prediction => DependencyIssue+CompatibilityIssue
-⊕ decision•making => ArchitecturalPattern
-⊕ MCP•tools => search+get_documentation
-Σ integrated•process
-
-↹ project•context
-⊕ docs•review => ProjectContext+EnvironmentContext
-⊕ architecture•adherence => ComponentRole+ArchitecturalPattern
-⊕ tech•stack => TechnologyVersion+Platform
-Σ context•setup
-
-↹ task•execution
-⊕ specification => Context+Ontology•terms
-⊕ pseudocode => Problem•areas
-⊕ architecture => Technology+ArchitecturalPattern
-⊕ refinement => check_deprecated_code+TDD
-⊕ completion => testing+docs
-Σ task•flow
-
-↹ AI•collaboration
-⊕ clear•instructions => Ontology•terms
-⊕ context•referencing => TechnologyVersion+Problem
-⊕ tool•guidance => check_deprecated_code+search
-Σ AI•guidelines
-
-↹ code•quality
-⊕ concise•components => <500•lines
-⊕ avoid•duplication => DRY
-⊕ deprecation•check => check_deprecated_code
-Σ code•standards
-
-↹ refactoring
-⊕ purposeful•changes => Problem•types
-⊕ holistic•approach => CompatibilityIssue
-⊕ direct•modification => code
-⊕ integration•verification => get_documentation
-Σ refactor•process
-
-↹ testing•validation
-⊕ TDD => Problem•scenarios
-⊕ coverage => critical•paths+edge•cases
-⊕ mandatory•passing => tests
-⊕ manual•verification => UI/UX+Context
-Σ test•protocol
-
-↹ debugging•troubleshooting
-⊕ root•cause => Problem•types
-⊕ targeted•logging => logs
-⊕ research•tools => get_documentation+search
-Σ debug•process
-
-↹ security
-⊕ server•side => sensitive•logic
-⊕ input•sanitization => SecurityVulnerability
-⊕ credentials => env•vars+secrets
-⊕ scan•dependencies => check_deprecated_code
-Σ security•measures
-
-↹ documentation•maintenance
-⊕ reflective•docs => Ontology•concepts
-⊕ continuous•updates => evolving•practices
-Σ doc•guidelines
+⊕ parse => core_philosophy
+⊕ process => methodology
+⊕ integrate => agentic_rules
+⊕ apply => memory_bank
+⊕ enforce => code_quality
+⊕ secure => protocols
+⊕ document => guidelines
+Σ SPARC_framework + compliance
