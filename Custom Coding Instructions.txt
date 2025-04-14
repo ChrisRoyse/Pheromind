@@ -1,46 +1,74 @@
-↹ SPARC-Omega•rules
-⊕ decompose•modes => roles
-⊕ integrate•ontology + tools
-⊕ orchestrate•TDD•loop => core•process
-Σ workflow + TDD•orchestration
+↹ SPARC•rules
+⊕ Ontology+MCP => process
+Σ dev•guidelines
 
 ↹ core•philosophy
-⊕ TDD => test•first•always
-⊕ minimal•code => just•enough•to•pass
-⊕ simplicity => clear•modular•code
-⊕ ontology => quality•checks•guidance
-⊕ tools => structured•collab•automation
-Σ principles + TDD•focus
+⊕ simplicity+iterate+focus => quality
+⊕ collaboration => teamwork
+Σ core•principles
 
-↹ methodology
-⊕ recursive•TDD•cycle => test•code•pass•refine•loop
-⊕ mode-driven => orchestration•specialization
-⊕ modularity => <500•lines•focused
-⊕ traceability => new_task•attempt•link
-Σ process + iterative•rules
+↹ methodology•workflow
+⊕ SPARC•phases => structure
+⊕ Ontology•terms => shared•vocabulary
+⊕ problem•prediction => DependencyIssue+CompatibilityIssue
+⊕ decision•making => ArchitecturalPattern
+⊕ MCP•tools => search+get_documentation
+Σ integrated•process
 
-↹ ontology•role
-⊕ proactive => :Problem•:Solution•:Pattern
-⊕ context => test•debug•refine•guidance
-⊕ validation => architecture•security•compat
-Σ guidance + proactive•validation
+↹ project•context
+⊕ docs•review => ProjectContext+EnvironmentContext
+⊕ architecture•adherence => ComponentRole+ArchitecturalPattern
+⊕ tech•stack => TechnologyVersion+Platform
+Σ context•setup
 
-↹ MCP•tools
-⊕ Perplexity => research•docs•APIs
-⊕ GitHub => repo•code•test•management
-⊕ Hyperbrowser => scrape•extract•agents•UI•test•debug
-Σ integration + enhanced•automation
+↹ task•execution
+⊕ specification => Context+Ontology•terms
+⊕ pseudocode => Problem•areas
+⊕ architecture => Technology+ArchitecturalPattern
+⊕ refinement => check_deprecated_code+TDD
+⊕ completion => testing+docs
+Σ task•flow
 
-↹ mode•rules
-⊕ sparc-omega => orchestrate•TDD•flow•delegate
-⊕ tdd-omega => minimal•test•first•drive•agents
-⊕ code-omega => minimal•code•to•pass•github
-⊕ security-omega => final•review•before•deploy
-Σ roles + TDD•responsibilities
+↹ AI•collaboration
+⊕ clear•instructions => Ontology•terms
+⊕ context•referencing => TechnologyVersion+Problem
+⊕ tool•guidance => check_deprecated_code+search
+Σ AI•guidelines
 
-↹ guidelines
-⊕ code => DRY•<500•lines•minimal•focused
-⊕ testing => TDD•first•minimal•coverage•pass•refactor
-⊕ security => final•audit•no•secrets•env•vars
-⊕ reflection => improve•after•pass•optimize
-Σ best•practices + SPARC•checks
+↹ code•quality
+⊕ concise•components => <500•lines
+⊕ avoid•duplication => DRY
+⊕ deprecation•check => check_deprecated_code
+Σ code•standards
+
+↹ refactoring
+⊕ purposeful•changes => Problem•types
+⊕ holistic•approach => CompatibilityIssue
+⊕ direct•modification => code
+⊕ integration•verification => get_documentation
+Σ refactor•process
+
+↹ testing•validation
+⊕ TDD => Problem•scenarios
+⊕ coverage => critical•paths+edge•cases
+⊕ mandatory•passing => tests
+⊕ manual•verification => UI/UX+Context
+Σ test•protocol
+
+↹ debugging•troubleshooting
+⊕ root•cause => Problem•types
+⊕ targeted•logging => logs
+⊕ research•tools => get_documentation+search
+Σ debug•process
+
+↹ security
+⊕ server•side => sensitive•logic
+⊕ input•sanitization => SecurityVulnerability
+⊕ credentials => env•vars+secrets
+⊕ scan•dependencies => check_deprecated_code
+Σ security•measures
+
+↹ documentation•maintenance
+⊕ reflective•docs => Ontology•concepts
+⊕ continuous•updates => evolving•practices
+Σ doc•guidelines
