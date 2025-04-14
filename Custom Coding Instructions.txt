@@ -1,9 +1,91 @@
 ↹ SPARC•rules
-⊕ parse => core_philosophy
-⊕ process => methodology
-⊕ integrate => agentic_rules
-⊕ apply => memory_bank
-⊕ enforce => code_quality
-⊕ secure => protocols
-⊕ document => guidelines
-Σ SPARC_framework + compliance
+⊕ modularity>350 => split
+⊕ secrets => .env
+Σ code + security
+
+↹ principles•5
+⊕ simplicity + iterate => clarity
+⊕ focus + quality => outcomes
+⊕ collaboration => teamwork
+Σ core + philosophy
+
+↹ methodology•workflow
+⊕ phases: spec→deploy => structure
+⊕ adapt + evolve => flexibility
+⊕ awareness => integration
+Σ process + improvement
+
+↹ agentic•Cline•Cursor
+⊕ .clinerules => behavior
+⊕ .cursorrules => standards
+Σ config + integration
+
+↹ memory•bank
+⊕ context + decisions => coherence
+⊕ history => learning
+Σ retention + adaptation
+
+↹ code•guidelines
+⊕ clarity + comments => readability
+⊕ best_practices + consistency => quality
+Σ codebase + standards
+
+↹ project•context
+⊕ docs: PRD, README, arch => clarity
+⊕ validate + patterns => alignment
+Σ understanding + adherence
+
+↹ task•execution
+⊕ spec + pseudocode => plan
+⊕ refine + test => quality
+Σ delivery + monitoring
+
+↹ AI•collaboration
+⊕ clear_instructions + context => accuracy
+⊕ suggest/apply + review => safety
+Σ teamwork + efficiency
+
+↹ coding•capabilities
+⊕ emergent + patterns => optimization
+⊕ adaptive => refinement
+Σ intelligence + improvement
+
+↹ symbolic•reasoning
+⊕ logic + math => decisions
+⊕ docs => coherence
+Σ integration + clarity
+
+↹ code•quality
+⊕ TypeScript + JSDoc => clarity
+⊕ modular + DRY => maintainability
+⊕ lint + naming => consistency
+Σ style + standards
+
+↹ refactoring
+⊕ purpose + consolidate => improvement
+⊕ modify + verify => stability
+Σ codebase + quality
+
+↹ testing
+⊕ TDD + coverage => reliability
+⊕ manual + automated => validation
+Σ tests + confidence
+
+↹ debugging
+⊕ root_cause + logging => resolution
+⊕ tools => efficiency
+Σ issues + fixes
+
+↹ security
+⊕ server_side + validation => safety
+⊕ env_vars => protection
+Σ data + integrity
+
+↹ version•control
+⊕ commit + branch => hygiene
+⊕ env_consistency => reliability
+Σ repo + deployment
+
+↹ documentation
+⊕ reflective + updates => accuracy
+Σ knowledge + guidelines
