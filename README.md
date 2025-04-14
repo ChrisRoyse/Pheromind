@@ -15,12 +15,18 @@ Step into the future of AI-assisted development with **SPARC-Omega Vibe Coding**
 1.  **Ontology-Guided Prompts:** A structured way to leverage the AI's internal knowledge about software architecture concepts (`:Problem` types, `:ArchitecturalPattern`s, `:TechnologyVersion`s, `:Context`).
 2.  **SPARC-Omega Methodology:** An enhanced workflow (Specification, Pseudocode, Architecture, Refinement, Completion), inspired by Reuven Cohen's SPARC and Boomerang Tasks, guiding development lifecycle stages.
 3.  **Perplexity Research:** Real-time knowledge infusion via Perplexity's MCP tools (`search`, `get_documentation`, etc.).
-4.  **Dual-Mode LLM Strategy:** Optimized AI performance using **Anthropic's Claude 3.5 Sonnet** at specific **temperatures** tailored to task types – higher for creativity/planning, lower for precision/execution.
+4.  **Dual-Mode LLM Strategy:** Optimized AI performance using **Anthropic's Claude 3.7 Sonnet** at specific **temperatures** tailored to task types – higher for creativity/planning, lower for precision/execution.
 5.  **Roo Code Multi-Agent System:** The platform hosting specialized AI agents collaborating on your project.
 
 You define the goal. The SPARC-Omega Orchestrator, operating in **"Thinking Mode" (Claude 3.7 Sonnet @ Temp 0.7)**, analyzes it using Ontology concepts and delegates tasks to specialized agents. Agents focused on planning, design, and documentation also use Thinking Mode. Agents responsible for concrete implementation, testing, debugging, and operations switch to **"Instruct Mode" (Claude 3.7 Sonnet Instruct @ Temp 0.25)** for high-fidelity execution. All agents leverage Ontology prompts and Perplexity tools as needed.
 
 This creates a synergistic system where structured architectural thinking, targeted research, and optimized AI reasoning work together for superior results.
+
+## 📺 Quick Start Video Guide
+
+[![Watch the SPARC-Omega Vibe Coding Setup Guide](https://img.youtube.com/vi/EEXAcMqRv3E/maxresdefault.jpg)](https://youtu.be/EEXAcMqRv3E)
+
+👆 **Click the image above for a complete setup walkthrough!** This video guide will help you quickly install and configure SPARC-Omega Vibe Coding with all its components.
 
 ## 🔄 NEW: Dual-Mode LLM Strategy with Claude 3.7 Sonnet
 
