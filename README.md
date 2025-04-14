@@ -174,5 +174,9 @@ Licensed under the MIT License—see the `LICENSE` file for details.
 -   [cline Setup](https://cline.tools)
 
 ---
+## 👤 Connect
+- [🔗 LinkedIn - Christopher Royse](https://www.linkedin.com/in/christopher-royse-b624b596/)
+
+---
 
 Code smarter, not just faster. Embrace the Ontology-guided, dual-mode Vibe with Claude 3.5 Sonnet!
