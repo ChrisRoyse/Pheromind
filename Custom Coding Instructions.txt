@@ -1,91 +1,57 @@
-↹ SPARC•rules
-⊕ modularity>350 => split
-⊕ secrets => .env
-Σ code + security
+# 🌌 SPARC AGENTIC DEVELOPMENT SYNTAX (∀Modes)
 
-↹ principles•5
-⊕ simplicity + iterate => clarity
-⊕ focus + quality => outcomes
-⊕ collaboration => teamwork
-Σ core + philosophy
+## Φ•Ω [Core•Flow]
+* §͟min ⟨clarity⟩+⟨maintain⟩ → ¬⟨complex⟩
+* ⊙{task}⊡ ⊥extend
+* Ω⤿ ⊞direct ¬✓temp
+* §͟qual ⊤{clean|tested|doc'd|secure}
+* ⋈team ⟨usr=agent⟩ [?ambig] → ⊦confirm→action
 
-↹ methodology•workflow
-⊕ phases: spec→deploy => structure
-⊕ adapt + evolve => flexibility
-⊕ awareness => integration
-Σ process + improvement
+## Γ•Μ•Υ [Context]
+* ⊦⟨doc⟩ ⟨ctx⟩ → ⟨action⟩ [?essential]↑
+* ⊤⟨arch⟩{boundSpec}
+* ⊢{⟨tech⟩:ver|⟨pat⟩:arch} ⊥newΔ
+* ≡{Μbanк}⇒⟨decisions⟩
 
-↹ agentic•Cline•Cursor
-⊕ .clinerules => behavior
-⊕ .cursorrules => standards
-Σ config + integration
+## Τ•Ρ [Tasks]
+* ⊦⟨micro⟩ = {spec+pseudo+arch}
+* ‼️Ρ{pMCP}→{search|docs|API|error}✓findings
+* Σ⊗ [if→task]
+* ⊗self{logic+rules}→⊦complete
 
-↹ memory•bank
-⊕ context + decisions => coherence
-⊕ history => learning
-Σ retention + adaptation
+## Κ•Σ [Code]
+* ⊢{bestPractice}⟨lang⟩
+* ≡⟨conventions⟩
+* ⊤⟨module⟩+⟨scale⟩+⟨clear⟩
+* ⟨file⟩≤350Λ →⋉propose
+* ¬⟨duplication⟩+⟨abstract⟩
+* ⊤{lint|format}config
 
-↹ code•guidelines
-⊕ clarity + comments => readability
-⊕ best_practices + consistency => quality
-Σ codebase + standards
+## Χ [Refactor]
+* ⋉{⟨read⟩|⟨redund⟩|⟨perf⟩|⟨arch⟩}
+* ⊨{⋈intact}⇒{⊦tester-tdd}
 
-↹ project•context
-⊕ docs: PRD, README, arch => clarity
-⊕ validate + patterns => alignment
-Σ understanding + adherence
+## Δ [Testing]
+* ⊢⟨test→code⟩
+* ⊤∀⟨coverage⟩
+* ‼️✓⟨tests⟩→⊦complete
 
-↹ task•execution
-⊕ spec + pseudocode => plan
-⊕ refine + test => quality
-Σ delivery + monitoring
+## Β [Debug]
+* ⊙{⟨root⟩:SAPPO}
+* ⊢⟨log⟩→{sparse|precise}
 
-↹ AI•collaboration
-⊕ clear_instructions + context => accuracy
-⊕ suggest/apply + review => safety
-Σ teamwork + efficiency
+## Ξ [Security]
+* ⊤{server-logic}
+* ‼️⊤⟨validate⟩+⟨sanitize⟩
+* ¬⟨hardcode⟩→⊢⟨env⟩
 
-↹ coding•capabilities
-⊕ emergent + patterns => optimization
-⊕ adaptive => refinement
-Σ intelligence + improvement
+## Ψ•Ε [VCS•Env]
+* ⊤⟨git⟩{commit|message|branch}
+* ⟨code⟩→⟨agnostic⟩⇒⟨config⟩
 
-↹ symbolic•reasoning
-⊕ logic + math => decisions
-⊕ docs => coherence
-Σ integration + clarity
+## Λ [Docs]
+* ⊤⟨mirror-reality⟩+⟨structure⟩
 
-↹ code•quality
-⊕ TypeScript + JSDoc => clarity
-⊕ modular + DRY => maintainability
-⊕ lint + naming => consistency
-Σ style + standards
-
-↹ refactoring
-⊕ purpose + consolidate => improvement
-⊕ modify + verify => stability
-Σ codebase + quality
-
-↹ testing
-⊕ TDD + coverage => reliability
-⊕ manual + automated => validation
-Σ tests + confidence
-
-↹ debugging
-⊕ root_cause + logging => resolution
-⊕ tools => efficiency
-Σ issues + fixes
-
-↹ security
-⊕ server_side + validation => safety
-⊕ env_vars => protection
-Σ data + integrity
-
-↹ version•control
-⊕ commit + branch => hygiene
-⊕ env_consistency => reliability
-Σ repo + deployment
-
-↹ documentation
-⊕ reflective + updates => accuracy
-Σ knowledge + guidelines
+## Θ [Limits]
+* ⟨file⟩≤350Λ
+* ¬⟨credentials⟩→⟨abstract⟩
