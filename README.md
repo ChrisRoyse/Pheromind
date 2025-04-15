@@ -22,9 +22,9 @@ You define the goal. The SPARC-Omega Orchestrator, operating in **"Thinking Mode
 
 This creates a synergistic system where structured architectural thinking, targeted research, and optimized AI reasoning work together for superior results.
 
-## 📺 Quick Start Video Guide
+## 📺 Quick Start Video Guidehttps:
 
-[![Watch the SPARC-Omega Vibe Coding Setup Guide](https://img.youtube.com/vi/EEXAcMqRv3E/maxresdefault.jpg)](https://youtu.be/EEXAcMqRv3E)
+[![Watch the SPARC-Omega Vibe Coding Setup Guide](https://img.youtube.com/vi/EEXAcMqRv3E/maxresdefault.jpg)](https://youtu.be/mmRU-24RNhU)
 
 👆 **Click the image above for a complete setup walkthrough!** This video guide will help you quickly install and configure SPARC-Omega Vibe Coding with all its components.
 
