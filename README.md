@@ -198,6 +198,19 @@ This framework heavily builds upon the pioneering work of **Reuven Cohen**, part
 ## 📜 License
 Licensed under the MIT License—see the `LICENSE` file for details.
 
+## 🙏 Support Development
+
+<div align="center">
+  <p>If you find this framework valuable, please consider supporting its continued development and maintenance.</p>
+
+  <a href="https://paypal.me/ChrisRoyseAI" target="_blank">
+    <img src="https://img.shields.io/badge/Support_via_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Support via PayPal" width="250"/>
+  </a>
+
+  <p style="margin-top: 10px;">Developing and experimenting with advanced AI tools incurs API costs. Your contributions help offset these expenses, allowing for further refinement, feature additions, and the creation of helpful resources for the community.</p>
+  <p>Thank you for your support!</p>
+</div>
+
 ## 🔗 Related Resources
 -   [Roo Code Docs](https://roo.ai/docs)
 -   [Perplexity API Docs](https://docs.perplexity.ai/)
