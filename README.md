@@ -1,165 +1,199 @@
-# 🚀 SPARC-Omega Vibe Coding: Ontology-Guided AI + Perplexity!
+# 🚀 SPARC-SAPPO Agentic Development Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Roo Code Compatible](https://img.shields.io/badge/Roo%20Code-Compatible-brightgreen)](https://roo.ai)
 [![Perplexity API](https://img.shields.io/badge/Perplexity-API-blue)](https://perplexity.ai)
-[![Anthropic Claude](https://img.shields.io/badge/Requires-Claude%203.5%20Sonnet-purple)](https://www.anthropic.com/news/claude-3-5-sonnet)
-[![Ontology-Guided](https://img.shields.io/badge/Ontology-Guided-purple)](.)
+[![Gemini 1.5 Pro](https://img.shields.io/badge/Uses-Gemini%201.5%20Pro-blueviolet)](https://deepmind.google/technologies/gemini/)
+[![GPT-4o](https://img.shields.io/badge/Uses-GPT--4o-lightgreen)](https://openai.com/index/hello-gpt-4o/)
+[![Ontology-Guided (SAPPO)](https://img.shields.io/badge/Ontology-Guided%20(SAPPO)-purple)](.)
 [![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC-orange)](.)
 [![cline MCP Installer](https://img.shields.io/badge/cline-MCP%20Installer-orange)](https://cline.tools)
 
-## 🎧 What is This? (The SPARC-Omega Vibe Explained)
+## 🌌 What is This? (The SPARC-SAPPO Framework Explained)
 
-Step into the future of AI-assisted development with **SPARC-Omega Vibe Coding**. This framework elevates coding beyond simple autocompletion by integrating:
+Welcome to the SPARC-SAPPO Agentic Development Framework, a highly structured system for AI-assisted software engineering built on Roo Code. This framework combines several key principles for robust, efficient, and high-quality code generation:
 
-1.  **Ontology-Guided Prompts:** A structured way to leverage the AI's internal knowledge about software architecture concepts (`:Problem` types, `:ArchitecturalPattern`s, `:TechnologyVersion`s, `:Context`).
-2.  **SPARC-Omega Methodology:** An enhanced workflow (Specification, Pseudocode, Architecture, Refinement, Completion), inspired by Reuven Cohen's SPARC and Boomerang Tasks, guiding development lifecycle stages.
-3.  **Perplexity Research:** Real-time knowledge infusion via Perplexity's MCP tools (`search`, `get_documentation`, etc.).
-4.  **Dual-Mode LLM Strategy:** Optimized AI performance using **Anthropic's Claude 3.7 Sonnet** at specific **temperatures** tailored to task types – higher for creativity/planning, lower for precision/execution.
-5.  **Roo Code Multi-Agent System:** The platform hosting specialized AI agents collaborating on your project.
+1.  **SPARC Agentic Development Syntax:** A concise symbolic language (see top of `README.md` source or [SPARC Syntax Details](#-sparc-syntax-overview) below) defining core principles like clarity, extensibility, testing, and collaboration. These principles are embedded within the agent instructions.
+2.  **SAPPO (Software Architecture Problem Prediction Ontology):** A custom ontology used explicitly by AI agents to frame tasks, identify potential problems (`:Problem`), apply solutions (`:Solution`), understand context (`:Context`), and leverage architectural knowledge (`:ArchitecturalPattern`, `:TechnologyVersion`).
+3.  **Micro-Task Orchestration:** A central `🧠 SAPPO Orchestrator` agent breaks down user-defined plans into hyper-specific, single micro-tasks, minimizing context window usage and enabling fast feedback loops.
+4.  **Mandatory RDD (Research-Driven Development) via Perplexity:** All specialized agents **MUST** use Perplexity MCP tools (`search`, `get_documentation`, etc.) to resolve ambiguities, verify best practices, or look up API details *before* acting.
+5.  **Dual-Model LLM Strategy:** Utilizes distinct LLMs and temperature settings for different cognitive tasks:
+    *   **🧠 Thinking Mode (Gemini 1.5 Pro @ Temp 0.7):** For planning, design, specification, architectural reasoning, and documentation.
+    *   **🛠️ Instruct Mode (GPT-4o @ Temp 0.25):** For precise code implementation, testing, debugging, and operations following strict instructions.
+6.  **Integrative & Cumulative TDD:** A dedicated `🧪 Tester (Integrative & Cumulative TDD)` agent writes tests for each new unit *and* re-runs all relevant prior tests to ensure no regressions are introduced.
+7.  **Roo Code Multi-Agent System:** Hosted within VS Code's Roo Code extension, enabling seamless collaboration between the specialized AI agents defined in the `.roomodes` file.
 
-You define the goal. The SPARC-Omega Orchestrator, operating in **"Thinking Mode" (Claude 3.7 Sonnet @ Temp 0.7)**, analyzes it using Ontology concepts and delegates tasks to specialized agents. Agents focused on planning, design, and documentation also use Thinking Mode. Agents responsible for concrete implementation, testing, debugging, and operations switch to **"Instruct Mode" (Claude 3.7 Sonnet Instruct @ Temp 0.25)** for high-fidelity execution. All agents leverage Ontology prompts and Perplexity tools as needed.
+**The Core Idea:** You provide a **detailed, multi-phase plan**. The `Orchestrator` (using Gemini 1.5 Pro) interprets this plan, anticipates SAPPO `:Problem`s, and delegates **one micro-task at a time** using precise SAPPO terminology to a specialist agent. Specialists (like the `Coder` using GPT-4o) execute their single task, leveraging Perplexity for RDD, and report back with `attempt_completion`, including SAPPO/MCP summaries. The `Tester` ensures continuous integration validity. This cycle repeats until your plan is complete, emphasizing **good practices and structured planning** over raw model size.
 
-This creates a synergistic system where structured architectural thinking, targeted research, and optimized AI reasoning work together for superior results.
+## 📺 Quick Start & Methodology Video Guide:
 
-## 📺 Quick Start Video Guidehttps:
+[![Watch the Setup & Best Practices Guide](https://img.youtube.com/vi/EEXAcMqRv3E/maxresdefault.jpg)](https://youtu.be/mmRU-24RNhU)
 
-[![Watch the SPARC-Omega Vibe Coding Setup Guide](https://img.youtube.com/vi/EEXAcMqRv3E/maxresdefault.jpg)](https://youtu.be/mmRU-24RNhU)
+👆 **Click the image above for a complete walkthrough!** This video covers:
+*   Setting up Roo Code with the SPARC-SAPPO modes.
+*   Configuring the Dual-Model LLM profiles (Gemini 1.5 Pro & GPT-4o).
+*   Best practices for **structuring your plans** effectively.
+*   Understanding the **micro-tasking workflow** and **TDD strategy**.
+*   The importance of **context window management** (<~200k goal for instruct tasks).
 
-👆 **Click the image above for a complete setup walkthrough!** This video guide will help you quickly install and configure SPARC-Omega Vibe Coding with all its components.
+## 🧠🛠️ NEW: Dual-Model LLM Strategy (Gemini 1.5 Pro + GPT-4o)
 
-## 🔄 NEW: Dual-Mode LLM Strategy with Claude 3.7 Sonnet
+This framework leverages the strengths of different cutting-edge LLMs by assigning them roles based on the cognitive demands of the task:
 
-This is the core engine optimization. Different tasks require different AI "mindsets." SPARC-Omega leverages this by using **Anthropic's Claude 3.7 Sonnet** with two distinct temperature settings:
-
-1.  🧠 **Thinking Mode (Temperature: 0.7)**
-    *   **Model:** Claude 3.7 Sonnet
-    *   **Purpose:** Brainstorming, planning, high-level design, creative writing, exploring possibilities, complex reasoning. Higher temperature allows for more diverse and novel outputs.
+1.  **🧠 Thinking Mode (Temperature: 0.7)**
+    *   **Model:** **Google Gemini 1.5 Pro**
+    *   **Purpose:** High-level planning, creative problem-solving, architectural design, writing detailed specifications, documentation, complex reasoning, and understanding user intent. Higher temperature encourages broader exploration.
     *   **Used By:**
-        *   `⚡️ SPARC Orchestrator (sparc)`
-        *   `📋 Specification Writer (spec-pseudocode)`
+        *   `🧠 SAPPO Orchestrator (orchestrator)`
+        *   `📝 Spec Writer (spec-writer)`
         *   `🏗️ Architect (architect)`
-        *   `📚 Documentation Writer (docs-writer)`
-        *   `❓ Ask (ask)`
+        *   `📚 Docs Writer (docs-writer)`
+        *   `❓ Ask Guide (ask)`
         *   `📘 Tutorial (tutorial)`
 
-2.  🛠️ **Instruct Mode (Temperature: 0.25)**
-    *   **Model:** Claude 3.7 Sonnet
-    *   **Purpose:** Precise code generation, detailed implementation, debugging, testing against specific criteria, following instructions strictly, generating factual and consistent output. Lower temperature reduces randomness and increases focus.
+2.  **🛠️ Instruct Mode (Temperature: 0.25)**
+    *   **Model:** **OpenAI GPT-4o**
+    *   **Purpose:** Precise code generation following specs, implementing specific algorithms, writing unit and integration tests, debugging specific errors, performing security audits, executing DevOps commands, and integrating components accurately. Lower temperature ensures focus and fidelity to instructions.
     *   **Used By:**
-        *   `🧠 Auto-Coder (code)`
-        *   `🧪 Tester (TDD, tdd)`
+        *   `🧠 Coder (code)`
+        *   `🧪 Tester (tester-tdd)`
         *   `🪲 Debugger (debug)`
-        *   `🛡️ Security Reviewer (security-review)`
-        *   `🔗 System Integrator (integration)`
+        *   `🛡️ Security Reviewer (security-reviewer)`
+        *   `🔗 Integrator (integrator)`
+        *   `📈 Monitor (monitor)`
+        *   `🧹 Optimizer (optimizer)`
         *   `🚀 DevOps (devops)`
-        *   `📈 Deployment Monitor (post-deployment-monitoring-mode)`
-        *   `🧹 Optimizer (refinement-optimization-mode)`
 
-**Why this matters:** Using the right temperature for the job maximizes the AI's effectiveness. You get creative exploration when needed (design) and precise execution when required (coding), leading to better overall quality and efficiency. Implementing this typically requires configuring Roo Code carefully, potentially using tools like **Requestly** to dynamically adjust API call parameters if native switching per mode isn't feasible (see Getting Started).
+**Why this split?** It optimizes performance and cost. Gemini 1.5 Pro excels at reasoning and planning, while GPT-4o is highly capable at precise instruction following and code generation. By assigning tasks appropriately and keeping instruct tasks focused (aiming for completion within ~100-200k context tokens to manage costs and maintain focus, even with larger available windows), the system balances capability with efficiency. **Your detailed plan is the key driver enabling this efficiency.**
 
-## ✨ Ontology Integration & SPARC-Omega Methodology
+## ✨ Key Features & Methodology
 
-While leveraging the powerful dual-mode LLM, the framework remains grounded in:
+This framework enforces a robust development process:
 
-### 🏛️ Ontology-Guided Reasoning
+### 🏛️ SAPPO-Guided Micro-Tasking
+-   **Ontology Integration:** SAPPO terms (`:Problem`, `:Solution`, `:TechnologyVersion`, `:ArchitecturalPattern`, `:Context`, etc.) are *mandated* in task framing by the Orchestrator and referenced in completions by Specialists.
+-   **Hyper-Granularity:** The `Orchestrator` decomposes your plan into the smallest logical units of work, enabling rapid iterations and precise context management.
+-   **Role Specialization:** Each agent (Coder, Tester, Architect...) has a sharply defined role and collaborates through the Orchestrator.
 
--   **Prompt-Based:** Uses conceptual labels (`:Problem`, `:Solution`, `:ArchitecturalPattern`, `:Context`, etc.) within agent instructions.
--   **Guides LLM Focus:** These prompts direct Claude 3.7 Sonnet to access relevant parts of its internal knowledge and structure its thinking around sound software engineering principles.
--   **Consistent & Proactive:** Ensures agents anticipate issues (e.g., `:CompatibilityIssue`) and apply appropriate patterns (e.g., `:Microservices`).
+### 🔍 Mandatory Research-Driven Development (RDD)
+-   **Perplexity MCP Integration:** Every specialist agent is instructed to **proactively use** `search`, `get_documentation`, `check_deprecated_code`, etc., via Perplexity MCP for *any* ambiguity, best practice check, or API lookup. No guessing allowed.
 
-### ✨ SPARC-Omega Workflow (Ontology & LLM-Tuned)
+### ✅ Integrative & Cumulative TDD
+-   **Phase-Based Testing:** The `Tester` agent validates each micro-task's output upon completion.
+-   **Regression Prevention:** Critically, the `Tester` **re-runs all relevant previous tests** cumulatively to ensure the new code integrates correctly without breaking existing functionality. **Your plan should include clear testing phases/requirements.**
 
-1.  **Specification (`sparc` -> `spec-pseudocode`, *Thinking Mode*)**: Define goals, `:Context`. Frame requirements using Ontology terms. High-level research via Perplexity.
-2.  **Pseudocode (`spec-pseudocode`, *Thinking Mode*)**: High-level logic, TDD anchors, anticipating `:Problem` areas. API research via Perplexity.
-3.  **Architecture (`sparc` -> `architect`, *Thinking Mode*)**: Design using `:ArchitecturalPattern`s, avoiding `:AntiPattern`s. Technology selection justified via `:Context`. Perplexity research on patterns/tech.
-4.  **Refinement (`sparc` -> various agents, *Instruct Mode primarily*)**:
-    *   `code`: Implement features precisely.
-    *   `tdd`: Write & run specific tests.
-    *   `debug`: Identify & fix bugs methodically.
-    *   `security-review`: Audit against known `:SecurityVulnerability` types.
-    *   `refinement-optimization-mode`: Apply concrete `:Solution`s to `:Problem`s.
-    *   Extensive use of Perplexity tools (`get_documentation`, `check_deprecated_code`, `search`).
-5.  **Completion (`sparc` -> various agents, *Mixed Modes*)**:
-    *   `integration` (*Instruct Mode*): Connect components, resolve `:CompatibilityIssue`.
-    *   `docs-writer` (*Thinking Mode*): Document `:ArchitectureConcept`s, setup.
-    *   `devops` (*Instruct Mode*): Deploy, manage `:EnvironmentContext`.
-    *   `post-deployment-monitoring-mode` (*Instruct Mode*): Observe for `:Problem`s.
+### 📄 Detailed Planning is Crucial
+-   **User Responsibility:** The success of this framework hinges on **you providing a well-structured, detailed, multi-phase plan.** The AI executes *your* plan.
+-   **Good Practices > Model Power:** As highlighted in the video, even the most advanced LLMs cannot compensate for poor planning or methodology. Focusing on clear phases, testable units, and modular design is paramount.
+
+### 🔄 The Workflow Loop
+1.  **You:** Provide a detailed plan to the `Orchestrator`.
+2.  **Orchestrator (Gemini 1.5 Pro):** Identifies the *next single micro-task*, frames it using SAPPO terms (`new_task @specialist...`).
+3.  **Specialist (e.g., Coder - GPT-4o):** Receives task, performs **mandatory RDD via MCP**, executes the single task (e.g., writes one function).
+4.  **Specialist:** Returns control with `attempt_completion`, providing a summary including work done, SAPPO concepts addressed, and MCP tools used.
+5.  **(If applicable) Tester (GPT-4o):** Tests the completed unit AND re-runs cumulative tests. Reports pass/fail with SAPPO/MCP details via `attempt_completion`.
+6.  **Orchestrator:** Analyzes completion/test results, identifies the *next* micro-task from your plan, loops back to step 2.
 
 ## ✨ Why It's a Game Changer
 
-This combination is potent:
-
--   🧠 **Optimized AI Performance**: Dual-mode temperatures tailor Claude 3.7 Sonnet's output for maximum creativity *or* precision as needed.
--   🏛️ **Structured Architectural Thinking**: Ontology guidance ensures robust, maintainable designs.
--   🎯 **Proactive Risk Management**: Anticipate `:Problem` types *before* coding begins.
--   💡 **Deep Research Power**: Perplexity provides targeted, real-time knowledge.
--   ✅ **Higher Quality Outputs**: More modular, testable, secure, and aligned code.
--   🔄 **Full Lifecycle Awareness**: Coherent process from idea to monitoring.
--   🤝 **Enhanced Collaboration**: Shared Ontology vocabulary + optimized AI reasoning.
+-   🏛️ **Structured & Predictable:** SAPPO and micro-tasking create a disciplined workflow.
+-   💡 **Accurate & Current:** Mandatory RDD via Perplexity ensures reliance on up-to-date information and best practices.
+-   ✅ **Robust & Reliable:** Cumulative TDD drastically reduces regressions.
+-   🧠 **Optimized AI Usage:** Dual-model strategy leverages the best of Gemini 1.5 Pro and GPT-4o for their respective tasks.
+-   💰 **Cost-Aware:** Hyper-granularity aims to keep instruct task context windows small (~100-200k goal), managing LLM costs effectively.
+-   📈 **Higher Quality:** Leads to more modular, testable, secure, and well-documented code aligned with architectural principles.
+-   🤝 **Clear Collaboration:** Shared SAPPO vocabulary and explicit task handoffs improve traceability.
 
 ## 🛠️ The Core Components
 
-1.  **SPARC-Omega Agent Army (.roomodes)**: Specialized AI personas defined in the `.roomodes` file, each assigned a default "Thinking" or "Instruct" mode context and relevant Perplexity tools.
-2.  **Ontology-Guided Prompts**: Instructions embedded with Ontology concepts to steer LLM reasoning.
-3.  **Perplexity Research Tools (MCP)**: `search`, `get_documentation`, `find_apis`, `check_deprecated_code`.
-4.  **Dual-Mode LLM Engine**: Requires Claude 3.7 Sonnet access configured for Temperature 0.7 (Thinking) and 0.25 (Instruct).
+1.  **SPARC-SAPPO Agent Army (.roomodes):** The JSON definitions of all specialized agents (Orchestrator, Coder, Tester, etc.) with their SAPPO-aware instructions, assigned LLM types (Thinking/Instruct), and mandatory MCP usage rules. Found at the top of this document source.
+2.  **SPARC Syntax:** The underlying symbolic principles guiding agent behavior. [See Overview](#-sparc-syntax-overview).
+3.  **SAPPO (Software Architecture Problem Prediction Ontology):** The conceptual framework used for task definition and architectural reasoning.
+4.  **Perplexity Research Tools (MCP):** Integrated via `search`, `get_documentation`, etc.
+5.  **Dual-Model LLM Engine:** Requires access to **Google Gemini 1.5 Pro** and **OpenAI GPT-4o** configured with appropriate temperatures.
 
-## 🎬 See It In Action (Dual-Mode Examples)
+## 🎬 See It In Action (Micro-Task Example)
 
-### Example 1: Designing a Feature (Thinking -> Instruct)
+**User Plan Snippet:** "Phase 2: Implement user login. Step 2.1: Create DB migration for 'users' table password hash column. Step 2.2: Implement backend login handler function. Step 2.3: Write tests for login handler."
 
-**User**: "Let's design and implement a recommendation feed feature based on user history."
+**▶️ Orchestrator (Gemini 1.5 Pro @ 0.7):** "Received plan. Next micro-task: DB Migration. `new_task @architect Design the :AlterTable :Solution for adding a 'password_hash' :DataSchemaField to the 'users' table. Specify :SQL datatype. Consider existing :ProjectContext. Use MCP search for secure hashing column type best practices.`"
 
-**⚡️ SPARC (Thinking Mode: Claude 3.7 Sonnet @ 0.7)**: "Intriguing! Recommendation engine. Assigning `architect`. Task: Design architecture for a recommendation feed. Consider `:Scalability`, `:PerformanceIssue`s (cold start), relevant `:ArchitecturalPattern`s (e.g., Content-Based Filtering, Collaborative Filtering). Research options via Perplexity `search`. Output diagram, component roles, API ideas. `attempt_completion`."
+**(Later) 🏗️ Architect (Gemini 1.5 Pro @ 0.7):** "`attempt_completion` Designed `ALTER TABLE users ADD COLUMN password_hash VARCHAR(255);` SQL snippet. SAPPO :Solution = :AlterTable. MCP `search` confirmed VARCHAR(255) suitable for common hash outputs. Returning control."
 
-**(Later) 🏗️ Architect (Thinking Mode: Claude 3.7 Sonnet @ 0.7)**: "Designed architecture using a hybrid `:ArchitecturalPattern`. Identified `:Scalability` concern for user history processing, suggesting an async `:ComponentRole`. Researched via Perplexity. Diagram attached. Ready for implementation planning. `attempt_completion`."
+**▶️ Orchestrator:** "Migration designed. Next: Implement login handler. `new_task @coder Implement the 'handleLogin' function for :UserAuth :ComponentRole using :NodeJS v20. Follow :JWT :ArchitecturalPattern provided in specs. Fetch user by email, verify hash using bcrypt library, issue JWT. Mandatory RDD: Use MCP get_documentation for precise bcrypt API usage. Watch for :TimingAttack :SecurityVulnerability. Handle :UserNotFound :Problem.`"
 
-**⚡️ SPARC (Thinking Mode: Claude 3.7 Sonnet @ 0.7)**: "Architecture approved. Assigning `code`. Task: Implement the core user history tracking API endpoint based on the spec. Use `:NodeJS` v20, `:PostgreSQL`. Ensure data integrity. `attempt_completion`. *Delegate will use Instruct Mode context.*"
+**(Later) 🧠 Coder (GPT-4o @ 0.25):** "`attempt_completion` Implemented `handleLogin` function in `authController.js` using NodeJS v20 and JWT pattern. Used MCP `get_documentation` for `bcrypt.compare` async signature. Included checks for user existence (:UserNotFound :Problem) and basic input presence. Used placeholder secret handling as per spec. Returning control."
 
-**(Later) 🧠 Code (Instruct Mode: Claude 3.7 Sonnet @ 0.25)**: "Implemented `/users/{id}/history` POST endpoint precisely as specified. `:TechnologyVersion`s used. Added input validation and database transaction logic. Code follows style guide. `attempt_completion`."
+**▶️ Orchestrator:** "Code complete. Next: Test login handler. `new_task @tester-tdd Write integrative tests for the 'handleLogin' function. Cover success case (valid credentials), failure (:UserNotFound, wrong password). Explicitly test against :TimingAttack :SecurityVulnerability if possible via mock timing (research via MCP search 'testing timing attacks nodejs'). Run these tests AND cumulative tests for User Profile module. All must pass.`"
+
+**(Later) 🧪 Tester (GPT-4o @ 0.25):** "`attempt_completion` Wrote 3 tests for `handleLogin` (success, invalid email, invalid pass) using Jest and supertest. Targeted SAPPO :UserNotFound, :LogicError. MCP `search` indicated direct timing attack tests complex; ensured constant-time compare function (`bcrypt.compare`) used based on Coder's MCP confirmation. Ran new tests + 5 prior User Profile tests. ALL PASSED. Returning control."
+
+**▶️ Orchestrator:** "Login handler implemented and tested. Proceeding to next step in user plan..."
 
 ## 🔧 Get Started (Join the Vibe!)
 
-Ready for Ontology-guided, dual-mode AI development with Claude 3.5 Sonnet?
+Ready for SAPPO-driven, dual-model AI development?
 
 ### Prerequisites
 1.  **VS Code** with the **Roo Code extension** installed.
-2.  **Anthropic API Key** with access to **Claude 3.7 Sonnet**.
-3.  **Perplexity API Key**.
+2.  **Google AI API Key** with access to **Gemini 1.5 Pro**.
+3.  **OpenAI API Key** with access to **GPT-4o**.
+4.  **Perplexity API Key**.
 
-### Configuration: The Dual-Mode Challenge
-Setting up the two different temperature modes using the *same base model* (Claude 3.7 Sonnet) requires careful configuration:
+### Configuration: Setting Up Dual Models & MCP
 
-1.  **Perplexity MCP Setup**:
-    *   Use [cline](https://cline.tools) (easiest) or manually set up an MCP server for Perplexity.
-    *   Search for and install the "Perplexity AI" provider in cline.
-    *   Follow prompts, enter your API key, and copy the MCP URL/Header details.
-    *   Paste these into Roo Code's Perplexity MCP settings.
+1.  **Perplexity MCP Setup:**
+    *   Use **[cline](https://cline.tools)** (recommended): Search for and install the "Perplexity AI" provider, enter your key, and copy the MCP URL/Header.
+    *   Manual Setup: Follow MCP standard guidelines if preferred.
+    *   Paste the MCP URL and Header details into Roo Code's Perplexity MCP settings.
 
-2.  **Claude 3.7 Sonnet Setup (IMPORTANT!)**:
-    *   You need to configure Roo Code to talk to Claude 3.7 Sonnet via the Anthropic API.
-    *   **Crucially, you need a way to apply Temperature 0.7 for 'Thinking' modes and 0.25 for 'Instruct' modes.** Roo Code might not natively support dynamic temperature switching based on the active *mode* easily when using a single model endpoint. Potential solutions:
-        *   **Ideal (Requires Roo Feature/Flexibility):** If Roo Code allows defining multiple configurations *for the same model* pointing to the same Anthropic API endpoint but with different default parameters (like temperature), create two: `claude-3.7-sonnet-thinking` (temp 0.7) and `claude-3.7-sonnet-instruct` (temp 0.25). Then *modify the `.roomodes` definitions* in your JSON to explicitly reference the appropriate configuration slug for each mode. (Check Roo Code documentation if this is possible).
-        *   **Requestly Workaround:** Configure *one* Claude 3.7 Sonnet endpoint in Roo Code. Use a tool like **Requestly** (browser extension/desktop app) to intercept the API calls from VS Code to your Claude endpoint. The rule would need to inspect the request payload (possibly identifying the mode from the prompt or meta-data if Roo includes it) and **modify the `temperature` parameter in the JSON payload** before it's sent to Anthropic. This requires Requestly setup and might be fragile.
-        *   **Manual Selection (Less Ideal):** If you can define the two configurations (`...-thinking`, `...-instruct`) in Roo Code, you might need to manually switch the *active model configuration* in the Roo Code chat UI depending on which *type* of mode (Thinking vs Instruct) you intend to invoke next. This demands user vigilance.
-    *   *Consult Roo Code documentation or community for the best current practice on managing distinct parameter sets for the same base model per mode invocation.*
+2.  **Dual LLM Configuration (IMPORTANT!):**
+    *   You need *two separate* model profiles configured in Roo Code:
+        *   **Profile 1 (Thinking):** Pointing to **Gemini 1.5 Pro**. Set the default **Temperature to 0.7**. Give it a clear name (e.g., `gemini-1.5-pro-thinking`).
+        *   **Profile 2 (Instruct):** Pointing to **GPT-4o**. Set the default **Temperature to 0.25**. Give it a clear name (e.g., `gpt-4o-instruct`).
+    *   Consult Roo Code documentation for creating multiple profiles for different models/providers.
+    *   **The `.roomodes` JSON provided *does not* explicitly assign models.** Roo Code currently selects the *globally active* model. **You MUST manually select the correct profile (Thinking/Instruct) in the Roo Code UI *before* invoking a task** intended for that type of agent (e.g., select `gemini-1.5-pro-thinking` before talking to the `Orchestrator`, then switch to `gpt-4o-instruct` before the Orchestrator delegates to the `Coder`). *This requires user diligence during the workflow.* (Future Roo Code versions might allow mode-specific model assignments).
 
-3.  **Install the SPARC-Omega RooModes**:
-    *   Copy the `.roomodes` JSON content provided earlier into a file named `.roomodes` in your project root (or a parent directory Roo Code checks).
-    *   Alternatively, use the Roo Code UI ("Modes" section) to create/paste each mode definition from the provided JSON. Ensure the `slug`, `name`, `roleDefinition`, and `customInstructions` match exactly.
-    *   Restart VS Code or refresh Roo Code.
+3.  **Install the SPARC-SAPPO RooModes:**
+    *   Copy the entire JSON object provided at the very top of this document source (`{ "customModes": [...] }`).
+    *   Go to Roo Code settings in VS Code (often via the Roo icon in the sidebar).
+    *   Find the "Edit Global Modes" or similar option.
+    *   Paste the copied JSON into the editor, replacing any existing content. Save the changes.
+    *   Alternatively, manually create each mode via the Roo Code UI, carefully copying `slug`, `name`, `roleDefinition`, and `customInstructions` for every mode in the JSON.
+    *   Restart VS Code or use the Roo Code command palette (`Roo Code: Reload Custom Modes`) to ensure they are loaded.
 
-### Start Vibing!
-1.  Open a Roo Code chat.
-2.  Select a SPARC-Omega mode (e.g., `⚡️ SPARC Orchestrator`). **Ensure your environment is correctly configured to apply the appropriate temperature (0.7 for Thinking modes, 0.25 for Instruct modes) when invoking tasks.**
-3.  Provide your objective and watch the Ontology-guided, temperature-tuned agents collaborate! Use `❓Ask` if you need guidance on mode selection or Ontology terms.
+### Start Developing!
+1.  Open a Roo Code chat in VS Code.
+2.  **Manually select the `gemini-1.5-pro-thinking` profile.**
+3.  Select the `🧠 SAPPO Orchestrator` mode.
+4.  Provide your detailed, phased development plan.
+5.  Observe the micro-tasking workflow. **Remember to manually switch to the `gpt-4o-instruct` profile in Roo Code when the Orchestrator indicates it's about to delegate an Instruct task (to Coder, Tester, etc.)**, and switch back to the thinking profile when control returns to the Orchestrator or another thinking agent.
+6.  Use the `❓ Ask Guide` mode if you need help structuring plans or understanding SAPPO/RDD concepts.
+
+## <a name="sparc-syntax-overview"></a>🌌 SPARC Syntax Overview
+
+The symbolic syntax at the top of this document source (`Φ•Ω`, `Γ•Μ•Υ`, etc.) represents core guiding principles encoded within the agent instructions. Here's a brief interpretation of key concepts:
+
+*   **Φ•Ω [Core•Flow]:** Focuses on overall workflow. Maintain clarity (`§͟min ⟨clarity⟩`), avoid complexity (`¬⟨complex⟩`), extend functionality systematically (`⊙{task}⊡ ⊥extend`), ensure clean/tested/documented/secure code (`§͟qual ⊤{...}`), and handle ambiguity via confirmation (`⋈team...→ ⊦confirm`).
+*   **Γ•Μ•Υ [Context]:** Emphasizes context understanding. Action driven by docs/context (`⊦⟨doc⟩ ⟨ctx⟩ → ⟨action⟩`), respecting architecture boundaries (`⊤⟨arch⟩{boundSpec}`), managing tech versions/patterns (`⊢{...} ⊥newΔ`), and recording decisions (`≡{Μbanк}⇒⟨decisions⟩`).
+*   **Τ•Ρ [Tasks]:** Defines task handling. Micro-tasks include specs/pseudo/arch (`⊦⟨micro⟩ = {...}`), mandatory research for uncertainty (`‼️Ρ{pMCP}→{search|...}✓findings`), conditional task execution (`Σ⊗ [if→task]`), and self-verification (`⊗self{...}→⊦complete`).
+*   **Κ•Σ [Code]:** Governs code quality. Adhere to best practices (`⊢{bestPractice}⟨lang⟩`), conventions (`≡⟨conventions⟩`), modularity/scalability/clarity (`⊤⟨module⟩+...`), reasonable file size (`⟨file⟩≤350Λ`), DRY/abstraction (`¬⟨duplication⟩+⟨abstract⟩`), linting/formatting (`⊤{lint|format}config`).
+*   **Χ [Refactor]:** Addresses code improvement based on readability, redundancy, performance, or architecture (`⋉{...}`), ensuring functionality remains intact via testing (`⊨{⋈intact}⇒{⊦tester-tdd}`).
+*   **Δ [Testing]:** Focuses on robust testing. Code driven by tests (`⊢⟨test→code⟩`), aiming for high coverage (`⊤∀⟨coverage⟩`), with task completion gated by passing tests (`‼️✓⟨tests⟩→⊦complete`).
+*   **Β [Debug]:** Guides debugging. Root cause analysis using SAPPO (`⊙{⟨root⟩:SAPPO}`), with sparse but precise logging (`⊢⟨log⟩→{sparse|precise}`).
+*   **Ξ [Security]:** Enforces security practices. Server-side logic preferred (`⊤{server-logic}`), mandatory validation/sanitization (`‼️⊤⟨validate⟩+⟨sanitize⟩`), no hardcoded secrets (`¬⟨hardcode⟩→⊢⟨env⟩`).
+*   **Ψ•Ε [VCS•Env]:** Covers version control and environment management. Proper Git usage (`⊤⟨git⟩{...}`), environment-agnostic code via config (`⟨code⟩→⟨agnostic⟩⇒⟨config⟩`).
+*   **Λ [Docs]:** Mandates accurate documentation (`⊤⟨mirror-reality⟩+⟨structure⟩`).
+*   **Θ [Limits]:** Sets constraints like file size (`⟨file⟩≤350Λ`) and abstracting credentials (`¬⟨credentials⟩→⟨abstract⟩`).
+
+These symbols provide a dense representation of the methodology baked into the custom mode instructions.
 
 ## 🙏 Acknowledgements
 
-This framework builds upon the visionary work of Reuven Cohen, especially his SPARC methodology and 'Boomerang Tasks' concept, foundational to structured AI development workflows in Roo Code.
+This framework heavily builds upon the pioneering work of **Reuven Cohen**, particularly his SPARC methodology and the 'Boomerang Tasks' concept, which are fundamental to structured AI agent workflows within Roo Code.
 
 -   Reference: [🪃 Boomerang Tasks: Automating Code Development with Roo Code and SPARC Orchestration by Reuven Cohen](https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc/)
+-   The Software Architecture Problem Prediction Ontology (SAPPO) is a custom ontology developed for this project.
 
 ## 📜 License
 Licensed under the MIT License—see the `LICENSE` file for details.
@@ -167,9 +201,10 @@ Licensed under the MIT License—see the `LICENSE` file for details.
 ## 🔗 Related Resources
 -   [Roo Code Docs](https://roo.ai/docs)
 -   [Perplexity API Docs](https://docs.perplexity.ai/)
--   [Anthropic API Docs](https://docs.anthropic.com/claude/reference/messages_post) (Check `temperature` parameter)
--   [Claude 3.5 Sonnet Announcement](https://www.anthropic.com/news/claude-3-5-sonnet)
--   [Requestly](https://requestly.io/) (Potential tool for temperature modification workaround)
+-   [Google AI Gemini API Docs](https://ai.google.dev/docs)
+-   [OpenAI API Docs](https://platform.openai.com/docs/api-reference)
+-   [SAPPO Ontology (Placeholder - Add Link if Public)](.) - *Consider linking if you host the ontology schema publicly.*
+-   [Requestly](https://requestly.io/) (Might be useful for advanced API call interception/modification if needed)
 -   [MCP Standard](https://mcp.ai)
 -   [cline Setup](https://cline.tools)
 
@@ -179,4 +214,4 @@ Licensed under the MIT License—see the `LICENSE` file for details.
 
 ---
 
-Code smarter, not just faster. Embrace the Ontology-guided, dual-mode Vibe with Claude 3.5 Sonnet!
+Embrace structured, ontology-driven, AI-accelerated development. Plan diligently, execute precisely!
