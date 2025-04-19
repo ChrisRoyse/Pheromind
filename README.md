@@ -1,29 +1,31 @@
-# 🚀 SPARC-SAPPO Agentic Development Framework
+# 🚀 SPARC-SAPPO Agentic Development Framework (v2 - Enhanced TDD & Tiered RDD)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Roo Code Compatible](https://img.shields.io/badge/Roo%20Code-Compatible-brightgreen)](https://roo.ai)
-[![Perplexity API](https://img.shields.io/badge/Perplexity-API-blue)](https://perplexity.ai)
-[![Gemini 2.5 Pro](https://img.shields.io/badge/Uses-Gemini%202.5%20Pro-blueviolet)](https://deepmind.google/technologies/gemini/)
-[![GPT-4.1](https://img.shields.io/badge/Uses-GPT--4.1-lightgreen)](https://openai.com/index/hello-gpt-4.1/)
+[![Perplexity API](https://img.shields.io/badge/Perplexity-API%20(Tiered)-blue)](https://perplexity.ai)
+[![Uses Claude 3.7 Sonnet](https://img.shields.io/badge/Uses-Claude%203.7%20Sonnet-orange)](https://www.anthropic.com/news/claude-3-5-sonnet)
 [![Ontology-Guided (SAPPO)](https://img.shields.io/badge/Ontology-Guided%20(SAPPO)-purple)](.)
 [![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC-orange)](.)
 [![cline MCP Installer](https://img.shields.io/badge/cline-MCP%20Installer-orange)](https://cline.tools)
 
-## 🌌 What is This? (The SPARC-SAPPO Framework Explained)
+## 🌌 What is This? (The Evolved SPARC-SAPPO Framework Explained)
 
-Welcome to the SPARC-SAPPO Agentic Development Framework, a highly structured system for AI-assisted software engineering built on Roo Code. This framework combines several key principles for robust, efficient, and high-quality code generation:
+Welcome to the refined SPARC-SAPPO Agentic Development Framework, a highly structured system for AI-assisted software engineering built on Roo Code. This framework leverages **meticulous planning, ontological guidance, a robust dual-strategy TDD cycle, and strategic AI research** to deliver high-quality, cost-effective results using Anthropic's Claude 3.7 Sonnet. Inspired by [Rueven Cohen's original SPARC/Boomerang](https://gist.github.com/ruvnet/a206de8d484e710499398e4c39fa6299) concepts, this evolution emphasises Micro-Tasking, Research Driven Development, and backed by my custom made [Software Architecture Problem Prediction Ontology](https://github.com/ChrisRoyse/Coding-Agent-Ontology)(SAPPO).
 
-1.  **SPARC Agentic Development Syntax:** A concise symbolic language (see top of `README.md` source or [SPARC Syntax Details](#-sparc-syntax-overview) below) defining core principles like clarity, extensibility, testing, and collaboration. These principles are embedded within the agent instructions.
-2.  **SAPPO (Software Architecture Problem Prediction Ontology):** A custom ontology used explicitly by AI agents to frame tasks, identify potential problems (`:Problem`), apply solutions (`:Solution`), understand context (`:Context`), and leverage architectural knowledge (`:ArchitecturalPattern`, `:TechnologyVersion`).
-3.  **Micro-Task Orchestration:** A central `🧠 SAPPO Orchestrator` agent breaks down user-defined plans into hyper-specific, single micro-tasks, minimizing context window usage and enabling fast feedback loops.
-4.  **Mandatory RDD (Research-Driven Development) via Perplexity:** All specialized agents **MUST** use Perplexity MCP tools (`search`, `get_documentation`, etc.) to resolve ambiguities, verify best practices, or look up API details *before* acting.
-5.  **Dual-Model LLM Strategy:** Utilizes distinct LLMs and temperature settings for different cognitive tasks:
-    *   **🧠 Thinking Mode (Gemini 2.5 Pro @ Temp 0.7):** For planning, design, specification, architectural reasoning, and documentation.
-    *   **🛠️ Instruct Mode (GPT-4.1 @ Temp 0.25):** For precise code implementation, testing, debugging, and operations following strict instructions.
-6.  **Integrative, Cumulative & Recursive TDD:** A dedicated `🧪 Tester (Integrative, Cumulative & Recursive TDD)` agent writes tests for each new unit, **specifically targeting recursive logic when present**, *and* re-runs all relevant prior tests to ensure no regressions are introduced.
-7.  **Roo Code Multi-Agent System:** Hosted within VS Code's Roo Code extension, enabling seamless collaboration between the specialized AI agents defined in the `.roomodes` file.
+**Key Pillars:**
 
-**The Core Idea:** You provide a **detailed, multi-phase plan**. The `Orchestrator` (using Gemini 2.5 Pro) interprets this plan, anticipates SAPPO `:Problem`s, and delegates **one micro-task at a time** using precise SAPPO terminology to a specialist agent. Specialists (like the `Coder` using GPT-4.1) execute their single task, leveraging Perplexity for RDD, and report back with `attempt_completion`, including SAPPO/MCP summaries. The `Tester` ensures continuous integration validity, **including detailed checks for recursive algorithms**. This cycle repeats until your plan is complete, emphasizing **good practices and structured planning** over raw model size.
+1.  **SPARC Principles:** Core symbolic guidelines (Clarity, Extensibility, Testing, Collaboration) embedded within agent instructions.
+2.  **SAPPO Ontology:** A custom ontology (`:Problem`, `:Solution`, `:Context`, `:ArchitecturalPattern`, `:TechnologyVersion`) explicitly used by agents to structure tasks, anticipate issues, and document decisions.
+3.  **Micro-Task Orchestration & "Boomerang" TDD Cycle:** A central `🧠 SAPPO Orchestrator` breaks down plans into single micro-tasks. Crucially, it manages an immediate **Code -> Test -> Fix -> Re-Test** cycle for every implementation unit, driven by explicit PASS/FAIL reporting from the Tester.
+4.  **Tiered Research-Driven Development (RDD):** Specialist agents strategically use Perplexity MCP tools (`search`, `get_documentation`, etc.) based on defined tiers (**MUST/SHOULD/MAY/DO NOT USE**), optimizing API usage and ensuring research is applied only when truly necessary.
+5.  **Dual-Strategy Test-Driven Development (TDD):** A dedicated `🧪 Tester` employs a **powerful dual approach within the TDD cycle:**
+    *   **Cumulative Testing:** Rerunning all relevant prior tests alongside new unit tests to prevent regressions and ensure system-wide stability.
+    *   **Recursive Testing:** Applying specific techniques (testing base cases, recursive steps, edge cases) when `:RecursiveAlgorithm` patterns are involved, ensuring algorithmic correctness and targeting potential SAPPO `:Problem`s like `:StackOverflowError` or `:LogicError`.
+6.  **Unified LLM, Dual-Mode Strategy (Claude 3.7 Sonnet):** Utilizes **Anthropic's Claude 3.7 Sonnet (~200k token context window)** with distinct temperature settings:
+    *   **🧠 Thinking Mode (Temp ~0.7):** For planning, design, architecture, complex reasoning.
+    *   **🛠️ Instruct Mode (Temp ~0.25):** For precise code, test generation, debugging following instructions.
+
+**The Core Idea:** Provide a **detailed plan**. The `Orchestrator` (Thinking Mode) delegates **one micro-task**, framed with SAPPO. The Specialist (e.g., `Coder` - Instruct Mode) executes, using **Tiered RDD** for targeted research. The `Tester` (Instruct Mode) then *immediately* runs **Dual-Strategy TDD** (Recursive checks + Cumulative suite). Based on **PASS/FAIL**, the Orchestrator either initiates a fix micro-task (Coder/Debugger -> Tester) or proceeds with the plan. This **methodology drastically reduces the need for massive context windows**, making development **robust AND cost-effective**. I prioritize structure and testing over excessive context, proving that ~200k tokens, used wisely, is highly effective and economical.
 
 ## 📺 Quick Start & Methodology Video Guide:
 
@@ -31,204 +33,189 @@ Welcome to the SPARC-SAPPO Agentic Development Framework, a highly structured sy
 
 👆 **Click the image above for a complete walkthrough!** This video covers:
 *   Setting up Roo Code with the SPARC-SAPPO modes.
-*   Configuring the Dual-Model LLM profiles (Gemini 2.5 Pro & GPT-4.1).
-*   Best practices for **structuring your plans** effectively.
-*   Understanding the **micro-tasking workflow** and **TDD strategy (including the approach to recursion)**.
-*   The importance of **context window management** (<~200k goal for instruct tasks).
+*   Configuring the **Claude 3.7 Sonnet** dual profiles (Thinking & Instruct).
+*   Structuring effective plans for micro-tasking and the **Boomerang TDD cycle**.
+*   Understanding **Dual-Strategy TDD** (Cumulative & Recursive).
+*   Why this methodology enables **cost-effective context management (~200k sufficient)**.
 
-## 🧠🛠️ NEW: Dual-Model LLM Strategy (Gemini 2.5 Pro + GPT-4.1)
+## 🧠🛠️ Unified LLM, Dual-Mode Strategy (Claude 3.7 Sonnet @ ~200k Context)
 
-This framework leverages the strengths of different cutting-edge LLMs by assigning them roles based on the cognitive demands of the task:
+Leveraging **Anthropic's Claude 3.7 Sonnet** (~200k context) with role-based temperature control:
 
-1.  **🧠 Thinking Mode (Temperature: 0.7)**
-    *   **Model:** **Google Gemini 2.5 Pro**
-    *   **Purpose:** High-level planning, creative problem-solving, architectural design, writing detailed specifications, documentation, complex reasoning, and understanding user intent. Higher temperature encourages broader exploration.
-    *   **Used By:**
-        *   `🧠 SAPPO Orchestrator (orchestrator)`
-        *   `📝 Spec Writer (spec-writer)`
-        *   `🏗️ Architect (architect)`
-        *   `📚 Docs Writer (docs-writer)`
-        *   `❓ Ask Guide (ask)`
-        *   `📘 Tutorial (tutorial)`
+1.  **🧠 Thinking Mode (Temperature: ~0.7)**
+    *   **Model:** Claude 3.7 Sonnet
+    *   **Purpose:** Planning, design, architecture, specs, documentation, complex reasoning.
+    *   **Agents:** Orchestrator, Spec Writer, Architect, Docs Writer, Ask Guide, Tutorial.
 
-2.  **🛠️ Instruct Mode (Temperature: 0.25)**
-    *   **Model:** **OpenAI GPT-4.1**
-    *   **Purpose:** Precise code generation following specs, implementing specific algorithms, writing unit and integration tests, debugging specific errors, performing security audits, executing DevOps commands, and integrating components accurately. Lower temperature ensures focus and fidelity to instructions.
-    *   **Used By:**
-        *   `🧠 Coder (code)`
-        *   `🧪 Tester (tester-tdd)`
-        *   `🪲 Debugger (debug)`
-        *   `🛡️ Security Reviewer (security-reviewer)`
-        *   `🔗 Integrator (integrator)`
-        *   `📈 Monitor (monitor)`
-        *   `🧹 Optimizer (optimizer)`
-        *   `🚀 DevOps (devops)`
+2.  **🛠️ Instruct Mode (Temperature: ~0.25)**
+    *   **Model:** Claude 3.7 Sonnet
+    *   **Purpose:** Precise code/test generation, debugging, security checks, integration, operations following strict guidance.
+    *   **Agents:** Coder, Tester, Debugger, Security Reviewer, Integrator, Monitor, Optimizer, DevOps.
 
-**Why this split?** It optimizes performance and cost. Gemini 2.5 Pro excels at reasoning and planning, while GPT-4.1 is highly capable at precise instruction following and code generation. By assigning tasks appropriately and keeping instruct tasks focused (aiming for completion within ~100-200k context tokens to manage costs and maintain focus, even with larger available windows), the system balances capability with efficiency. **Your detailed plan is the key driver enabling this efficiency.**
+**Why Claude 3.7 Sonnet & the ~200k Window Strategy (Cost-Efficiency by Design):**
+
+*   **Peak Capability, Optimized Cost:** Claude 3.7 Sonnet offers leading performance within a generous yet manageable ~200k context.
+*   **Methodology Trumps Raw Context:** This framework **intentionally avoids multi-million token dependency.** Our **rigorous Dual-Strategy TDD** (especially cumulative testing) acts as the *persistent state memory* and quality gate. Combined with **micro-tasking** and **focused RDD**, vast context becomes **methodologically unnecessary and economically wasteful.**
+*   **The Dual-Strategy TDD Advantage:** Cumulative testing validates each step against the *verified history* embodied by the test suite. Recursive testing ensures complex logic is sound. The LLM doesn't *need* to reread everything constantly; the tests confirm integration and correctness.
+*   **Dramatic Cost Savings:** Extremely large context windows incur significantly higher, often quadratic, API costs (potentially **$0.30 to $2.00+ per call**). Our micro-tasking and TDD keep Instruct calls lean (often 50k-150k), staying *well below* the 200k limit and **slashing LLM expenses** without sacrificing quality.
+*   **Structure Over Size:** Success hinges on **your detailed plan** and the framework's structured execution (SAPPO, TDD Cycle), enabling Claude 3.7 Sonnet to excel within its efficient ~200k window. Rigor beats brute force.
 
 ## ✨ Key Features & Methodology
 
-This framework enforces a robust development process:
-
 ### 🏛️ SAPPO-Guided Micro-Tasking
--   **Ontology Integration:** SAPPO terms (`:Problem`, `:Solution`, `:TechnologyVersion`, `:ArchitecturalPattern`, `:Context`, etc.) are *mandated* in task framing by the Orchestrator and referenced in completions by Specialists.
--   **Hyper-Granularity:** The `Orchestrator` decomposes your plan into the smallest logical units of work, enabling rapid iterations and precise context management.
--   **Role Specialization:** Each agent (Coder, Tester, Architect...) has a sharply defined role and collaborates through the Orchestrator.
+-   **Ontology Mandate:** SAPPO terms (`:Problem`, `:Solution`, `:TechnologyVersion`, etc.) structure tasks and completion summaries.
+-   **Granularity:** Orchestrator breaks plans into minimal, testable units.
+-   **Specialization:** Agents collaborate via the Orchestrator, using appropriate Claude 3.7 modes.
 
-### 🔍 Mandatory Research-Driven Development (RDD)
--   **Perplexity MCP Integration:** Every specialist agent is instructed to **proactively use** `search`, `get_documentation`, `check_deprecated_code`, etc., via Perplexity MCP for *any* ambiguity, best practice check, or API lookup. No guessing allowed.
+### 🔍 Tiered Research-Driven Development (RDD)
+-   **Strategic Perplexity Use:** Specialist agents use MCP tools (`search`, `get_documentation`, etc.) based on **clear tiers**:
+    *   **MUST USE:** For critical unknowns, unfamiliar APIs, complex errors, vulnerability checks.
+    *   **SHOULD USE:** For best practices, specific technology/pattern nuances.
+    *   **MAY USE:** For examples, broader context understanding.
+    *   **DO NOT USE:** For basic knowledge, straightforward tasks.
+-   **Optimized & Justified Research:** Avoids unnecessary API calls while ensuring accuracy when needed.
 
-### ✅ Integrative, Cumulative & Recursive TDD
--   **Phase-Based Testing:** The `🧪 Tester (Integrative, Cumulative & Recursive TDD)` agent validates each micro-task's output (a single function/module) upon completion.
--   **Cumulative Regression Prevention:** Critically, the `Tester` **re-runs all relevant previous tests** cumulatively after adding tests for the new unit. This ensures the new code integrates correctly without breaking existing functionality. Think of it like building layers – check the whole structure each time a new layer is added.
--   **🎯 Targeted Recursive Testing:**
-    *   **What:** When the `Coder` implements a function using a `:RecursiveAlgorithm` pattern (identified by the `Architect`/`Spec Writer` or the `Coder` themselves), the `Tester` applies specific **recursive testing techniques**.
-    *   **How:** This involves writing distinct tests for:
-        *   **Base Cases:** Conditions that stop the recursion (e.g., `factorial(0)`).
-        *   **Recursive Steps:** Typical calls that invoke the function itself (e.g., `factorial(5)`).
-        *   **Edge Cases:** Invalid inputs, boundaries, potential deep nesting, or conditions that might trigger SAPPO `:Problem`s like `:StackOverflowError` or `:LogicError` within the recursive logic.
-    *   **Why:** AI models can sometimes generate recursive code with subtle flaws (incorrect base case, off-by-one errors, missed termination conditions). Explicitly testing these aspects is crucial for robustness. These targeted recursive tests become *part of* the cumulative test suite.
--   **Your plan should include clear testing phases/requirements**, indicating where testing is needed, and potentially highlighting if specific recursive testing is expected.
+### ✅ Dual-Strategy Test-Driven Development (TDD)
+-   **Immediate Testing Cycle ("Boomerang"):** `🧪 Tester` runs immediately after `Coder` completion.
+-   **Comprehensive Validation (Dual Strategy):**
+    1.  **Cumulative Testing:** *Always* runs new unit tests **AND** all relevant prior tests to catch regressions and ensure system-wide stability. **Acts as reliable system state memory.**
+    2.  **Recursive Testing (If Applicable):** When `:RecursiveAlgorithm` is involved, applies *specific tests* targeting **base cases, recursive steps, and edge cases** (e.g., potential `:StackOverflowError`, `:LogicError`), becoming part of the cumulative suite.
+-   **PASS/FAIL Driven Workflow:** Tester's explicit PASS/FAIL result dictates the Orchestrator's next step (fix or proceed).
+-   **Plan Integration:** Your plan should anticipate testing phases and highlight expected recursive logic for targeted testing.
 
-### 📄 Detailed Planning is Crucial
--   **User Responsibility:** The success of this framework hinges on **you providing a well-structured, detailed, multi-phase plan.** The AI executes *your* plan.
--   **Good Practices > Model Power:** As highlighted in the video, even the most advanced LLMs cannot compensate for poor planning or methodology. Focusing on clear phases, testable units, and modular design is paramount.
+### 📄 Detailed Planning is Paramount
+-   **User Responsibility:** Success requires a **well-structured, phased plan**. The AI executes *your* strategy.
+-   **Methodology > Model Size:** Good planning + strong TDD are essential for quality and **cost-efficiency**, regardless of LLM context size.
 
-### 🔄 The Workflow Loop
+### 🔄 The Workflow Loop (Featuring the Boomerang TDD Cycle)
 1.  **You:** Provide a detailed plan to the `Orchestrator`.
-2.  **Orchestrator (Gemini 2.5 Pro):** Identifies the *next single micro-task*, frames it using SAPPO terms (`new_task @specialist...`, potentially noting `:RecursiveAlgorithm` or `:StackOverflowError`).
-3.  **Specialist (e.g., Coder - GPT-4.1):** Receives task, performs **mandatory RDD via MCP**, executes the single task (e.g., writes one function, possibly recursive).
-4.  **Specialist:** Returns control with `attempt_completion`, providing a summary including work done, SAPPO concepts addressed (e.g., 'Implemented using :RecursiveAlgorithm'), and MCP tools used.
-5.  **(If applicable) Tester (GPT-4.1):** Tests the completed unit (applying **recursive testing techniques if needed**) AND re-runs cumulative tests. Reports pass/fail with SAPPO/MCP details via `attempt_completion` (e.g., 'Tested recursive base/step/edges; all cumulative tests passed').
-6.  **Orchestrator:** Analyzes completion/test results, identifies the *next* micro-task from your plan, loops back to step 2.
+2.  **Orchestrator (Claude 3.7 Sonnet @ ~0.7):** Identifies next micro-task, frames with SAPPO, delegates (e.g., `new_task @coder Implement X... using :RecursiveAlgorithm...`).
+3.  **Coder (Claude 3.7 Sonnet @ ~0.25):** Receives task, performs **Tiered RDD (if needed)**, implements the single unit.
+4.  **Coder:** Reports `attempt_completion` (mentions pattern used, SAPPO considerations, RDD usage if any). States **"Ready for immediate testing via @tester-tdd"**.
+5.  **Orchestrator:** Immediately assigns testing task: `new_task @tester-tdd Apply DUAL TESTING STRATEGY to X... Report PASS/FAIL.`
+6.  **Tester (Claude 3.7 Sonnet @ ~0.25):** Writes new tests, applies **Recursive Testing** (if applicable), runs these **PLUS all cumulative tests**.
+7.  **Tester:** Reports `attempt_completion` with **explicit "Result: PASS" or "Result: FAIL [details...]"**, confirms dual strategy application.
+8.  **Orchestrator (Analyzes Test Result):**
+    *   **IF PASS:** Proceeds to the next step in your plan (e.g., integration, docs).
+    *   **IF FAIL:** Initiates fix cycle: assigns fix task to `@coder` or `@debugger` (`new_task @coder Fix :LogicError in X identified by test Y...`), awaits fix `attempt_completion`, then **loops back to Step 5** to re-assign testing to `@tester-tdd`.
+9.  Cycle Repeats until the plan is complete.
 
 ## ✨ Why It's a Game Changer
 
--   🏛️ **Structured & Predictable:** SAPPO and micro-tasking create a disciplined workflow.
--   💡 **Accurate & Current:** Mandatory RDD via Perplexity ensures reliance on up-to-date information and best practices.
--   ✅ **Robust & Reliable:** Cumulative TDD drastically reduces regressions, bolstered by **targeted testing for recursive logic** when necessary.
--   🧠 **Optimized AI Usage:** Dual-model strategy leverages the best of Gemini 2.5 Pro and GPT-4.1 for their respective tasks.
--   💰 **Cost-Aware:** Hyper-granularity aims to keep instruct task context windows small (~100-200k goal), managing LLM costs effectively.
--   📈 **Higher Quality:** Leads to more modular, testable, secure, and well-documented code aligned with architectural principles.
--   🤝 **Clear Collaboration:** Shared SAPPO vocabulary and explicit task handoffs improve traceability.
+-   🏛️ **Structured & Predictable:** SAPPO + Micro-tasking + TDD cycle create discipline.
+-   💡 **Accurate & Efficient Research:** Tiered RDD ensures up-to-date info without waste.
+-   ✅ **Highly Robust:** Dual-Strategy TDD (Cumulative + Recursive) drastically reduces bugs and ensures algorithmic + integration correctness. **Provides reliable state context.**
+-   🧠 **Optimized AI Usage:** Leverages Claude 3.7 Sonnet's strengths via Thinking/Instruct modes within its efficient ~200k window.
+-   💰 **MASSIVELY Cost-Effective:** Methodology (Micro-tasks + Dual TDD) **makes >200k context unnecessary**. Keeps API calls lean (often 50k-150k Instruct), **slashing LLM costs** versus huge context models. Avoid budget blowouts!
+-   📈 **Superior Quality:** Leads to modular, rigorously tested, secure, documented code.
+-   🤝 **Clear Collaboration:** Explicit SAPPO terms, TDD cycle steps, and PASS/FAIL reports improve traceability.
 
 ## 🛠️ The Core Components
 
-1.  **SPARC-SAPPO Agent Army (.roomodes):** The JSON definitions of all specialized agents (Orchestrator, Coder, Tester, etc.) with their SAPPO-aware instructions, assigned LLM types (Thinking/Instruct), and mandatory MCP usage rules. Found at the very beginning of this document's source code.
-2.  **SPARC Syntax:** The underlying symbolic principles guiding agent behavior. [See Overview](#-sparc-syntax-overview).
-3.  **SAPPO (Software Architecture Problem Prediction Ontology):** The conceptual framework used for task definition and architectural reasoning.
-4.  **Perplexity Research Tools (MCP):** Integrated via `search`, `get_documentation`, etc.
-5.  **Dual-Model LLM Engine:** Requires access to **Google Gemini 2.5 Pro** and **OpenAI GPT-4.1** configured with appropriate temperatures.
+1.  **SPARC-SAPPO Agent Army (.roomodes):** JSON definitions with SAPPO/TDD/RDD instructions, Thinking/Instruct roles, Tiered MCP rules.
+2.  **SPARC Syntax:** Underlying symbolic principles. [See Overview](#-sparc-syntax-overview).
+3.  **SAPPO Ontology:** Conceptual framework.
+4.  **Perplexity Research Tools (MCP):** Integrated via `search`, `get_documentation`, etc., used according to tiers.
+5.  **Unified LLM Engine (Claude 3.7 Sonnet):** Configured with two temperature profiles (~200k context limit).
 
-## 🎬 See It In Action (Micro-Task Example)
+## 🎬 See It In Action (Micro-Task & TDD Cycle Example)
 
-**User Plan Snippet:** "Phase 2: Implement user login. Step 2.1: Create DB migration for 'users' table password hash column. Step 2.2: Implement backend login handler function. Step 2.3: Write tests for login handler."
+**User Plan Snippet:** "Phase 3: Implement recursive file search. Step 3.1: Specify `findFilesRecursive` function. Step 3.2: Code `findFilesRecursive`. Step 3.3: Apply Dual-Strategy TDD. Step 3.4: Document."
 
-**▶️ Orchestrator (Gemini 2.5 Pro @ 0.7):** "Received plan. Next micro-task: DB Migration. `new_task @architect Design the :AlterTable :Solution for adding a 'password_hash' :DataSchemaField to the 'users' table. Specify :SQL datatype. Consider existing :ProjectContext. Use MCP search for secure hashing column type best practices.`"
+**▶️ Orchestrator (Claude @ 0.7):** "`new_task @spec-writer Specify `findFilesRecursive(dir, pattern)` using :RecursiveAlgorithm. Detail base case (not dir or empty), step (recurse subdirs). Note potential :StackOverflowError :Problem. Define TDD anchors (base, recursive, edge cases like symlinks).`"
 
-**(Later) 🏗️ Architect (Gemini 2.5 Pro @ 0.7):** "`attempt_completion` Designed `ALTER TABLE users ADD COLUMN password_hash VARCHAR(255);` SQL snippet. SAPPO :Solution = :AlterTable. MCP `search` confirmed VARCHAR(255) suitable for common hash outputs. Returning control."
+**(Later) 📝 Spec Writer (Claude @ 0.7):** "`attempt_completion` Spec written. Notes :RecursiveAlgorithm, base/step, potential :StackOverflowError. Provides TDD anchors for base (empty dir), recursion (nested), edge (symlink loop). Used MCP `search` (SHOULD USE tier) for robust symlink loop detection patterns. Returning."
 
-**▶️ Orchestrator:** "Migration designed. Next: Implement login handler. `new_task @coder Implement the 'handleLogin' function for :UserAuth :ComponentRole using :NodeJS v20. Follow :JWT :ArchitecturalPattern provided in specs. Fetch user by email, verify hash using bcrypt library, issue JWT. Mandatory RDD: Use MCP get_documentation for precise bcrypt API usage. Watch for :TimingAttack :SecurityVulnerability. Handle :UserNotFound :Problem.`"
+**▶️ Orchestrator:** "`new_task @coder Implement `findFilesRecursive` per spec... Use :NodeJS v20... Handle symlink loops (:LogicError). Manage depth to mitigate :StackOverflowError.`"
 
-**(Later) 🧠 Coder (GPT-4.1 @ 0.25):** "`attempt_completion` Implemented `handleLogin` function in `authController.js` using NodeJS v20 and JWT pattern. Used MCP `get_documentation` for `bcrypt.compare` async signature. Included checks for user existence (:UserNotFound :Problem) and basic input presence. Used placeholder secret handling as per spec. Returning control."
+**(Later) 🧠 Coder (Claude @ 0.25):** "`attempt_completion` Implemented `findFilesRecursive`. Used :RecursiveAlgorithm pattern, added depth limit and visited set for symlink loops. Used MCP `get_documentation` (MUST USE tier) for `fs.promises.readdir` `withFileTypes` option. Code complete, ready for immediate testing via @tester-tdd. Returning."
 
-**▶️ Orchestrator:** "Code complete. Next: Test login handler. `new_task @tester-tdd Write integrative tests for the 'handleLogin' function. Cover success case (valid credentials), failure (:UserNotFound, wrong password). Explicitly test against :TimingAttack :SecurityVulnerability if possible via mock timing (research via MCP search 'testing timing attacks nodejs'). Run these tests AND cumulative tests for User Profile module. All must pass.`"
+**▶️ Orchestrator:** "`new_task @tester-tdd Apply DUAL TESTING STRATEGY to `findFilesRecursive`. Test base/recursive/edge cases (symlinks, deep nesting). Run CUMULATIVE suite. Report PASS/FAIL.`"
 
-**(Later) 🧪 Tester (GPT-4.1 @ 0.25):** "`attempt_completion` Wrote 3 tests for `handleLogin` (success, invalid email, invalid pass) using Jest and supertest. Targeted SAPPO :UserNotFound, :LogicError. MCP `search` indicated direct timing attack tests complex; ensured constant-time compare function (`bcrypt.compare`) used based on Coder's MCP confirmation. Ran new tests + 5 prior User Profile tests. ALL PASSED. Returning control."
-*(Note: If `handleLogin` involved a recursive helper, the Tester's task would also specify testing its base/recursive/edge cases).*
+**(Later) 🧪 Tester (Claude @ 0.25):** "`attempt_completion` **Applied Dual Testing Strategy.** RECURSIVE TESTING: Tested base case (empty dir), recursive step (nested match), edge cases (symlink loop handled, depth limit respected). CUMULATIVE TESTING: Ran new tests + 15 prior tests. Used Jest mocks. **Result: PASS**. All 19 tests passed. Returning control."
+*(If FAIL: `... Result: FAIL. Test 'test_deep_nesting_stackoverflow' failed. Suspected :StackOverflowError despite limit. Suggest reviewing depth counter logic... Returning control.` The orchestrator would then trigger the fix cycle.)*
 
-**▶️ Orchestrator:** "Login handler implemented and tested. Proceeding to next step in user plan..."
+**▶️ Orchestrator:** "Implementation tested (Passed TDD cycle). Proceeding to documentation..."
 
 ## 🔧 Get Started (Join the Vibe!)
 
-Ready for SAPPO-driven, dual-model AI development?
+Ready for structured, TDD-powered, cost-effective AI development?
 
 ### Prerequisites
-1.  **VS Code** with the **Roo Code extension** installed.
-2.  **Google AI API Key** with access to **Gemini 2.5 Pro**.
-3.  **OpenAI API Key** with access to **GPT-4.1**.
-4.  **Perplexity API Key**.
+1.  **VS Code** + **Roo Code extension**.
+2.  **Anthropic API Key** (Claude 3.7 Sonnet access).
+3.  **Perplexity API Key**.
 
-### Configuration: Setting Up Dual Models & MCP
+### Configuration: Claude 3.7 Sonnet Dual Profiles & RDD Tools
 
-1.  **Perplexity MCP Setup:**
-    *   Use **[cline](https://cline.tools)** (recommended): Search for and install the "Perplexity AI" provider, enter your key, and copy the MCP URL/Header.
-    *   Manual Setup: Follow MCP standard guidelines if preferred.
-    *   Paste the MCP URL and Header details into Roo Code's Perplexity MCP settings.
+1.  **Perplexity MCP Setup (RDD Tools):**
+    *   Use **[cline](https://cline.tools)** (recommended): Install "Perplexity AI" provider, enter key, copy MCP URL/Header.
+    *   Paste URL/Header into Roo Code's Perplexity MCP settings.
 
-2.  **Dual LLM Configuration (IMPORTANT!):**
-    *   You need *two separate* model profiles configured in Roo Code:
-        *   **Profile 1 (Thinking):** Pointing to **Gemini 2.5 Pro**. Set the default **Temperature to 0.7**. Give it a clear name (e.g., `gemini-2.5-pro-thinking`).
-        *   **Profile 2 (Instruct):** Pointing to **GPT-4.1**. Set the default **Temperature to 0.25**. Give it a clear name (e.g., `gpt-4.1-instruct`).
-    *   Consult Roo Code documentation for creating multiple profiles for different models/providers.
-    *   **The `.roomodes` JSON provided *does not* explicitly assign models.** Roo Code currently selects the *globally active* model. **You MUST manually select the correct profile (Thinking/Instruct) in the Roo Code UI *before* invoking a task** intended for that type of agent (e.g., select `gemini-2.5-pro-thinking` before talking to the `Orchestrator`, then switch to `gpt-4.1-instruct` before the Orchestrator delegates to the `Coder`), and switch back to the thinking profile when control returns to the Orchestrator or another thinking agent. *This requires user diligence during the workflow.* (Future Roo Code versions might allow mode-specific model assignments).
+2.  **Dual-Mode LLM Configuration (CRITICAL!):**
+    *   Create **TWO** model profiles in Roo Code settings, **BOTH** pointing to your **Anthropic Claude 3.7 Sonnet** endpoint:
+        *   **Profile 1 (Thinking):** Name: `claude-3.7-sonnet-thinking`. Endpoint: [Your Claude 3.7 Sonnet Endpoint]. **Default Temperature: ~0.7**.
+        *   **Profile 2 (Instruct):** Name: `claude-3.7-sonnet-instruct`. Endpoint: [Your Claude 3.7 Sonnet Endpoint]. **Default Temperature: ~0.25**.
+    *   **Why two profiles?** To easily switch between high-temp Thinking (Orchestrator, Architect, etc.) and low-temp Instruct (Coder, Tester, etc.) as required by the framework roles, optimizing Claude 3.7 Sonnet's performance within its ~200k context.
+    *   **Manual Switching Required:** The `.roomodes` does NOT auto-assign profiles. **You MUST manually select the correct profile (`thinking` or `instruct`) in the Roo Code UI *before* invoking or allowing delegation to an agent.** Select `thinking` for Orchestrator interactions, switch to `instruct` when an Instruct agent (Coder, Tester) takes over, then switch back to `thinking` when control returns to Orchestrator. Diligence is key here.
 
-3.  **Install the SPARC-SAPPO RooModes:**
-    *   Copy the entire JSON object provided at the very top of this document source (`{ "customModes": [...] }`).
-    *   Go to Roo Code settings in VS Code (often via the Roo icon in the sidebar).
-    *   Find the "Edit Global Modes" or similar option.
-    *   Paste the copied JSON into the editor, replacing any existing content. Save the changes.
-    *   Alternatively, manually create each mode via the Roo Code UI, carefully copying `slug`, `name`, `roleDefinition`, and `customInstructions` for every mode in the JSON.
-    *   Restart VS Code or use the Roo Code command palette (`Roo Code: Reload Custom Modes`) to ensure they are loaded.
+3.  **Install SPARC-SAPPO RooModes:**
+    *   Copy the entire JSON object from the `*.roomodes` file source provided earlier.
+    *   Go to Roo Code settings -> "Edit Global Modes".
+    *   Paste the JSON, replacing existing content. Save.
+    *   Reload Roo Code (`Roo Code: Reload Custom Modes` or restart VS Code).
 
 ### Start Developing!
-1.  Open a Roo Code chat in VS Code.
-2.  **Manually select the `gemini-2.5-pro-thinking` profile.**
+1.  Open a Roo Code chat.
+2.  **Manually select the `claude-3.7-sonnet-thinking` profile.**
 3.  Select the `🧠 SAPPO Orchestrator` mode.
-4.  Provide your detailed, phased development plan.
-5.  Observe the micro-tasking workflow. **Remember to manually switch to the `gpt-4.1-instruct` profile in Roo Code when the Orchestrator indicates it's about to delegate an Instruct task (to Coder, Tester, etc.)**, and switch back to the thinking profile when control returns to the Orchestrator or another thinking agent.
-6.  Use the `❓ Ask Guide` mode if you need help structuring plans or understanding SAPPO/RDD concepts, including how testing (cumulative & recursive) fits in.
+4.  Provide your detailed, phased plan (mentioning testing needs, recursive parts).
+5.  Observe the micro-tasking and **Boomerang TDD Cycle**.
+6.  **Remember to manually switch profiles (Thinking <-> Instruct) based on which agent is active.** Keep Instruct context minimal.
+7.  Use `❓ Ask Guide` (Thinking profile) for help structuring plans or understanding the Dual-Strategy TDD/cost-efficiency rationale.
 
 ## <a name="sparc-syntax-overview"></a>🌌 SPARC Syntax Overview
 
-The symbolic syntax at the top of this document source (`Φ•Ω`, `Γ•Μ•Υ`, etc.) represents core guiding principles encoded within the agent instructions. Here's a brief interpretation of key concepts:
+The symbolic syntax (`Φ•Ω`, `Γ•Μ•Υ`, etc.) represents core principles encoded in agent instructions. Key concepts include:
 
-*   **Φ•Ω [Core•Flow]:** Focuses on overall workflow. Maintain clarity (`§͟min ⟨clarity⟩`), avoid complexity (`¬⟨complex⟩`), extend functionality systematically (`⊙{task}⊡ ⊥extend`), ensure clean/tested/documented/secure code (`§͟qual ⊤{...}`), and handle ambiguity via confirmation (`⋈team...→ ⊦confirm`).
-*   **Γ•Μ•Υ [Context]:** Emphasizes context understanding. Action driven by docs/context (`⊦⟨doc⟩ ⟨ctx⟩ → ⟨action⟩`), respecting architecture boundaries (`⊤⟨arch⟩{boundSpec}`), managing tech versions/patterns (`⊢{...} ⊥newΔ`), and recording decisions (`≡{Μbanк}⇒⟨decisions⟩`).
-*   **Τ•Ρ [Tasks]:** Defines task handling. Micro-tasks include specs/pseudo/arch (`⊦⟨micro⟩ = {...}`), mandatory research for uncertainty (`‼️Ρ{pMCP}→{search|...}✓findings`), conditional task execution (`Σ⊗ [if→task]`), and self-verification (`⊗self{...}→⊦complete`).
-*   **Κ•Σ [Code]:** Governs code quality. Adhere to best practices (`⊢{bestPractice}⟨lang⟩`), conventions (`≡⟨conventions⟩`), modularity/scalability/clarity (`⊤⟨module⟩+...`), reasonable file size (`⟨file⟩≤350Λ`), DRY/abstraction (`¬⟨duplication⟩+⟨abstract⟩`), linting/formatting (`⊤{lint|format}config`).
-*   **Χ [Refactor]:** Addresses code improvement based on readability, redundancy, performance, or architecture (`⋉{...}`), ensuring functionality remains intact via testing (`⊨{⋈intact}⇒{⊦tester-tdd}`).
-*   **Δ [Testing]:** Focuses on robust testing. Code driven by tests (`⊢⟨test→code⟩`), aiming for high coverage (`⊤∀⟨coverage⟩`), with task completion gated by passing tests (`‼️✓⟨tests⟩→⊦complete`). **Includes specific validation of recursive logic.**
-*   **Β [Debug]:** Guides debugging. Root cause analysis using SAPPO (`⊙{⟨root⟩:SAPPO}`), with sparse but precise logging (`⊢⟨log⟩→{sparse|precise}`).
-*   **Ξ [Security]:** Enforces security practices. Server-side logic preferred (`⊤{server-logic}`), mandatory validation/sanitization (`‼️⊤⟨validate⟩+⟨sanitize⟩`), no hardcoded secrets (`¬⟨hardcode⟩→⊢⟨env⟩`).
-*   **Ψ•Ε [VCS•Env]:** Covers version control and environment management. Proper Git usage (`⊤⟨git⟩{...}`), environment-agnostic code via config (`⟨code⟩→⟨agnostic⟩⇒⟨config⟩`).
-*   **Λ [Docs]:** Mandates accurate documentation (`⊤⟨mirror-reality⟩+⟨structure⟩`).
-*   **Θ [Limits]:** Sets constraints like file size (`⟨file⟩≤350Λ`) and abstracting credentials (`¬⟨credentials⟩→⟨abstract⟩`).
-
-These symbols provide a dense representation of the methodology baked into the custom mode instructions.
+*   **Φ•Ω [Core•Flow]:** Workflow clarity, systematic extension, code quality (`§͟qual`), confirmation (`⊦confirm`).
+*   **Γ•Μ•Υ [Context]:** Doc/context-driven action (`⊦⟨doc⟩ ⟨ctx⟩ → ⟨action⟩`), arch boundaries (`⊤⟨arch⟩`), tech management (`⊢{...} ⊥newΔ`). **Effective context mgmt + TDD avoids huge token needs.**
+*   **Τ•Ρ [Tasks]:** Micro-tasks (`⊦⟨micro⟩`), **tiered RDD** for uncertainty (`‼️Ρ{pMCP tiers}→{search|...}✓findings`), self-verify (`⊗self{...}→⊦complete`).
+*   **Κ•Σ [Code]:** Best practices (`⊢{bestPractice}`), conventions (`≡⟨conventions⟩`), modularity (`⊤⟨module⟩`), size limits (`⟨file⟩≤350Λ`), DRY (`¬⟨duplication⟩`).
+*   **Χ [Refactor]:** Improve code based on specific triggers (`⋉{...}`), **verify via tests** (`⊨{⋈intact}⇒{⊦tester-tdd}`).
+*   **Δ [Testing]:** **Test-driven** (`⊢⟨test→code⟩`), high coverage (`⊤∀⟨coverage⟩`), completion gated by **passing dual-strategy tests** (`‼️✓⟨tests pass:dual⟩→⊦complete`). Includes recursive validation. **Cumulative tests provide system state.**
+*   **Β [Debug]:** SAPPO root cause (`⊙{⟨root⟩:SAPPO}`), precise logs (`⊢⟨log⟩`). Supports TDD cycle.
+*   **Ξ [Security]:** Server-logic (`⊤{server-logic}`), validation/sanitization (`‼️⊤⟨validate⟩`), no hardcoded secrets (`¬⟨hardcode⟩`).
+*   **Ψ•Ε [VCS•Env]:** Git usage (`⊤⟨git⟩`), env-agnostic code (`⟨code⟩→⟨agnostic⟩`).
+*   **Λ [Docs]:** Accurate (`⊤⟨mirror-reality⟩`), including test strategy. Aids context recall.
+*   **Θ [Limits]:** File size (`⟨file⟩≤350Λ`), abstract credentials (`¬⟨credentials⟩`).
 
 ## 🙏 Acknowledgements
 
-This framework heavily builds upon the pioneering work of **Reuven Cohen**, particularly his SPARC methodology and the 'Boomerang Tasks' concept, which are fundamental to structured AI agent workflows within Roo Code.
-
--   Reference: [🪃 Boomerang Tasks: Automating Code Development with Roo Code and SPARC Orchestration by Reuven Cohen](https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc/)
--   The Software Architecture Problem Prediction Ontology (SAPPO) is a custom ontology developed for this project.
+Builds heavily on **Reuven Cohen**'s SPARC methodology and 'Boomerang Tasks' concept.
+-   Reference: [🪃 Boomerang Tasks by Reuven Cohen](https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc/)
+-   SAPPO is a custom ontology for this framework.
 
 ## 📜 License
-Licensed under the MIT License—see the `LICENSE` file for details.
+MIT License - see `LICENSE` file.
 
 ## 🙏 Support Development
 
 <div align="center">
-  <p>If you find this framework valuable, please consider supporting its continued development and maintenance.</p>
-
-  <a href="https://paypal.me/ChrisRoyseAI" target="_blank">
-    <img src="https://img.shields.io/badge/Support_via_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Support via PayPal" width="250"/>
-  </a>
-
-  <p style="margin-top: 10px;">Developing and experimenting with advanced AI tools incurs API costs. Your contributions help offset these expenses, allowing for further refinement, feature additions, and the creation of helpful resources for the community.</p>
-  <p>Thank you for your support!</p>
+  <p>Found this framework valuable? Consider supporting its development.</p>
+  <a href="https://paypal.me/ChrisRoyseAI" target="_blank"><img src="https://img.shields.io/badge/Support_via_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Support via PayPal" width="250"/></a>
+  <p style="margin-top: 10px;">Your support helps offset API costs (even with efficient models/methods) and allows for further refinement.</p>
+  <p>Thank you!</p>
 </div>
 
 ## 🔗 Related Resources
 -   [Roo Code Docs](https://roo.ai/docs)
 -   [Perplexity API Docs](https://docs.perplexity.ai/)
--   [Google AI Gemini API Docs](https://ai.google.dev/docs)
--   [OpenAI API Docs](https://platform.openai.com/docs/api-reference)
--   [SAPPO Ontology (Placeholder - Add Link if Public)](.) - *Consider linking if you host the ontology schema publicly.*
--   [Requestly](https://requestly.io/) (Might be useful for advanced API call interception/modification if needed)
+-   [Anthropic API Docs (Claude)](https://docs.anthropic.com/claude/reference/getting-started-with-the-api)
+-   [SAPPO Ontology (Placeholder)](.)
+-   [cline MCP Installer](https://cline.tools)
+-   [Requestly (Useful for API mocking/testing)](https://requestly.io/)
 -   [MCP Standard](https://mcp.ai)
--   [cline Setup](https://cline.tools)
 
 ---
 ## 👤 Connect
@@ -236,4 +223,6 @@ Licensed under the MIT License—see the `LICENSE` file for details.
 
 ---
 
-Embrace structured, ontology-driven, AI-accelerated development. Plan diligently, execute precisely!
+Embrace structured, ontology-driven, **dual-strategy TDD-powered**, and **cost-effective** AI-accelerated development. Plan meticulously, execute precisely, test rigorously!
+
+---
