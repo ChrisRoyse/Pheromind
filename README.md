@@ -29,7 +29,7 @@ Welcome to the refined SPARC-SAPPO Agentic Development Framework, a highly struc
 
 ## 📺 Quick Start & Methodology Video Guide:
 
-[![Watch the Setup & Best Practices Guide](https://img.youtube.com/vi/EEXAcMqRv3E/maxresdefault.jpg)](https://youtu.be/mmRU-24RNhU)
+[![Watch the Setup & Best Practices Guide](https://img.youtube.com/vi/X0qIr-dEViU/maxresdefault.jpg)](https://youtu.be/X0qIr-dEViU)
 
 👆 **Click the image above for a complete walkthrough!** This video covers:
 *   Setting up Roo Code with the SPARC-SAPPO modes.
