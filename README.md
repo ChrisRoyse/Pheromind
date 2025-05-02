@@ -1,196 +1,169 @@
-# 🚀 SPARC-SAPPO Agentic Development Framework (v3 - Targeted TDD & Tiered RDD)
+# 🚀 SPARC Agentic Development Framework (v3 - Framework-First, Test-Plan-Driven w/ Tiered RDD)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Roo Code Compatible](https://img.shields.io/badge/Roo%20Code-Compatible-brightgreen)](https://roo.ai)
-[![Perplexity API](https://img.shields.io/badge/Perplexity-API%20(Tiered)-blue)](https://perplexity.ai)
-[![Uses Claude 3.7 Sonnet](https://img.shields.io/badge/Uses-Claude%203.7%20Sonnet-orange)](https://www.anthropic.com/news/claude-3-5-sonnet)
-[![Ontology-Guided (SAPPO)](https://img.shields.io/badge/Ontology-Guided%20(SAPPO)-purple)](.)
+[![Perplexity API (Tiered)](https://img.shields.io/badge/Perplexity-API%20(Tiered)-blue)](https://perplexity.ai)
+[![Uses AI Model (e.g., Claude 3.7 Sonnet)](https://img.shields.io/badge/Uses-AI%20Model-orange)](https://www.anthropic.com/news/claude-3-5-sonnet)
 [![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC-orange)](.)
 [![cline MCP Installer](https://img.shields.io/badge/cline-MCP%20Installer-orange)](https://cline.tools)
 
-## 🌌 What is This? (The Evolved SPARC-SAPPO Framework Explained)
+## 🌌 What is This? (The SPARC Framework: Framework-First, Test-Plan-Driven)
 
-Welcome to the refined SPARC-SAPPO Agentic Development Framework, a highly structured system for AI-assisted software engineering built on Roo Code. This framework leverages **meticulous planning, ontological guidance, a robust Targeted TDD cycle, and strategic AI research** to deliver high-quality, cost-effective results using Anthropic's Claude 3.7 Sonnet. Inspired by [Rueven Cohen's original SPARC/Boomerang](https://gist.github.com/ruvnet/a206de8d484e710499398e4c39fa6299) concepts, this evolution emphasizes Micro-Tasking, Research Driven Development, and is backed by my custom-made [Software Architecture Problem Prediction Ontology](https://github.com/ChrisRoyse/Coding-Agent-Ontology)(SAPPO).
+Welcome to the SPARC Agentic Development Framework, a structured system for AI-assisted software engineering using Roo Code. This framework emphasizes **building a solid foundation first, meticulously planning testing upfront, and then executing feature development rigorously against that plan**, all while leveraging **strategic Research-Driven Development (RDD)** via Perplexity AI.
 
 **Key Pillars:**
 
-1.  **SPARC Principles:** Core symbolic guidelines (Clarity, Extensibility, Testing, Collaboration) embedded within agent instructions.
-2.  **SAPPO Ontology:** A custom ontology (`:Problem`, `:Solution`, `:Context`, `:ArchitecturalPattern`, `:TechnologyVersion`) explicitly used by agents to structure tasks, anticipate issues, and document decisions.
-3.  **Micro-Task Orchestration & "Boomerang" TDD Cycle:** A central `⚡️ SAPPO Orchestrator` breaks down plans into single micro-tasks. Crucially, it manages an immediate **Code -> Test -> Fix -> Re-Test** cycle for every implementation unit, driven by explicit PASS/FAIL reporting from the Tester.
-4.  **Tiered Research-Driven Development (RDD):** Specialist agents strategically use Perplexity MCP tools (`search`, `get_documentation`, etc.) based on defined tiers (**MUST/SHOULD/MAY/DO NOT USE**), optimizing API usage and ensuring research is applied only when truly necessary.
-5.  **Targeted Test-Driven Development (TDD):** A dedicated `🎯 Tester` (`@tester-core`) employs a **precise two-part strategy within the *immediate* TDD cycle:**
-    *   **Core Logic Testing:** Focused unit tests verifying the internal correctness of the *newly implemented code*, including specific checks for `:RecursiveAlgorithm` patterns (base cases, steps, edge cases targeting `:LogicError` or `:StackOverflowError`).
-    *   **Contextual Integration Testing:** Using `:Context` provided by the Orchestrator (e.g., feature, interacting components), the tester writes a *small number* of focused tests verifying only the **most critical, direct interactions** of the new code with its immediate collaborators. This catches integration issues like `:InterfaceMismatch` early.
-6.  **Unified LLM, Dual-Mode Strategy (Claude 3.7 Sonnet):** Utilizes **Anthropic's Claude 3.7 Sonnet (~200k token context window)** with distinct temperature settings:
-    *   **🧠 Thinking Mode (Temp ~0.7):** For planning, design, architecture, complex reasoning.
-    *   **🛠️ Instruct Mode (Temp ~0.25):** For precise code, test generation, debugging following instructions.
+1.  **SPARC Principles:** Core symbolic guidelines (Specification, Pseudocode, Architecture, Refinement, Completion) embedded within agent instructions ensure clarity, extensibility, testability, and maintainability.
+2.  **Framework-First Workflow:** Development follows distinct phases: Specification/Architecture -> **Framework Implementation** -> **Comprehensive Test Plan Generation** -> Phased Feature Implementation & Testing -> Integration & Final Validation -> Refinement/Deployment.
+3.  **Test-Plan-Driven Development:** A central `TEST_PLAN.md` document, created *after* the framework exists using its context, serves as the **single source of truth for quality**. It defines testing phases, tasks, required test types (unit, integration, cumulative, recursive), and success criteria.
+4.  **Tiered Research-Driven Development (RDD):** Specialist agents strategically use Perplexity MCP tools (`search`, `get_documentation`, etc.) based on defined tiers (**MUST/SHOULD/MAY/DO NOT USE**), optimizing API usage and ensuring research is applied cost-effectively only when needed.
+5.  **Deep Research Capability:** A dedicated `@deep-research` mode handles extensive, foundational research tasks separately, keeping specialist agents focused.
+6.  **Rigorous Planned Testing:** `@tdd` agent executes tests *strictly according to the `TEST_PLAN.md`* for each feature. The `@integration` agent runs the *entire* test suite defined in the plan as final validation. Includes explicit support for **cumulative** (regression) and **recursive** testing when defined in the plan.
 
-**The Core Idea:** Provide a **detailed plan**. The `Orchestrator` (Thinking Mode) delegates **one micro-task**, framed with SAPPO. The Specialist (e.g., `Coder` - Instruct Mode) executes, using **Tiered RDD** for targeted research. The `Tester` (`@tester-core` - Instruct Mode) then *immediately* applies the **Targeted Testing Strategy** (Core Logic + Contextual Integration based on Orchestrator-provided context). Based on **PASS/FAIL**, the Orchestrator either initiates a fix micro-task (Coder/Debugger -> Tester) or proceeds with the plan. Broader regression testing is handled by the `Integrator` later. This **methodology drastically reduces the need for massive context windows**, making development **robust, fast, AND cost-effective**. We prioritize structure and *focused* testing over excessive context, proving that ~200k tokens, used wisely, is highly effective and economical.
+**The Core Idea:** Start with clear specs and architecture. Build the application's structural framework. **Then, create a detailed, comprehensive `TEST_PLAN.md` that considers the framework and overall goals.** Implement features one by one, testing each **rigorously against the predefined plan**. Finally, integrate everything and run the **full test plan** to ensure system integrity. This structured approach emphasizes predictability, maintainability, and quality through upfront planning and methodical execution, supported by strategic AI research.
 
 ## 📺 Quick Start & Methodology Video Guide:
 
 [![Watch the Setup & Best Practices Guide](https://img.youtube.com/vi/X0qIr-dEViU/maxresdefault.jpg)](https://youtu.be/X0qIr-dEViU)
 
-👆 **Click the image above for a walkthrough!** (Note: This video demonstrates the previous "Dual Testing" strategy. While setup remains similar, the testing methodology has evolved to the "Targeted Testing Strategy" described here for faster, more focused feedback in the immediate loop. Key principles of planning and micro-tasking remain.) This README reflects the **current** Targeted Testing approach.
-
-## 🧠🛠️ Unified LLM, Dual-Mode Strategy (Claude 3.7 Sonnet @ ~200k Context)
-
-Leveraging **Anthropic's Claude 3.7 Sonnet** (~200k context) with role-based temperature control:
-
-1.  **🧠 Thinking Mode (Temperature: ~0.7)**
-    *   **Model:** Claude 3.7 Sonnet
-    *   **Purpose:** Planning, design, architecture, specs, documentation, complex reasoning.
-    *   **Agents:** Orchestrator, Spec Writer, Architect, Docs Writer, Ask Guide, Security Reviewer (uses edit).
-
-2.  **🛠️ Instruct Mode (Temperature: ~0.25)**
-    *   **Model:** Claude 3.7 Sonnet
-    *   **Purpose:** Precise code/test generation, debugging, integration, operations following strict guidance.
-    *   **Agents:** Coder, Tester, Debugger, Integrator, Optimizer, DevOps.
-
-**Why Claude 3.7 Sonnet & the ~200k Window Strategy (Cost-Efficiency by Design):**
-
-*   **Peak Capability, Optimized Cost:** Claude 3.7 Sonnet offers leading performance within a generous yet manageable ~200k context.
-*   **Methodology Trumps Raw Context:** This framework **intentionally avoids multi-million token dependency.** Our **rigorous Targeted TDD cycle** acts as the *immediate quality gate*. Combined with **micro-tasking**, **focused RDD**, and *later* **comprehensive integration tests** by `@integrator`, vast context becomes **methodologically unnecessary and economically wasteful for the core loop.**
-*   **The Targeted TDD Advantage:** Core Logic testing ensures unit correctness. Contextual Integration testing validates *key interactions* early, guided by Orchestrator context. The LLM doesn't *need* to reread everything constantly in the fastest loop; the targeted tests confirm the unit works and fits its immediate purpose, while `@integrator` verifies broader system health later.
-*   **Dramatic Cost Savings:** Extremely large context windows incur significantly higher, often quadratic, API costs (potentially **$0.30 to $2.00+ per call**). Our micro-tasking and *Targeted* TDD keep Instruct calls lean (often 50k-150k, focusing on the unit + immediate context), staying *well below* the 200k limit and **slashing LLM expenses** without sacrificing initial quality checks.
-*   **Structure Over Size:** Success hinges on **your detailed plan** and the framework's structured execution (SAPPO, Targeted TDD Cycle), enabling Claude 3.7 Sonnet to excel within its efficient ~200k window. Rigor beats brute force.
+👆 **Click the image above for a walkthrough!** (Note: The video may demonstrate earlier concepts like the Boomerang Task or Dual Testing. This README reflects the **current Framework-First, Test-Plan-Driven** workflow. Setup and core agent interactions remain similar, but the overall development *strategy* is different.)
 
 ## ✨ Key Features & Methodology
 
-### 🏛️ SAPPO-Guided Micro-Tasking
--   **Ontology Mandate:** SAPPO terms (`:Problem`, `:Solution`, `:TechnologyVersion`, `:Context`, etc.) structure tasks and completion summaries.
--   **Granularity:** Orchestrator breaks plans into minimal, single logical units.
--   **Specialization:** Agents collaborate via the Orchestrator, using appropriate Claude 3.7 modes.
+### 🏛️ Framework-First Approach
+-   **Foundation Building:** Prioritizes implementing the core application structure, configuration, and interfaces *before* full feature development.
+-   **Context for Planning:** Ensures the subsequent Test Plan is created with a solid understanding of the system's architecture.
+
+### 📝 Test-Plan-Driven Development
+-   **Central `TEST_PLAN.md`:** `@docs-writer` creates this critical artifact using framework context. Defines phases, tasks, test types, cumulative/recursive requirements, and success criteria.
+-   **Execution Blueprint:** `@tdd` executes tests precisely as specified in the plan for each feature.
+-   **Final Validation:** `@integration` validates the entire system against the *full* `TEST_PLAN.md`.
+
+### 🔄 Cumulative & Recursive Testing
+-   **Planned Regression:** The `TEST_PLAN.md` explicitly defines which previous tests must be re-run (cumulative) to catch regressions during development.
+-   **Planned Recursive Checks:** For recursive algorithms, the plan specifies required tests (base cases, steps, edge cases).
+-   **Systematic Execution:** `@tdd` performs these checks as mandated by the plan section for the current task.
 
 ### 🔍 Tiered Research-Driven Development (RDD)
--   **Strategic Perplexity Use:** Specialist agents use MCP tools (`search`, `get_documentation`, etc.) based on **clear tiers**:
-    *   **MUST USE:** For critical unknowns, unfamiliar APIs, complex errors, vulnerability checks.
-    *   **SHOULD USE:** For best practices, specific technology/pattern nuances.
-    *   **MAY USE:** For examples, broader context understanding.
-    *   **DO NOT USE:** For basic knowledge, straightforward tasks.
--   **Optimized & Justified Research:** Avoids unnecessary API calls while ensuring accuracy when needed.
+-   **Strategic Perplexity Use:** Specialist agents use MCP tools based on clear tiers:
+    *   **MUST USE:** For critical unknowns, complex algorithms, specific API/library details.
+    *   **SHOULD USE:** For best practices, confirming implementation patterns.
+    *   **MAY USE:** For examples, exploration.
+    *   **DO NOT USE:** For basic knowledge, simple tasks.
+-   **Optimized & Justified Research:** Focuses AI assistance where it adds most value, managing costs.
+-   **Dedicated Deep Research:** `@deep-research` handles large-scale information gathering separately.
 
-### ✅ Targeted Test-Driven Development (TDD)
--   **Immediate Testing Cycle ("Boomerang"):** `🎯 Tester` (`@tester-core`) runs immediately after `Coder` completion.
--   **Focused Validation (Targeted Strategy):**
-    1.  **Core Logic Testing:** Unit tests verify the *implemented code's internal correctness*, including specific handling for patterns like `:RecursiveAlgorithm` (base/step/edge cases targeting relevant SAPPO `:Problem`s like `:LogicError`, `:StackOverflowError`).
-    2.  **Contextual Integration Testing:** Orchestrator provides `:Context` (e.g., 'Part of Feature X', 'Consumed by Service Y'). Tester writes a *few critical tests* verifying **direct interactions** based on this context, preventing early integration `:Problem`s (`:InterfaceMismatch`, `:CompatibilityIssue`) related to the unit's role.
--   **PASS/FAIL Driven Workflow:** Tester's explicit PASS/FAIL result for the *targeted tests* dictates the Orchestrator's next step (initiate fix or proceed).
--   **Later Comprehensive Checks:** The `🔗 Integrator` agent runs broader, potentially system-wide tests *after* a unit has successfully passed its targeted TDD cycle and is ready for merge.
--   **Plan Integration:** Your plan should anticipate these targeted testing steps and provide necessary `:Context` hints for the Orchestrator to pass to the Tester.
+### 🔄 The Workflow Loop (Framework-First, Test-Plan-Driven)
+1.  **You:** Provide overall objectives and constraints to the `⚡️ SPARC Orchestrator`.
+2.  **Phase 1: Spec & Arch:** Orchestrator delegates to `@spec-pseudocode` / `@architect` for high-level design. RDD used strategically.
+3.  **Phase 2: Framework Code:** Orchestrator delegates to `@code` to build the application skeleton based on architecture.
+4.  **Phase 3: Test Plan Generation:** Orchestrator provides framework context -> delegates **`new_task @docs-writer Create TEST_PLAN.md based on framework context... Plan phases for Feature A, Feature B... Define cumulative tests for Phase 2... Define recursive tests for function X...`**
+5.  **Phase 4: Phased Implementation & Testing (Iterative based on `TEST_PLAN.md`):**
+    a.  Orchestrator assigns feature coding: `new_task @code Implement Feature A part 1 as per spec, ready for testing per TEST_PLAN.md section 3.1.`
+    b.  Orchestrator assigns testing: `new_task @tdd Execute tests for Feature A part 1 per TEST_PLAN.md section 3.1. Include cumulative/recursive checks as specified. Report PASS/FAIL.`
+    c.  **If FAIL:** Orchestrator assigns debugging: `new_task @debug Fix failure reported by @tdd for TEST_PLAN.md section 3.1...` -> Loop back to 5b.
+    d.  **If PASS:** Orchestrator proceeds to the next task/feature in the `TEST_PLAN.md`.
+6.  **Phase 5: Integration:** Once all plan phases PASS, Orchestrator delegates: `new_task @integration Merge all features and run the COMPLETE test suite from TEST_PLAN.md.`
+7.  **Phase 6: Final Steps:** Security review (`@security-review`), final docs (`@docs-writer`), optimization (`@refinement-optimization-mode`), deployment (`@devops`).
 
-### 📄 Detailed Planning is Paramount
--   **User Responsibility:** Success requires a **well-structured, phased plan**. The AI executes *your* strategy. Clearly defining expected interactions helps the Orchestrator provide good `:Context` for testing.
--   **Methodology > Model Size:** Good planning + strong TDD (Targeted loop + Comprehensive integration checks) are essential for quality and **cost-efficiency**, regardless of LLM context size.
+## ✨ Why This Approach?
 
-### 🔄 The Workflow Loop (Featuring the Targeted Boomerang TDD Cycle)
-1.  **You:** Provide a detailed plan to the `Orchestrator`, including hints about component interactions (:Context).
-2.  **Orchestrator (Claude 3.7 Sonnet @ ~0.7):** Identifies next micro-task, frames with SAPPO, delegates (e.g., `new_task @coder Implement X... using :RecursiveAlgorithm... CONTEXT: Part of 'User Profile Update', sends data to :AuditService.` ).
-3.  **Coder (Claude 3.7 Sonnet @ ~0.25):** Receives task, performs **Tiered RDD (if needed)**, implements the single unit.
-4.  **Coder:** Reports `attempt_completion` (mentions pattern, SAPPO considerations, RDD usage). States **"Code complete, ready for immediate targeted testing via @tester-core. Returning control to Orchestrator."**
-5.  **Orchestrator:** Immediately assigns testing task *with context*: `new_task @tester-core Apply TARGETED TESTING STRATEGY to X. CONTEXT: Part of 'User Profile Update', sends data to :AuditService. Test core logic (esp. recursion if any) AND context (interaction w/ :AuditService). Report PASS/FAIL.`
-6.  **Tester (`@tester-core`, Claude 3.7 Sonnet @ ~0.25):** Writes/executes **Targeted Tests**: (1) Core Logic tests (unit tests, recursive checks). (2) Contextual Integration tests (mocks `:AuditService`, checks if `X` calls it correctly based on context).
-7.  **Tester:** Reports `attempt_completion` with **explicit "Targeted testing complete. Result: PASS" or "Result: FAIL [details on Core/Contextual test failure...]"**, confirms strategy application.
-8.  **Orchestrator (Analyzes Test Result):**
-    *   **IF PASS:** Proceeds to the next step in your plan (e.g., documentation, pass to integrator).
-    *   **IF FAIL:** Initiates fix cycle: assigns fix task to `@coder` or `@debugger` (`new_task @coder Fix :InterfaceMismatch in X identified by Contextual Integration test...`), awaits fix `attempt_completion`, then **loops back to Step 5** to re-assign testing to `@tester-core` *with the same context*.
-9.  Cycle Repeats until the plan phase involving implementation/unit testing is complete. Later steps might involve `@integrator` for merging and broader tests.
-
-## ✨ Why It's a Game Changer
-
--   🏛️ **Structured & Predictable:** SAPPO + Micro-tasking + Targeted TDD cycle create discipline.
--   💡 **Accurate & Efficient Research:** Tiered RDD ensures up-to-date info without waste.
--   ✅ **Robust & Fast Feedback:** Targeted TDD catches core logic and critical integration issues *immediately*. Comprehensive checks by `@integrator` ensure broader stability before release.
--   🧠 **Optimized AI Usage:** Leverages Claude 3.7 Sonnet's strengths via Thinking/Instruct modes within its efficient ~200k window.
--   💰 **MASSIVELY Cost-Effective:** Methodology (Micro-tasks + *Targeted* TDD loop) **makes >200k context unnecessary for the rapid iteration cycle**. Keeps API calls lean (often 50k-150k Instruct), **slashing LLM costs** versus huge context models. Avoid budget blowouts!
--   📈 **Superior Quality:** Leads to modular, rigorously unit-tested *and* integration-aware, secure, documented code.
--   🤝 **Clear Collaboration:** Explicit SAPPO terms, Targeted TDD cycle steps, Context passing, and PASS/FAIL reports improve traceability.
+-   🏛️ **Structured & Predictable:** Framework-First builds a solid base; Test-Plan-Driven ensures quality gates are defined upfront.
+-   📝 **Comprehensive Testing:** The Test Plan ensures systematic coverage, including crucial regression (cumulative) and algorithmic (recursive) checks.
+-   💡 **Accurate & Efficient Research:** Tiered RDD focuses AI research; Deep Research mode handles large tasks.
+-   ✅ **Robust Quality Assurance:** Testing follows a defined strategy, culminating in full validation against the plan.
+-   📈 **Maintainable & Scalable:** Building the framework first promotes better long-term structure.
+-   💰 **Cost-Effective RDD:** Strategic use of Perplexity API prevents unnecessary calls.
 
 ## 🛠️ The Core Components
 
-1.  **SPARC-SAPPO Agent Army (.roomodes):** JSON definitions with SAPPO/Targeted TDD/RDD instructions, Thinking/Instruct roles, Tiered MCP rules. (*You are reading the description for V3 with Targeted TDD*).
-2.  **SPARC Syntax:** Underlying symbolic principles. [See Overview](#-sparc-syntax-overview).
-3.  **SAPPO Ontology:** Conceptual framework.
-4.  **Perplexity Research Tools (MCP):** Integrated via `search`, `get_documentation`, etc., used according to tiers.
-5.  **Unified LLM Engine (Claude 3.7 Sonnet):** Configured with two temperature profiles (~200k context limit).
+1.  **SPARC Agent Army (.roomodes):** JSON definitions for the Framework-First, Plan-Driven workflow with Tiered RDD.
+2.  **SPARC Syntax:** Underlying symbolic principles guiding agents. [See Overview](#sparc-syntax-overview).
+3.  **Perplexity Research Tools (MCP):** Integrated for Tiered RDD.
+4.  **Deep Research Mode:** Dedicated agent for extensive research.
+5.  **AI Engine (e.g., Claude 3.7 Sonnet):** The underlying language model executing instructions.
 
-## 🎬 See It In Action (Targeted Micro-Task & TDD Cycle Example)
+## 🎬 See It In Action (Framework-First, Plan-Driven Example)
 
-**User Plan Snippet:** "Phase 3: Implement recursive file search for report generator. Step 3.1: Specify `findFilesRecursive`. Step 3.2: Code `findFilesRecursive`. CONTEXT: Consumed by :ReportGeneratorService, must handle '.txt' files only. Step 3.3: Apply Targeted TDD. Step 3.4: Document."
+**User:** "Start project: Simple Blog Platform."
 
-**▶️ Orchestrator (Claude @ 0.7):** "`new_task @spec-writer Specify `findFilesRecursive(dir, pattern)` using :RecursiveAlgorithm. Detail base case, recursive step. Target: `.txt` files. Potential :StackOverflowError :Problem. Define TDD anchors (Core Logic: base, recursion, edge cases like symlinks; Contextual Integration: check filter logic for `.txt`).`"
+**▶️ Orchestrator:** (Phase 1) `new_task @spec-pseudocode Define core blog features (posts CRUD, basic comments)...` -> `new_task @architect Design framework (e.g., Express routes, basic data models)...`
 
-**(Later) 📝 Spec Writer (Claude @ 0.7):** "`attempt_completion` Spec written. Notes :RecursiveAlgorithm, targets `.txt` files, potential :StackOverflowError. Provides **TDD Anchors:** **Core Logic:** empty dir, nested `.txt` find, symlink loop avoidance. **Contextual Integration:** Ensure only `.txt` files are returned when called with various inputs. Used MCP `search` (SHOULD USE tier) for robust symlink loop detection patterns. Returning."
+**(Later) ▶️ Orchestrator:** (Phase 2) `new_task @code Implement framework: Setup Express app, define base routes (`/posts`, `/comments`), placeholder data models...`
 
-**▶️ Orchestrator:** "`new_task @coder Implement `findFilesRecursive` per spec... Use :NodeJS v20... Handle symlink loops (:LogicError). Add depth limit (:StackOverflowError mitigation). Ensure filter for `.txt` pattern passed in.`"
+**(Later) ▶️ Orchestrator:** (Phase 3 - CRITICAL) `new_task @docs-writer **ACTION: Analyze framework code [link/context]. Create comprehensive TEST_PLAN.md.** Plan Phase 1: Posts CRUD (Unit & Integration tests). Plan Phase 2: Comments CRUD (Unit & Integration). **Cumulative Req:** After implementing comments, re-run Post listing integration tests. **Recursive Req:** N/A for this example.`
 
-**(Later) 🧠 Coder (Claude @ 0.25):** "`attempt_completion` Implemented `findFilesRecursive`. Used :RecursiveAlgorithm, added depth limit, visited set for symlinks, respects input pattern (expects `.txt`). Used MCP `get_documentation` (MUST USE tier) for `fs.promises.readdir` `withFileTypes` option. Code complete, ready for immediate targeted testing via @tester-core. Returning."
+**(Later) ▶️ Orchestrator:** (Phase 4 - Following `TEST_PLAN.md` Phase 1) `new_task @code Implement 'Create Post' endpoint (POST /posts) per spec.`
 
-**▶️ Orchestrator:** "`new_task @tester-core Apply TARGETED TESTING STRATEGY to `findFilesRecursive`. CONTEXT: Must return only '.txt' files for :ReportGeneratorService. TEST: (1) CORE LOGIC (base/step/edges/recursion). (2) CONTEXTUAL INTEGRATION (verify `.txt` filter works, interacts as expected by context). Report PASS/FAIL.`"
+**(Later) ▶️ Orchestrator:** `new_task @tdd Execute tests for 'Create Post' as defined in **TEST_PLAN.md section 'Phase 1 - Posts CRUD - Create Post Tests'**. Report PASS/FAIL.`
 
-**(Later) 🎯 Tester (`@tester-core`, Claude @ 0.25):** "`attempt_completion` **Applied Targeted Testing Strategy.** Context: `.txt` filter for :ReportGeneratorService. **(1) Core Logic Testing:** Base case (empty dir) passed. Recursive step (nested file find) passed. Edge case (symlink loop) passed. **(2) Contextual Integration Testing:** Test with pattern `*.txt` correctly returned only .txt files. Test with other patterns returned empty list as expected per context. **Result: PASS**. All targeted tests passed. Returning control."
-*(If FAIL: `... Result: FAIL. Contextual Integration test 'test_txt_filter_ignores_other_extensions' failed. Returned '.log' files unexpectedly. Suspected :LogicError in pattern filtering... Returning control.` The orchestrator would then trigger the fix cycle.)*
+**(Later, after @tdd reports PASS for 'Create Post') ▶️ Orchestrator:** `new_task @code Implement 'List Posts' endpoint (GET /posts) per spec.`
 
-**▶️ Orchestrator:** "Implementation tested (Passed Targeted TDD cycle). Proceeding to documentation..."
+**(Later) ▶️ Orchestrator:** `new_task @tdd Execute tests for 'List Posts' per **TEST_PLAN.md section 'Phase 1 - Posts CRUD - List Posts Tests'**. Report PASS/FAIL.`
 
-## 🔧 Get Started (Join the Vibe!)
+*(...Continues executing Phase 1 tasks per the plan...)*
 
-Ready for structured, Targeted TDD-powered, cost-effective AI development?
+**(Later, starts Phase 2) ▶️ Orchestrator:** `new_task @code Implement 'Create Comment' endpoint (POST /posts/:postId/comments) per spec.`
+
+**(Later) ▶️ Orchestrator:** `new_task @tdd Execute 'Create Comment' tests per **TEST_PLAN.md section 'Phase 2 - Comments CRUD - Create Comment Tests'**. ALSO execute **cumulative tests defined in plan (re-run Post Listing tests)**. Report PASS/FAIL.`
+
+*(...Continues until all TEST_PLAN.md phases are complete...)*
+
+**(Finally) ▶️ Orchestrator:** (Phase 5) `new_task @integration All features implemented and passed phase testing. Merge all branches. Execute the **ENTIRE TEST SUITE from TEST_PLAN.md** for final validation.`
+
+## 🔧 Get Started
+
+Ready for structured, plan-driven AI development?
 
 ### Prerequisites
 1.  **VS Code** + **Roo Code extension**.
-2.  **Anthropic API Key** (Claude 3.7 Sonnet access).
-3.  **Perplexity API Key**.
+2.  **AI Model API Key** (e.g., Anthropic for Claude, OpenAI, etc.). Configure in Roo Code.
+3.  **Perplexity API Key** (for RDD).
 
-### Configuration: Claude 3.7 Sonnet Dual Profiles & RDD Tools
+### Configuration:
 
 1.  **Perplexity MCP Setup (RDD Tools):**
     *   Use **[cline](https://cline.tools)** (recommended): Install "Perplexity AI" provider, enter key, copy MCP URL/Header.
     *   Paste URL/Header into Roo Code's Perplexity MCP settings.
 
-2.  **Dual-Mode LLM Configuration (CRITICAL!):**
-    *   Create **TWO** model profiles in Roo Code settings, **BOTH** pointing to your **Anthropic Claude 3.7 Sonnet** endpoint:
-        *   **Profile 1 (Thinking):** Name: `claude-3.7-sonnet-thinking`. Endpoint: [Your Claude 3.7 Sonnet Endpoint]. **Default Temperature: ~0.7**.
-        *   **Profile 2 (Instruct):** Name: `claude-3.7-sonnet-instruct`. Endpoint: [Your Claude 3.7 Sonnet Endpoint]. **Default Temperature: ~0.25**.
-    *   **Why two profiles?** To easily switch between high-temp Thinking (Orchestrator, Architect, Spec Writer, etc.) and low-temp Instruct (Coder, Tester, Debugger, etc.) as required by the framework roles, optimizing Claude 3.7 Sonnet's performance within its ~200k context.
-    *   **Manual Switching Required:** The `.roomodes` does NOT auto-assign profiles. **You MUST manually select the correct profile (`thinking` or `instruct`) in the Roo Code UI *before* invoking or allowing delegation to an agent.** Select `thinking` for Orchestrator interactions, switch to `instruct` when an Instruct agent (Coder, Tester) takes over, then switch back to `thinking` when control returns to Orchestrator. Diligence is key here.
+2.  **AI Model Configuration:**
+    *   Configure your chosen LLM (e.g., Claude 3.7 Sonnet, GPT-4o) in Roo Code's model settings. Set appropriate default temperatures if needed (typically moderate, ~0.5-0.7, as roles aren't strictly split by temperature in this Roomode set).
 
-3.  **Install SPARC-SAPPO RooModes:**
-    *   Copy the entire JSON object from the `*.roomodes` file source representing the **Targeted Testing Strategy (V3)**.
+3.  **Install SPARC Roomodes (This Version):**
+    *   Copy the entire JSON object from the `*.roomodes` file source representing the **Framework-First, Test-Plan-Driven (v3)** workflow.
     *   Go to Roo Code settings -> "Edit Global Modes".
     *   Paste the JSON, replacing existing content. Save.
     *   Reload Roo Code (`Roo Code: Reload Custom Modes` or restart VS Code).
 
 ### Start Developing!
 1.  Open a Roo Code chat.
-2.  **Manually select the `claude-3.7-sonnet-thinking` profile.**
-3.  Select the `⚡️ SAPPO Orchestrator` mode.
-4.  Provide your detailed, phased plan (mentioning testing needs, :Context hints for interaction, recursive parts).
-5.  Observe the micro-tasking and **Targeted Boomerang TDD Cycle**.
-6.  **Remember to manually switch profiles (Thinking <-> Instruct) based on which agent is active.** Keep Instruct context minimal, focused on the current micro-task + immediate context.
-7.  Use `❓ Ask Guide` (Thinking profile) for help structuring plans or understanding the Targeted TDD/cost-efficiency rationale.
+2.  Select your configured AI Model profile.
+3.  Select the `⚡️ SPARC Orchestrator` mode.
+4.  Provide your high-level project objectives.
+5.  Guide the orchestrator through the phases: Specify/Architect -> Build Framework -> **Generate Test Plan** -> Implement Features according to Plan -> Integrate & Final Test.
+6.  Observe the structured workflow and how testing is driven by the `TEST_PLAN.md`.
+7.  Use `❓ Ask Guide` for help understanding the workflow or formulating requests for specific phases.
+8.  For major research tasks, instruct the orchestrator: `new_task @deep-research Research best practices for [topic relevant to project]...`
 
 ## <a name="sparc-syntax-overview"></a>🌌 SPARC Syntax Overview
 
-The symbolic syntax (`Φ•Ω`, `Γ•Μ•Υ`, etc.) represents core principles encoded in agent instructions. Key concepts relevant to the Targeted TDD approach:
+The symbolic syntax (`Φ•Ω`, `Γ•Μ•Υ`, etc.) represents core principles encoded in agent instructions. Key concepts relevant to this framework:
 
-*   **Φ•Ω [Core•Flow]:** Workflow clarity, systematic extension, code quality (`§͟qual`), confirmation (`⊦confirm`).
-*   **Γ•Μ•Υ [Context]:** Doc/context-driven action (`⊦⟨doc⟩ ⟨ctx⟩ → ⟨action⟩`), arch boundaries (`⊤⟨arch⟩`), tech management (`⊢{...} ⊥newΔ`). **Orchestrator passes necessary :Context for targeted testing.**
-*   **Τ•Ρ [Tasks]:** Micro-tasks (`⊦⟨micro⟩`), **tiered RDD** for uncertainty (`‼️Ρ{pMCP tiers}→{search|...}✓findings`), self-verify (`⊗self{...}→⊦complete`).
-*   **Κ•Σ [Code]:** Best practices (`⊢{bestPractice}`), conventions (`≡⟨conventions⟩`), modularity (`⊤⟨module⟩`), size limits (`⟨file⟩≤350Λ`), DRY (`¬⟨duplication⟩`).
-*   **Χ [Refactor]:** Improve code based on specific triggers (`⋉{...}`), **verify via tests** (initially `@tester-core` for targeted checks, potentially `@integrator` later) (`⊨{⋈intact}⇒{⊦tester-core}`).
-*   **Δ [Testing]:** **Test-driven** (`⊢⟨test→code⟩`), **targeted coverage** (`🎯⟨coverage:core+context⟩`), completion gated by **passing targeted tests** (`‼️✓⟨tests pass:targeted⟩→⊦complete`). Includes core recursive validation. **Later comprehensive testing via `@integrator`.**
-*   **Β [Debug]:** SAPPO root cause (`⊙{⟨root⟩:SAPPO}`), precise logs (`⊢⟨log⟩`). Supports Targeted TDD cycle.
-*   **Ξ [Security]:** Server-logic (`⊤{server-logic}`), validation/sanitization (`‼️⊤⟨validate⟩`), no hardcoded secrets (`¬⟨hardcode⟩`).
+*   **Φ•Ω [Core•Flow]:** Workflow clarity (Specification, Architecture, **Framework**, **Test Plan**, Implementation, Integration), systematic extension, code quality (`§͟qual`), confirmation (`⊦confirm`).
+*   **Γ•Μ•Υ [Context]:** **Framework context drives Test Plan** (`⊦⟨framework_ctx⟩ → ⟨TEST_PLAN.md⟩`), Doc/context-driven action (`⊦⟨doc⟩ ⟨ctx⟩ → ⟨action⟩`), Arch boundaries (`⊤⟨arch⟩`), tech management (`⊢{...} ⊥newΔ`).
+*   **Τ•Ρ [Tasks]:** Plan-driven tasks (`⊦⟨plan_task⟩`), **tiered RDD** for uncertainty (`‼️Ρ{pMCP tiers}→{search|...}✓findings`), self-verify (`⊗self{...}→⊦complete`). `@deep-research` for large RDD (`🔍deep-research`).
+*   **Κ•Σ [Code]:** Best practices (`⊢{bestPractice}`), modularity (`⊤⟨module⟩`), size limits (`⟨file⟩≤500Λ`).
+*   **Χ [Refactor]:** Improve code (`⋉{...}`), **verify via existing planned tests** (`⊨{⋈intact}⇒{⊦tdd}`).
+*   **Δ [Testing]:** **Driven by `TEST_PLAN.md`** (`⊢⟨TEST_PLAN.md⟩ → ⟨test_execution⟩`), defines coverage, cumulative, recursive needs (`🎯⟨coverage:plan_defined⟩`), completion gated by **passing planned tests** (`‼️✓⟨tests pass:plan⟩→⊦complete`). Final validation runs **full plan** (`‼️✓⟨tests pass:full_plan⟩→⊦integration_complete`).
+*   **Β [Debug]:** Fix based on test failure reports (`⊙{⟨root⟩}`), precise logs (`⊢⟨log⟩`). Enables Plan-Driven cycle continuation.
+*   **Ξ [Security]:** Server-logic (`⊤{server-logic}`), validation (`‼️⊤⟨validate⟩`), no hardcoded secrets (`¬⟨hardcode⟩`).
 *   **Ψ•Ε [VCS•Env]:** Git usage (`⊤⟨git⟩`), env-agnostic code (`⟨code⟩→⟨agnostic⟩`).
-*   **Λ [Docs]:** Accurate (`⊤⟨mirror-reality⟩`), including **Targeted Test strategy** explanation. Aids context recall.
-*   **Θ [Limits]:** File size (`⟨file⟩≤350Λ`), abstract credentials (`¬⟨credentials⟩`).
+*   **Λ [Docs]:** **`TEST_PLAN.md` creation is key.** Final docs accurate (`⊤⟨mirror-reality⟩`).
+*   **Θ [Limits]:** File size (`⟨file⟩≤500Λ`), abstract credentials (`¬⟨credentials⟩`).
 
 ## 🙏 Acknowledgements
 
-Builds heavily on **Reuven Cohen**'s SPARC methodology and 'Boomerang Tasks' concept.
--   Reference: [🪃 Boomerang Tasks by Reuven Cohen](https://www.linkedin.com/pulse/boomerang-tasks-automating-code-development-roo-sparc-reuven-cohen-nr3zc/)
--   SAPPO is a custom ontology for this framework.
+Builds on **Reuven Cohen**'s original SPARC methodology concepts.
 
 ## 📜 License
 MIT License - see `LICENSE` file.
@@ -200,17 +173,15 @@ MIT License - see `LICENSE` file.
 <div align="center">
   <p>Found this framework valuable? Consider supporting its development.</p>
   <a href="https://paypal.me/ChrisRoyseAI" target="_blank"><img src="https://img.shields.io/badge/Support_via_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Support via PayPal" width="250"/></a>
-  <p style="margin-top: 10px;">Your support helps offset API costs (even with efficient models/methods) and allows for further refinement.</p>
+  <p style="margin-top: 10px;">Your support helps offset API costs and allows for further refinement.</p>
   <p>Thank you!</p>
 </div>
 
 ## 🔗 Related Resources
 -   [Roo Code Docs](https://roo.ai/docs)
 -   [Perplexity API Docs](https://docs.perplexity.ai/)
--   [Anthropic API Docs (Claude)](https://docs.anthropic.com/claude/reference/getting-started-with-the-api)
--   [Software Architecture Problem Prediction Ontology (SAPPO)](https://github.com/ChrisRoyse/Coding-Agent-Ontology)
+-   [AI Model Provider Docs (e.g., Anthropic, OpenAI)](...)
 -   [cline MCP Installer](https://cline.tools)
--   [Requestly (Useful for API mocking/testing)](https://requestly.io/)
 -   [MCP Standard](https://mcp.ai)
 
 ---
@@ -219,6 +190,6 @@ MIT License - see `LICENSE` file.
 
 ---
 
-Embrace structured, ontology-driven, **Targeted TDD-powered**, and **cost-effective** AI-accelerated development. Plan meticulously, execute precisely, test smartly!
+Embrace structured, plan-driven, AI-accelerated development with built-in quality assurance!
 
 ---
