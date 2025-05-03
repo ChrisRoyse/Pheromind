@@ -158,15 +158,6 @@ This approach is heavily inspired by and utilizes the **SPARC methodology and Ro
 ## 📜 License
 MIT License - see `LICENSE` file.
 
-## 🙏 Support Development
-
-<div align="center">
-  <p>Found this blueprint and agent setup valuable? Consider supporting its continued development and refinement.</p>
-  <a href="https://paypal.me/ChrisRoyseAI" target="_blank"><img src="https://img.shields.io/badge/Support_via_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Support via PayPal" width="250"/></a>
-  <p style="margin-top: 10px;">Your support helps offset API costs and allows for further exploration of AI-driven development.</p>
-  <p>Thank you!</p>
-</div>
-
 ## 🔗 Related Resources
 -   [Roo Code Docs](https://roo.ai/docs)
 -   [Reuven Cohen on LinkedIn](https://www.linkedin.com/in/reuvencohen/) (Follow for more on SPARC & AI)
