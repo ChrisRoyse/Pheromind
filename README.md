@@ -27,7 +27,15 @@ Welcome! This repository demonstrates and provides the tools for a groundbreakin
 
 **The Goal:** To empower *you*, the Visionary, to transform your ideas into functional software by leveraging cutting-edge AI collaboration, making the powerful SPARC framework more accessible and even more potent through structured input and integrated research.
 
-*The process and tools demonstrated here were showcased in the accompanying video (transcript context included or video linked).*
+*The process and tools demonstrated here were showcased in the accompanying video.*
+
+<div align="center">
+  <a href="https://youtu.be/q3CdigR2IvU">
+    <img src="https://img.youtube.com/vi/q3CdigR2IvU/maxresdefault.jpg" alt="Watch the Demo Video" style="width:100%;max-width:800px;">
+  </a>
+  <br>
+  <b>🎥 Click to watch the Zero-Code SPARC AI Demo Video</b>
+</div>
 
 ---
 
