@@ -1,172 +1,193 @@
-# 🚀 Zero-Code Blueprint for SPARC AI Development (Powered by Roo Code)
+# 🚀 Zero-Code SPARC AI: Your Vision, Built by AI (Powered by Roo Code & Enhanced Tooling)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Roo Code Compatible](https://img.shields.io/badge/Roo%20Code-Compatible-brightgreen)](https://roo.ai)
 [![Blueprint Driven](https://img.shields.io/badge/Input-Zero--Code%20Blueprint-blue)](./Zero_Code_User_Blueprint.pdf)
 [![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC%20(Reuven%20Cohen)-orange)](.)
-[![Uses AI Model (e.g., Claude 3.x)](https://img.shields.io/badge/Uses-AI%20Model-orange)](https://www.anthropic.com/)
-[![MCP Enabled Agents](https://img.shields.io/badge/Agents-MCP%20Enabled-purple)](https://mcp.ai)
+[![AI Models (e.g., Claude 3.x)](https://img.shields.io/badge/AI%20Models-Claude%203.x/GPT--4-orange)](.)
+[![MCP Enabled Agents](https://img.shields.io/badge/Agents-MCP%20Enabled-purple)](.)
+[![Video Demo Included](https://img.shields.io/badge/Demo-Video%20Context-informational)](.)
 
-*Based on the powerful SPARC methodology and agent definitions pioneered by Reuven Cohen.*
+**Based on the powerful SPARC methodology and foundational agent definitions pioneered by Reuven Cohen.**
 
-## 🌌 What is This? (Bridging Vision & Code with AI)
+---
 
-Welcome! This repository showcases a revolutionary approach to software creation: enabling **anyone with an idea (a Visionary!)** to describe their desired program in plain English using the **Zero-Code User Blueprint**, and then having a sophisticated team of AI agents (SPARC, powered by Roo Code) automatically build it.
+## 🌌 What is This? (From Your Vision to Working Software, Without Code)
 
-**Forget the technical jargon!** The core idea is simple:
+Welcome! This repository demonstrates and provides the tools for a groundbreaking approach to software creation. It enables **anyone with an idea (we call you the Visionary!)** to describe their desired program in plain English using the **`Zero_Code_User_Blueprint.pdf`**, and then watch as a sophisticated team of AI agents, orchestrated by **SPARC** (and powered by the Roo Code VS Code extension), automatically builds it.
 
-1.  **You (The Visionary):** Fill out the `Zero_Code_User_Blueprint.pdf`. Describe *what* your program should do, *who* it's for, and *why* it needs to exist – just like explaining it to a human team.
-2.  **SPARC (The AI Team):** The `sparc_agent_roomodes.json` defines a versatile team of AI specialists (like Architects, Coders, Testers, Researchers). Guided by the SPARC Orchestrator and your Blueprint, this AI team uses deep research, analysis, and code generation to bring your vision to life.
+**The Problem:** Bringing a software idea to life often requires deep technical knowledge, creating a barrier for entrepreneurs, subject-matter experts, and creative thinkers.
 
-**The Goal:** To empower non-technical users to translate their real-world needs and ideas directly into working software, letting the AI handle the complex "how".
+**Our Solution:** We bridge this gap! This repository offers:
 
-## ✨ Key Pillars & Methodology
+1. **A Structured Input:** The `Zero-Code_User_Blueprint.pdf` translates your vision into a format AI can understand, without you writing a single line of code.
+2. **An Intelligent AI Workforce:** The `sparc_agent_roomodes.json` defines a versatile team of specialized AI agents (Architects, Coders, Testers, Researchers, Database Admins, Web Crawlers, etc.), ready to execute your blueprint using the robust **SPARC methodology**.
+3. **Enhanced Tooling & Research:** This configuration integrates powerful **Deep Research** (using Perplexity) and **Web Crawling** (using Firecrawl) agents directly into the SPARC workflow. It also includes pre-researched documentation (like the Spark Report, Workflow, and "Uber Prompt" demonstrated in the included video context) to kickstart AI understanding and prompt generation for common development tasks.
+4. **Streamlined SPARC Implementation:** This project bundles necessary SPARC modes (like Deep Research and Firecrawler) and provides clear documentation (`SPARC_Universal_Workflow.md`) on how to apply the methodology effectively within the Roo Code environment.
 
-1.  **Zero-Code User Blueprint:** A structured template (`.pdf` included) guiding users to provide clear, detailed descriptions of their project goals, features, users, and rules in simple language. This is the **single source of truth** for the user's vision.
-2.  **SPARC Orchestration:** A master AI agent (`⚡️ SPARC Orchestrator`) interprets the Blueprint, breaks down the project into logical steps, and delegates tasks to specialized AI agents defined in the Roomodes.
-3.  **Specialized AI Agent Team (Roomodes):** A suite of pre-configured Roo Code modes (`sparc_agent_roomodes.json`), each with a specific role (Specification Writing, Architecture, Coding, Testing, Debugging, Security, Documentation, **Deep Research**, **Database Admin (Supabase)**, **Web Crawling (Firecrawl)**, Deployment, etc.). These agents collaborate, using tools and research (via MCP integrations) as needed.
-4.  **Deep Research Integration:** The `@deep-research` and `@fire-crawler` modes empower SPARC to automatically investigate existing solutions, technical possibilities, and gather necessary context based on the Blueprint, filling knowledge gaps.
-5.  **Focus on Outcomes:** The process prioritizes understanding the user's *intent* and desired *outcomes* (as defined in the Blueprint's Success Criteria) over rigid technical pre-specifications.
+**The Goal:** To empower *you*, the Visionary, to transform your ideas into functional software by leveraging cutting-edge AI collaboration, making the powerful SPARC framework more accessible and even more potent through structured input and integrated research.
 
-## 🔄 The Workflow Loop (Vision to Reality)
+*The process and tools demonstrated here were showcased in the accompanying video (transcript context included or video linked).*
 
-1.  **You:** Download and meticulously fill out the `Zero_Code_User_Blueprint.pdf`. Focus on clarity and detail in plain English.
-2.  **(In Roo Code)** **You:** Provide the completed Blueprint context (e.g., copy-paste content or reference the file) to the `⚡️ SPARC Orchestrator` mode.
-3.  **SPARC Orchestrator:** Reads and analyzes the Blueprint.
-4.  **Deep Research & Analysis:** Orchestrator likely delegates initial tasks:
-    *   `new_task @deep-research Analyze Blueprint Section [X, Y, Z]. Research similar applications, potential challenges, and best practices mentioned in Section 9.`
-    *   `new_task @fire-crawler Crawl websites mentioned in Section 9 [Similar Programs] to understand their features and structure.`
-    *   `new_task @spec-pseudocode Translate Blueprint Sections [1-4] and research findings into formal requirements and high-level pseudocode.`
-5.  **Architecture & Design:** `new_task @architect Design the system architecture based on the specification, considering platform choices (Section 6) and data needs (Section 4). Create diagrams.`
-6.  **Phased Implementation & Testing (Iterative):**
-    *   `new_task @code Implement feature [Core Action from Section 3] based on spec and architecture. Handle data [Information from Section 4].`
-    *   (If Database needed) `new_task @supabase-admin Setup database schema for [Data from Section 4] based on architecture. Implement RLS policies.`
-    *   `new_task @tdd Write and execute tests for feature [Core Action]. Verify against [Success Criteria from Section 8].`
-    *   **If FAIL:** `new_task @debug Investigate test failure for [Feature].` -> Loop back.
-7.  **Integration & Final Steps:** `new_task @integration Merge components.` -> `new_task @security-review Audit code.` -> `new_task @docs-writer Create user documentation based on Blueprint sections.` -> `new_task @devops Deploy application to [Platform from Section 6].`
-8.  **Result:** SPARC presents the working program, aiming to meet the Definition of Done described in your Blueprint!
+---
 
-## ✨ Why This Approach?
+## ✨ Key Pillars & How It Works
 
-*   👩‍💻 **Empowers Non-Technical Users:** Turns ideas into software without needing to code.
-*   🗣️ **Clear Communication:** The Blueprint provides a structured way to express complex ideas simply.
-*   ⚡ **Accelerated Development:** Leverages AI speed for research, coding, and testing.
-*   🤖 **Handles Complexity:** Abstracts away difficult technical choices and implementation details.
-*   🎯 **Focus on the Vision:** Keeps development aligned with the user's original goals and success criteria.
-*   🧠 **Built-in Expertise:** Utilizes specialized AI agents for high-quality architecture, code, security, and more.
+This system rests on several key pillars:
 
-## 🛠️ The Core Components
+1. **Zero-Code User Blueprint:** Your starting point. A detailed questionnaire (`.pdf` included) designed for non-technical users to articulate their project goals, target audience, desired features, essential rules, and success criteria in plain English. *This becomes the primary input for the AI team.*
+2. **SPARC Methodology (by Reuven Cohen):** The core operational framework – **S**pecification, **P**seudocode, **A**rchitecture, **R**efinement, **C**ompletion. This structured approach ensures a logical flow from idea to deployment, managed by the Orchestrator.
+3. **SPARC Orchestrator (⚡️ Mode):** The AI project manager. It interprets the Blueprint, consults the integrated research documents, breaks down the project using the SPARC workflow (`SPARC_Universal_Workflow.md`), and delegates tasks to specialized AI agents.
+4. **Specialized AI Agent Team (Roomodes):** Defined in `sparc_agent_roomodes.json`, this is your AI development team. Each agent (mode) has a specific role, instructions, and access to tools (like coding, testing, security scanning, database management, research via MCP). We've included and integrated essential agents like Deep Research, Fire Crawler, and Supabase Admin.
+5. **Integrated Deep Research & Context:** The `🔍 Deep Research` and `🔥 Fire Crawler` agents proactively gather external knowledge. Furthermore, the included documents (Spark Report, Workflow, Uber Prompt from the video demo) provide immediate, rich context to the AI, significantly enhancing its ability to plan and generate relevant prompts and code, especially for AI-assisted development tasks themselves.
+6. **Outcome-Driven Development:** The focus is squarely on achieving the goals and `Success Criteria` you define in the Blueprint. The AI figures out the technical "how" based on your desired "what" and "why".
 
-1.  📄 **The Zero-Code User Blueprint (`Zero_Code_User_Blueprint.pdf`):** The structured questionnaire for capturing the user's vision. **[Download/View Blueprint](./Zero_Code_User_Blueprint.pdf)**
-2.  🤖 **The SPARC Agent Roomodes (`sparc_agent_roomodes.json`):** The JSON configuration defining the AI specialist team for Roo Code. Contains roles like Orchestrator, Deep Research, Code, TDD, Supabase Admin, Fire Crawler, etc. **[View Roomodes](./sparc_agent_roomodes.json)**
-3.  🧩 **Roo Code (Environment):** The VS Code extension that runs the SPARC agents.
-4.  🧠 **AI Model (Engine):** The underlying large language model (e.g., Claude 3.x) that powers the agents' reasoning and generation.
-5.  🔌 **MCP (Management Control Panel):** Enables agents like Deep Research (Perplexity), Supabase Admin, and Fire Crawler to interact securely with external tools and APIs.
+---
 
-## 🎬 How It Works: A Simple Example
+## 🔄 Conceptual Workflow: From Your Brain to AI-Built App
+```
+    A[You (Visionary)] -- Fills out --> B(Zero-Code Blueprint PDF);
+    B -- Provides content to --> C{⚡️ SPARC Orchestrator (in Roo Code)};
+    C -- Uses --> D[📄 SPARC Workflow Doc];
+    C -- Consults --> E[📚 Enhanced Docs (Spark Report, Uber Prompt, etc.)];
+    C -- Delegates Task 1 --> F 🔍 Deep Research;
+    F -- Gathers Info --> C;
+    C -- Delegates Task 2 --> G(📋 Specification Writer);
+    G -- Creates Specs --> C;
+    C -- Delegates Task 3 --> H(🏗️ Architect);
+    H -- Designs System --> C;
+    C -- Delegates Tasks (Iterative) --> I(🧠 Code / 🧪 TDD / 🔐 Supabase Admin / etc.);
+    I -- Builds & Tests --> C;
+    C -- Delegates Final Tasks --> J(🔗 Integrator / 🛡️ Security / 📚 Docs / 🚀 DevOps);
+    J -- Finalizes & Deploys --> K{✅ Working Program!};
+    K -- Matches --> L(🎯 Success Criteria from Blueprint);
+```
 
-**User fills out the Blueprint:**
+---
 
-*   **Project Title:** Simple Recipe Finder
-*   **Section 1 (Elevator Pitch):** "An app to quickly find simple recipes based on ingredients I have at home."
-*   **Section 3 (Core Actions):** "Search recipes by ingredient", "View recipe steps", "Save favorite recipes".
-*   **Section 4 (Information):** "Recipe names, ingredients list, instructions, user favorites list".
-*   **Section 8 (Success Criteria):** "1. When I search 'chicken, rice', I see recipes using both. 2. I can click a recipe and see clear steps. 3. I can click a 'Save' button and find it later in 'My Favorites'."
+## 🛠️ The Core Components in This Repository
 
-**▶️ SPARC Orchestrator (in Roo Code, after receiving Blueprint):**
+* **📄 Zero_Code_User_Blueprint.pdf:** The essential questionnaire for capturing your vision. This is your primary interaction point. 
+  ➡️ [Download/View Blueprint](./Uber Prompt SPARC.pdf)
+  
+* **🤖 sparc_agent_roomodes.json:** The JSON configuration defining the specialized AI agents for Roo Code. Includes the SPARC orchestrator and critical modes like Deep Research, Fire Crawler, Supabase Admin, and more, integrating the concepts from the video.
+  ➡️ [View Agent Definitions (JSON)](./roomodes.json)
+  
+* **🧩 SPARC_Universal_Workflow.md:** A detailed guide outlining the step-by-step SPARC process leveraging these Roomodes and research capabilities, from conception to deployment and maintenance.
+  ➡️ [Read the Workflow Guide](./SPARC Development Workflow.md)
+  
+* **📚 Enhanced Context Documents** (From Video Demo - Contained within this Repo or referenced):
+  * **Spark Report:** Deep research findings on using Spark effectively with AI. (Example of Deep Research output)
+  * **Spark Development Workflow:** A specific process document generated using AI. (Example artifact)
+  * **"Uber Prompt":** A comprehensive starting prompt for AI program generation. (Example artifact)
+  
+  These demonstrate the power of using AI to generate documentation and context for subsequent AI tasks, as discussed in the video.
+  
+* **💡 Video Context (Implicit):** The transcript/summary/link related to the original video explaining the genesis of these tools and demonstrating their use.
 
-1.  `Thinking... Analyzing Blueprint for 'Simple Recipe Finder'.`
-2.  `Delegating Research: new_task @deep-research Analyze Blueprint. Research existing simple recipe apps (Section 9), common data structures for recipes (Section 4), and UI patterns (Section 5).`
-3.  `Delegating Specification: new_task @spec-pseudocode Draft formal requirements based on Blueprint and research. Outline pseudocode for 'Search', 'View', 'Save' features (Section 3).`
-4.  `Delegating Database Design: new_task @supabase-admin Design schema for recipes (name, ingredients, steps) and user favorites (user_id, recipe_id). Use info from Section 4.`
-5.  *(...continues assigning tasks for Architecture, Coding, Testing based on the Blueprint specifications...)*
-6.  `Result: Development proceeding based directly on user's vision described in the Blueprint.`
+---
 
-## 🔧 Get Started
+## 🚀 Get Started: Build Your Idea!
 
-Ready to turn your vision into reality without writing code?
+Ready to bring your vision to life using AI? Follow these steps:
 
 ### Prerequisites
-1.  **VS Code** + **Roo Code extension** installed.
-2.  **AI Model API Key** (e.g., Anthropic for Claude). Configured in Roo Code.
-3.  **(Potentially) API Keys for MCP Tools:** If your project requires deep web research, database interaction, or web crawling, you might need keys for Perplexity AI, Supabase, or Firecrawl, respectively. Setup via **[cline](https://cline.tools)** or manually in Roo Code MCP settings.
 
-### Configuration:
+1. **Visual Studio Code:** The code editor. Install it from [code.visualstudio.com](https://code.visualstudio.com).
+2. **Roo Code Extension:** Install this directly from the VS Code Marketplace. Search for "Roo Code".
+3. **AI Model API Key:** You'll need an API key from a supported provider (e.g., Anthropic for Claude models, OpenAI for GPT models). Configure this within the Roo Code extension settings.
+4. **(Optional but Recommended for Full Power) MCP Tooling Keys:** To enable the `🔍 Deep Research` (Perplexity AI), `🔥 Fire Crawler`, and `🔐 Supabase Admin` agents, you will likely need API keys for these services. The easiest way to manage these is often via cline (if available/applicable) or manual configuration in Roo Code's MCP settings. Check Roo Code documentation for details.
 
-1.  **Install SPARC Roomodes:**
-    *   Copy the entire JSON object from the `sparc_agent_roomodes.json` file in this repository.
-    *   In VS Code, go to Roo Code settings -> "Edit Global Modes".
-    *   Paste the JSON, replacing any existing content. Save.
-    *   Reload Roo Code (`Roo Code: Reload Custom Modes` command or restart VS Code).
+### Configuration
 
-2.  **Configure AI Model:**
-    *   Select your preferred AI model (e.g., Claude 3.5 Sonnet) in Roo Code's model settings.
+1. **Install SPARC Roomodes:**
+   * Open the `sparc_agent_roomodes.json` file from this repository.
+   * Copy the entire JSON content.
+   * In VS Code, open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
+   * Run the command: `Roo Code: Edit Global Modes`.
+   * Paste the copied JSON into the `roomode.json` file that opens, completely replacing its previous content.
+   * Save and close the file.
+   * **Reload Roo Code:** Run the command `Roo Code: Reload Custom Modes` or simply restart VS Code.
 
-3.  **(Optional) Configure MCP:**
-    *   If using Deep Research, Supabase Admin, Fire Crawler, etc., configure their respective MCP connections in Roo Code settings, likely using URLs/Headers obtained from `cline`.
+2. **Configure AI Model:**
+   * In Roo Code settings, select the AI model you have an API key for (e.g., Claude 3.5 Sonnet via Anthropic). Ensure the corresponding API key is entered.
 
-### Start Building!
-1.  **Download** the `Zero_Code_User_Blueprint.pdf` from this repository.
-2.  **Fill it out** completely and clearly in plain English. The more detail, the better!
-3.  Open a Roo Code chat in VS Code.
-4.  Select your configured AI Model profile.
-5.  Select the `⚡️ SPARC Orchestrator` mode.
-6.  **Provide the content** of your filled-out Blueprint to the Orchestrator. (You can copy-paste sections or the whole text). Clearly state: "Here is my completed Zero-Code Blueprint. Please begin the development process."
-7.  Let the SPARC AI team take over! Observe as it asks clarifying questions (if needed, though the goal is minimal interaction), researches, designs, codes, and tests based *solely* on your Blueprint.
-8.  Use the `❓ Ask` mode if you need guidance on how to interact with SPARC or formulate requests during the process (though ideally, the Blueprint is comprehensive).
+3. **(Optional) Configure MCP Connections:**
+   * Follow Roo Code's documentation to configure Management Control Panel (MCP) connections for Perplexity AI, Firecrawl, and Supabase if you intend to use those agents heavily. This usually involves providing API keys and potentially server endpoints via cline or the settings UI.
 
-## 📄 The Zero-Code User Blueprint
+### Let's Build!
 
-This PDF template is the heart of the user input process. It guides you through defining:
+1. **Download & Complete the Blueprint:**
+   * Download the `Zero_Code_User_Blueprint.pdf`.
+   * Fill it out thoroughly and thoughtfully in plain English. Provide details, examples, and clear success criteria. The quality of your Blueprint directly impacts the quality of the AI's output.
 
-*   **Section 1: The Big Picture** (What & Why)
-*   **Section 2: The Users** (Who is it for?)
-*   **Section 3: The Features** (What can it DO?)
-*   **Section 4: The Information** (What data does it handle?)
-*   **Section 5: The Look & Feel** (General vibe)
-*   **Section 6: The Platform** (Where will it be used?)
-*   **Section 7: The Rules & Boundaries** (Must-dos and don'ts)
-*   **Section 8: Success Criteria** (How do we know it's right?)
-*   **Section 9: Inspirations & Comparisons** (Learning from others)
-*   **Section 10: Future Dreams** (Optional nice-to-haves)
+2. **Start Roo Code Chat:**
+   * Open VS Code.
+   * Open a new Roo Code chat panel (usually via an icon in the activity bar or a command).
 
-**[➡️ Download the Blueprint PDF here](./Zero_Code_User_Blueprint.pdf)**
+3. **Select Profile & Mode:**
+   * Ensure your configured AI Model profile is active.
+   * From the "Mode" dropdown in the Roo Code chat, select the `⚡️ SPARC Orchestrator` mode.
 
-## 🤖 The SPARC Agent Army (Roomodes)
+4. **Provide Your Blueprint:**
+   * In the chat input, paste the complete text content of your filled-out Blueprint.
+   * Precede it with a clear instruction, like:
+   
+   ```
+   Hello SPARC! Here is my completed Zero-Code Blueprint. Please analyze it, perform any necessary research using the integrated tools and documents, and begin the development process following the SPARC methodology outlined in the workflow document. Build this vision for me.
+   
+   [--- PASTE YOUR ENTIRE FILLED BLUEPRINT TEXT HERE ---]
+   ```
 
-The `sparc_agent_roomodes.json` file defines the roles, instructions, and capabilities of the AI agents that will build your project. It includes specialists like:
+5. **Observe & Guide (Minimally):**
+   * The SPARC Orchestrator will now begin analyzing, researching, and delegating tasks to the other AI agents. It will use the `SPARC_Universal_Workflow.md` as its guide.
+   * Watch the process unfold in the chat. The goal is for the AI to proceed autonomously based on the Blueprint. It might ask clarifying questions if the Blueprint is ambiguous, but aim for completeness in your initial input.
+   * If you need guidance during the process, you can switch to the `❓ Ask` mode for help on formulating requests or understanding SPARC.
 
-*   `⚡️ SPARC Orchestrator`: The project manager.
-*   `🔍 Deep Research Mode`: Investigates and gathers knowledge.
-*   `🔥 Fire Crawler`: Scrapes and analyzes web content.
-*   `📋 Specification Writer`: Translates the Blueprint into formal specs.
-*   `🏗️ Architect`: Designs the system structure.
-*   `🧠 Auto-Coder`: Writes the code.
-*   `🧪 Tester (TDD)`: Writes and runs tests.
-*   `🔐 Supabase Admin`: Manages the database (if needed).
-*   `🛡️ Security Reviewer`: Checks for vulnerabilities.
-*   `📚 Documentation Writer`: Creates manuals.
-*   `🚀 DevOps`: Handles deployment.
-*   ...and others for debugging, integration, optimization.
+6. **Receive Your Application:** The AI team will work through the SPARC phases, eventually aiming to present you with a functional application that meets the Success Criteria defined in your Blueprint!
 
-**[➡️ View the Agent Definitions (JSON) here](./sparc_agent_roomodes.json)**
+---
 
-## 🙏 Acknowledgements
+## 🙏 Acknowledgements & Gratitude
 
-This approach is heavily inspired by and utilizes the **SPARC methodology and Roomode definitions pioneered by Reuven Cohen**. His work in structuring AI agent collaboration is foundational to this framework.
+This entire framework and workflow is built upon the pioneering work of **Reuven Cohen**.
+
+* The **SPARC** (Specification, Pseudocode, Architecture, Refinement, Completion) methodology is his conceptual framework for structured AI software development.
+* The foundational definitions and roles of the specialized AI agents (Roomodes) originate from his designs and implementations.
+
+This repository aims to make Reuven's powerful SPARC vision more accessible and practical by providing:
+
+* A clear Zero-Code entry point (the Blueprint) for non-technical users.
+* Integrated Deep Research and Web Crawling capabilities within the SPARC flow.
+* Pre-packaged documentation and examples (like the Spark Report/Workflow/Prompt) demonstrated in the video to enhance AI context.
+* A consolidated and documented set of Roomodes for easy setup in Roo Code.
+
+**Thank you, Reuven Cohen, for laying the groundwork for this exciting future of AI-driven development!**
+
+Follow Reuven Cohen for more insights: 🔗 [Reuven Cohen on LinkedIn](https://www.linkedin.com/in/reuvencohen/)
+
+---
 
 ## 📜 License
-MIT License - see `LICENSE` file.
 
-## 🔗 Related Resources
--   [Roo Code Docs](https://www.linkedin.com/pulse/automated-code-development-new-sparc-npx-create-sparc-reuven-cohen-8ujwe/)
--   [Reuven Cohen on LinkedIn](https://www.linkedin.com/in/reuvencohen/) (Follow for more on SPARC & AI)
--   [Perplexity AI](https://perplexity.ai/), [Supabase](https://supabase.com/), [Firecrawl](https://firecrawl.dev/) (Tools potentially used by agents via MCP)
-
----
-## 👤 Connect
-- [🔗 LinkedIn - Christopher Royse](https://www.linkedin.com/in/christopher-royse-b624b596/)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-Let's build the future, one Blueprint at a time!
+## 🔗 Related & Helpful Resources
+
+* [Roo Code Information (Official Docs/Blog)](https://roo.ai)
+* [Reuven Cohen's SPARC Articles/Posts](https://www.linkedin.com/in/reuvencohen/) 
+* [Perplexity AI](https://www.perplexity.ai/)
+* [Firecrawl](https://firecrawl.dev/)
+* [Supabase](https://supabase.com/)
+
+---
+
+## 👤 Connect With Me
+
+🔗 [LinkedIn - Christopher Royse](https://www.linkedin.com/in/christopherroyse/)
+
+---
+
+**Let's build amazing things together! Provide your Blueprint and let the AI work its magic. ✨**
