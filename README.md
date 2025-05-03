@@ -159,10 +159,8 @@ This approach is heavily inspired by and utilizes the **SPARC methodology and Ro
 MIT License - see `LICENSE` file.
 
 ## 🔗 Related Resources
--   [Roo Code Docs](https://roo.ai/docs)
+-   [Roo Code Docs](https://www.linkedin.com/pulse/automated-code-development-new-sparc-npx-create-sparc-reuven-cohen-8ujwe/)
 -   [Reuven Cohen on LinkedIn](https://www.linkedin.com/in/reuvencohen/) (Follow for more on SPARC & AI)
--   [MCP Standard](https://mcp.ai)
--   [cline MCP Installer](https://cline.tools)
 -   [Perplexity AI](https://perplexity.ai/), [Supabase](https://supabase.com/), [Firecrawl](https://firecrawl.dev/) (Tools potentially used by agents via MCP)
 
 ---
