@@ -1,564 +1,450 @@
-# 🚀 Zero-Code SPARC AI: Your Vision, Built by AI (Powered by Roo Code & Enhanced Tooling)
+# 🚀 SPARC-SAPPO Agentic Development Framework (v3 - Swarm Orchestration Edition)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Roo Code Compatible](https://img.shields.io/badge/Roo%20Code-Compatible-brightgreen)](https://roo.ai)
-[![Blueprint Driven](https://img.shields.io/badge/Input-Uber%20Prompt%20SPARC-blue)](./Uber%20Prompt%20SPARC.pdf)
-[![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC%20(Reuven%20Cohen)-orange)](.)
-[![AI Models (e.g., Claude 3.x)](https://img.shields.io/badge/AI%20Models-Claude%203.x/GPT--4-orange)](.)
-[![MCP Enabled Agents](https://img.shields.io/badge/Agents-MCP%20Enabled-purple)](.)
-[![Video Demo Included](https://img.shields.io/badge/Demo-Video%20Context-informational)](.)
+[![Perplexity API](https://img.shields.io/badge/Perplexity-API%20(Tiered)-blue)](https://perplexity.ai)
+[![Uses Claude 3.7 Sonnet](https://img.shields.io/badge/Uses-Claude%203.7%20Sonnet-orange)](https://www.anthropic.com/news/claude-3-5-sonnet)
+[![Ontology-Guided (SAPPO)](https://img.shields.io/badge/Ontology-Guided%20(SAPPO)-purple)](.)
+[![SPARC Methodology](https://img.shields.io/badge/Methodology-SPARC-orange)](.)
+[![Swarm Orchestration](https://img.shields.io/badge/Coordination-Swarm%20Orchestration-red)](.)
+[![cline MCP Installer](https://img.shields.io/badge/cline-MCP%20Installer-orange)](https://cline.tools)
 
-**Based on the powerful SPARC methodology and foundational agent definitions pioneered by Reuven Cohen.**
+## 🌌 Introducing the Evolution: AI Swarm Orchestration
 
----
+Welcome to **Version 3** of the SPARC-SAPPO Agentic Development Framework, now supercharged with a **Pheromone-Based Swarm Orchestration Engine**! This isn't just an update; it's a paradigm shift in how AI agents collaborate to build software.
 
-## 🌌 What is This? (From Your Vision to Working Software, Without Code)
+Built on Roo Code, this framework leverages the meticulous planning of **SPARC**, the semantic precision of the **SAPPO Ontology**, our robust **Dual-Strategy TDD cycle**, and strategic **Tiered RDD research**. The new Swarm Engine introduces an emergent, adaptive layer of coordination, enabling a collective of specialized AI agents powered by Anthropic's Claude 3.7 Sonnet to tackle complex software projects with unprecedented autonomy and resilience.
 
-Welcome! This repository demonstrates and provides the tools for a groundbreaking approach to software creation. It enables **anyone with an idea (we call you the Visionary!)** to describe their desired program in plain English using the **`Uber Prompt SPARC.pdf`**, and then watch as a sophisticated team of AI agents, orchestrated by **SPARC** (and powered by the Roo Code VS Code extension), automatically builds it.
+Inspired by [Rueven Cohen's original SPARC/Boomerang](https://gist.github.com/ruvnet/a206de8d484e710499398e4c39fa6299) concepts and your custom [Software Architecture Problem Prediction Ontology (SAPPO)](https://github.com/ChrisRoyse/Coding-Agent-Ontology), this evolution drives development through a stigmergic process where agents communicate and coordinate via digital "pheromones," leading to intelligent, decentralized decision-making.
 
-**The Problem:** Bringing a software idea to life often requires deep technical knowledge, creating a barrier for entrepreneurs, subject-matter experts, and creative thinkers.
+**Core Tenets of the Swarm Edition:**
 
-**Our Solution:** We bridge this gap! This repository offers:
+1. **👑 Meta-Orchestration & Phased Delegation:** A `👑 Meta-Orchestrator (Swarm Director)` oversees the entire project lifecycle, dynamically activating specialized Phase Orchestrators (e.g., `🌟 Orchestrator (Project Initialization)`, `⚙️ Orchestrator (Feature Implementation - Test-Driven)`) based on the collective state signaled by the swarm.
+2. **🐜 Pheromone-Based Coordination (Stigmergy):** Agents "deposit" signals into a shared `.pheromone` file, indicating project state, needs, problems, and priorities. This board guides the Meta-Orchestrator and allows the system to self-organize and adapt.
+3. **🎯 Specialized Agent Roles:** A rich ecosystem of agents, each with specific instructions and tools (defined in `.roomodes`), contribute to different facets of development—from research and spec writing to coding, testing, and DevOps.
+4. **📊 Dynamic Prioritization & Conflict Resolution:** The `swarmConfig` within `.roomodes` defines how signals evaporate, amplify, and influence task prioritization, enabling the system to respond to critical issues like bugs or security vulnerabilities automatically.
+5. **🧬 Emergent Intelligence & Adaptability:** The swarm doesn't just follow a rigid plan; it adapts based on real-time feedback (test results, identified problems, changing priorities) reflected in the pheromone signals.
+6. **⛓️ Dependency-Aware Workflow:** The system tracks feature and component dependencies via signals, ensuring a logical progression of work.
+7. **Robust TDD as a Signaling Mechanism:** The Dual-Strategy TDD cycle remains central. Test PASS/FAIL results directly translate into powerful pheromone signals, guiding the Coder/Debugger loop and informing the overall project status.
+8. **Tiered RDD for Efficient Research:** Specialist agents continue to use Perplexity MCP tools strategically.
+9. **Unified LLM (Claude 3.7 Sonnet), Dual-Mode:** Individual agents leverage "Thinking" (high-temp) and "Instruct" (low-temp) modes for optimal performance within Claude 3.7 Sonnet's ~200k context window. The swarm orchestrates many such focused agents.
 
-1. **A Structured Input:** The `Uber Prompt SPARC.pdf` translates your vision into a format AI can understand, without you writing a single line of code.
-2. **An Intelligent AI Workforce:** The `.roomodes` file defines a versatile team of specialized AI agents (Architects, Coders, Testers, Researchers, Database Admins, Web Crawlers, etc.), ready to execute your blueprint using the robust **SPARC methodology**.
-3. **Enhanced Tooling & Research:** This configuration integrates powerful **Deep Research** (using Perplexity) and **Web Crawling** (using Firecrawl) agents directly into the SPARC workflow. It also includes pre-researched documentation (like the Spark Report, Workflow, and "Uber Prompt" demonstrated in the included video context) to kickstart AI understanding and prompt generation for common development tasks.
-4. **Streamlined SPARC Implementation:** This project bundles necessary SPARC modes (like Deep Research and Firecrawler) and provides clear documentation (`SPARC Development Workflow.pdf`) on how to apply the methodology effectively within the Roo Code environment.
+**The Grand Idea:** You provide a **detailed User Blueprint** (for new projects) or a **Change Request** (for existing ones) to the `👑 Meta-Orchestrator`. This initiates a cascade of pheromone signals. The Meta-Orchestrator interprets these signals and delegates entire project phases to specialized Orchestrators. These Orchestrators, in turn, break down their phase into micro-tasks for worker agents (Coders, Testers, etc.). Each completed task and test result generates new pheromone signals, continually updating the swarm's collective understanding and guiding the next actions. This decentralized yet coordinated approach enables robust, adaptive, and scalable AI-assisted software development.
 
-**The Goal:** To empower *you*, the Visionary, to transform your ideas into functional software by leveraging cutting-edge AI collaboration, making the powerful SPARC framework more accessible and even more potent through structured input and integrated research.
+## 📺 Quick Start & Methodology Video Guide (Swarm Edition)
 
-*The process and tools demonstrated here were showcased in the accompanying video.*
+**(Placeholder: The previous video needs an update to cover Swarm Orchestration!)**
 
-<div align="center">
-  <a href="https://youtu.be/q3CdigR2IvU">
-    <img src="https://img.youtube.com/vi/q3CdigR2IvU/maxresdefault.jpg" alt="Watch the Demo Video" style="width:100%;max-width:800px;">
-  </a>
-  <br>
-  <b>🎥 Click to watch the Zero-Code SPARC AI Demo Video</b>
-</div>
+<!-- [![Watch the Setup & Best Practices Guide (Swarm Edition)](https://img.youtube.com/vi/Y HematO_NEW_VIDEO_ID_HERE/maxresdefault.jpg)](https://youtu.be/YOUR_NEW_VIDEO_ID_HERE) -->
+**(Coming Soon! A new video will walk through the Swarm Orchestration setup and workflow.)**
 
----
+A future video will cover:
+* Setting up Roo Code with the new Swarm Orchestration `.roomodes`.
+* Understanding the `.pheromone` file and `swarmConfig`.
+* Crafting effective User Blueprints to kickstart the swarm.
+* Observing the Meta-Orchestrator, Phase Orchestrators, and specialist agents in action.
+* How Dual-Strategy TDD fuels the pheromone signaling system.
+* Managing complex projects with adaptive, decentralized AI collaboration.
 
-## ✨ Key Pillars & How It Works
+## 🏛️ System Architecture Overview
 
-This system rests on several key pillars:
+The system follows a hierarchical yet adaptive structure:
 
-1. **Uber Prompt SPARC:** Your starting point. A detailed questionnaire (`.pdf` included) designed for non-technical users to articulate their project goals, target audience, desired features, essential rules, and success criteria in plain English. *This becomes the primary input for the AI team.*
-2. **SPARC Methodology (by Reuven Cohen):** The core operational framework – **S**pecification, **P**seudocode, **A**rchitecture, **R**efinement, **C**ompletion. This structured approach ensures a logical flow from idea to deployment, managed by the Orchestrator.
-3. **SPARC Orchestrator (⚡️ Mode):** The AI project manager. It interprets the Blueprint, consults the integrated research documents, breaks down the project using the SPARC workflow (`SPARC Development Workflow.pdf`), and delegates tasks to specialized AI agents.
-4. **Specialized AI Agent Team (Roomodes):** Defined in `.roomodes`, this is your AI development team. Each agent (mode) has a specific role, instructions, and access to tools (like coding, testing, security scanning, database management, research via MCP). We've included and integrated essential agents like Deep Research, Fire Crawler, and Supabase Admin.
-5. **Integrated Deep Research & Context:** The `🔍 Deep Research` and `🔥 Fire Crawler` agents proactively gather external knowledge. Furthermore, the included documents (SPARC Report, SPARC Development Workflow, Uber Prompt SPARC from the video demo) provide immediate, rich context to the AI, significantly enhancing its ability to plan and generate relevant prompts and code, especially for AI-assisted development tasks themselves.
-6. **Outcome-Driven Development:** The focus is squarely on achieving the goals and `Success Criteria` you define in the Blueprint. The AI figures out the technical "how" based on your desired "what" and "why".
+1. **User Input:** The User initiates a project with a Blueprint or a Change Request.
+2. **Meta-Orchestrator (👑):** This is the top-level director. It reads the overall project state from the `.pheromone` file and, guided by `swarmConfig`, delegates entire project phases to specialized Phase Orchestrators.
+3. **Pheromone System (`.pheromone` file & `swarmConfig`):** This is the central nervous system.
+   * `.pheromone` file: A shared "digital scent trail" where all agents deposit signals (status updates, needs, problems, priorities).
+   * `swarmConfig`: Defines the rules for how signals are processed (e.g., evaporation, amplification, prioritization).
+4. **Phase Orchestrators (🌟, 🛠️, 🎯, ⚙️, 🔗, 🔄):** Each Phase Orchestrator manages a specific stage of the development lifecycle (e.g., Initialization, Scaffolding, Test Generation, Feature Implementation). They break down their phase into smaller tasks and delegate to Specialist Agents. They also read and write to the `.pheromone` file to coordinate within their phase and signal completion to the Meta-Orchestrator.
+5. **Specialist Agents (🔎, 📝, 👨‍💻, 🧪, 🎯, etc.):** These are the worker bees. They perform specific tasks like research, writing specifications, coding, testing, debugging, integration, etc. Their actions and results directly generate new pheromone signals.
+6. **MCP Tools (Perplexity, Firecrawl, etc.):** Utilized by relevant specialist agents for external information gathering (e.g., research, documentation lookup).
 
----
+All agents, from the Meta-Orchestrator down to the individual specialists, interact with and are guided by the `.pheromone` file, creating a dynamic, self-organizing system.
 
-## 🔄 Conceptual Workflow: From Your Brain to AI-Built App
+## 🧠🛠️ Unified LLM, Dual-Mode Strategy (Claude 3.7 Sonnet @ ~200k Context)
 
+Even within the swarm, individual agent effectiveness relies on **Anthropic's Claude 3.7 Sonnet** (~200k context window) with role-based temperature control:
+
+1. **🧠 Thinking Mode (Temperature: ~0.7)**
+   * **Model:** Claude 3.7 Sonnet
+   * **Purpose:** Strategic planning, architectural design, complex reasoning, user interaction, interpreting pheromone signals.
+   * **Primary Users:** `👑 Meta-Orchestrator`, Phase Orchestrators (`🌟 Init`, `🛠️ Scaffolding`, etc.), `📝 Spec Writer`, `🏛️ Architect`, `❓ Ask Guide`, `📘 Tutorial`.
+
+2. **🛠️ Instruct Mode (Temperature: ~0.25)**
+   * **Model:** Claude 3.7 Sonnet
+   * **Purpose:** Precise code/test generation, debugging, specific tool execution, security checks, documentation generation following strict guidance.
+   * **Primary Users:** `👨‍💻 Coder`, `🧪 Tester`, `🎯 Debugger`, `🛡️ Security Reviewer`, `🔌 Integrator`, `🧹 Optimizer`, `📚 Docs Writer`, `🔩 DevOps`, `⚙️ MCP Tool Specialist`.
+
+**Why Claude 3.7 Sonnet & ~200k Window + Swarm (Cost-Efficiency & Scalability by Design):**
+
+* **Focused Agent Execution:** Each agent tackles a well-defined, smaller part of the problem, making the ~200k context window highly effective for its specific task.
+* **Distributed Cognition:** The overall project "memory" and "state" are not solely reliant on one massive LLM context. Instead, it's distributed:
+  * Partially in the `.pheromone` file (current needs, problems, overall progress).
+  * Partially in the artifacts produced (code, tests, specs, docs on disk).
+  * Partially in the structured TDD cycle (the test suite *is* a form of persistent memory and specification).
+* **Methodology Over Raw Context:** Rigorous TDD, SAPPO-guided tasks, and focused RDD, now coordinated by the swarm, mean individual agents don't need to "know everything" all the time.
+* **Scalable Complexity Management:** The swarm can orchestrate numerous focused agents, tackling larger and more complex projects than might be feasible with a single LLM, while keeping individual agent calls relatively lean.
+* **Cost Implications:** While a swarm involves many agent interactions, each is typically smaller and more targeted. This can be more cost-effective than attempting to manage an entire complex project within a multi-million token window of a monolithic LLM, which can incur very high per-call costs and diminishing returns in coherence. **The goal is effective distribution of work and intelligence.**
+
+## ✨ Key Features & Methodology (Swarm Edition)
+
+### 🐜 Pheromonic Swarm Intelligence & Coordination
+* **Dynamic Tasking:** `👑 Meta-Orchestrator` assigns high-level phases based on active signals in the `.pheromone` file.
+* **Signal-Driven Workflow:** `swarmConfig` dictates signal processing:
+  * **Categories:** `state`, `need`, `problem`, `priority` drive different behaviors.
+  * **Evaporation & Amplification:** Keeps signals relevant and allows urgent issues to rise.
+  * **Priorities & Conflict Resolution:** Ensures critical tasks (e.g., `critical_bug_in_feature_X`) are addressed promptly.
+  * **Dependency Tracking:** Ensures, for example, `feature_X_depends_on_feature_Y` is respected.
+  * **Anticipatory Signals:** System pre-emptively flags upcoming needs (e.g., `anticipate_integration_soon_for_feature_X`).
+* **Adaptive Behavior:** The swarm can pivot based on new problem signals (e.g., test failures, security alerts) without direct human intervention for every step.
+
+### 🏛️ SAPPO-Guided Tasks
+* Still core: SAPPO terms (`:Problem`, `:Solution`, etc.) structure agent tasks and reporting, now flowing through the pheromone system.
+
+### 🔍 Tiered Research-Driven Development (RDD)
+* Specialist agents like `🔎 Research Planner` or `👨‍💻 Coder` use Perplexity MCP tools (`search`, `get_documentation`) based on clear tiers (**MUST/SHOULD/MAY/DO NOT USE**) for efficient and justified research.
+
+### ✅ Dual-Strategy Test-Driven Development (TDD) as a Core Signaling Mechanism
+* **Immediate "Boomerang" Testing Cycle:** `🧪 Tester` runs immediately after `👨‍💻 Coder`.
+* **Test Results -> Pheromone Signals:**
+  * **PASS:** Deposits positive signals (e.g., `coding_complete_for_feature_X`), reducing "need" signals.
+  * **FAIL:** Deposits problem signals (e.g., `critical_bug_in_feature_X`), increases "need" for debugging, and guides the `🎯 Debugger`.
+* **Dual Strategy:**
+  1. **Cumulative Testing:** Prevents regressions, ensuring system stability.
+  2. **Recursive Testing:** Addresses complex algorithms.
+* This TDD cycle is now a fundamental driver of the swarm's adaptive behavior.
+
+### 📄 Detailed Planning is Paramount: The User Blueprint
+* **User Responsibility:** The quality of the initial **User Blueprint** (for new projects) or **Change Request** (for existing ones) is CRITICAL. This provides the initial "scent" for the swarm.
+* The AI swarm executes and adapts; it doesn't intuit your high-level goals from scratch.
+
+## 🔄 The Swarm Workflow Loop (Simplified)
+
+1. **You (User):**
+   * For **New Project:** Provide a detailed `User_Blueprint.md` to the `👑 Meta-Orchestrator`.
+   * For **Existing Project:** Provide `Change_Request.md` or `Bug_Report.md` to `👑 Meta-Orchestrator`.
+2. **👑 Meta-Orchestrator (Thinking Mode, Claude @ ~0.7):**
+   * Parses your input.
+   * Deposits initial signals into `.pheromone` (e.g., `project_state_new_blueprint_available`).
+   * **Continuously:** Reads the `.pheromone` file (applying evaporation, amplification, priorities from `swarmConfig`).
+   * Identifies the highest priority phase (e.g., `project_initialization_needed`).
+   * Delegates: `new_task @Orchestrator_Project_Initialization User_Blueprint_Path: ..., Project_Root: ...`
+3. **Phase Orchestrator (e.g., `🌟 Orchestrator_Project_Initialization`, Thinking Mode):**
+   * Receives phase task.
+   * Breaks it down, delegating to specialist agents:
+     * `new_task @ResearchPlanner_Strategic Blueprint_Path: ...`
+     * `new_task @SpecWriter_Feature_Overview Feature_Name: ...`
+4. **Specialist Agent (e.g., `👨‍💻 Coder_Test_Driven`, Instruct Mode, Claude @ ~0.25):**
+   * Receives micro-task (e.g., "Implement function X to pass these tests Y, Z").
+   * Performs task (coding, testing, researching via Tiered RDD).
+   * Reports `attempt_completion`. Crucially, its `customInstructions` (in `.roomodes`) define **Pheromone Deposits** based on its outcome.
+     * Example (Coder successful): `PheromoneDeposit: [{signalType: 'coding_complete_for_feature_X', target: 'FeatureA', delta: 10.0, category: 'state'}, {signalType: 'coding_needed_for_feature_X', target: 'FeatureA', delta: -5.0, category: 'need'}]`
+     * Example (Tester finds bug): `PheromoneDeposit: [{signalType: 'critical_bug_in_feature_X', target: 'FeatureA', delta: 7.0, category: 'problem'}]`
+5. **Signal Propagation & Next Cycle:**
+   * New signals update the `.pheromone` file.
+   * The `👑 Meta-Orchestrator` (or the current Phase Orchestrator if managing sub-phases) re-evaluates the pheromone landscape in its next cycle.
+   * If `critical_bug_in_feature_X` is high, it might prioritize calling `🎯 Debugger` or tasking `🔄 Orchestrator_Refinement_And_Maintenance`.
+   * If `coding_complete_for_feature_X` is signaled, and tests pass, it might signal `integration_needed_for_features_XYZ`.
+6. **Loop Continues:** This cycle of signal interpretation, delegation, execution, and new signal deposition continues until the overall project goals (derived from your initial input) are met, or the system reaches a stable state awaiting further user input.
+
+## ✨ Why the Swarm Edition is a Game Changer
+
+* 👑 **Autonomous Project Progression:** Less hand-holding needed once the initial Blueprint is clear.
+* 🐜 **Adaptive & Emergent Problem Solving:** The swarm can identify and prioritize fixing bugs, security issues, or integration conflicts based on real-time signals.
+* 📈 **Scalable Complexity Management:** Breaks down huge projects into manageable, coordinated phases and micro-tasks handled by specialized agents.
+* 🔗 **Robust Dependency Handling:** Built-in signals for feature and component dependencies prevent out-of-order work.
+* 🛡️ **Enhanced Resilience:** The system can dynamically re	
+
+route efforts if one path is blocked (e.g., a stubborn bug can halt a feature but allow others to proceed if independent).
+* 📊 **Transparent Progress & Bottlenecks:** The `.pheromone` file (though not for manual editing) can be inspected (or a future UI could visualize it) to understand current priorities, needs, and blockers.
+* 💰 **Efficient Resource Utilization:** While involving many agents, each uses its Claude 3.7 Sonnet context (~200k) effectively for focused tasks. The distributed nature of swarm memory avoids the extreme costs and diminishing returns of attempting to manage entire projects in hypothetical terabyte-scale single contexts.
+* 🧪 **TDD as a True Guiding Force:** Test outcomes directly shape the swarm's behavior.
+
+## 🛠️ The Core Components of the Swarm
+
+1. **SPARC-SAPPO Swarm Agent Army (`.roomodes` file):**
+   * **`swarmConfig`:** Defines the physics of your pheromone system (evaporation, amplification, priorities, signal categories, recruitment thresholds for specialist debuggers/optimizers, etc.). THIS IS KEY.
+   * **`customModes`:** JSON definitions for all agents (`👑 Meta-Orchestrator`, Phase Orchestrators, `👨‍💻 Coder`, `🧪 Tester`, `🔎 ResearchPlanner_Strategic`, etc.). Each agent has:
+     * `roleDefinition`: Its purpose.
+     * `customInstructions`: Detailed step-by-step logic, including **when and what Pheromone Signals to deposit** upon `attempt_completion`.
+     * `groups`: Permitted Roo Code tools (read, edit, command, mcp).
+2. **The Pheromone Board (`.pheromone` file):**
+   * The dynamic, shared "whiteboard" or "scent map" for the swarm.
+   * Stores an array of signal objects, each with `signalType`, `target`, `strength`, `timestamp`, `category`, etc.
+   * **CRITICAL: Managed ENTIRELY by the agents. DO NOT MANUALLY EDIT THIS FILE.** Corrupting it can confuse the swarm. (Okay to delete if you need a hard reset, then re-initiate with Meta-Orchestrator).
+3. **SPARC Syntax & SAPPO Ontology:** Embedded within agent instructions to guide task structuring, problem anticipation, and decision documentation.
+4. **Perplexity Research Tools (MCP):** Used by specialist agents via `⚙️ MCP Tool Specialist` or directly if configured for `mcp` group.
+5. **Unified LLM Engine (Claude 3.7 Sonnet):** With dual temperature profiles.
+
+## 🎬 See It In Action (A Glimpse of the Swarm)
+
+**User:** Provides `MyCoolApp_Blueprint.md` to `👑 Meta-Orchestrator`.
+
+**Meta-Orchestrator:**
+1. Reads blueprint.
+2. Writes to `.pheromone`: `[{signalType: "project_state_new_blueprint_available", strength: 10.0, ...}, {signalType: "project_initialization_needed", strength: 8.0, ...}]`
+3. Sees `project_initialization_needed` is high.
+4. `new_task @Orchestrator_Project_Initialization Blueprint_Path: "MyCoolApp_Blueprint.md" ...`
+
+**🌟 Orchestrator_Project_Initialization:**
+1. Tasks `🔎 ResearchPlanner_Strategic`.
+2. `🔎 ResearchPlanner_Strategic` completes, deposits its findings (indirectly causing updates to `.pheromone` via the Orchestrator).
+3. Eventually, `🌟 Orchestrator_Project_Initialization` reports `attempt_completion`.
+4. Its `PheromoneDeposit` in `customInstructions` updates `.pheromone`: `[{signalType: "project_initialization_complete", strength: 10.0, ...}, {signalType: "framework_scaffolding_needed", strength: 7.0, ...}]` (and negative delta on "project_initialization_needed").
+
+**(Later, a Coder and Tester interact via the `⚙️ Orchestrator_Feature_Implementation_TDD`)**
+
+**👨‍💻 Coder_Test_Driven (after an attempt):**
+* `attempt_completion` (code written).
+* Implicitly, the Feature Orchestrator tasks the Tester.
+
+**🧪 Tester_TDD_Master (after running tests):**
+* If FAIL: `attempt_completion` Summary: "Test Run Complete. Result: FAIL. Test_X_Failed...".
+* Its `PheromoneDeposit` updates `.pheromone`: `[{signalType: "critical_bug_in_feature_X", target: "MyFeature", strength: 6.5 (priority adjusted), ...}]`.
+
+**👑 Meta-Orchestrator (or `⚙️ Orchestrator_Feature_Implementation_TDD`):**
+1. Sees new `critical_bug_in_feature_X` signal.
+2. Consults `swarmConfig.recruitmentThresholds`. If `critical_bug_in_feature_X` strength is high enough for `Debugger_Targeted`.
+3. `new_task @Debugger_Targeted Target_Feature_Name: "MyFeature" ...`
+4. The cycle continues, adaptively.
+
+**Example snippet from `.pheromone` (illustrative):**
+```json
+{
+  "signals": [
+    {
+      "signalType": "framework_scaffolding_complete",
+      "target": "project_root",
+      "strength": 9.8,
+      "timestamp": "...",
+      "category": "state"
+    },
+    {
+      "signalType": "test_planning_needed_for_feature_X",
+      "target": "UserLogin",
+      "strength": 6.5,
+      "timestamp": "...",
+      "category": "need"
+    },
+    {
+      "signalType": "coding_needed_for_feature_X",
+      "target": "UserProfile",
+      "strength": 0.8,
+      "timestamp": "...",
+      "category": "need"
+    },
+    {
+      "signalType": "critical_bug_in_feature_X",
+      "target": "PaymentModule",
+      "strength": 7.2,
+      "timestamp": "...",
+      "category": "problem",
+      "priorityBoost": 2.5
+    }
+  ],
+  "analytics": { /* history, bottleneck info */ }
+}
 ```
-    [You (Visionary)] -- Fills out --> (Uber Prompt SPARC PDF);
-    Provides content to --> {⚡️ SPARC Orchestrator (in Roo Code)};
-    Uses --> [📄 SPARC Development Workflow];
-    Consults --> [📚 Enhanced Docs (SPARC Report, Uber Prompt, etc.)];
-    Delegates Task 1 --> (🔍 Deep Research);
-    Gathers Info --> ;
-    Delegates Task 2 --> (📋 Specification Writer);
-    Creates Specs --> ;
-    Delegates Task 3 --> (🏗️ Architect);
-    Designs System --> ;
-    Delegates Tasks (Iterative) --> (🧠 Code / 🧪 TDD / 🔐 Supabase Admin / etc.);
-    Builds & Tests --> ;
-    Delegates Final Tasks --> (🔗 Integrator / 🛡️ Security / 📚 Docs / 🚀 DevOps);
-    Finalizes & Deploys --> {✅ Working Program!};
-    Matches --> (🎯 Success Criteria from Blueprint);
-```
 
----
+## 🔧 Get Started (Unleash the Swarm!)
 
-## 🛠️ The Core Components in This Repository
-
-* **📄 Uber Prompt SPARC.pdf:** The essential questionnaire for capturing your vision. This is your primary interaction point. 
-  ➡️ [Download/View Blueprint](./Uber%20Prompt%20SPARC.pdf)
-  
-* **🤖 .roomodes:** The JSON configuration defining the specialized AI agents for Roo Code. Includes the SPARC orchestrator and critical modes like Deep Research, Fire Crawler, Supabase Admin, and more, integrating the concepts from the video.
-  ➡️ [View Agent Definitions (JSON)](./.roomodes)
-  
-* **🧩 SPARC Development Workflow.pdf:** A detailed guide outlining the step-by-step SPARC process leveraging these Roomodes and research capabilities, from conception to deployment and maintenance.
-  ➡️ [Read the Workflow Guide](./SPARC%20Development%20Workflow.pdf)
-  
-* **📚 Enhanced Context Documents** (From Video Demo - Contained within this Repo):
-  * **SPARC Report:** Deep research findings on using SPARC effectively with AI. (Example of Deep Research output) ➡️ [View Report](./SPARC%20Report.pdf)
-  * **SPARC Development Workflow:** A specific process document generated using AI. (Example artifact) ➡️ [View Workflow](./SPARC%20Development%20Workflow.pdf)
-  * **"Uber Prompt SPARC":** A comprehensive starting prompt for AI program generation. (Example artifact) ➡️ [View Prompt](./Uber%20Prompt%20SPARC.pdf)
-  
-  These demonstrate the power of using AI to generate documentation and context for subsequent AI tasks, as discussed in the video.
-  
-* **💡 Video Context (Implicit):** The transcript/summary/link related to the original video explaining the genesis of these tools and demonstrating their use.
-
----
-
-## 🚀 Get Started: Build Your Idea!
-
-Ready to bring your vision to life using AI? Follow these steps:
+Ready for intelligent, adaptive, AI-driven development?
 
 ### Prerequisites
+* VS Code + Roo Code extension.
+* Anthropic API Key (Claude 3.7 Sonnet access).
+* Perplexity API Key (for Tiered RDD).
 
-1. **Visual Studio Code:** The code editor. Install it from [code.visualstudio.com](https://code.visualstudio.com).
-2. **Roo Code Extension:** Install this directly from the VS Code Marketplace. Search for "Roo Code".
-3. **AI Model API Key:** You'll need an API key from a supported provider (e.g., Anthropic for Claude models, OpenAI for GPT models). Configure this within the Roo Code extension settings.
-4. **(Optional but Recommended for Full Power) MCP Tooling Keys:** To enable the `🔍 Deep Research` (Perplexity AI), `🔥 Fire Crawler`, and `🔐 Supabase Admin` agents, you will likely need API keys for these services. The easiest way to manage these is often via cline (if available/applicable) or manual configuration in Roo Code's MCP settings. Check Roo Code documentation for details.
+### Configuration: The Holy Trinity (`.roomodes`, `.pheromone`, LLM Profiles)
 
-### Configuration
+1. **Create `.roomodes` File:**
+   * In the root of your project directory, create a file named exactly `.roomodes`.
+   * Copy the entire JSON content (the full JSON configuration you provided previously, starting with `{"swarmConfig": ...}` and ending with the last `]`) into this `.roomodes` file. Save it.
+   * This file is your swarm's DNA.
 
-1. **Install SPARC Roomodes:**
-   * Open a project in VSCode.
-   * Open a Terminal (Make sure the terminal is opened up to the project directory)
-   * In the terminal Type [npx create-sparc init](https://www.linkedin.com/pulse/automated-code-development-new-sparc-npx-create-sparc-reuven-cohen-8ujwe/)
-   * Copy my roomodes over the roomodes that gets created in the project directory if you want to use perplexity research and fire crawl.
-   * Save and close the file.
+2. **Create `.pheromone` File:**
+   * In the root of your project directory, create an empty file named exactly `.pheromone`.
+   * **DO NOT** add any content to it initially. The swarm populates and manages this.
 
-2. **Configure AI Model:**
-   * In Roo Code settings, select the AI model you have an API key for (e.g., Claude 3.5 Sonnet via Anthropic). Ensure the corresponding API key is entered.
+3. **Perplexity MCP Setup (RDD Tools):**
+   * Use `cline` (recommended): Install "Perplexity AI" provider, enter key, copy MCP URL/Header.
+   * Paste URL/Header into Roo Code's Perplexity MCP settings. (Tools like Firecrawl in your `.roomodes` also use MCP, so ensure that provider is set up if you intend to use it).
 
-3. **(Optional) Configure MCP Connections:**
-   * Follow Roo Code's documentation to configure Management Control Panel (MCP) connections for Perplexity AI, Firecrawl, and Supabase if you intend to use those agents heavily. This usually involves providing API keys and potentially server endpoints via cline or the settings UI.
+4. **Dual-Mode LLM Configuration (CRITICAL for Agent Roles!):**
+   * Create **TWO** model profiles in Roo Code settings, **BOTH** pointing to your Anthropic Claude 3.7 Sonnet endpoint:
+     * **Profile 1 (Thinking):** Name: `claude-3.7-sonnet-thinking`. Endpoint: [Your Claude 3.7 Sonnet Endpoint]. Default Temperature: ~0.7.
+     * **Profile 2 (Instruct):** Name: `claude-3.7-sonnet-instruct`. Endpoint: [Your Claude 3.7 Sonnet Endpoint]. Default Temperature: ~0.25.
+   * **Manual Profile Switching:** The `.roomodes` define which agents are intended for thinking vs. instruct tasks. You **MUST** manually select the correct profile (thinking or instruct) in the Roo Code UI before invoking or allowing delegation to an agent that typically uses that mode.
+     * Generally: Use `thinking` for `👑 Meta-Orchestrator` and Phase Orchestrators.
+     * Switch to `instruct` if a Coder, Tester, Debugger, or other specialist "Instruct Mode" agent is about to run.
+     * Switch back to `thinking` when control returns to an Orchestrator.
 
-### Let's Build!
+5. **Reload Roo Code Modes:**
+   * After saving `.roomodes`, use the VS Code command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`): `Roo Code: Reload Custom Modes`. Or restart VS Code.
 
-1. **Download & Complete the Blueprint:**
-   * Download the `Uber Prompt SPARC.pdf`.
-   * Fill it out thoroughly and thoughtfully in plain English. Provide details, examples, and clear success criteria. The quality of your Blueprint directly impacts the quality of the AI's output.
+### Igniting the Swarm: Your First Project
 
-2. **Start Roo Code Chat:**
-   * Open VS Code.
-   * Open a new Roo Code chat panel (usually via an icon in the activity bar or a command).
-
-3. **Select Profile & Mode:**
-   * Ensure your configured AI Model profile is active.
-   * From the "Mode" dropdown in the Roo Code chat, select the `⚡️ SPARC Orchestrator` mode.
-
-4. **Provide Your Blueprint:**
-   * In the chat input, paste the complete text content of your filled-out Blueprint.
-   * Precede it with a clear instruction, like:
-   
+1. **Craft a Detailed User Blueprint:**
+   * Create a Markdown file (e.g., `my_project_blueprint.md`). This is your primary input for the swarm. See *The User Blueprint Format* section below for crucial details on what to include. The more detail, the better the swarm performs.
+2. Open a Roo Code Chat.
+3. Manually select the `claude-3.7-sonnet-thinking` profile.
+4. Select the `👑 Meta-Orchestrator (Swarm Director)` mode from the Roo Code mode dropdown.
+5. Provide the initial directive:
    ```
+   @Meta-Orchestrator (Swarm Director)
+   User_Directive_Type_Field: 'NEW_PROJECT'
+   User_Directive_Payload_Path_Field: 'path/to/your/my_project_blueprint.md'
+   Project_Root_Path_Field: '.' // (or the relative/absolute path to your project root if different)
+   ```
+   * Replace `path/to/your/my_project_blueprint.md` with the actual path.
+6. **Observe!** The `👑 Meta-Orchestrator` will start its loop, reading/writing to `.pheromone`, and delegating to Phase Orchestrators. You'll see tasks being created for other agents.
+7. **Manage LLM Profiles:** Remember to switch between `thinking` and `instruct` profiles as different agent types become active if you are manually stepping through or observing closely. (Full automation of this is a Roo Code feature for the future).
 
-5. **Observe & Guide (Minimally):**
-   * The SPARC Orchestrator will now begin analyzing, researching, and delegating tasks to the other AI agents. It will use the `SPARC Development Workflow.pdf` as its guide.
-   * Watch the process unfold in the chat. The goal is for the AI to proceed autonomously based on the Blueprint. It might ask clarifying questions if the Blueprint is ambiguous, but aim for completeness in your initial input.
-   * If you need guidance during the process, you can switch to the `❓ Ask` mode for help on formulating requests or understanding SPARC.
+### Modifying an Existing Project with the Swarm
 
-6. **Receive Your Application:** The AI team will work through the SPARC phases, eventually aiming to present you with a functional application that meets the Success Criteria defined in your Blueprint!
+1. **Prepare a Change Request / Bug Report:**
+   * Create a Markdown file (e.g., `feature_enhancement_01.md` or `bug_fix_auth_module.md`) detailing the required changes or the bug.
+2. Open Roo Code Chat, select `claude-3.7-sonnet-thinking` profile.
+3. Select `👑 Meta-Orchestrator (Swarm Director)` mode.
+4. Provide the directive:
+   ```
+   @Meta-Orchestrator (Swarm Director)
+   User_Directive_Type_Field: 'EXISTING_PROJECT_MODIFICATION'
+   User_Directive_Payload_Path_Field: 'path/to/your/feature_enhancement_01.md'
+   Project_Root_Path_Field: '.'
+   ```
+5. The `👑 Meta-Orchestrator` will initiate signals and likely delegate to `🔄 Orchestrator (Refinement & Maintenance)`.
 
----
+## 📄 The User Blueprint (Essential Input for New Projects)
 
-## 🙏 Acknowledgements & Gratitude
+Your `.roomodes` specify what `🌟 Orchestrator (Project Initialization & Vision)` expects. A comprehensive User Blueprint is critical. It should be a Markdown file and ideally cover:
 
-This entire framework and workflow is built upon the pioneering work of [**Reuven Cohen**](https://www.linkedin.com/pulse/automated-code-development-new-sparc-npx-create-sparc-reuven-cohen-8ujwe/).
+* **Big Picture Elevator Pitch:** What is it? Who is it for? Why build it?
+* **Problem:** The core problem this software solves.
+* **Why:** The motivation behind solving this problem.
+* **Users Primary:** Detailed description of the target users.
+* **Goals:** What users will achieve with this software.
+* **Features Core Actions:** A list of primary actions/features. E.g., "User can register," "User can create a post," "Admin can manage users."
+* **Deep Dive (for complex features):** More detailed explanation of intricate features.
+* **Information Needed:** What data will the system manage? (e.g., user profiles, product details, order history).
+* **Relationships:** How different pieces of information relate (e.g., an order belongs to a user and contains products).
+* **Look & Feel Style:** General aesthetic preferences, brand guidelines if any.
+* **Similar Programs:** Links or descriptions of existing applications that have similar features or style (likes/dislikes).
+* **Platform Environment:** Target platforms (web, mobile, desktop), desired OS, browser compatibility.
+* **Rules & Boundaries Must-Haves:** Non-negotiable constraints, compliance requirements (e.g., GDPR, HIPAA if applicable).
+* **Avoid:** Things to explicitly not do or technologies/patterns to avoid.
+* **Success Criteria Scenarios:** High-level user scenarios that, if functional, would define success. (e.g., "A new user can sign up, create a profile, and post their first message within 5 minutes.").
+* **Inspirations Similar Functionality:** Specific examples of functionality you like.
+* **Likes/Dislikes:** General preferences.
+* **Future Dreams (Optional):** Ideas for v2, v3, etc.
+* **Technical Preferences (Optional):** Preferred programming languages, frameworks, databases, architectural styles (but be prepared for the AI to research and recommend).
 
-* The **SPARC** (Specification, Pseudocode, Architecture, Refinement, Completion) methodology is his conceptual framework for structured AI software development.
-* The foundational definitions and roles of the specialized AI agents (Roomodes) originate from his designs and implementations.
+The more specific and clear your Blueprint, the better the `🔎 Research Planner` and subsequent agents can build an accurate initial plan.
 
-This repository aims to make Reuven's powerful SPARC vision more accessible and practical by providing:
+## 🐜 Understanding the Pheromone System (`.pheromone` & `swarmConfig`)
 
-* A clear Zero-Code entry point (the Blueprint) for non-technical users.
-* Integrated Deep Research and Web Crawling capabilities within the SPARC flow.
-* Pre-packaged documentation and examples (like the SPARC Report/Workflow/Prompt) demonstrated in the video to enhance AI context.
-* A consolidated and documented set of Roomodes for easy setup in Roo Code.
+The heart of the swarm is the communication system.
 
-**Thank you, Reuven Cohen, for laying the groundwork for this exciting future of AI-driven development!**
+### `.pheromone` File:
+* **Dynamic State:** Stores an array of "signal" objects. Each signal has a `signalType` (e.g., `coding Wanted_for_feature_X`), `target` (e.g., "FeatureName"), `strength`, `timestamp`, `category` (`state`, `need`, `problem`, `priority`), and potentially other metadata like `relatedTarget` for dependencies.
+* **Agent-Managed:** Agents deposit signals based on their `customInstructions` when they `attempt_completion`. The `👑 Meta-Orchestrator` (and sometimes Phase Orchestrators) reads and processes these signals.
+* **Evolution:** Signal strengths change due to:
+  * **New Deposits:** Agents adding or modifying signals.
+  * **Evaporation:** `swarmConfig.evaporationRates` cause signals to weaken over time, keeping the board focused on current needs.
+  * **Amplification:** `swarmConfig.signalAmplification` boosts repeated signals, highlighting persistent needs or successful discoveries.
+  * **Pruning:** Weak signals below `swarmConfig.signalPruneThreshold` are removed.
+* **Read-Only for Humans:** For observation or debugging, you can look at it. But **DO NOT MANUALLY EDIT IT**. A hard reset involves deleting it and re-initiating with the Meta-Orchestrator.
 
-Follow Reuven Cohen for more insights: 🔗 [Reuven Cohen on LinkedIn](https://www.linkedin.com/in/reuvencohen/)
+### `swarmConfig` (in `.roomodes`):
+Defines the "laws of physics" for your pheromone system. Key aspects:
+* `evaporationRates`: How quickly different signal categories fade.
+* `explorationRate` (ε): Small chance for the Meta-Orchestrator to pick a non-top-priority task to avoid getting stuck.
+* `signalCategories` & `signalTypes`: The vocabulary of the swarm.
+* `signalPriorities`: Certain signals (e.g., `critical_bug_in_feature_X`) inherently get higher importance.
+* `dependencySignals`: Configuration for tracking inter-feature/component dependencies.
+* `conflictResolution`: How the Meta-Orchestrator chooses when multiple needs compete.
+* `anticipatorySignals`: Enables the system to proactively flag future needs.
+* `analyticsTracking`: For advanced features like bottleneck or oscillation detection.
+* `emergencyThresholds`: Critical signal strengths that trigger immediate priority shifts.
+* `recruitmentThresholds`: Signal strengths that trigger specialized agents like `🎯 Debugger_Targeted` or `🧹 Optimizer_Module`.
 
----
+Familiarize yourself with these `swarmConfig` settings in your `.roomodes` to understand how the swarm will behave. Tuning these (carefully!) allows for advancedÂ advanced customization of the swarm's intelligence.
+
+## 🚦 Navigating the Swarm: Best Practices
+
+* **Detailed Inputs are King:** The User Blueprint (or Change Request) is your most powerful steering tool. Garbage-in, garbage-out (or at least, a very confused swarm).
+* **Trust The Process (Mostly):** The swarm is designed to be adaptive. Let it work through its phases. Intervene at the Meta-Orchestrator level if the overall direction seems off, rather than trying to micromanage individual specialist agents (unless debugging a specific agent's behavior).
+* **TDD is Your Friend:** The swarm heavily relies on test outcomes as signals. Well-defined tests (planned by `🎯 Orchestrator (Test Specification & Generation)`) are crucial for the `⚙️ Orchestrator (Feature Implementation - Test-Driven)` to guide Coders effectively.
+* **Iterative Refinement:** For very complex projects, you might provide an initial Blueprint for an MVP, let the swarm build it, then provide Change Requests for subsequent features.
+* **Understand Agent Roles:** Review the `roleDefinition` and `customInstructions` (especially `PheromoneDeposit` logic) for key orchestrators and specialists in your `.roomodes` to grasp how they contribute and communicate.
+* **Monitor (Don't Edit) `.pheromone`:** If things seem stalled, peeking into `.pheromone` (read-only!) can give clues about what signals the Meta-Orchestrator is currently seeing.
+* **Patience with Exploration:** The `explorationRate` means the swarm might occasionally try a less obvious path. This is a feature to prevent local optima.
+
+## 🔎 Troubleshooting the Swarm
+
+* **Swarm Seems Stalled:**
+  * Check the last few outputs from the `👑 Meta-Orchestrator` or active Phase Orchestrator.
+  * (Carefully) view the `.pheromone` file. Are there very strong "problem" signals? Are "need" signals not being addressed? Is there an unfulfilled dependency?
+  * Ensure your LLM API keys are valid and you have credits.
+* **Agents Not Behaving as Expected:**
+  * Double-check the `customInstructions` for that specific agent in `.roomodes`.
+  * Ensure the correct LLM profile (Thinking/Instruct) was active when that agent was invoked.
+  * Simplify the input or task for that agent to see if it's a complexity issue.
+* **Hard Reset:**
+  * If the `.pheromone` file seems corrupted or the swarm is in an unrecoverable loop, you can:
+    * Stop any active Roo Code processes.
+    * Delete the `.pheromone` file.
+    * Re-create an empty `.pheromone` file.
+    * Re-initiate the project from scratch with the `👑 Meta-Orchestrator` and your original User Blueprint/Change Request.
+* **Vague Blueprint Issues:** If the swarm is thrashing or producing irrelevant output early on, your User Blueprint likely lacks clarity or contains conflicting requirements. Refine it and restart.
+
+## 🌌 SPARC Syntax Overview
+*(This section remains relevant as SPARC principles are still encoded in agent instructions)*
+
+The symbolic syntax (`Φ•Ω`, `Γ•Μ•Υ`, etc.) represents core principles encoded in agent instructions. Key concepts include:
+* `Φ•Ω` [Core•Flow]: Workflow clarity, systematic extension, code quality (§͟qual), confirmation (⊦confirm).
+* `Γ•Μ•Υ` [Context]: Doc/context-driven action (⊦⟨doc⟩ ⟨ctx⟩ → ⟨action⟩), arch boundaries (⊤⟨arch⟩), tech management (⊢{...} ⊥newΔ). Swarm helps manage distributed context.
+* `Τ•Ρ` [Tasks]: Micro-tasks (⊦⟨micro⟩), tiered RDD for uncertainty (‼️Ρ{pMCP tiers}→{search|...}✓findings), self-verify (⊗self{...}→⊦complete).
+* `Κ•Σ` [Code]: Best practices (⊢{bestPractice}), conventions (≡⟨conventions⟩), modularity (⊤⟨module⟩), size limits (⟨file⟩≤350Λ), DRY (¬⟨duplication⟩).
+* `Χ` [Refactor]: Improve code, verify via tests (⊨{⋈intact}⇒{⊦tester-tdd}).
+* `Δ` [Testing]: Test-driven (⊢⟨test→code⟩), high coverage (⊤∀⟨coverage⟩), completion gated by passing dual-strategy tests (‼️✓⟨tests pass:dual⟩→⊦complete). Crucial for swarm signaling.
+* `Β` [Debug]: SAPPO root cause (⊙{⟨root⟩:SAPPO}), precise logs. Triggered by pheromone signals.
+* `Ξ` [Security]: Server-logic (⊤{server-logic}), validation (‼️⊤⟨validate⟩), no hardcoded secrets. Agents like `🛡️ SecurityReviewer_Module` are triggered by signals or phase plans.
+* `Ψ•Ε` [VCS•Env]: Git usage, env-agnostic code.
+* `Λ` [Docs]: Accurate, including test strategy.
+* `Θ` [Limits]: File size, abstract credentials.
+
+## 🙏 Acknowledgements
+
+* Builds heavily on Reuven Cohen's SPARC methodology and 'Boomerang Tasks' concept.
+* Reference: 🪃 [Boomerang Tasks by Reuven Cohen](https://gist.github.com/ruvnet/a206de8d484e710499398e4c39fa6299)
+* The Pheromone-Based Swarm Orchestration engine is a new layer inspired by stigmergic communication in natural systems.
+* SAPPO is a custom ontology for this framework.
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) file.
 
----
+## 🙏 Support Development
 
-## 🔗 Related & Helpful Resources
+<div align="center">
+<p>Found this framework valuable? Consider supporting its development.</p>
+<a href="https://paypal.me/ChrisRoyseAI" target="_blank"><img src="https://img.shields.io/badge/Support_via_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Support via PayPal" width="250"/></a>
+<p style="margin-top: 10px;">Your support helps offset API costs and allows for further refinement and evolution of this AI swarm system.</p>
+<p>Thank you!</p>
+</div>
 
-* [Roo Code Information (Official Docs/Blog)](https://roo.ai)
-* [Reuven Cohen's SPARC Articles/Posts]([https://www.linkedin.com/in/reuvencohen/](https://www.linkedin.com/pulse/automated-code-development-new-sparc-npx-create-sparc-reuven-cohen-8ujwe/)) 
-* [Perplexity AI](https://www.perplexity.ai/)
-* [Firecrawl](https://firecrawl.dev/)
-* [Supabase](https://supabase.com/)
+## 🔗 Related Resources
 
----
+* [Roo Code Docs](https://roo.ai)
+* [Perplexity API Docs](https://perplexity.ai)
+* [Anthropic API Docs (Claude)](https://www.anthropic.com/api)
+* [SAPPO Ontology](https://github.com/ChrisRoyse/Coding-Agent-Ontology) (Placeholder)
+* [cline MCP Installer](https://cline.tools)
+* [MCP Standard](https://perplexity.ai/mcp)
 
-## 👤 Connect With Me
+## 👤 Connect
 
-🔗 [LinkedIn - Christopher Royse](https://www.linkedin.com/in/christopher-royse-b624b596/)
+🔗 [LinkedIn - Christopher Royse](https://www.linkedin.com/in/christopher-royse)
 
----
-
-**Let's build amazing things together! Provide your Blueprint and let the AI work its magic. ✨**
-
-
-# Welcome to the Ultimate AI Coding Swarm: A User's Guide
-
-Hello! 👋 Welcome to a revolutionary way to build software using a team of specialized AI assistants. Think of this system like a highly organized construction crew where each AI has a very specific job, and "Orchestrators" act as the project managers. This guide will walk you through everything you need to know to bring your software ideas to life, even if you're new to coding concepts!
-
-**What is This System?**
-
-This system uses a collection of AI "modes" (think of them as virtual robots or specialized assistants) defined in a configuration file called `roomodes.json`. Each mode has a specific role, like writing specifications, designing architecture, writing code, testing, or even researching. "Orchestrator" modes are special project managers that coordinate these specialists to build your application step-by-step.
-
-The key ideas behind this system are:
-
-1.  **Break Down Big Problems:** Complex software is built by breaking it into tiny, manageable pieces.
-2.  **Tests First (Often!):** For new features, we often design all the quality checks (tests) *before* writing the main code. This tells the AI Coder exactly what "correct" looks like.
-3.  **AI Specialization:** Each AI assistant is an expert in one small area.
-4.  **Clear Communication:** You provide your vision, and the orchestrators manage the detailed communication between AI assistants.
-
-**Our Goal:** To empower you to create complex and amazing software by guiding this team of AI assistants, without needing to write the code yourself.
-
-## Table of Contents
-
-1.  [Getting Started: The Pheromone File (A Tiny Bit of Setup)](#1-getting-started-the-pheromone-file-a-tiny-bit-of-setup)
-2.  [Meet Your Project Managers: The Orchestrators](#2-meet-your-project-managers-the-orchestrators)
-    *   [🌟 Orchestrator (Project Initialization & Vision)](#-orchestrator-project-initialization--vision)
-        *   [When to Use It](#when-to-use-it)
-        *   [How It Works (Simplified)](#how-it-works-simplified)
-        *   [Your Input: The User Blueprint](#your-input-the-user-blueprint)
-    *   [뼈대 Orchestrator (Framework Scaffolding)](#-orchestrator-framework-scaffolding)
-        *   [When to Use It](#when-to-use-it-1)
-        *   [How It Works (Simplified)](#how-it-works-simplified-1)
-    *   [🎯 Orchestrator (Test Specification & Generation)](#-orchestrator-test-specification--generation)
-        *   [When to Use It](#when-to-use-it-2)
-        *   [How It Works (Simplified)](#how-it-works-simplified-2)
-    *   [⚙️ Orchestrator (Feature Implementation - Test-Driven)](#️-orchestrator-feature-implementation---test-driven)
-        *   [When to Use It](#when-to-use-it-3)
-        *   [How It Works (Simplified)](#how-it-works-simplified-3)
-    *   [🔗 Orchestrator (Integration & System Testing)](#-orchestrator-integration--system-testing)
-        *   [When to Use It](#when-to-use-it-4)
-        *   [How It Works (Simplified)](#how-it-works-simplified-4)
-    *   [🔄 Orchestrator (Refinement & Maintenance - Existing Code)](#-orchestrator-refinement--maintenance---existing-code)
-        *   [When to Use It](#when-to-use-it-5)
-        *   [How It Works (Simplified)](#how-it-works-simplified-5)
-3.  [The Software Development Lifecycle with Your AI Swarm](#3-the-software-development-lifecycle-with-your-ai-swarm)
-    *   [Step 1: The Idea & The Blueprint (You + Project Initialization Orchestrator)](#step-1-the-idea--the-blueprint-you--project-initialization-orchestrator)
-    *   [Step 2: Building the Foundation (Framework Scaffolding Orchestrator)](#step-2-building-the-foundation-framework-scaffolding-orchestrator)
-    *   [Step 3: Designing the Quality Checks for Each Feature (Test Specification & Generation Orchestrator)](#step-3-designing-the-quality-checks-for-each-feature-test-specification--generation-orchestrator)
-    *   [Step 4: AI Writes Code to Pass the Checks (Feature Implementation Orchestrator)](#step-4-ai-writes-code-to-pass-the-checks-feature-implementation-orchestrator)
-    *   [Step 5: Putting It All Together (Integration & System Testing Orchestrator)](#step-5-putting-it-all-together-integration--system-testing-orchestrator)
-    *   [Step 6: Keeping it Great (Refinement & Maintenance Orchestrator)](#step-6-keeping-it-great-refinement--maintenance-orchestrator)
-4.  [Best Practices for Working with Your AI Swarm](#4-best-practices-for-working-with-your-ai-swarm)
-5.  [A Note on the "Specialist" AI Modes](#5-a-note-on-the-specialist-ai-modes)
-6.  [Troubleshooting Common Scenarios & Which Orchestrator Helps](#6-troubleshooting-common-scenarios--which-orchestrator-helps)
-
----
-
-## 1. Getting Started: The Pheromone File (A Tiny Bit of Setup)
-
-Imagine ants leaving little trails (pheromones) to guide other ants to food or to warn them of danger. Our AI system uses a similar idea with a special file to help the orchestrators prioritize tasks or notice problem areas.
-
-**What is the Pheromone File?**
-
-*   It's a simple text file, usually named `board.json`, located in a folder like `.pheromones/` in your project directory.
-*   It stores "signals" with "weights" (like how strong the ant trail is).
-*   Example signals: `bug_detected_in_feature_X`, `coding_needed_for_feature_Y`.
-*   The orchestrators and specialist AI modes read and update this file. You usually don't need to edit it directly!
-
-**How to Set It Up (Super Easy!):**
-
-1.  **Create a Folder:** In the main folder where your project will live (or already lives), create a new folder.
-    *   On Windows: Right-click -> New -> Folder. Name it `.pheromones` (the dot at the beginning might make it hidden, which is okay).
-    *   On Mac/Linux: Open Terminal, navigate to your project folder, and type `mkdir .pheromones` and press Enter.
-2.  **Create an Empty File:** Inside that `.pheromones` folder, create an empty text file.
-    *   On Windows: Right-click inside the `.pheromones` folder -> New -> Text Document. Name it `board.json`. Make sure the extension is `.json`, not `.json.txt`. (You might need to enable "File name extensions" in File Explorer's View menu).
-    *   On Mac/Linux: In Terminal, navigate into `.pheromones` folder (`cd .pheromones`) and type `touch board.json` and press Enter.
-3.  **Initial Content (Optional but good practice):** Open `board.json` with a simple text editor (like Notepad on Windows, TextEdit on Mac, or VS Code if you have it). You can leave it completely empty, or put this inside to start:
-
-    ```json
-    {}
-    ```
-
-    This just means "an empty collection of signals."
-
-**That's it!** The system will automatically use and update this file.
-
-**Why is this important (in simple terms)?**
-
-If many AI Coder assistants report they are stuck on a particular feature, they might "deposit" a strong `bug_detected_in_feature_X` signal. When an orchestrator looks at its to-do list, it might see this strong signal and decide to prioritize getting a Debugger AI to look at that feature next. It helps the system adapt.
-
----
-
-## 2. Meet Your Project Managers: The Orchestrators
-
-Orchestrators are the "brains" of the operation. They take your high-level requests, break them down into smaller tasks, and assign those tasks to the right specialist AI modes. You will primarily interact with these orchestrators.
-
-### 🌟 Orchestrator (Project Initialization & Vision)
-
-*   **Slug:** `orchestrator-project-initialization`
-*   **Purpose:** This is your **starting point for any brand new software idea.** It takes your dream and turns it into a concrete plan.
-
-#### When to Use It:
-
-*   You have a new app idea and want to build it from scratch.
-*   You've filled out (or are ready to fill out) the "Zero-Code User Blueprint" (more on this below!).
-
-#### How It Works (Simplified):
-
-1.  You provide your "User Blueprint" (your detailed idea written in plain English).
-2.  It sends this Blueprint to a "Research Planner" AI that explores similar apps, best technologies, and potential challenges.
-3.  Based on the research and your Blueprint, it defines the major features of your app and a high-level design.
-4.  It creates a "Master Project Plan" document that outlines everything, ready for the next orchestrator.
-
-#### Your Input: The User Blueprint
-
-This is the **most important document you will create** for a new project. It's a template you fill out, describing your idea without any technical jargon. The `Orchestrator (Project Initialization & Vision)` expects this.
-
-**(You would include a simplified version of the Zero-Code User Blueprint template here, like the one you provided in the prompt, explaining each section briefly and how it helps the AI)**
-
-**Key takeaway:** For a *new project*, start with this orchestrator and a well-thought-out User Blueprint.
-
----
-
-### 뼈대 Orchestrator (Framework Scaffolding)
-
-*   **Slug:** `orchestrator-framework-scaffolding`
-*   **Purpose:** After the initial plan is ready, this orchestrator sets up the **empty "skeleton" of your project.** Think of it as laying the foundation and putting up the basic frame of a house before building the rooms.
-
-#### When to Use It (Usually Automated):
-
-*   Right after the `Orchestrator (Project Initialization & Vision)` finishes.
-*   You usually don't call this one directly; the system flows into it.
-
-#### How It Works (Simplified):
-
-1.  It takes the "Master Project Plan" (which includes technology choices like Python/React or Java/Spring).
-2.  It tasks "DevOps" AI assistants to create the necessary folders, install basic tools (like linters to keep code tidy), and set up a very basic automated workflow (CI/CD) that can build and test your project later.
-3.  It tasks "Coder" AI assistants to write the absolute bare minimum "boilerplate" code – for example, an empty API structure or a file to connect to a database (but no actual features yet).
-4.  It tasks a "Tester" AI to set up the testing system.
-
-**Key takeaway:** This orchestrator builds the empty, runnable shell of your application.
-
----
-
-### 🎯 Orchestrator (Test Specification & Generation)
-
-*   **Slug:** `orchestrator-test-specification-and-generation`
-*   **Purpose:** This is a **crucial and unique orchestrator!** For *each feature* of your app, its job is to **design and then have AI assistants write all the quality checks (tests) BEFORE the feature's main code is written.**
-
-#### When to Use It (Usually Automated):
-
-*   After the project framework is scaffolded, this orchestrator will be called for each major feature defined in the Master Project Plan.
-*   It can also be used by the `Orchestrator (Refinement & Maintenance)` when you request a new enhancement to an existing project.
-
-#### How It Works (Simplified):
-
-1.  It takes the high-level specification and architecture design for **one specific feature** (e.g., "User Login" feature).
-2.  It tasks a specialist AI (`Spec_To_TestPlan_Converter`) to create a very detailed "Test Plan." This plan lists all the things that need to be checked for the feature to work correctly:
-    *   "If user enters correct password, they should log in."
-    *   "If user enters wrong password 3 times, account should be temporarily locked."
-    *   "If username field is empty, show error message."
-3.  Then, for each item in the Test Plan, it tasks another specialist AI (`Tester_TDD_Master`) to write the actual test *code*. This test code will try to use functions that *don't exist yet* (like a `loginUser()` function). So, these tests will initially fail, which is exactly what we want!
-
-**Key takeaway:** This orchestrator ensures that for every feature, we know exactly what "correct" looks like (defined by the tests) *before* we try to build it. The failing tests become the precise instructions for the AI Coder.
-
----
-
-### ⚙️ Orchestrator (Feature Implementation - Test-Driven)
-
-*   **Slug:** `orchestrator-feature-implementation-tdd`
-*   **Purpose:** Its mission is simple: take a feature for which all tests have ALREADY been written (by the previous orchestrator) and manage AI Coder assistants to **write the source code that makes all those tests pass.**
-
-#### When to Use It (Usually Automated):
-
-*   After the `Orchestrator (Test Specification & Generation)` has finished creating all the tests for a specific feature.
-
-#### How It Works (Simplified) - The "TDD Boomerang Cycle":
-
-1.  It looks at the list of (currently failing) tests for the feature.
-2.  It picks a small group of related failing tests (e.g., tests for the `loginUser()` function).
-3.  It tasks an AI Coder (`Coder_Test_Driven`): "Here are tests A, B, and C. They are failing. Please write the `loginUser()` function in `auth_service.py` so that these tests pass. Here's the spec for what `loginUser()` should do."
-4.  The Coder AI writes or modifies the `loginUser()` function and sends it back.
-5.  The orchestrator (or a Tester AI it calls) runs *all* the tests for the feature again.
-    *   **If all tests for the feature now pass:** Great! This feature is done.
-    *   **If some tests still fail (or new ones start failing):**
-        *   If the Coder seems stuck or the error is tricky, it might ask a "Debugger" AI (`Debugger_Targeted`) to look at the Coder's code and the failing tests to find the problem.
-        *   It then goes back to step 2 or 3, giving the Coder (or Debugger's corrected code) the new information about which tests are still failing.
-6.  This loop continues until every single pre-written test for that feature passes.
-
-**Key takeaway:** This is where your actual feature code gets built. The AI Coders are relentlessly trying to satisfy the quality checks you designed earlier. It's okay if they take many tries – that's how AI learns and gets it right based on the tests!
-
----
-
-### 🔗 Orchestrator (Integration & System Testing)
-
-*   **Slug:** `orchestrator-integration-and-system-testing`
-*   **Purpose:** Once you have several features that have individually passed all their tests, this orchestrator **connects them all together** into the main application and runs tests to make sure they work correctly *with each other*.
-
-#### When to Use It (Usually Automated):
-
-*   After one or more features have been completed by the `Orchestrator (Feature Implementation - Test-Driven)`.
-*   Often run before preparing a new version of your app for users.
-
-#### How It Works (Simplified):
-
-1.  It takes the code for the completed features.
-2.  It tasks an "Integrator" AI (`Integrator_Module`) to merge these features into the main project code.
-3.  If there are conflicts (e.g., two features changed the same file), it might use a Debugger AI to help resolve them.
-4.  Once merged, it tasks a Tester AI (`Tester_TDD_Master`) to run "System-Wide Tests." These are broader tests that check complete user journeys or interactions between multiple features.
-5.  If system tests fail, it will coordinate with Debugger AIs to find and fix these "integration bugs."
-
-**Key takeaway:** This orchestrator ensures that the individual pieces of your app play nicely together.
-
----
-
-### 🔄 Orchestrator (Refinement & Maintenance - Existing Code)
-
-*   **Slug:** `orchestrator-refinement-and-maintenance`
-*   **Purpose:** Use this orchestrator when you want to **make changes to a project that already exists** – fixing bugs, adding small enhancements, or optimizing performance.
-
-#### When to Use It:
-
-*   You have an existing codebase (built by this system or even by humans!).
-*   You want to:
-    *   Fix a reported bug.
-    *   Add a new, relatively contained feature or modification to an existing one.
-    *   Improve the performance of a specific part of the application.
-
-#### How It Works (Simplified):
-
-1.  You provide a clear request (e.g., "The login page crashes if I enter a very long password," or "Add an option to export the user list as a CSV file").
-2.  It first tasks a "Code Comprehension" AI (`CodeComprehension_Assistant_V2`) to understand the relevant parts of the *existing* code related to your request. This is super important because we don't want to break what's already working!
-3.  **Test-First (even for changes!):**
-    *   **For Bug Fixes:** It tasks a Tester AI to write a *new test that fails because of the bug*. This test proves the bug exists and defines when it's fixed.
-    *   **For Enhancements:** It tasks specification and test generation AIs (similar to how new features are handled) to create a plan and write new tests for the *new behavior* you want.
-4.  It then uses the `Orchestrator (Feature Implementation - Test-Driven)` logic (or a similar internal loop) to manage AI Coders. Their job is to modify the existing code to:
-    *   Make the new bug-fixing test (or new enhancement tests) pass.
-    *   **AND critically, ensure ALL OTHER EXISTING TESTS in the entire project STILL PASS!** This prevents regressions (breaking old stuff).
-5.  It may also coordinate security reviews or documentation updates for the changed parts.
-
-**Key takeaway:** This orchestrator is your go-to for evolving an existing application safely. It emphasizes understanding the current code first and then making changes in a test-driven way to avoid breaking things.
-
----
-
-## 3. The Software Development Lifecycle with Your AI Swarm
-
-Here's how these orchestrators typically work together to build a new application from your idea:
-
-### Step 1: The Idea & The Blueprint (You + Project Initialization Orchestrator)
-
-*   **You:** Have a brilliant idea! You carefully fill out the "Zero-Code User Blueprint," describing everything in plain English.
-*   **Action:** You submit this Blueprint to the `Orchestrator (Project Initialization & Vision)`.
-*   **Outcome:** The orchestrator and its research team will study your idea, investigate technologies, define major features, and create a `Master_Project_Plan.md`.
-
-### Step 2: Building the Foundation (Framework Scaffolding Orchestrator)
-
-*   **Action:** The `Orchestrator (Project Initialization & Vision)` automatically hands off the Master Plan to the `Orchestrator (Framework Scaffolding)`.
-*   **Outcome:** This orchestrator sets up your project's empty folders, basic build tools, CI/CD, configuration files, and maybe some empty "boilerplate" code for your API or database. Your project is now a runnable (but empty) shell.
-
-### Step 3: Designing the Quality Checks for Each Feature (Test Specification & Generation Orchestrator)
-
-*   **Action:** For *each major feature* outlined in the Master Project Plan (e.g., "User Registration," then "Product Search," then "Shopping Cart"):
-    1.  The `Orchestrator (Test Specification & Generation)` takes the feature's high-level spec and architecture.
-    2.  It creates a detailed Test Plan for that feature.
-    3.  It then instructs `Tester_TDD_Master` AIs to write all the actual test *code* for that feature. These tests will fail because the feature code doesn't exist.
-*   **Outcome:** For each feature, you now have a complete set of "quality check" instructions (the test code).
-
-### Step 4: AI Writes Code to Pass the Checks (Feature Implementation Orchestrator)
-
-*   **Action:** For *each feature* that now has its tests written:
-    1.  The `Orchestrator (Feature Implementation - Test-Driven)` takes the failing tests and the feature's spec/arch.
-    2.  It repeatedly tasks `Coder_Test_Driven` AIs to write the actual source code for the feature.
-    3.  After each Coder attempt, the orchestrator re-runs the feature's tests.
-    4.  If tests fail, a `Debugger_Targeted` AI might be called in to help.
-    5.  This loop continues until ALL tests for that specific feature pass.
-*   **Outcome:** You get fully coded and *individually tested* features.
-
-### Step 5: Putting It All Together (Integration & System Testing Orchestrator)
-
-*   **Action:** Once several features are complete and have passed their own tests:
-    1.  The `Orchestrator (Integration & System Testing)` takes these completed features.
-    2.  It merges their code into the main application.
-    3.  It then runs a big set of "System-Wide Tests" to ensure the features work correctly *together* and that the whole application behaves as expected.
-*   **Outcome:** A more complete version of your application, with multiple features working in harmony.
-
-### Step 6: Keeping it Great (Refinement & Maintenance Orchestrator)
-
-*   **Action:** Months later, you want to add a small new option to the "Product Search" feature, or a user reports a bug in the "Shopping Cart."
-    1.  You submit a clear request to the `Orchestrator (Refinement & Maintenance - Existing Code)`.
-    2.  It analyzes the existing code related to your request.
-    3.  It ensures new tests are written for your change/fix *first*.
-    4.  It then tasks AI Coders to make those new tests pass *and* ensure all old tests still pass.
-*   **Outcome:** Your application is updated or fixed safely, without breaking existing functionality.
-
-This cycle (especially steps 3-5) can repeat for many features. For very large projects, features themselves might be broken down by `Orchestrator_Project_Initialization` into sub-features that follow a similar flow.
-
----
-
-## 4. Best Practices for Working with Your AI Swarm
-
-To get the best results from this powerful system:
-
-1.  **Be Crystal Clear in Your User Blueprint (for New Projects):** This is your primary communication tool. The more detail, specific examples (especially for "Success Criteria"), and clarity you provide, the better the AIs can understand your vision. Garbage in, garbage out applies!
-2.  **Write Clear Change Requests & Bug Reports (for Existing Projects):**
-    *   **Bugs:** What did you do? What did you expect? What actually happened? Any error messages?
-    *   **Enhancements:** What is the new behavior you want? Why is it needed? Who benefits?
-3.  **Think in Features:** Break down your big idea into logical, user-facing features. The "Core Actions" and "Key Feature Deep Dive" in the Blueprint help with this.
-4.  **Review AI Outputs at Key Stages:**
-    *   After `Orchestrator_Project_Initialization`: Review the `Master_Project_Plan.md`. Does the feature list and high-level architecture make sense for your Blueprint?
-    *   After `Orchestrator_Test_Specification_And_Generation`: Skim the `Test_Plan.md` for a key feature. Do the test scenarios seem to cover your "Success Criteria" from the Blueprint? (You don't need to read the test *code*).
-    *   After `Orchestrator_Integration_And_System_Testing`: Try out the application if it's a runnable version. Does it behave as you expected for the integrated features?
-5.  **Embrace Iteration, Especially with AI Coders:** The `Orchestrator (Feature Implementation - Test-Driven)` is *designed* for AI Coders to make multiple attempts. It's not a failure if the AI doesn't get it perfect on the first try. The tests are there to guide it. Trust the process.
-6.  **Understand Context is Limited for AIs:** Each AI specialist only knows about the tiny task it's given. It doesn't remember previous conversations or other parts of the project unless the Orchestrator specifically tells it. This is why your initial Blueprint and clear change requests are so vital – they are the source of truth.
-7.  **Don't Specify *How* in Your Blueprint (Usually):** Focus on *what* you want the app to do and *why*. Let the `ResearchPlanner_Strategic` and `Architect_HighLevel_Module` AIs propose the best *how* (technologies, design patterns) based on your requirements. (The "Technical Preferences" section of the Blueprint is for when you have a *very strong, existing reason* to use a specific technology).
-8.  **Patience for Complex Tasks:** Building complex software, even with AI, takes time. The orchestrators break things down, which means many small steps.
-9.  **Use the Tutorial Mode:** When you're unsure, or just to see an example flow, the `Tutorial (Phased, Test-First AI Workflow)` mode can walk you through a simulated project.
-10. **Ask for Clarification:** The `Ask (Ultimate Guide to Phased Orchestration & Test-First AI)` mode is there to help you understand any part of this process.
-
----
-
-## 5. A Note on the "Specialist" AI Modes
-
-While you primarily interact with the Orchestrators, they are coordinating a whole team of specialist AIs in the background. You don't usually talk to these specialists directly, but it's good to know they exist:
-
-*   `ResearchPlanner_Strategic`: The super-researcher.
-*   `SpecWriter_Feature_Overview`: Writes high-level feature descriptions.
-*   `Architect_HighLevel_Module`: Designs parts of the app.
-*   `DevOps_Foundations_Setup`: Sets up technical project parts.
-*   `Coder_Framework_Boilerplate`: Writes basic empty code structures.
-*   `Spec_To_TestPlan_Converter`: Turns feature descriptions into detailed test plans.
-*   `Tester_TDD_Master`: Writes test code OR runs existing tests.
-*   `Coder_Test_Driven`: Writes the actual feature code to pass tests.
-*   `Debugger_Targeted`: Helps find and fix code problems.
-*   `Integrator_Module`: Merges code from different features.
-*   `CodeComprehension_Assistant_V2`: Understands existing code for changes.
-*   `SecurityReviewer_Module`: Checks for security weaknesses.
-*   `DocsWriter_Feature`: Writes user and technical documents.
-*   `DevOps_Pipeline_Manager`: Manages deploying your app to the internet.
-*   `Optimizer_Module`: Improves code performance or structure.
-*   And a few low-level utility AIs like `MCP_Tool_Specialist` (for using external AI search tools) and `FireCrawler_Assistant` (for reading websites for research).
-
-Understanding that this team is working behind the scenes helps appreciate how your high-level requests are transformed into working software!
-
----
-
-## 6. Troubleshooting Common Scenarios & Which Orchestrator Helps
-
-*   **"I have a brand new app idea!"**
-    *   **Start with:** `Orchestrator (Project Initialization & Vision)` and a filled-out User Blueprint.
-*   **"The AI seems to be misunderstanding a core feature of my new app."**
-    *   **Check:** Your User Blueprint's description for that feature. Is it crystal clear?
-    *   **Action:** You might need to provide a revised Blueprint (or a clarification document) to `Orchestrator (Project Initialization & Vision)` to restart or refine the planning for *that specific feature area*. The system is designed to be iterative.
-*   **"My new app is built, but Feature X doesn't quite work like I described in my Blueprint."**
-    *   **This indicates a potential gap.** Was the "Success Criteria" in your Blueprint for Feature X very clear? Did the `Test_Plan.md` (created by `Spec_To_TestPlan_Converter`) accurately capture that success criteria?
-    *   **Action:** This is a "bug" or "misinterpretation." Submit a detailed bug report/change request to `Orchestrator (Refinement & Maintenance - Existing Code)`. It will analyze Feature X, likely have *new tests* written that better capture your original intent, and then task AI Coders to fix the code for Feature X to pass these new (and all old) tests.
-*   **"I want to add a small new option to my existing, working app."**
-    *   **Start with:** `Orchestrator (Refinement & Maintenance - Existing Code)`. Provide a clear description of the new option, where it fits, and how it should behave.
-*   **"A user found a bug in my live application!"**
-    *   **Start with:** `Orchestrator (Refinement & Maintenance - Existing Code)`. Provide a detailed bug report (steps to reproduce, expected vs. actual).
-*   **"The AI Coder seems to be stuck trying to pass a specific test for a new feature."**
-    *   **Trust the Process (Initially):** The `Orchestrator (Feature Implementation - Test-Driven)` is designed to use the `Debugger_Targeted` AI to help the Coder. This is normal.
-    *   **If it's *really* stuck (many, many cycles on one test):** This might mean the test itself is impossible to pass given the feature's specification or architecture, OR the spec is contradictory. This is rare if the earlier phases were done well. You might need to (conceptually) flag this to a human overseer, or provide a clarifying note about the spec to the maintenance orchestrator which could then refine the spec and regenerate related tests.
-*   **"I want to see what the AI is planning for testing Feature Y."**
-    *   **Look for:** The output of the `Orchestrator (Test Specification & Generation)` for Feature Y. It will include a path to a `feature_Y_test_plan.md` file. This human-readable plan details all the test scenarios.
-*   **"The whole app feels slow after a few features were added."**
-    *   **Action:** Submit an "optimization request" to `Orchestrator (Refinement & Maintenance - Existing Code)`. Be specific if you know which part is slow. It can task `Optimizer_Module` AIs to investigate and improve performance, while still ensuring all tests pass.
-
----
-
-This guide provides a comprehensive overview. The key is to start with a clear vision (your Blueprint for new projects, or clear requests for existing ones) and then trust the specialized orchestrators and AI assistants to follow this robust, test-driven process. Happy building!
+Embrace the future of software development with structured, ontology-driven, Dual-Strategy TDD-powered AI Swarm Orchestration. Plan meticulously with detailed User Blueprints, and let the swarm intelligently and adaptively build your vision!
