@@ -14,6 +14,18 @@ At its heart, Pheromind employs a **pheromone-based swarm intelligence model**. 
 
 Pheromind isn't just about automating tasks; it's about creating an adaptive, intelligent system that can navigate the complexities of modern project execution with a level of autonomy and resilience previously unattainable.
 
+---
+
+## 🚀 Quick Setup & Video Guide
+
+Watch the full setup video to see these steps in action:
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=0sIws94A1U0" target="_blank" title="Pheromind Setup Video - Click to Watch">
+    <img src="https://img.youtube.com/vi/0sIws94A1U0/hqdefault.jpg" alt="Pheromind Setup Video Thumbnail" width="480"> 
+  </a>
+</p>
+
 ## ✨ Core Concepts: Understanding the Pheromind Swarm
 
 To grasp the power of Pheromind, familiarize yourself with these foundational principles:
