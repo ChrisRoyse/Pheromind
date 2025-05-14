@@ -4,15 +4,16 @@
 [![Framework: Roo Code](https://img.shields.io/badge/Framework-Roo%20Code-brightgreen)](https://roo.ai)
 [![LLM: Claude 3.x Compatible](https://img.shields.io/badge/LLM-Claude%203.x%20Compatible-orange)](https://www.anthropic.com/)
 [![Coordination: Swarm Intelligence](https://img.shields.io/badge/Coordination-Swarm%20Intelligence-red)](.)
-[![Communication: Pheromone Signals](https://img.shields.io/badge/Communication-Pheromone%20Signals-purple)](.)
+[![Communication: Interpreted Pheromone Signals](https://img.shields.io/badge/Communication-Interpreted%20Pheromone%20Signals-purple)](.)
+[![Methodology: AI-Verifiable Outcomes](https://img.shields.io/badge/Methodology-AI--Verifiable%20Outcomes-dodgerblue)](.)
 
 ## 🌌 Welcome to Pheromind: The Future of AI-Driven Project Execution
 
-**Pheromind** is a cutting-edge AI agent orchestration framework designed for the autonomous management and execution of complex projects, particularly geared towards intricate software development lifecycles and similar multi-step workflows.
+**Pheromind** is a cutting-edge AI agent orchestration framework designed for the autonomous management and execution of complex projects, particularly geared towards intricate software development lifecycles adhering to an **AI-Verifiable Methodology**. This methodology ensures that project progress is tracked through concrete, measurable, and AI-confirmable outcomes.
 
-At its heart, Pheromind employs a **pheromone-based swarm intelligence model**. This allows a diverse collective of specialized AI agents to collaborate, adapt, and drive projects to completion. A cornerstone of Pheromind's innovation is its ability to interpret rich, natural language summaries from high-level orchestrator agents and translate them into structured, actionable "digital pheromones" or **`:signals`**. These signals guide the swarm's behavior, enabling dynamic task allocation, robust state management, and emergent problem-solving capabilities.
+At its heart, Pheromind employs a **pheromone-based swarm intelligence model**. A diverse collective of specialized AI agents collaborates and adapts by interacting indirectly through a shared state medium. A cornerstone of Pheromind's innovation is its **`✍️ @orchestrator-pheromone-scribe`**. This central agent interprets rich, natural language summaries from high-level Task Orchestrators—narratives detailing project progress and AI-verifiable results—and translates them into structured, actionable "digital pheromones" or **`:signals`** and human-centric **documentation registry** updates. These are stored in the `.pheromone` file, guiding the swarm's behavior, enabling dynamic task allocation, robust state management, and emergent problem-solving, all while maintaining a clear, human-auditable trail.
 
-Pheromind isn't just about automating tasks; it's about creating an adaptive, intelligent system that can navigate the complexities of modern project execution with a level of autonomy and resilience previously unattainable.
+Pheromind isn't just about automating tasks; it's about creating an adaptive, intelligent system that can navigate the complexities of modern project execution with a focus on verifiable deliverables and a level of autonomy previously unattainable.
 
 Pheromind Discord Server: https://discord.gg/rTq3PBeThX
 
@@ -24,7 +25,7 @@ Watch the full setup video to see these steps in action:
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=0sIws94A1U0" target="_blank" title="Pheromind Setup Video - Click to Watch">
-    <img src="https://img.youtube.com/vi/0sIws94A1U0/hqdefault.jpg" alt="Pheromind Setup Video Thumbnail" width="480"> 
+    <img src="https://img.youtube.com/vi/0sIws94A1U0/hqdefault.jpg" alt="Pheromind Setup Video Thumbnail" width="480">
   </a>
 </p>
 
@@ -33,211 +34,217 @@ Watch the full setup video to see these steps in action:
 To grasp the power of Pheromind, familiarize yourself with these foundational principles:
 
 *   **🧠 Pheromone-Based Swarm Intelligence (Stigmergy):**
-    Inspired by the way social insects like ants coordinate, Pheromind agents don't rely on direct peer-to-peer commands. Instead, they interact indirectly through a shared environment – the `.pheromone` file. Agents "sense" and "deposit" digital trails (structured JSON `:signals`) that reflect the project's current state, needs, completed work, or emerging problems. This "pheromone landscape" guides the actions of other agents, fostering a decentralized yet coordinated system.
+    Inspired by social insects, Pheromind agents interact indirectly through a shared environment – the `.pheromone` file. This file contains structured JSON `:signals` representing project state and a `documentationRegistry` tracking human-readable project artifacts. Agents "sense" these signals and Task Orchestrators provide natural language summaries that the Pheromone Scribe uses to "deposit" new trails. This "pheromone landscape" guides agent actions, fostering decentralized yet coordinated work.
 
-*   **⚙️ Autonomous Task Orchestration:**
-    Once initiated with a high-level objective (e.g., a detailed User Blueprint), Pheromind autonomously manages the entire project workflow. Tasks are delegated hierarchically, progress is monitored through continuous updates to the pheromone state, and the system dynamically adjusts its strategy based on the evolving signal landscape.
+*   **🎯 AI-Verifiable Project Execution:**
+    Pheromind champions a methodology where project progression is defined by tasks with **AI-Verifiable End Results**. The `🌟 @orchestrator-project-initialization` creates a **Master Project Plan** detailing phases and micro-tasks, each with specific, programmatically checkable completion criteria (e.g., file existence with correct schema, script execution without error, all tests in a suite passing). Task Orchestrators ensure their delegated worker tasks adhere to these verifiable outcomes, making progress unambiguous and AI-auditable.
 
-*   **💬 Structured `:signals` – The Language of the Swarm:**
-    `:signals` are the lifeblood of Pheromind. They are machine-readable, structured JSON objects stored centrally in the `.pheromone` file. Each `:signal` serves as a piece of information influencing the swarm's behavior and typically includes:
-    *   `id`: A unique identifier for the signal.
-    *   `signalType`: Defines the nature of the signal (e.g., `feature_spec_complete`, `coding_needed`, `critical_bug_identified`).
-    *   `target`: The specific entity the signal pertains to (e.g., a project name, a feature module, a file path).
-    *   `category`: A broader classification (e.g., `system_event`, `task_status`, `identified_need`, `problem_report`).
-    *   `strength`: A numerical value indicating the signal's intensity, which can change over time.
-    *   `message`: A human-readable description of the signal.
-    *   `data`: A flexible JSON object to carry additional structured information relevant to the signal (e.g., file paths, specific metrics, error details).
-    *   `timestamp_created` & `last_updated_timestamp`: Temporal metadata for tracking signal age and updates.
-    These `:signals` are dynamic, subject to rules like evaporation (decaying over time), amplification (strengthening if reinforced), and pruning (removal if too weak or outdated), all governed by the `swarmConfig`.
+*   **⚙️ Autonomous Task Orchestration with Verifiable Outcomes:**
+    Once initiated with a high-level objective (e.g., a User Blueprint), Pheromind autonomously manages the project workflow. The `🧐 @uber-orchestrator` strategically delegates phases to Task-Specific Orchestrators, guided by the current `.pheromone` state. These orchestrators, in turn, assign granular tasks to Worker Agents, ensuring each task has an AI-verifiable end result. Progress, reported as rich natural language summaries detailing these verifiable outcomes, is processed by the Pheromone Scribe to update the global state, allowing the system to dynamically adjust its strategy.
+
+*   **💬 Structured `:signals` – The Language of the Swarm's Interpreted State:**
+    `:signals` are the lifeblood of Pheromind's internal state representation. Generated *exclusively* by the `✍️ @orchestrator-pheromone-scribe`'s interpretation of natural language summaries, they are machine-readable, structured JSON objects stored in the `.pheromone` file's `signals` array. Each `:signal` influences swarm behavior and typically includes:
+    *   `id`, `signalType`, `target`, `category`, `strength`, `message`, `data` (extracted specifics), `timestamp_created` & `last_updated_timestamp`.
+    These `:signals` are dynamic, subject to rules (evaporation, amplification, pruning) governed by the separate `.swarmConfig` file, which the Scribe uses.
 
 *   **🗣️ Natural Language Summary Interpretation – The Scribe's Keystone Role:**
-    This is where Pheromind truly shines. The flow is:
-    1.  **Worker Agents** (e.g., coders, testers) complete their granular tasks and produce detailed, **natural language `Summary` reports** of their actions and outcomes for their parent orchestrator.
-    2.  **Task-Specific Orchestrators** aggregate these worker summaries and details of their own phase-management activities into a single, comprehensive **natural language summary report**.
-    3.  This comprehensive narrative is then dispatched to the **`✍️ @orchestrator-pheromone-scribe`**.
-    4.  The **Pheromone Scribe**, using sophisticated interpretation logic defined in `swarmConfig.interpretationLogic` (involving semantic analysis, keyword/pattern matching), *translates* this rich natural language summary into precise, **structured JSON `:signals`**.
-    This unique capability allows the swarm to react to complex, nuanced updates from its constituent parts, moving beyond rigid, pre-coded communication protocols.
+    This is where Pheromind translates complex progress into structured state:
+    1.  **Worker Agents** complete granular tasks, producing AI-verifiable outputs (e.g., a spec file, tested code) and a detailed, **natural language `Summary` report** of their actions, outcomes, and verification status for their parent Task Orchestrator.
+    2.  **Task-Specific Orchestrators** aggregate these worker summaries and details of their own phase-management activities (which also involve tracking AI-verifiable phase goals) into a single, comprehensive **natural language summary report**.
+    3.  This narrative is dispatched to the **`✍️ @orchestrator-pheromone-scribe`**.
+    4.  The **Pheromone Scribe**, using sophisticated `interpretationLogic` (defined in the external `.swarmConfig` file), *translates* this rich natural language summary into precise, **structured JSON `:signals`** and updates to the `documentationRegistry` within the `.pheromone` file. This unique capability allows the swarm to react to nuanced updates, beyond rigid protocols, and track human-readable documentation.
 
-## 🏛️ System Architecture: Agents & Components
+*   **📖 Human-Centric Documentation Trail:**
+    Throughout the project, agents (especially workers like spec writers, architects, coders with TDD, and dedicated documentation writers) produce human-readable artifacts (plans, specifications, architectural documents, code, test reports, final documentation). The Pheromone Scribe, through its interpretation of summaries, populates a `documentationRegistry` within the `.pheromone` file. This registry tracks these vital documents, making project progress, decisions, and potential issues transparent and understandable to human supervisors and developers.
 
-Pheromind's architecture revolves around a hierarchy of specialized AI agents and a central state mechanism:
+## 🏛️ System Architecture: Agents & Key Files
 
-### 1. The `.pheromone` File: The Swarm's Shared Brain
-This single JSON file acts as the central repository for the swarm's collective knowledge and current state. It's meticulously managed and consists of two primary top-level keys:
-*   **`swarmConfig`**: A JSON object detailing all operational parameters for the swarm. This includes rules for signal dynamics (evaporation, amplification), signal type definitions, priority weightings, conflict resolution strategies, and, most importantly, the **`interpretationLogic`** which empowers the Pheromone Scribe to convert natural language summaries into structured `:signals`.
-*   **`signals`**: An array of the structured JSON `:signal` objects described above. This array represents the current "pheromone landscape," guiding the swarm's decisions.
+Pheromind's architecture revolves around specialized AI agents, a central state file managed by the Scribe, and a configuration file guiding the Scribe's interpretation.
 
-### 2. `✍️ @orchestrator-pheromone-scribe` (The Pheromone Scribe)
-The Scribe is the intelligent gatekeeper and sole manipulator of the `.pheromone` file. Its critical duties include:
-*   **Receiving Task Orchestrator Summaries:** Processes the comprehensive natural language `Incoming_task_Orchestrator_Summary_Text_Optional` and `Incoming_Handoff_Reason_Code_Optional` from completing Task-Specific Orchestrators.
-*   **Intelligent Interpretation:** Analyzes the received narrative content using its `swarmConfig.interpretationLogic` to understand completed work, newly identified needs, problems, or critical state changes.
-*   **Structured Signal Generation & Updates:** Translates its interpretation into new structured JSON `:signal` objects or updates existing ones within the `.pheromone` file. This involves determining appropriate signal types, targets, strengths, messages, and populating the `data` field with specifics extracted from the summary.
-*   **Pheromone Dynamics Management:** Applies configured rules for signal evaporation, amplification, pruning (e.g., maintaining file size limits like 500 lines by removing the weakest signals if necessary), and conflict resolution to the global list of signals.
-*   **State Persistence:** Saves the fully updated `swarmConfig` and the processed `signals` array back to the `.pheromone` file, ensuring the swarm's state is accurately recorded.
-*   **Initiating the Next Cycle:** Once the state is updated, it activates the `@head-orchestrator` to continue the overall project flow.
+### Key Files:
+1.  **The `.pheromone` File: The Swarm's Shared Understanding & Documentation Hub**
+    This single JSON file, exclusively managed by the `✍️ @orchestrator-pheromone-scribe`, acts as the central repository for the swarm's current interpreted state and documentation pointers. It contains two primary top-level keys:
+    *   **`signals`**: An array of structured JSON `:signal` objects representing the current "pheromone landscape."
+    *   **`documentationRegistry`**: A JSON object mapping to and describing key human-readable project documents (specifications, architecture, plans, reports), essential for human oversight and agent context.
+    The Scribe *never* writes configuration data (from `.swarmConfig` or `.roomodes`) into this file.
 
-### 3. `🎩 @head-orchestrator` (Plan Custodian & UBER Tasker)
-This agent is responsible for initiating and overseeing the project at the highest level.
-*   Receives the initial project directive (e.g., User Blueprint path, project root).
-*   Upon activation by the Pheromone Scribe (after a state update cycle), it passes the original project directive and relevant context to the `@uber-orchestrator`.
+2.  **The `.swarmConfig` File: The Scribe's Interpretation Rulebook**
+    A separate JSON file (e.g., `project_root/.swarmConfig`) containing all operational parameters for signal dynamics and, most importantly, the **`interpretationLogic`**. This logic (rules, patterns, semantic mappings) dictates how the Pheromone Scribe translates incoming natural language summaries into structured `:signals` and `documentationRegistry` updates. The Scribe loads this file at the start of its cycle and *never* modifies it.
 
-### 4. `🧐 @uber-orchestrator` (Pheromone-Guided Delegator)
-The UBER Orchestrator serves as the primary strategic decision-maker for task delegation.
-*   **State Awareness:** Reads (but *never* writes to) the current `.pheromone` file to understand the global project state via its `:signal` data.
-*   **Strategic Delegation:** Based on the overall project goals and the current "pheromone landscape," it determines the next major phase of work.
-*   **Orchestrator Tasking:** Delegates this phase *exclusively* to an appropriate **Task-Specific Orchestrator** (agents with "orchestrator" in their slug). It does not directly task Worker Agents.
+3.  **The `.roomodes` File: Agent Definitions**
+    This file contains the JSON definitions for all Pheromind agents, detailing their roles, specific instructions, and capabilities.
 
-### 5. Task-Specific Orchestrators (e.g., `🌟 @orchestrator-project-initialization`, `🛠️ @orchestrator-framework-scaffolding`, `⚙️ @orchestrator-feature-implementation-tdd`)
-These orchestrators manage distinct, large-scale phases of the project lifecycle.
-*   **Phase Management:** Decompose their assigned phase into logical sub-tasks.
-*   **Worker Delegation:** Assign these sub-tasks to specialized Worker Agents.
-*   **Synthesis of Outcomes:** Collect detailed natural language `Summary` reports from their workers. They then synthesize these individual reports, along with a narrative of their own management activities and phase status, into a *single, comprehensive natural language summary*.
-*   **Reporting to the Scribe:** This comprehensive summary, packaged as `Incoming_task_Orchestrator_Summary_Text_Optional` along with a `Incoming_Handoff_Reason_Code_Optional`, is sent to the `✍️ @orchestrator-pheromone-scribe` for interpretation and global state update. Task Orchestrators *do not* generate structured `:signals` themselves. They may have operational limits (e.g., token constraints) necessitating handoff of partial work with an explanatory summary.
+### Core Agents:
+1.  **`✍️ @orchestrator-pheromone-scribe` (The Pheromone Scribe)**
+    The intelligent gatekeeper and *sole manipulator* of the `.pheromone` file.
+    *   Loads `interpretationLogic` from the `.swarmConfig` file.
+    *   Loads the current `.pheromone` file (or bootstraps an empty one: `{"signals": [], "documentationRegistry": {}}`).
+    *   Receives comprehensive natural language summaries and handoff reason codes from Task Orchestrators.
+    *   **Interprets** this NL summary using its `interpretationLogic` to understand completed work, AI-verifiable outcomes, new needs, problems, and generated documentation.
+    *   **Generates/Updates** structured JSON `:signals` in the `signals` array and entries in the `documentationRegistry`.
+    *   Manages signal dynamics (evaporation, amplification, pruning) applied *only* to signals.
+    *   Persists the updated `signals` and `documentationRegistry` to the `.pheromone` file.
+    *   Activates the `🎩 @head-orchestrator` to continue the project flow.
 
-### 6. Worker Agents (e.g., `👨‍💻 @coder-test-driven`, `📝 @spec-writer-feature-overview`, `🔎 @research-planner-strategic`)
-Worker agents are the specialists performing the granular, hands-on tasks of the project.
-*   **Focused Execution:** Execute their narrowly defined roles (e.g., write code, generate specifications, perform research, execute tests).
-*   **Rich Natural Language Reporting:** Upon task completion, their primary output to their parent Task Orchestrator is a detailed, natural language `Summary` field within their `task_completion` message. This summary meticulously describes actions taken, results achieved, files created or modified, any issues encountered, and potential needs for subsequent tasks.
-*   Worker Agents *do not* create or propose structured `:signals`. Their narrative `Summary` is the raw input for the hierarchical aggregation and eventual interpretation process.
+2.  **`🎩 @head-orchestrator` (Plan Custodian Initiator)**
+    Initiates the project by passing its initial prompt (e.g., User Blueprint details) directly to the `🧐 @uber-orchestrator`.
 
-## 🔄 Workflow: The "Boomerang Task" Lifecycle & Information Flow
+3.  **`🧐 @uber-orchestrator` (Pheromone-Guided Delegator & Verifiability Enforcer)**
+    The primary strategic decision-maker.
+    *   **State & Documentation Awareness:** Reads the `.pheromone` file (signals and `documentationRegistry`) and consults referenced documents to understand the global project state and ensure human programmer clarity.
+    *   **Strategic Delegation to Orchestrators:** Based on project goals and the current "pheromone landscape," delegates major work phases *exclusively* to appropriate **Task-Specific Orchestrators**.
+    *   **Ensuring AI-Verifiable Tasks:** Crucially, it instructs selected Task Orchestrators to define tasks with clear, AI-verifiable end results and to ensure their subsequent worker delegations also adhere to this principle. It also tells them to consult the `.pheromone` file and relevant docs for context.
 
-Pheromind operates via a cyclical "boomerang" process: tasks are delegated downwards, and rich narrative results flow upwards, leading to intelligent state updates that drive subsequent cycles.
+4.  **Task-Specific Orchestrators (e.g., `🌟 @orchestrator-project-initialization`, `🛠️ @orchestrator-framework-scaffolding`, `⚙️ @orchestrator-feature-implementation-tdd`)**
+    Manage distinct, large-scale project phases, enforcing AI-verifiable outcomes.
+    *   **Phase Management with Verifiability:** Decompose their phase into logical sub-tasks, each with an AI-verifiable end result (e.g., `@orchestrator-project-initialization` creates a Master Project Plan where every task has an AI-verifiable deliverable).
+    *   **Worker Delegation (AI-Verifiable):** Assign sub-tasks to specialized Worker Agents, providing them with instructions that define AI-verifiable completion criteria.
+    *   **Synthesis of Outcomes:** Collect rich natural language `Summary` reports (detailing verifiable results) from workers. Synthesize these, plus their own phase management narrative, into a *single, comprehensive natural language summary*.
+    *   **Reporting to Scribe:** Send this comprehensive NL summary and a handoff reason code to the Pheromone Scribe for interpretation. They *do not* generate structured `:signals`. Their summary must explain its intent for Scribe interpretation based on `swarmConfig`. They also pass through original directive details to the Scribe.
 
-1.  **Initiation:** A project is launched when the `🎩 @head-orchestrator` receives an initial User Blueprint or Change Request.
-2.  **Top-Level Delegation:** The `@head-orchestrator` activates the `🧐 @uber-orchestrator`.
-3.  **Pheromone-Guided Phase Assignment:** The `@uber-orchestrator` consults the `.pheromone` file. Based on the existing signals (or lack thereof for a new project), it delegates the next major project phase to a suitable **Task-Specific Orchestrator** (e.g., `🌟 @orchestrator-project-initialization`).
-4.  **Task Orchestration & Worker Tasking:** The assigned **Task-Specific Orchestrator** breaks down its phase and delegates granular tasks to appropriate **Worker Agents**.
-5.  **Worker Execution & Narrative Summary:** A **Worker Agent** (e.g., `📝 @spec-writer-feature-overview`) completes its task and provides a detailed natural language `Summary` of its work to its parent Task Orchestrator.
-    *   *Example Worker `Summary`*: `"Feature Overview specification for 'AddTask' has been created and saved to docs/specs/AddTask_overview.md. This spec includes user stories, acceptance criteria, and high-level requirements. The feature AddTask specification is now complete and ready for architectural review or test planning."*
-6.  **Task Orchestrator Aggregation & Comprehensive Summary:** The **Task-Specific Orchestrator** collects `Summary` reports from its workers and synthesizes them, along with its own phase management activities, into a single, comprehensive natural language summary.
-    *   *Example Task Orchestrator `Incoming_task_Orchestrator_Summary_Text_Optional`*: `"Project Initialization task is nearing completion. @ResearchPlanner_Strategic reported completion of initial feasibility study (report at docs/research/feasibility.md), finding the project viable. @SpecWriter_Feature_Overview created specs for AddTask (docs/specs/AddTask_overview.md) and ViewTasks (docs/specs/ViewTasks_overview.md). @Architect_HighLevel_Module then defined the overall architecture (docs/architecture/main_arch.md), noting a dependency of ViewTasks on AddTask data structure. Master_Project_Plan.md has been generated in /docs/. This task indicates project initialization is complete and framework scaffolding is now needed for the TodoApp project."*
-7.  **Handoff to the Scribe:** The Task-Specific Orchestrator sends its comprehensive summary and a handoff reason code to the `✍️ @orchestrator-pheromone-scribe`.
-8.  **The Scribe's Interpretation & State Update:** The Pheromone Scribe:
-    *   Analyzes the incoming natural language summary using `swarmConfig.interpretationLogic`.
-    *   Identifies key events, achievements, needs (e.g., "project initialization is complete," "framework scaffolding is now needed," file paths for specs).
-    *   Generates or updates relevant structured JSON `:signals` reflecting this understanding (e.g., `signalType: "project_initialization_complete"`, `signalType: "feature_spec_complete", data: {specPath: "..."}`).
-    *   Applies pheromone dynamics (evaporation, amplification, pruning).
-    *   Persists the new state (updated `swarmConfig` and `signals` array) to the `.pheromone` file.
-    *   Activates the `🎩 @head-orchestrator` to initiate the next project cycle.
-9.  **Cycle Continuation:** The `@head-orchestrator` re-engages the `🧐 @uber-orchestrator`, which reads the *newly updated* `.pheromone` file. The presence of fresh, potent signals (e.g., `framework_scaffolding_needed`) directly influences its next delegation decision, thus continuing the autonomous project progression.
+5.  **Worker Agents (e.g., `👨‍💻 @coder-test-driven`, `📝 @spec-writer-feature-overview`, `🔎 @research-planner-strategic`, `🧪 @tester-tdd-master`)**
+    Specialists performing granular, hands-on tasks that produce AI-verifiable results.
+    *   **Focused Execution for Verifiable Outcomes:** Execute narrowly defined roles (e.g., write code to pass specific tests, generate a spec document matching a schema, run tests verifying AI-Actionable End Results from a Test Plan).
+    *   **Rich Natural Language Reporting:** Primary output to their parent Task Orchestrator is a detailed, natural language `Summary` in their `task_completion` message. This summary meticulously describes actions taken, AI-verifiable results achieved (and how they were verified), files created/modified (which become part of the human-readable documentation trail), issues, and potential next steps.
+    *   Worker Agents *do not* create or propose structured `:signals`. Their narrative `Summary` is raw input for aggregation and eventual Scribe interpretation. The `🧪 @tester-tdd-master` is crucial for verifying AI-Verifiable End Results using London School TDD and recursive testing.
+
+## 🔄 Workflow: The AI-Verifiable "Boomerang Task" Lifecycle
+
+Pheromind operates via a cyclical "boomerang" process: tasks are delegated downwards with AI-verifiable criteria, and rich narrative results (confirming these verifications) flow upwards for interpretation and state update.
+
+1.  **Initiation:** A project launches. `🎩 @head-orchestrator` passes the initial User Blueprint/Change Request to `🧐 @uber-orchestrator`.
+2.  **Pheromone-Guided Phase Assignment with Verifiability Mandate:** `🧐 @uber-orchestrator` consults the `.pheromone` file (signals and `documentationRegistry` + referenced docs). It delegates the next major phase to a suitable **Task-Specific Orchestrator** (e.g., `🌟 @orchestrator-project-initialization`), instructing it to ensure all sub-tasks have AI-verifiable outcomes and to consult pheromones/docs.
+3.  **Task Orchestration & Verifiable Worker Tasking:** The **Task-Specific Orchestrator** (e.g., `@orchestrator-project-initialization`) breaks down its phase. It defines sub-tasks for **Worker Agents**, each with an AI-verifiable end result. (e.g., `@orchestrator-project-initialization` might task `@spec-writer-feature-overview` to produce a spec file at `path/to/spec.md` with defined sections, and later create the Master Project Plan with verifiable tasks).
+4.  **Worker Execution & Narrative Summary (AI-Verified):** A **Worker Agent** (e.g., `📝 @spec-writer-feature-overview`) completes its task (e.g., creates `docs/specs/AddTask_overview.md`). Its `Summary` details actions, confirms the AI-verifiable outcome (e.g., "Specification created at `docs/specs/AddTask_overview.md` matching schema requirements"), and is sent to its parent.
+    *   *Example Worker `Summary` for TDD Coder*: `"Coding for 'AddTaskModule' complete. All tests in 'tests/test_add_task.py' (15 tests) are now passing, confirming adherence to specifications and AI-verifiable criteria defined in Test Plan. Code pushed to 'feature/add-task' branch. Output log from 'pytest' attached. Module ready for integration."*
+5.  **Task Orchestrator Aggregation & Comprehensive NL Summary:** The **Task-Specific Orchestrator** collects `Summary` reports. It synthesizes them with its own phase management narrative into a single, comprehensive NL summary. This summary explicitly mentions AI-verifiable milestones achieved and explains its intent for Scribe interpretation.
+    *   *Example Task Orchestrator NL Summary (Excerpt)*: "... `🌟 @orchestrator-project-initialization` reports: Feasibility study by `@research-planner-strategic` (report at `docs/research/feasibility.md` added to documentation registry) confirmed project viability. Specs for 'AddTask' (`docs/specs/AddTask_overview.md`) and 'ViewTasks' (`docs/specs/ViewTasks_overview.md`) created by `@spec-writer-feature-overview`, verified against blueprint sections A1-A5. Master Project Plan (`docs/Master_Project_Plan.md`), detailing all phases with AI-verifiable micro-tasks, has been generated and added to documentation registry. Project initialization phase achieved its AI-verifiable goal: 'Master Project Plan in place'. This comprehensive natural language summary details collective worker outcomes for interpretation by `✍️ @orchestrator-pheromone-scribe` using its `swarmConfig.interpretationLogic` to update `.pheromone` signals and documentation registry, indicating readiness for framework scaffolding for 'TodoApp'..."
+6.  **Handoff to Scribe:** The Task-Specific Orchestrator sends its comprehensive NL summary, handoff reason code, and original directive details to the `✍️ @orchestrator-pheromone-scribe`.
+7.  **Scribe's Interpretation & State Update:** The Pheromone Scribe:
+    *   Loads its `interpretationLogic` from `.swarmConfig`.
+    *   Analyzes the incoming NL summary.
+    *   Identifies AI-verified events, documentation paths, needs.
+    *   Generates/updates structured JSON `:signals` (e.g., `signalType: "project_initialization_complete_verified"`, `target: "TodoApp"`) and updates the `documentationRegistry` (e.g., adding `Master_Project_Plan.md`).
+    *   Applies pheromone dynamics to signals.
+    *   Persists updated `signals` and `documentationRegistry` to `.pheromone`.
+    *   Activates `🎩 @head-orchestrator`.
+8.  **Cycle Continuation:** The `🎩 @head-orchestrator` re-engages `🧐 @uber-orchestrator`. The UBER Orchestrator reads the *newly updated* `.pheromone` file. Fresh, potent signals (e.g., reflecting `framework_scaffolding_needed_for_TodoApp_verified`) and new documentation entries directly influence its next delegation, continuing autonomous, verifiable project progression.
 
 ## 🌟 Key Features & Capabilities
 
-*   **Autonomous Project Execution:** Manages complex software development lifecycles with minimal human intervention post-initiation.
-*   **Dynamic & Adaptive Tasking:** Project direction and task allocation evolve based on the real-time state communicated through pheromone signals.
-*   **Sophisticated NL-Driven State Updates:** The Pheromone Scribe's ability to translate rich narrative summaries into structured, actionable data is a core differentiator, enabling nuanced state management.
-*   **Resilience Through Swarm Intelligence:** Decentralized coordination allows the system to adapt to unforeseen challenges and continue making progress.
-*   **Clear Role Specialization:** Agents possess well-defined responsibilities, promoting modularity and focused expertise.
-*   **Centralized, Interpreted State:** The `.pheromone` file, under the exclusive control of the Scribe, provides a single, authoritative source of the swarm's understanding.
-*   **Operational Robustness:** Handles complexities like agent operational limits (e.g., token counts) and manages the growth of the state file.
+*   **AI-Verifiable Project Execution:** Ensures progress is tracked via concrete, measurable, and AI-confirmable outcomes.
+*   **Autonomous Project Management:** Manages complex lifecycles with minimal human intervention post-initiation.
+*   **Human-Centric Documentation Trail:** Actively tracks and registers human-readable documents for transparency and oversight.
+*   **Sophisticated NL-Driven State Updates:** The Scribe translates rich narrative summaries into structured state and documentation links, guided by `.swarmConfig`.
+*   **Dynamic & Adaptive Tasking:** Evolves project direction based on real-time, interpreted state.
+*   **Resilience & Modularity:** Decentralized coordination and clear role specialization promote robustness.
+*   **Centralized State Interpretation:** The Pheromone Scribe's exclusive management of `.pheromone` ensures coherent state updates.
 
 ## 💡 Why Pheromind? The Design Philosophy
 
-Pheromind is engineered around several key design principles:
+*   **Verifiable Progress:** Pheromind isn't just about doing tasks; it's about *proving* they're done correctly via AI-verifiable criteria.
+*   **The Power of Interpreted Narratives:** Leverages natural language for rich communication, with the Scribe performing the heavy lifting of translation into formal state based on `.swarmConfig`. This allows flexibility and expressiveness beyond rigid message formats.
+*   **Stigmergy for Scalable Coordination:** Indirect communication via the `.pheromone` medium enables adaptability and scalability.
+*   **Centralized Interpretation, Decentralized Action:** The Pheromone Scribe centralizes state interpretation for consistency, while agents act with role-specific autonomy.
+*   **Emergent Behavior Guided by Explicit Logic:** Complex project management emerges from agent interactions governed by defined roles (`.roomodes`) and the Scribe's explicit `interpretationLogic` (`.swarmConfig`).
+*   **Transparency and Human Oversight:** AI-verifiable outcomes and a maintained `documentationRegistry` provide clear insight into the swarm's operations for human developers.
 
-*   **The Power of Interpreted Narratives:** Traditional agent systems often rely on rigid, pre-defined messages. Pheromind leverages the richness of natural language. Task Orchestrators can communicate complex scenarios, dependencies, and unexpected outcomes in their summaries. The Pheromone Scribe then shoulders the burden of translating this into a formal, structured state, allowing for more flexible and expressive inter-agent "understanding."
-*   **Stigmergy for Scalable Coordination:** The pheromone model (indirect communication via a shared medium) allows the system to scale. Agents react to the "scent" of work needed or accomplished, rather than requiring intricate knowledge of every other agent's status. This promotes adaptability and reduces brittleness.
-*   **Centralized Interpretation, Decentralized Action:** While individual agents act with a degree of autonomy, the crucial step of interpreting broad outcomes and updating the global state is centralized in the Pheromone Scribe. This ensures consistency and coherence in the swarm's collective understanding.
-*   **Emergent Behavior:** By defining agent roles, their communication method (summaries to the Scribe), and the rules of the pheromone environment (`swarmConfig`), complex and intelligent project management behaviors can emerge from the interactions of simpler components.
+## 🧬 The Pheromone Ecosystem: `.pheromone`, `.swarmConfig`, and `.roomodes`
 
-## 🧬 The `.pheromone` File & `swarmConfig`: The Swarm's DNA
+These three components are crucial:
 
-These two components are crucial to Pheromind's operation:
-
-### The `.pheromone` File
-*   **Dynamic Repository:** Contains the `swarmConfig` and the `signals` array.
-*   **Structured JSON `:signals`:** Each signal is an object with fields like `id`, `signalType`, `target`, `category`, `strength`, `message`, `data`, `timestamp_created`, `last_updated_timestamp`.
-    *   **Example Signal:**
+### 1. The `.pheromone` File
+*   The swarm's interpreted shared state, exclusively written to by the Pheromone Scribe.
+*   Contains:
+    *   `signals`: An array of structured JSON `:signal` objects.
         ```json
+        // Example Signal in .pheromone's "signals" array
         {
-          "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-          "signalType": "feature_coding_complete",
+          "id": "signal-xyz-789",
+          "signalType": "feature_implementation_verified_tdd_complete",
           "target": "UserAuthenticationModule",
-          "category": "task_status",
-          "strength": 8.5,
-          "message": "Coding for UserAuthenticationModule completed, all unit tests passing.",
+          "category": "task_status_verified",
+          "strength": 9.2,
+          "message": "TDD cycle for UserAuthenticationModule completed. All 42 unit tests passed, verifying AI-actionable end results from Test Plan TP-003. Ready for integration.",
           "data": {
-            "featureBranch": "feature/user-auth",
-            "commitSha": "abcdef123456"
+            "featureBranch": "feature/user-auth-v2",
+            "commitSha": "fedcba987654",
+            "testPlanId": "TP-003",
+            "verifiedResultCount": 42,
+            "relevantDocRegistryKey": "doc_user_auth_test_report_final"
           },
-          "timestamp_created": "2023-10-27T10:30:00Z",
-          "last_updated_timestamp": "2023-10-27T10:30:00Z"
+          "timestamp_created": "2023-11-15T14:00:00Z",
+          "last_updated_timestamp": "2023-11-15T14:00:00Z"
         }
         ```
-*   **Exclusively Scribe-Managed:** Only the Pheromone Scribe writes to this file, ensuring data integrity and consistent application of dynamics.
+    *   `documentationRegistry`: A JSON object mapping keys to metadata about project documents (path, description, timestamp), enabling human and AI access to critical information.
+        ```json
+        // Example entry in .pheromone's "documentationRegistry"
+        "doc_master_project_plan_v1": {
+          "path": "docs/Master_Project_Plan.md",
+          "description": "Master Project Plan with AI-verifiable micro-tasks and phases for Project Phoenix.",
+          "lastUpdated": "2023-11-10T10:00:00Z",
+          "generatedBy": "orchestrator-project-initialization"
+        }
+        ```
 
-### The `swarmConfig` Object (within `.pheromone`)
-This object is the rulebook for the Pheromone Scribe and the pheromone environment itself. Key conceptual fields include:
-*   **`version`**: Configuration version.
-*   **`evaporationRates`**: Defines how quickly signal strengths decay over time, based on category or type.
-*   **`amplificationRules`**: Logic for increasing signal strength (e.g., if multiple agents report the same need).
-*   **`signalPriorities`**: Baseline priorities for different `signalTypes`.
-*   **`signalTypes`**: A list or map defining valid signal types (e.g., `project_directive_received`, `feature_spec_complete`, `coding_needed`, `bug_report_critical`).
-*   **`category`**: Definitions of valid signal categories (e.g., `system_event`, `task_status`, `resource_availability`, `error_report`).
-*   **`conflictResolution`**: Strategies for when conflicting signals arise.
-*   **`dependencySignals`**: Rules for managing dependencies between tasks or features via signals.
-*   **`emergencyThresholds`**: Signal strength thresholds that might trigger urgent responses.
-*   **`anticipatorySignals`**: Configuration for generating signals about potential future needs.
-*   **`analyticsTracking`**: Flags for enabling logging of signal history for advanced analysis.
-*   **`explorationRate`**: A parameter for the UBER orchestrator to occasionally explore less dominant tasks.
-*   **`interpretationLogic`**: **This is paramount.** A conceptual structure containing rules, keywords, regex patterns, semantic mappings, and data extraction templates that the Pheromone Scribe uses to parse the `Incoming_task_Orchestrator_Summary_Text_Optional` and generate appropriate structured JSON `:signals`. For instance, it might map phrases like "feature X implementation complete" to `signalType: "feature_implementation_complete", target: "X"`, or extract file paths mentioned in the summary into a signal's `data` field.
+### 2. The `.swarmConfig` File
+*   A separate JSON file defining the Pheromone Scribe's "brain" and pheromone dynamics.
+*   **Crucially contains `interpretationLogic`:** Rules, patterns, semantic mappings for the Scribe to parse NL summaries and generate/update `:signals` and `documentationRegistry` entries.
+*   Also defines `evaporationRates`, `amplificationRules`, `signalPriorities`, valid `signalTypes`, `category` definitions, etc.
+*   Loaded by the Scribe; *never* modified by the Scribe. Careful tuning enables sophisticated emergent behavior.
 
-Understanding and (carefully) tuning `swarmConfig` allows for sophisticated customization of Pheromind's emergent intelligence.
+### 3. The `.roomodes` File
+*   Contains detailed JSON definitions for all AI agent modes, specifying their roles, `customInstructions`, and capabilities, forming the behavioral blueprint of the swarm.
 
 ## 🚀 Getting Started with Pheromind
 
 1.  **Setup Environment:**
-    *   Ensure you have a compatible Roo Code environment.
-    *   Configure your chosen LLM (e.g., Claude 3.x series) and obtain necessary API keys.
+    *   Ensure a compatible Roo Code environment.
+    *   Configure your LLM (e.g., Claude 3.x) and API keys.
 2.  **Define Agent Modes (`.roomodes`):**
-    *   The `.roomodes` file will contain the JSON definitions for all Pheromind agents (Pheromone Scribe, Head, UBER, Task Orchestrators, Workers), including their roles and detailed `customInstructions`. The Pheromone Scribe's instructions will reference its need for a comprehensive `swarmConfig` (usually loaded from the `.pheromone` file itself).
-3.  **Bootstrap `.pheromone` File:**
-    *   On the very first run for a project, the `✍️ @orchestrator-pheromone-scribe` will create a `.pheromone` file with a default/bootstrap `swarmConfig` and an empty `signals` array if one doesn't exist.
-    *   Subsequently, it will load and update this file.
-4.  **Craft Your Input:**
-    *   For a new project, prepare a detailed **User Blueprint** (e.g., `MyProject_Blueprint.md`).
-    *   For modifications, prepare a **Change Request** or **Bug Report** document.
-5.  **Initiate the Swarm:**
-    *   Activate the `🎩 @head-orchestrator` with the necessary initial parameters:
-        *   `Original_User_Directive_Type_Field`: (e.g., 'NEW_PROJECT')
-        *   `Original_User_Directive_Payload_Path_Field`: (path to your Blueprint/Change Request)
-        *   `Original_Project_Root_Path_Field`: (path to your project's root directory)
-        *   `Pheromone_File_Path`: (path to the `.pheromone` file, e.g., `./.pheromone`)
-6.  **Observe & Iterate:** Monitor the swarm's activity (e.g., through agent logs or by inspecting the `.pheromone` file read-only). The system will autonomously progress through its cycles.
+    *   Craft your agent definitions in the `.roomodes` file (as provided in your example).
+3.  **Create `swarmConfig` File:**
+    *   Prepare your initial `.swarmConfig` JSON file in the project root. This file *must* exist, as the Pheromone Scribe loads its `interpretationLogic` from here. Define rules for signal dynamics and especially the `interpretationLogic` for NL summary-to-signal translation.
+4.  **Prepare `.pheromone` File (Optional First Run):**
+    *   The `✍️ @orchestrator-pheromone-scribe`, on its first run, if the `.pheromone` file (e.g., `./.pheromone`) is missing, will bootstrap an empty one: `{"signals": [], "documentationRegistry": {}}`. For subsequent runs, it loads and updates the existing file.
+5.  **Craft Your Input:**
+    *   For a new project: A detailed User Blueprint (e.g., `MyProject_Blueprint.md`). This will feed into the `Master Project Plan` creation with AI-verifiable tasks.
+    *   For changes: A Change Request or Bug Report.
+6.  **Initiate the Swarm:**
+    *   Activate the `🎩 @head-orchestrator` with parameters like:
+        *   `Original_User_Directive_Type_Field`
+        *   `Original_User_Directive_Payload_Path_Field`
+        *   `Original_Project_Root_Path_Field`
+        *   `Pheromone_File_Path` (path to `.pheromone`)
+        *   (The Head Orchestrator will pass these to the UBER Orchestrator, which needs the pheromone file path. The Scribe will also use its pheromone file path.)
+7.  **Observe & Iterate:** Monitor agent logs and inspect the `.pheromone` file (read-only) and generated documents in the `documentationRegistry` to track autonomous, AI-verifiable progress.
 
 ## ✍️ Crafting Effective Inputs: The User Blueprint & Change Requests
 
-The quality of Pheromind's output is heavily dependent on the clarity and detail of your initial input.
+High-quality initial input is key.
 
-*   **User Blueprint (for new projects):** Provide comprehensive details on goals, target users, core features, non-negotiable constraints, desired technologies (if any), and success criteria. The more context the swarm has, the better its initial planning and subsequent execution.
-*   **Change Requests/Bug Reports (for existing projects):** Clearly define the scope of the change, the specific problem or bug, affected areas, expected behavior, and any relevant context from the existing system.
+*   **User Blueprint:** Detail goals, features, constraints, and *measurable success criteria* that can translate into AI-verifiable outcomes in the Master Project Plan.
+*   **Change Requests/Bug Reports:** Clearly define scope, problem, expected *verifiable* behavior, and context.
 
-The `🧐 @uber-orchestrator` and various Task-Specific Orchestrators will rely on information derived from these initial documents, which gets encoded into early-stage pheromone signals.
+The Pheromone Scribe's interpretation of summaries derived from these inputs will shape early-stage signals and documentation.
 
-## (Optional) Contextual Terminology: Enhancing Signal Precision
+## (Optional) Contextual Terminology in `interpretationLogic`
 
-Pheromind's `swarmConfig.interpretationLogic` can be designed to recognize specific contextual terms within orchestrator summaries. For example:
-
-*   `:BlueprintAnalysisComplete`
-*   `:FeatureSpecificationApproved`
-*   `:CriticalSecurityFlawFound`
-*   `:ModuleReadyForIntegration`
-
-When the Pheromone Scribe detects these (or similar configured patterns) in an incoming summary, it can generate highly specific and actionable `:signals`, further refining the swarm's understanding and response.
+The `swarmConfig.interpretationLogic` is powerful. Design it to recognize specific keywords, phrases, or patterns in Task Orchestrator summaries (e.g., "AI-verifiable outcome XYZ achieved," "Master Plan section 2.3 complete," "tests for ABC passed"). The Scribe uses this to generate precise signals (e.g., `:BlueprintAnalysisComplete_Verified`, `:FeatureSpecApproved_AI_Checked`) and update the `documentationRegistry` accurately, enhancing swarm coordination and human understanding.
 
 ## 🤝 Contributing & Future Evolution
 
-Pheromind is an evolving framework. We welcome contributions from the community!
-*(Standard contributing guidelines like forking, PRs, issue tracking would go here.)*
+Pheromind is an evolving framework. We welcome contributions!
+*(Standard contributing guidelines would go here.)*
 
 **Potential Future Directions:**
-*   **Visual Pheromone Landscape:** Tools to visualize the current signal state in the `.pheromone` file.
-*   **Advanced `swarmConfig` Tuning UI:** A more user-friendly way to manage and optimize `swarmConfig` parameters.
-*   **Self-healing `interpretationLogic`:** Mechanisms for the Pheromone Scribe to suggest improvements to its own interpretation rules based on feedback loops or observed inefficiencies.
-*   **Broader Agent Ecosystem:** Expanding the library of specialized worker and orchestrator agents for diverse project types.
-*   **Enhanced Analytics:** More sophisticated analysis of signal patterns to detect bottlenecks, recurring issues, or predict project trajectories.
+*   Visual Pheromone & Documentation Landscape: Tools to visualize `.pheromone` signals and `documentationRegistry`.
+*   Advanced `swarmConfig` Tuning & Validation UI.
+*   Self-adaptive `interpretationLogic`: Scribe suggests improvements to its own rules.
+*   Expanded Agent Ecosystem for diverse AI-verifiable project types.
+*   Enhanced Analytics on signal/documentation patterns for project health.
 
 ---
 
-Unleash the collective intelligence of Pheromind and transform how your complex projects are managed and executed.
+Unleash the collective, verifiable intelligence of Pheromind and transform how your complex projects are executed.
