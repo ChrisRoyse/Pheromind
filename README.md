@@ -14,6 +14,8 @@ At its heart, Pheromind employs a **pheromone-based swarm intelligence model**. 
 
 Pheromind isn't just about automating tasks; it's about creating an adaptive, intelligent system that can navigate the complexities of modern project execution with a level of autonomy and resilience previously unattainable.
 
+Pheromind Discord Server: https://discord.gg/rTq3PBeThX
+
 ---
 
 ## 🚀 Quick Setup & Video Guide
