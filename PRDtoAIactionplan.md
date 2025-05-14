@@ -7,88 +7,90 @@ I will provide you with a Product Requirements Document (PRD). Your goal is to t
 **Definition of AI-Verifiable End Result:**
 An AI-Verifiable End Result is a specific, measurable, achievable, relevant, and time-bound (SMART) outcome that an AI system can check automatically, without human subjectivity.
 *   **Good Examples:**
-    *   "Script `ingest_data.py` executes without raising Python exceptions."
-    *   "A file named `validation_report.json` is generated in the `/reports` directory."
-    *   "A Cypher query `MATCH (n:Customer) RETURN count(n)` on the Neo4j database returns a value greater than 0."
-    *   "The function `parse_ontology_class(owl_file)` returns a dictionary containing at least one key-value pair where the key is 'className' and the value is a non-empty string."
-    *   "All unit tests in the `tests/test_ingestion.py` suite pass when executed with `pytest`."
-    *   "A log message 'Data ingestion complete for X records' is present in `ingestion.log`."
+    *   "Script `[script_name_from_prd].py` executes without raising Python exceptions when run with standard test inputs."
+    *   "A file named `[report_name_from_prd].json` is generated in the `/[specified_output_directory]/` directory."
+    *   "A specific API endpoint `/[api_endpoint_from_prd]` returns a `200 OK` status and a JSON response matching `[expected_schema_from_prd]` when a GET request is made."
+    *   "The function `[function_name_from_prd]([example_input])` returns `[expected_output_value_or_structure]`."
+    *   "All unit tests within the `[test_file_path_from_prd]` suite pass when executed with the project's test runner (e.g., `pytest`, `jest`)."
+    *   "A log message containing the string '[specific_log_message_pattern_from_prd]' is present in `[log_file_name_from_prd]` after executing [triggering_action_from_prd]."
 *   **Bad Examples (Not AI-Verifiable):**
-    *   "Ensure the data ingestion is robust." (Too vague)
-    *   "Make the node mapping accurate." (How does an AI verify "accurate" without specific checks?)
-    *   "The code should be well-documented." (Subjective unless tied to a linting rule for comment density that an AI can check)
-    *   "The user interface for the demo is intuitive." (Subjective)
+    *   "Ensure the [component_name] is robust." (Too vague)
+    *   "Make the [data_mapping_feature] accurate." (How does an AI verify "accurate" without specific checks derived from the PRD?)
+    *   "The code should be well-documented." (Subjective unless tied to a linting rule for comment density/format that an AI can check based on PRD specifications, if any.)
+    *   "The user interface for the [feature_name] is intuitive." (Subjective)
 
 **Your Process (Think Step-by-Step and Self-Critique):**
 
 1.  **Initial PRD Comprehension:**
-    *   Thoroughly read and understand the provided PRD, paying close attention to:
-        *   The "Revised Focus" and "Critical Priorities."
-        *   Specific functional requirements (FR-XXX) and non-functional requirements (NFR-XXX).
-        *   Success metrics and KPIs (especially those marked CRITICAL).
-        *   Key entities, scripts, files, and technologies mentioned.
-        *   Dependencies and the stated "Out of Scope" items for the current critical phase.
+    *   Thoroughly read and understand the provided PRD.
+    *   Identify:
+        *   The primary goals, overall vision, and critical priorities stated.
+        *   Key features, modules, components, or systems to be developed/modified.
+        *   Specific functional requirements (FRs) and non-functional requirements (NFRs), noting their IDs if provided.
+        *   Success metrics, KPIs, or acceptance criteria defined in the PRD.
+        *   Key entities, data structures, scripts, files, and technologies mentioned.
+        *   Dependencies between components or tasks.
+        *   Any items explicitly listed as "Out of Scope" for the current version/phase.
 
 2.  **Phase Identification & Sequencing:**
-    *   Identify logical, sequential phases based on the PRD's primary goal (e.g., fixing `ingest_data.py` and ensuring data integrity).
-    *   Consider dependencies: What must be done before something else can start?
-    *   Name each phase clearly (e.g., "Phase 1: Ontology Parsing & Basic CSV Ingestion Setup").
+    *   Based on the PRD's primary goals and dependencies, identify logical, sequential project phases.
+    *   Consider a natural progression, e.g., setup, core feature development, integration, testing, data handling.
+    *   Name each phase clearly, reflecting its main purpose (e.g., "Phase 1: Core Module X - Initial Implementation & Unit Testing").
 
 3.  **Micro-Task Decomposition per Phase:**
     *   For each phase, break it down into small, manageable micro-tasks.
-    *   Each micro-task should correspond to a specific action or development step required to achieve the phase's goal.
-    *   Crucially, link micro-tasks back to specific requirements in the PRD (e.g., FR-ONT-001, FR-MAP-003).
+    *   Each micro-task should correspond to a specific action, development step, or configuration required to achieve the phase's goal.
+    *   Where possible, link micro-tasks back to specific requirement IDs or sections from the PRD.
 
 4.  **Defining AI-Verifiable End Results (The MOST CRITICAL STEP):**
-    *   For **EACH micro-task**, meticulously define its AI-Verifiable End Result. What specific, tangible output, system state, or test result will indicate this micro-task is 100% complete from an AI's perspective?
-    *   For **EACH phase**, define its overall AI-Verifiable End Goal. This should be an aggregation or a key overarching checkpoint based on the completion of its constituent micro-tasks. (e.g., "All micro-tasks in Phase 1 are complete, AND a script `validate_phase1_outputs.sh` runs successfully, printing 'Phase 1 Validation OK'").
+    *   For **EACH micro-task**, meticulously define its AI-Verifiable End Result. What specific, tangible output, system state, test result, or observable artifact will indicate this micro-task is 100% complete from an AI's perspective? Draw these details from the PRD's requirements and specifications.
+    *   For **EACH phase**, define its overall AI-Verifiable End Goal. This should be an aggregation of its micro-task completions or a key overarching checkpoint (e.g., "All micro-tasks in Phase 1 are complete, AND a P0 automated test suite for Module X passes, verifying all critical functionalities outlined in PRD sections A, B, C.").
 
 5.  **Self-Critique and Refinement (Iterative Loop Simulation):**
     *   **Before generating the final plan, review your entire proposed plan.** For every micro-task and phase:
-        *   Ask: "Can an AI *actually* check this completion criteria programmatically or by observing a direct, unambiguous system output/state?"
-        *   Ask: "Is there *any* ambiguity or subjectivity in this end result?"
-        *   Ask: "Does this align with the PRD's critical priorities?"
-        *   If the answer to the first question is "no," or to the second is "yes," revise the end result until it meets the AI-verifiable standard. This step is paramount.
+        *   Ask: "Can an AI *actually* check this completion criteria programmatically or by observing a direct, unambiguous system output/state based on the information in *this specific PRD*?"
+        *   Ask: "Is there *any* ambiguity or subjectivity in this end result that isn't resolved by a PRD specification?"
+        *   Ask: "Does this task/phase align with the PRD's stated critical priorities?"
+        *   If the answer to the first question is "no," or to the second is "yes" (and the PRD doesn't provide the clarifier), revise the end result. Strive for maximum objective verifiability based *on the given PRD*. If the PRD is vague on a verification point, the task's output might be to *define* that verification method first.
 
 **Output Format:**
 Present the plan in the following Markdown structure:
 
 ```markdown
-# Project Plan: [PRD Title/Focus]
+# Project Plan: [Extract Title/Focus from PRD]
 
 ## Overall Project Goal (Derived from PRD):
-[State the primary, critical goal from the PRD in AI-verifiable terms if possible, e.g., "Achieve 100% accurate data ingestion via ingest_data.py as per KPI-001 and KPI-002."]
+[State the primary, critical goal from the PRD in AI-verifiable terms if possible, e.g., "Achieve [main outcome specified in PRD section X.Y] as validated by meeting KPIs [KPI-ID-1, KPI-ID-2] and passing all acceptance tests for critical requirements [FR-ID-A, FR-ID-B]."]
 
 ---
 
-## Phase 1: [Phase Name - e.g., Initial Setup & Ontology Parsing Verification]
-**Phase AI-Verifiable End Goal:** [Describe the state that, if achieved, means Phase 1 is 100% complete and verifiable by an AI. This could be a summary of micro-task completions OR a specific validation script/check.]
-**Relevant PRD Sections:** [List relevant FR/NFR/KPIs]
+## Phase 1: [Concise Phase Name - e.g., System Setup & Core Component Scaffolding]
+**Phase AI-Verifiable End Goal:** [Describe the verifiable state signifying Phase 1 completion, e.g., "All micro-tasks in Phase 1 are complete. The basic project structure is established, build process is functional, and placeholder functions for core module [Module_Name_from_PRD] exist and pass initial 'smoke tests' that confirm they can be called without error."]
+**Relevant PRD Sections/Requirements:** [List relevant PRD sections or specific requirement IDs like "Section 3.1", "FR-001", "NFR-Perf-02"]
 
-### Micro-task 1.1: [Task Description - e.g., Setup Python Environment and Install Dependencies]
-*   **AI-Verifiable Deliverable/Completion Criteria:** The `requirements.txt` file exists. Running `pip install -r requirements.txt` completes without errors. The command `python -c "import pandas, rdflib, neo4j"` executes without `ImportError`.
-*   **Relevant PRD Sections:** [e.g., NFR-005 (Technical Stack), Dependency 10.2]
+### Micro-task 1.1: [Task Description - e.g., Establish Project Repository & CI Setup]
+*   **AI-Verifiable Deliverable/Completion Criteria:** A Git repository at [URL_if_known_or_TBD] is created. A basic CI pipeline configuration file (e.g., `.github/workflows/main.yml`) exists and a preliminary build/lint job in the CI pipeline executes successfully upon commit.
+*   **Relevant PRD Sections/Requirements:** [e.g., "NFR-DevOps-01", "PRD Section: Deployment"]
 
-### Micro-task 1.2: [Task Description - e.g., Implement Basic Ontology File Loading]
-*   **AI-Verifiable Deliverable/Completion Criteria:** A Python function `load_ontology(file_path)` exists in `ingest_data.py`. When called with a valid .owl file path from `ontology/`, it returns an RDFLib Graph object with `len(graph) > 0` and does not raise an exception. A unit test `test_load_ontology_success` calling this function passes.
-*   **Relevant PRD Sections:** [e.g., FR-ONT-001]
+### Micro-task 1.2: [Task Description - e.g., Implement Initial Data Model Loading for Entity 'X']
+*   **AI-Verifiable Deliverable/Completion Criteria:** A Python function `load_[EntityX]_data(source_file)` exists in `[relevant_script_from_prd].py`. When called with a test file matching the PRD's description for 'Entity X' data, it returns a data structure (e.g., list of objects, pandas DataFrame) with more than 0 records and whose structure matches the fields defined for 'Entity X' in PRD Section [Y.Z]. All associated unit tests in `tests/test_data_loading.py` for this function pass.
+*   **Relevant PRD Sections/Requirements:** [e.g., "FR-Data-005", "PRD Appendix A: Data Formats"]
 
 ---
 
-## Phase 2: [Phase Name - e.g., CSV Data Parsing & Node Creation (Core Entities)]
+## Phase 2: [Concise Phase Name - e.g., Implementation of Feature Y as per PRD spec]
 **Phase AI-Verifiable End Goal:** [...]
-**Relevant PRD Sections:** [...]
+**Relevant PRD Sections/Requirements:** [...]
 
 ### Micro-task 2.1: [...]
 *   **AI-Verifiable Deliverable/Completion Criteria:** [...]
-*   **Relevant PRD Sections:** [...]
+*   **Relevant PRD Sections/Requirements:** [...]
 
-(Continue for all phases and micro-tasks)
+(Continue for all identified phases and micro-tasks)
 ---
 
 ## Final Validation Approach (Post All Phases):
-[Briefly describe how the overall PRD goal will be validated in an AI-verifiable manner, likely referencing the PRD's KPIs directly as checks, e.g., "Execute validation scripts targeting KPI-001 and KPI-002 criteria. Scripts output PASS/FAIL for each checked item."]
-Use code with caution.
-Prompt
-PRD Document to Process:
+[Briefly describe how the overall PRD goal will be validated in an AI-verifiable manner, drawing from the PRD's success metrics or acceptance criteria. E.g., "Successful execution of an end-to-end test script ([script_name].sh) that simulates user stories [US-1, US-2, US-5 from PRD] and validates output against PRD-defined expected results. All P0 and P1 bugs identified during UAT (as per PRD definition) are resolved and verified."]
+
+
 {{YOUR PRD DOCUMENT CONTENT HERE}}
