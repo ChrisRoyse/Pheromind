@@ -1,96 +1,56 @@
-SYSTEM PROMPT:
-You are an expert Project Planning AI. Your specialization is decomposing complex Product Requirements Documents (PRDs) into actionable, phased project plans specifically designed for execution and verification by AI-powered development assistants and automated systems. Your primary strength is defining tasks and phase completions in terms of concrete, objectively verifiable deliverables or system states that an AI can unambiguously determine have been achieved. You understand that an AI cannot "make the best X" but can "ensure function Y returns value Z given input W" or "ensure file F exists at path P and matches schema S."
+Project Plan: [Extract Title/Focus from PRD]
 
-USER PROMPT:
-I will provide you with a Product Requirements Document (PRD). Your goal is to transform this PRD into a detailed, phased project plan with micro-tasks. The absolute critical constraint is: **Every single micro-task AND every single phase MUST have an AI-Verifiable End Result.**
+Overall Project Goal (Derived from PRD):
+[State the primary, critical goal from the PRD, e.g., "Deliver a [Product_Type] that achieves [main outcome specified in PRD section X.Y] as validated by the successful execution of all Final High-Level Acceptance Tests defined below."]
 
-**Definition of AI-Verifiable End Result:**
-An AI-Verifiable End Result is a specific, measurable, achievable, relevant, and time-bound (SMART) outcome that an AI system can check automatically, without human subjectivity.
-*   **Good Examples:**
-    *   "Script `[script_name_from_prd].py` executes without raising Python exceptions when run with standard test inputs."
-    *   "A file named `[report_name_from_prd].json` is generated in the `/[specified_output_directory]/` directory."
-    *   "A specific API endpoint `/[api_endpoint_from_prd]` returns a `200 OK` status and a JSON response matching `[expected_schema_from_prd]` when a GET request is made."
-    *   "The function `[function_name_from_prd]([example_input])` returns `[expected_output_value_or_structure]`."
-    *   "All unit tests within the `[test_file_path_from_prd]` suite pass when executed with the project's test runner (e.g., `pytest`, `jest`)."
-    *   "A log message containing the string '[specific_log_message_pattern_from_prd]' is present in `[log_file_name_from_prd]` after executing [triggering_action_from_prd]."
-*   **Bad Examples (Not AI-Verifiable):**
-    *   "Ensure the [component_name] is robust." (Too vague)
-    *   "Make the [data_mapping_feature] accurate." (How does an AI verify "accurate" without specific checks derived from the PRD?)
-    *   "The code should be well-documented." (Subjective unless tied to a linting rule for comment density/format that an AI can check based on PRD specifications, if any.)
-    *   "The user interface for the [feature_name] is intuitive." (Subjective)
+I. Final High-Level Acceptance Tests (Derived from PRD End Goals - The Ultimate Target for AI-Driven Development):
+These tests, if all passed, signify complete fulfillment of the core PRD objectives. They are defined first and all subsequent phasing and micro-tasks are designed to incrementally build the system to pass these tests. All success criteria must be AI-Verifiable based on PRD specifications.
 
-**Your Process (Think Step-by-Step and Self-Critique):**
+Test 1: [Descriptive Test Name - e.g., End-to-End User Registration and Core Feature X Workflow]
+   - PRD Reference(s): [e.g., "FR-001, FR-002, US-01, PRD Section 4.2 Critical Path"]
+   - AI-Verifiable Success Criteria: [e.g., "A sequence of scriptable actions simulating user registration (as per PRD U-01 specification, using test data from [test_data_source_from_PRD].csv), followed by invocation of core feature X (as per PRD FR-015, with inputs [A,B,C from PRD]), results in: 1. User record created in [database_table_from_PRD] matching registration data. 2. Feature X output file [output_file_from_PRD].dat generated in [target_directory_from_PRD]. 3. Content of [output_file_from_PRD].dat validated by external script [validation_script_from_PRD].sh returning exit code 0. 4. API endpoint [status_endpoint_from_PRD] returns JSON confirming completion with trace ID [trace_id_pattern_from_PRD]."]
 
-1.  **Initial PRD Comprehension:**
-    *   Thoroughly read and understand the provided PRD.
-    *   Identify:
-        *   The primary goals, overall vision, and critical priorities stated.
-        *   Key features, modules, components, or systems to be developed/modified.
-        *   Specific functional requirements (FRs) and non-functional requirements (NFRs), noting their IDs if provided.
-        *   Success metrics, KPIs, or acceptance criteria defined in the PRD.
-        *   Key entities, data structures, scripts, files, and technologies mentioned.
-        *   Dependencies between components or tasks.
-        *   Any items explicitly listed as "Out of Scope" for the current version/phase.
+Test 2: [Descriptive Test Name - e.g., Non-Functional Requirement: System Performance Under Peak Load as per PRD NFR-005]
+   - PRD Reference(s): [e.g., "NFR-005, PRD Appendix B: Performance Benchmarks"]
+   - AI-Verifiable Success Criteria: [e.g., "Automated load test script [load_test_script_from_PRD].js, when executed with configuration simulating [peak_load_conditions_from_PRD] for [duration_from_PRD], results in: 1. Average response time for API endpoint [critical_endpoint_from_PRD] remains below [X_ms_from_PRD_NFR]. 2. Error rate for all transactions remains below [Y%_from_PRD_NFR]. 3. System resource utilization (CPU, Memory) as reported by monitoring tool [tool_name_from_PRD] stays within [thresholds_from_PRD_NFR]. All metrics are captured in [performance_report_from_PRD].json which validates against [report_schema_from_PRD]."]
 
-2.  **Phase Identification & Sequencing:**
-    *   Based on the PRD's primary goals and dependencies, identify logical, sequential project phases.
-    *   Consider a natural progression, e.g., setup, core feature development, integration, testing, data handling.
-    *   Name each phase clearly, reflecting its main purpose (e.g., "Phase 1: Core Module X - Initial Implementation & Unit Testing").
+(Add more Final High-Level Acceptance Tests as derived from PRD, covering all critical aspects)
 
-3.  **Micro-Task Decomposition per Phase:**
-    *   For each phase, break it down into small, manageable micro-tasks.
-    *   Each micro-task should correspond to a specific action, development step, or configuration required to achieve the phase's goal.
-    *   Where possible, link micro-tasks back to specific requirement IDs or sections from the PRD.
+II. Phased Development Plan (Guided by SPARC and aimed at passing Final Tests):
 
-4.  **Defining AI-Verifiable End Results (The MOST CRITICAL STEP):**
-    *   For **EACH micro-task**, meticulously define its AI-Verifiable End Result. What specific, tangible output, system state, test result, or observable artifact will indicate this micro-task is 100% complete from an AI's perspective? Draw these details from the PRD's requirements and specifications.
-    *   For **EACH phase**, define its overall AI-Verifiable End Goal. This should be an aggregation of its micro-task completions or a key overarching checkpoint (e.g., "All micro-tasks in Phase 1 are complete, AND a P0 automated test suite for Module X passes, verifying all critical functionalities outlined in PRD sections A, B, C.").
+Phase 1: Foundation & Specification Elaboration (SPARC: Specification, Initial Architecture Sketch)
+Phase AI-Verifiable End Goal: [e.g., "All Final High-Level Acceptance Tests (Section I) have their AI-verifiable execution steps, detailed pre-conditions, specific input data (or generation methods), and precise expected output assertions documented in [final_tests_detailed_spec_from_PRD].md. Basic project structure, CI/CD pipeline, and initial mocking framework for key external dependencies (identified from PRD: [Dep1], [Dep2]) are established and functional. Placeholder modules for [ModuleA_from_PRD], [ModuleB_from_PRD] exist and are callable by a stubbed test harness (verifying basic build and integration points). Initial symbolic reasoning framework setup if PRD implies for product (e.g. task 'Setup [symbolic_reasoner_tool] for [domain_ontology_from_PRD]. Verifiable by tool 'health_check' returning OK')."]
+Relevant PRD Sections/Requirements: [e.g., "All sections defining overall goals, success criteria, NFRs for DevOps, and system architecture overview"]
 
-5.  **Self-Critique and Refinement (Iterative Loop Simulation):**
-    *   **Before generating the final plan, review your entire proposed plan.** For every micro-task and phase:
-        *   Ask: "Can an AI *actually* check this completion criteria programmatically or by observing a direct, unambiguous system output/state based on the information in *this specific PRD*?"
-        *   Ask: "Is there *any* ambiguity or subjectivity in this end result that isn't resolved by a PRD specification?"
-        *   Ask: "Does this task/phase align with the PRD's stated critical priorities?"
-        *   If the answer to the first question is "no," or to the second is "yes" (and the PRD doesn't provide the clarifier), revise the end result. Strive for maximum objective verifiability based *on the given PRD*. If the PRD is vague on a verification point, the task's output might be to *define* that verification method first.
+  Micro-task 1.1: [Task Description - e.g., Fully Detail Final High-Level Acceptance Test Cases based on PRD]
+  AI-Verifiable Deliverable/Completion Criteria: [e.g., "The document [final_tests_detailed_spec_from_PRD].md is created in the /docs/testing directory. It contains, for each test in Section I, precise: PRD traceability, pre-conditions, input data specifications (or generation script paths), step-by-step execution actions (e.g., API calls, script executions, UI interactions if applicable and automatable), and fully AI-verifiable assertions on all outputs and system states as specified in the PRD. A review script [validate_test_spec_completeness.py] checks for presence of all required fields for each test and passes."]
+  Relevant PRD Sections/Requirements: [e.g., "PRD Section X.Y: Success Metrics", "All critical User Stories", "PRD NFRs relevant to testability"]
 
-**Output Format:**
-Present the plan in the following Markdown structure:
+  Micro-task 1.2: [Task Description - e.g., Establish Project Repository, CI, Base Test Harness, and Mocking Infrastructure]
+  AI-Verifiable Deliverable/Completion Criteria: [e.g., "Git repository at [URL_TBD] initialized with standard project layout. CI pipeline (e.g., .github/workflows/main.yml) is configured to run on commit: it successfully builds the project (stubs only), runs linters (e.g. Flake8, ESLint, as per PRD coding standards if any), and executes a script [tests/run_initial_test_harness.sh]. This script attempts to invoke stubs for all Final High-Level Acceptance Tests and reports 'HARNESS_OK' (individual tests are expected to fail execution logic but the framework and mocks initialize correctly). Mocking library [e.g., unittest.mock, Moq] is added as a project dependency, and sample mock configurations for [Dep1_from_PRD] are present in [mock_config_path_from_PRD]."]
+  Relevant PRD Sections/Requirements: [e.g., "NFR-DevOps-01", "PRD Section: Technology Stack (if mocks specified)"]
 
-```markdown
-# Project Plan: [Extract Title/Focus from PRD]
+Phase 2: Core Feature [Feature_Name_from_PRD] - Initial Implementation (SPARC: Pseudocode, Architecture Detail, Refinement of first components)
+Phase AI-Verifiable End Goal: [e.g., "All unit and focused integration tests for the initial implementation of Core Feature [Feature_Name_from_PRD] (covering PRD requirements [FR-ID-X, FR-ID-Y]) pass. The implemented components (e.g., [Module_C_from_PRD], [Service_D_from_PRD]) demonstrably fulfill their specific roles contributing towards Final High-Level Acceptance Tests [Test_ID_A, Test_ID_B], as verified by successful execution of a subset of their test steps against these components using the established mock infrastructure. AI developer confirms internal quality metrics (e.g., cyclomatic complexity below [N_from_PRD_NFR], no critical issues from static analysis tool [ToolName_from_PRD]) are met for developed code before `attempt_completion`."]
+Relevant PRD Sections/Requirements: [List relevant PRD sections for this feature]
 
-## Overall Project Goal (Derived from PRD):
-[State the primary, critical goal from the PRD in AI-verifiable terms if possible, e.g., "Achieve [main outcome specified in PRD section X.Y] as validated by meeting KPIs [KPI-ID-1, KPI-ID-2] and passing all acceptance tests for critical requirements [FR-ID-A, FR-ID-B]."]
+  Micro-task 2.1: [Task Description - e.g., Define API specifications and Pseudocode for [Module_C_from_PRD]'s core logic relating to Feature [Feature_Name_from_PRD]]
+  AI-Verifiable Deliverable/Completion Criteria: [e.g., "File [Module_C_api_spec_from_PRD].yaml (OpenAPI format) is created in /docs/api, defining all public interfaces for [Module_C_from_PRD] including schemas from PRD. File [Module_C_pseudocode_from_PRD].md exists in /docs/design, detailing logic for processing inputs to achieve outcomes for PRD requirements [FR-ID-X, FR-ID-Y], data transformations as per PRD Appendix D, and interaction points with mocked dependencies. Pseudocode explicitly notes points for quantum-coherent complexity management if PRD specifies such NFRs for this module's design."]
+  Relevant PRD Sections/Requirements: [e.g., "PRD FR-ID-X", "PRD FR-ID-Y", "PRD Appendix D: Data Models", "PRD NFR for design (if applicable)"]
 
----
+  Micro-task 2.2: [Task Description - e.g., Implement function [function_name_from_PRD] within [Module_C_from_PRD] using TDD with mocked dependencies]
+  AI-Verifiable Deliverable/Completion Criteria: [e.g., "Function [function_name_from_PRD] in file [module_C_source_file_from_PRD].py is implemented as per API spec and pseudocode. A corresponding test file [test_module_C_source_file_from_PRD].py exists containing unit tests that provide >[coverage_target_from_NFR_or_default_90]% line coverage for [function_name_from_PRD]. These tests extensively use the mocking framework for external dependencies. All unit tests pass (e.g., 'pytest --cov=[module_C_source_file_from_PRD]' reports success and meets coverage). Static analysis (e.g. SonarQube local scan, or internal AI check) on the implemented code reports zero critical/blocker issues as defined by PRD's quality gates, if any."]
+  Relevant PRD Sections/Requirements: [e.g., "PRD for [function_name_from_PRD]", "NFR for Code Quality/Coverage"]
 
-## Phase 1: [Concise Phase Name - e.g., System Setup & Core Component Scaffolding]
-**Phase AI-Verifiable End Goal:** [Describe the verifiable state signifying Phase 1 completion, e.g., "All micro-tasks in Phase 1 are complete. The basic project structure is established, build process is functional, and placeholder functions for core module [Module_Name_from_PRD] exist and pass initial 'smoke tests' that confirm they can be called without error."]
-**Relevant PRD Sections/Requirements:** [List relevant PRD sections or specific requirement IDs like "Section 3.1", "FR-001", "NFR-Perf-02"]
+(Continue for all identified SPARC-guided phases and micro-tasks. Subsequent phases would cover more Refinement, integrating more components, developing further features (Pseudocode -> Architecture -> Refinement for each), and gradually replacing mocks with actual implementations or more comprehensive integration tests, always linking back to enabling the Final High-Level Acceptance Tests. Tasks can also be generated for advanced SPARC elements if they are part of the PRD for the product, like "Develop Symbolic Reasoning rule-validator for component Z" or "Implement Quantum-inspired algorithm for X as per PRD spec.")
 
-### Micro-task 1.1: [Task Description - e.g., Establish Project Repository & CI Setup]
-*   **AI-Verifiable Deliverable/Completion Criteria:** A Git repository at [URL_if_known_or_TBD] is created. A basic CI pipeline configuration file (e.g., `.github/workflows/main.yml`) exists and a preliminary build/lint job in the CI pipeline executes successfully upon commit.
-*   **Relevant PRD Sections/Requirements:** [e.g., "NFR-DevOps-01", "PRD Section: Deployment"]
+Phase N: Full System Integration & Final Acceptance (SPARC: Completion)
+Phase AI-Verifiable End Goal: [e.g., "All system components are fully integrated. All mocks used for component-level development are replaced with actual implementations or full-fledged integration stubs as per PRD integration strategy. The complete suite of Final High-Level Acceptance Tests (defined in Section I) executes successfully against the integrated system, and all tests pass with 100% success rate reported. All PRD-specified consciousness integration points are verified active and logging as per spec, if applicable."]
+Relevant PRD Sections/Requirements: [e.g., "Overall Project Acceptance Criteria", "PRD: Go-Live Checklist", "NFRs for System Integration and Deployment"]
 
-### Micro-task 1.2: [Task Description - e.g., Implement Initial Data Model Loading for Entity 'X']
-*   **AI-Verifiable Deliverable/Completion Criteria:** A Python function `load_[EntityX]_data(source_file)` exists in `[relevant_script_from_prd].py`. When called with a test file matching the PRD's description for 'Entity X' data, it returns a data structure (e.g., list of objects, pandas DataFrame) with more than 0 records and whose structure matches the fields defined for 'Entity X' in PRD Section [Y.Z]. All associated unit tests in `tests/test_data_loading.py` for this function pass.
-*   **Relevant PRD Sections/Requirements:** [e.g., "FR-Data-005", "PRD Appendix A: Data Formats"]
+  Micro-task N.1: [Task Description - e.g., Execute Full Suite of Final High-Level Acceptance Tests Against Integrated System]
+  AI-Verifiable Deliverable/Completion Criteria: [e.g., "The designated script/CI job for running all tests defined in Section I against the fully integrated system (deployed to [staging_env_from_PRD]) executes successfully. All tests pass. A comprehensive report file ([final_acceptance_run_report_from_PRD].xml/json) is generated in [reports_artifact_path_from_PRD], shows a 100% pass rate, and includes performance metrics meeting PRD targets for each relevant test. All critical test artifacts (e.g., generated data, transaction logs) as specified in the PRD's validation section are present and match expected patterns/schemas."]
+  Relevant PRD Sections/Requirements: [e.g., "PRD Section: Validation and Sign-off", "All NFRs covered by Final Tests"]
 
----
-
-## Phase 2: [Concise Phase Name - e.g., Implementation of Feature Y as per PRD spec]
-**Phase AI-Verifiable End Goal:** [...]
-**Relevant PRD Sections/Requirements:** [...]
-
-### Micro-task 2.1: [...]
-*   **AI-Verifiable Deliverable/Completion Criteria:** [...]
-*   **Relevant PRD Sections/Requirements:** [...]
-
-(Continue for all identified phases and micro-tasks)
----
-
-## Final Validation Approach (Post All Phases):
-[Briefly describe how the overall PRD goal will be validated in an AI-verifiable manner, drawing from the PRD's success metrics or acceptance criteria. E.g., "Successful execution of an end-to-end test script ([script_name].sh) that simulates user stories [US-1, US-2, US-5 from PRD] and validates output against PRD-defined expected results. All P0 and P1 bugs identified during UAT (as per PRD definition) are resolved and verified."]
-
-
-{{YOUR PRD DOCUMENT CONTENT HERE}}
+Overall Project Validation (Post All Phases):
+[Reiterate precisely how the 100% successful execution of all Final High-Level Acceptance Tests (defined in Section I) constitutes full validation of the PRD. Reference specific PRD success metrics, KPIs, or crucial user stories directly addressed and verified by these tests. E.g., "Successful execution of all Final High-Level Acceptance Tests, as detailed in [final_acceptance_run_report_from_PRD].xml, confirms that the system meets all critical functional requirements [list key FR-IDs], non-functional requirements [list key NFR-IDs validated], and user stories [US-1, US-2, US-5 from PRD] outlined in the PRD. Key performance indicators (KPIs) such as [KPI-ID-1 from PRD for response time under Test_X], [KPI-ID-2 from PRD for data accuracy under Test_Y], and [KPI-ID-3 for emergent behavior Z as specified in PRD section ABC if applicable] are certified as met through specific, AI-verifiable assertions within the relevant passed tests."]
