@@ -247,4 +247,21 @@ Pheromind is an evolving framework. We welcome contributions!
 
 ---
 
+## 🤝 Support & Contribution
+
+This is an open-source project under the MIT License.
+
+<div align="center">
+  <h2>⭐ SUPPORT Pheromind ⭐</h2>
+  <p><b>Help fund continued development and new features!</b></p>
+  
+  <a href="https://paypal.me/ChrisRoyseAI" target="_blank">
+    <img src="https://img.shields.io/badge/DONATE_NOW-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate Now" width="300"/>
+  </a>
+  
+  <h3>❤️ Your support makes a huge difference! ❤️</h3>
+  <p>Pheromind is maintained by a single developer<br>Every donation directly helps improve the tool</p>
+</div>
+
+
 Unleash the collective, verifiable intelligence of Pheromind and transform how your complex projects are executed.
