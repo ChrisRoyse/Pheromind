@@ -1,0 +1,77 @@
+{
+  "signals": [
+    {
+      "id": "example-init-001",
+      "signalType": "project_initialization_needed",
+      "target": "ExampleProject",
+      "category": "need",
+      "strength": 0.85,
+      "message": "Example: Project initialization is required. Overwrite this signal.",
+      "data": {
+        "initial_directive_type": "user_blueprint",
+        "payload_path": "path/to/your/blueprint.md"
+      },
+      "timestamp_created": "YYYY-MM-DDTHH:MM:SSZ",
+      "last_updated_timestamp": "YYYY-MM-DDTHH:MM:SSZ"
+    },
+    {
+      "id": "example-priority-001",
+      "signalType": "prioritize_feature_X_development",
+      "target": "ExampleFeature",
+      "category": "priority",
+      "strength": 4.5,
+      "message": "Example: High priority task - focus development on ExampleFeature. Replace this message.",
+      "data": {
+        "prd_path": "docs/example_prd.md",
+        "relevant_prd_sections": [
+          "Section 1.A",
+          "Section 5.B (Critical Example)",
+          "FR-EXAMPLE-001",
+          "FR-EXAMPLE-002"
+        ],
+        "specific_data_paths_to_use": [
+          "data/example_data_source_1/",
+          "data/example_data_source_2/"
+        ],
+        "data_source_instruction": "EXAMPLE INSTRUCTION: Use only specified data sources. DO NOT use placeholder data in actual runs. This is an example.",
+        "env_details": {
+          "NEO4J_URI": "bolt://example-host:7687",
+          "NEO4J_USER": "user_placeholder",
+          "NEO4J_PASSWORD": "password_placeholder",
+          "NEO4J_DATABASE": "example_db"
+        },
+        "user_directive": "EXAMPLE DIRECTIVE: Focus solely on implementing ExampleFeature using the specified data sources. Overwrite this directive."
+      },
+      "timestamp_created": "YYYY-MM-DDTHH:MM:SSZ",
+      "last_updated_timestamp": "YYYY-MM-DDTHH:MM:SSZ"
+    },
+    {
+      "id": "example-state-001",
+      "signalType": "framework_scaffolding_complete",
+      "target": "ExampleProject",
+      "category": "state",
+      "strength": 1.0,
+      "message": "Example: Framework scaffolding has been completed. This is an example signal.",
+      "data": {
+        "report_path": "docs/example_scaffold_report.md",
+        "scaffolded_modules": ["module_A_example", "module_B_example"]
+      },
+      "timestamp_created": "YYYY-MM-DDTHH:MM:SSZ",
+      "last_updated_timestamp": "YYYY-MM-DDTHH:MM:SSZ"
+    }
+  ],
+  "documentation_registry": [
+    {
+      "file_path": "docs/Example_Document_1.md",
+      "description": "Example: General project documentation file. Replace this entry.",
+      "type": "general_documentation",
+      "last_updated_timestamp": "YYYY-MM-DDTHH:MM:SSZ"
+    },
+    {
+      "file_path": "docs/Example_Specification_v1.md",
+      "description": "Example: Specification document for a core feature. Overwrite this.",
+      "type": "specification",
+      "last_updated_timestamp": "YYYY-MM-DDTHH:MM:SSZ"
+    }
+  ]
+}

@@ -1,1 +1,254 @@
 
+{
+  "pheromoneDynamics": {
+    "evaporationRate": 0.05,
+    "amplificationRules": [
+      {
+        "ifSignalType": "critical_error_detected",
+        "amplifyFactor": 1.5
+      },
+      {
+        "ifSignalType": "application_scaffolding_complete",
+        "amplifyFactor": 1.2
+      },
+      {
+        "ifSignalType": "research_phase_complete",
+        "amplifyFactor": 1.1
+      }
+    ],
+    "signalMaxAgeHours": 720,
+    "pruningThresholdLines": 400,
+    "pruningSignalCount": 4
+  },
+  "scribeSettings": {
+    "defaultSignalStrength": 1.0,
+    "signalTypes": [
+      "project_initialization_needed",
+      "prioritize_feature_X_development",
+      "framework_scaffolding_complete",
+      "feature_implementation_verified_tdd_complete",
+      "project_initialization_complete_verified",
+      "sparc_specification_complete",
+      "architect_specs_ingested",
+      "initial_project_directories_created",
+      "research_phase_initiated",
+      "research_phase_complete",
+      "research_document_generated",
+      "overall_acceptance_tests_defined",
+      "implementation_roadmap_generated",
+      "implementation_phase_plan_generated",
+      "application_scaffolding_initiated",
+      "source_code_scaffold_generated",
+      "test_structure_scaffold_generated",
+      "application_scaffolding_complete",
+      "task_delegation_error",
+      "critical_bug_identified",
+      "task_complete_verified",
+      "architecture_document_generated",
+      "devops_foundations_established",
+      "test_harness_setup_complete"
+    ],
+    "categories": [
+      "need",
+      "priority",
+      "state",
+      "action_request",
+      "information",
+      "error",
+      "milestone",
+      "documentation_update",
+      "task_status_verified",
+      "phase_completion"
+    ],
+    "interpretationLogic": {
+      "documentPatterns": [
+        {
+          "pattern": "architect specification file located at ['\"]?(agent-specs/[^'\"]+\\.(md|json|yaml|yml|txt))['\"]?",
+          "docType": "architect_specification",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "architect vision document at ['\"]?(agent-specs/vision/[^'\"]+\\.(md|json|yaml|yml|txt))['\"]?",
+          "docType": "architect_vision_specification",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "research findings report located at ['\"]?(research/[^'\"]+\\.(md|json|pdf))['\"]?",
+          "docType": "research_report",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "research executive summary at ['\"]?(research/final_report/executive_summary[^'\"]*\\.(md))['\"]?",
+          "docType": "research_executive_summary",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "knowledge gaps file at ['\"]?(research/analysis/knowledge_gaps[^'\"]*\\.(md))['\"]?",
+          "docType": "research_knowledge_gaps",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "implementation roadmap created at ['\"]?(implementation-plan/Roadmap\\.md)['\"]?",
+          "docType": "implementation_roadmap",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "overall acceptance test plan (?:at|in) ['\"]?(implementation-plan/overall_acceptance_tests/[^'\"]*Master_Acceptance_Test_Plan\\.md)['\"]?",
+          "docType": "overall_acceptance_test_plan",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "overall acceptance tests (?:defined in|located at|directory) ['\"]?(implementation-plan/overall_acceptance_tests/tests[/]?)['\"]?",
+          "docType": "overall_acceptance_tests_suite_dir",
+          "captureGroups": ["filePathOrDir"]
+        },
+        {
+          "pattern": "phase ['\"]?(?<phase_name>[\\w_\\-]+)['\"]? documentation (?:at|in) ['\"]?(implementation-plan/(?<phase_dir_name>[\\w_\\-]+)/[^'\"]+\\.(md|json|yaml))['\"]?",
+          "docType": "implementation_phase_document",
+          "captureGroups": ["filePath", "phase_name", "phase_dir_name"],
+          "descriptionTemplate": "Documentation for implementation phase: ${phase_name}"
+        },
+        {
+          "pattern": "architecture document (?:created at|saved to) ['\"]?((?:agent-specs/architecture|implementation-plan/(?:[\\w_\\-]+)/architecture)/[^'\"]+\\.md)['\"]?",
+          "docType": "architecture_document",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "Master Project Plan .* at ['\"]?(docs/Master_Project_Plan\\.md)['\"]?",
+          "docType": "master_project_plan",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "Framework Scaffold Report .* at ['\"]?(documentation/Framework_Scaffold_Report\\.md)['\"]?",
+          "docType": "framework_scaffold_report",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "feature overview specification .* saved to ['\"]?([^'\"]+\\.md)['\"]?",
+          "docType": "feature_specification",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "test plan .* saved to ['\"]?docs/testing/([^'\"]+\\.md)['\"]?",
+          "docType": "granular_test_plan",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "application scaffold source structure report at ['\"]?(reports/scaffolding/source_structure\\.md)['\"]?",
+          "docType": "source_scaffold_report",
+          "captureGroups": ["filePath"]
+        },
+        {
+          "pattern": "application scaffold test structure report at ['\"]?(reports/scaffolding/test_structure\\.md)['\"]?",
+          "docType": "test_scaffold_report",
+          "captureGroups": ["filePath"]
+        }
+      ],
+      "signalRules": [
+        {
+          "conditionType": "handoff_reason_code_match",
+          "value": "project_kickstart_research_complete",
+          "generatesSignal": {
+            "signalType": "research_phase_complete",
+            "category": "milestone",
+            "messageTemplate": "Project kickstart phase complete: Architect specs from 'agent-specs/' processed. Research completed and outputs are in 'research/' directory. Ready for implementation planning."
+          },
+          "updatesDocumentation": true
+        },
+        {
+          "conditionType": "summary_keywords",
+          "keywords": ["architect specifications processed", "agent-specs/"],
+          "generatesSignal": {
+            "signalType": "architect_specs_ingested",
+            "category": "state",
+            "messageTemplate": "Architect specifications from 'agent-specs/' have been processed and ingested."
+          },
+          "updatesDocumentation": true
+        },
+        {
+          "conditionType": "summary_keywords",
+          "keywords": ["initial project directories created", "research/", "implementation-plan/"],
+          "generatesSignal": {
+            "signalType": "initial_project_directories_created",
+            "category": "state",
+            "messageTemplate": "Initial project directories ('research/', 'implementation-plan/') created by DevOps agent."
+          }
+        },
+        {
+          "conditionType": "handoff_reason_code_match",
+          "value": "implementation_plan_created",
+          "generatesSignal": {
+            "signalType": "implementation_roadmap_generated",
+            "category": "milestone",
+            "messageTemplate": "Phased implementation plan and roadmap created. Located in 'implementation-plan/' directory. Overall acceptance tests defined in 'implementation-plan/overall_acceptance_tests/'."
+          },
+          "updatesDocumentation": true
+        },
+        {
+          "conditionType": "summary_keywords_pattern",
+          "pattern": "Implementation plan for Phase ['\"]?(?<phase_name>[\\w_\\-]+)['\"]? has been generated",
+          "generatesSignal": {
+            "signalTypeTemplate": "implementation_phase_${phase_name}_plan_generated",
+            "category": "milestone",
+            "messageTemplate": "Implementation plan for Phase ${phase_name} has been generated and detailed documentation is available.",
+            "dataFromPattern": ["phase_name"]
+          },
+          "updatesDocumentation": true
+        },
+        {
+          "conditionType": "handoff_reason_code_match",
+          "value": "application_scaffolding_complete",
+          "generatesSignal": {
+            "signalType": "application_scaffolding_complete",
+            "category": "milestone",
+            "messageTemplate": "End-to-end application scaffolding (source code structure in 'src/' and test structure in 'tests/') complete. Project is ready for phased development."
+          },
+          "updatesDocumentation": true // To catch any scaffold summary reports
+        },
+        {
+          "conditionType": "summary_keywords",
+          "keywords": ["source code scaffold generated", "src/"],
+          "generatesSignal": {
+            "signalType": "source_code_scaffold_generated",
+            "category": "state",
+            "messageTemplate": "Application source code structure has been scaffolded in 'src/'."
+          }
+        },
+        {
+          "conditionType": "summary_keywords",
+          "keywords": ["test structure scaffold generated", "tests/"],
+          "generatesSignal": {
+            "signalType": "test_structure_scaffold_generated",
+            "category": "state",
+            "messageTemplate": "Application test structure has been scaffolded in 'tests/'."
+          }
+        },
+        {
+          "conditionType": "handoff_reason_code_match",
+          "value": "sparc_specification_complete",
+          "generatesSignal": {
+            "signalType": "sparc_specification_complete",
+            "category": "milestone",
+            "messageTemplate": "SPARC Specification phase complete. Master Project Plan and high-level acceptance tests defined."
+          },
+          "updatesDocumentation": true
+        },
+        {
+          "conditionType": "summary_keywords",
+          "keywords": ["framework scaffolding complete", "Framework_Scaffold_Report.md"],
+          "generatesSignal": {
+            "signalType": "framework_scaffolding_complete",
+            "category": "state",
+            "messageTemplate": "Legacy framework scaffolding has been completed."
+          },
+          "updatesDocumentation": true
+        }
+      ]
+    }
+  },
+  "generalSettings": {
+    "projectNameVariable": "target",
+    "defaultTimezone": "UTC",
+    "logLevel": "INFO"
+  }
+}
