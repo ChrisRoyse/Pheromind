@@ -19,16 +19,39 @@ export const PheromoneDataProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [socket, setSocket] = useState(null);
 
-  // Initialize socket connection
+  // Fetch initial pheromone state from backend REST API, then connect websocket
   useEffect(() => {
-    const socketInstance = io(process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001');
-    setSocket(socketInstance);
-
-    // Clean up on unmount
-    return () => {
-      if (socketInstance) {
-        socketInstance.disconnect();
+    let didCancel = false;
+    const fetchInitialData = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+        const res = await fetch(`${backendUrl}/api/pheromone/current`);
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const data = await res.json();
+        if (!didCancel) {
+          setPheromoneData(data);
+          setLoading(false);
+        }
+      } catch (err) {
+        if (!didCancel) {
+          setError('Failed to fetch initial pheromone state');
+          setLoading(false);
+        }
+      } finally {
+        // Always connect the websocket after fetch attempt (success or error)
+        if (!didCancel) {
+          const socketInstance = io(process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001');
+          setSocket(socketInstance);
+        }
       }
+    };
+    fetchInitialData();
+    return () => {
+      didCancel = true;
     };
   }, []);
 
@@ -62,6 +85,13 @@ export const PheromoneDataProvider = ({ children }) => {
       setError('Disconnected from server');
     });
 
+    // Clean up listeners on unmount
+    return () => {
+      socket.off('pheromone_data_update');
+      socket.off('connect_error');
+      socket.off('connect');
+      socket.off('disconnect');
+    };
   }, [socket]);
 
   // Filter signals by type, target, or category
