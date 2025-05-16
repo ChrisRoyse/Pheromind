@@ -1,85 +1,49 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { usePheromoneData } from '../../contexts/PheromoneDataContext';
+import { Card, Title, Text, Badge } from '@tremor/react';
 
 const Sidebar = () => {
   const { pheromoneData } = usePheromoneData();
-  
-  // Count signals
   const signalCount = pheromoneData.signals ? pheromoneData.signals.length : 0;
-  
-  // Count documentation entries
   const documentationCount = pheromoneData.documentationRegistry 
     ? Object.keys(pheromoneData.documentationRegistry).length 
     : 0;
-  
+
   return (
-    <aside className="bg-gray-100 w-64 p-4 h-full">
-      <nav>
-        <ul className="space-y-2">
-          <li>
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => 
-                `block p-2 rounded ${isActive ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`
-              }
-              end
-            >
-              Dashboard
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/timeline" 
-              className={({ isActive }) => 
-                `block p-2 rounded ${isActive ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`
-              }
-            >
-              Signal Timeline
-              <span className="ml-2 bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">
-                {signalCount}
-              </span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/network" 
-              className={({ isActive }) => 
-                `block p-2 rounded ${isActive ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`
-              }
-            >
-              Signal Network
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/documentation" 
-              className={({ isActive }) => 
-                `block p-2 rounded ${isActive ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`
-              }
-            >
-              Documentation Registry
-              <span className="ml-2 bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs">
-                {documentationCount}
-              </span>
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-      
-      <div className="mt-8 text-sm text-gray-600">
-        <h3 className="font-semibold mb-2">Quick Stats</h3>
-        <div className="space-y-1">
-          <div>
-            <span className="font-medium">Signals: </span>
-            <span>{signalCount}</span>
-          </div>
-          <div>
-            <span className="font-medium">Documents: </span>
-            <span>{documentationCount}</span>
+    <aside className="h-full min-h-screen bg-tremor-background dark:bg-tremor-background-dark border-r border-tremor-border p-0">
+      <Card className="rounded-none shadow-none h-full flex flex-col justify-between bg-transparent">
+        <nav>
+          <Title className="mb-6 mt-2 text-lg tracking-wide">Navigation</Title>
+          <ul className="flex flex-col gap-2">
+            <li>
+              <NavLink to="/" end className={({ isActive }) => `flex items-center px-3 py-2 rounded transition ${isActive ? 'bg-tremor-brand text-white' : 'hover:bg-tremor-muted'}`}>Dashboard</NavLink>
+            </li>
+            <li>
+              <NavLink to="/timeline" className={({ isActive }) => `flex items-center px-3 py-2 rounded transition ${isActive ? 'bg-tremor-brand text-white' : 'hover:bg-tremor-muted'}`}>
+                Signal Timeline
+                <Badge className="ml-2" color="gray">{signalCount}</Badge>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/network" className={({ isActive }) => `flex items-center px-3 py-2 rounded transition ${isActive ? 'bg-tremor-brand text-white' : 'hover:bg-tremor-muted'}`}>Signal Network</NavLink>
+            </li>
+            <li>
+              <NavLink to="/documentation" className={({ isActive }) => `flex items-center px-3 py-2 rounded transition ${isActive ? 'bg-tremor-brand text-white' : 'hover:bg-tremor-muted'}`}>
+                Documentation Registry
+                <Badge className="ml-2" color="gray">{documentationCount}</Badge>
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <div className="mt-8 mb-2">
+          <Title className="text-base mb-2">Quick Stats</Title>
+          <div className="flex flex-col gap-1 text-tremor-content">
+            <Text>Signals: <span className="font-semibold">{signalCount}</span></Text>
+            <Text>Documents: <span className="font-semibold">{documentationCount}</span></Text>
           </div>
         </div>
-      </div>
+      </Card>
     </aside>
   );
 };

@@ -1,0 +1,4 @@
+.single-slice svg path {
+  fill: #2563eb !important; /* Tremor blue-600 */
+  stroke: #2563eb !important;
+}

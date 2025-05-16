@@ -1,5 +1,6 @@
 import React from 'react';
 import { usePheromoneData } from '../../contexts/PheromoneDataContext';
+import { Card, Title, Text, Badge } from '@tremor/react';
 
 const Header = ({ connectionStatus }) => {
   const { pheromoneData } = usePheromoneData();
@@ -27,27 +28,20 @@ const Header = ({ connectionStatus }) => {
   };
   
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <h1 className="text-xl font-bold mr-4">Pheromind Visualizer</h1>
-          <div className="flex items-center text-sm">
-            <span className={`status-indicator ${getStatusIndicatorClass()}`}></span>
-            <span>{connectionStatus}</span>
+    <header className="bg-tremor-background dark:bg-tremor-background-dark border-b border-tremor-border shadow-sm">
+      <Card className="rounded-none shadow-none bg-transparent py-3 px-6 flex flex-row items-center justify-between">
+        <div className="flex items-center gap-4">
+          <Title className="text-xl font-bold tracking-wide">Pheromind Visualizer</Title>
+          <div className="flex items-center gap-2">
+            <Badge className={`w-3 h-3 rounded-full ${getStatusIndicatorClass() === 'status-connected' ? 'bg-green-500' : getStatusIndicatorClass() === 'status-error' ? 'bg-red-500' : 'bg-gray-400'}`} />
+            <Text className="text-sm">{connectionStatus}</Text>
           </div>
         </div>
-        
-        <div className="flex items-center text-sm">
-          <div className="mr-4">
-            <span className="font-semibold">File: </span>
-            <span>{pheromoneData.filePath || 'N/A'}</span>
-          </div>
-          <div>
-            <span className="font-semibold">Last Updated: </span>
-            <span>{formatTimestamp(pheromoneData.lastModified)}</span>
-          </div>
+        <div className="flex items-center gap-6 text-tremor-content">
+          <Text className="text-sm"><span className="font-semibold">File:</span> {pheromoneData.filePath || 'N/A'}</Text>
+          <Text className="text-sm"><span className="font-semibold">Last Updated:</span> {formatTimestamp(pheromoneData.lastModified)}</Text>
         </div>
-      </div>
+      </Card>
     </header>
   );
 };

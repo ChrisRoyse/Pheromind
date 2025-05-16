@@ -1,69 +1,30 @@
 import React from 'react';
 import { usePheromoneData } from '../contexts/PheromoneDataContext';
-import { Pie, Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
-
-// Register ChartJS components
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
+import { Card, Title, Text, Metric, DonutChart, Table, TableHead, TableRow, TableHeaderCell, TableBody, TableCell } from '@tremor/react';
 
 const DashboardView = () => {
   const { pheromoneData, loading, error, getUniqueSignalTypes, getUniqueDocumentTypes } = usePheromoneData();
   
-  // Generate random colors for charts
-  const generateColors = (count) => {
-    const colors = [];
-    for (let i = 0; i < count; i++) {
-      const r = Math.floor(Math.random() * 200);
-      const g = Math.floor(Math.random() * 200);
-      const b = Math.floor(Math.random() * 200);
-      colors.push(`rgba(${r}, ${g}, ${b}, 0.6)`);
-    }
-    return colors;
-  };
-  
-  // Prepare signal type distribution data
+  // Tremor supported color names for DonutChart
+  const tremorColors = [
+    "blue", "cyan", "amber", "rose", "emerald", "violet", "fuchsia", "lime", "indigo", "teal"
+  ];
+
+  // Prepare signal type distribution data for Tremor DonutChart
   const prepareSignalTypeData = () => {
     const types = getUniqueSignalTypes();
-    const counts = types.map(type => {
-      return pheromoneData.signals.filter(signal => signal.signalType === type).length;
-    });
-    
-    const backgroundColor = generateColors(types.length);
-    
-    return {
-      labels: types,
-      datasets: [
-        {
-          data: counts,
-          backgroundColor,
-          borderColor: backgroundColor.map(color => color.replace('0.6', '1')),
-          borderWidth: 1,
-        },
-      ],
-    };
+    return types.map((type) => ({
+      name: type,
+      value: pheromoneData.signals.filter(signal => signal.signalType === type).length,
+    }));
   };
-  
-  // Prepare document type distribution data
+  // Prepare document type distribution data for Tremor DonutChart
   const prepareDocumentTypeData = () => {
     const types = getUniqueDocumentTypes();
-    const counts = types.map(type => {
-      return Object.values(pheromoneData.documentationRegistry)
-        .filter(doc => doc.type === type).length;
-    });
-    
-    const backgroundColor = generateColors(types.length);
-    
-    return {
-      labels: types,
-      datasets: [
-        {
-          data: counts,
-          backgroundColor,
-          borderColor: backgroundColor.map(color => color.replace('0.6', '1')),
-          borderWidth: 1,
-        },
-      ],
-    };
+    return types.map((type) => ({
+      name: type,
+      value: Object.values(pheromoneData.documentationRegistry).filter(doc => doc.type === type).length,
+    }));
   };
   
   // Get recent signals
@@ -118,73 +79,71 @@ const DashboardView = () => {
   const recentSignals = getRecentSignals();
   
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
-      
-      {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="bg-white p-4 rounded shadow">
-          <h3 className="text-lg font-semibold mb-2">Signals</h3>
-          <p className="text-3xl font-bold">{signalCount}</p>
-        </div>
-        <div className="bg-white p-4 rounded shadow">
-          <h3 className="text-lg font-semibold mb-2">Documentation Entries</h3>
-          <p className="text-3xl font-bold">{documentCount}</p>
-        </div>
+    <div className="p-6 bg-tremor-background min-h-screen">
+      <Title className="text-2xl mb-6">Dashboard</Title>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <Card>
+          <Text>Signals</Text>
+          <Metric>{signalCount}</Metric>
+        </Card>
+        <Card>
+          <Text>Documentation Entries</Text>
+          <Metric>{documentCount}</Metric>
+        </Card>
       </div>
-      
-      {/* Charts */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         {signalCount > 0 && (
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-lg font-semibold mb-4">Signal Types Distribution</h3>
-            <div className="h-64">
-              <Pie data={prepareSignalTypeData()} options={{ maintainAspectRatio: false }} />
-            </div>
-          </div>
+          <Card>
+            <Title className="mb-4">Signal Types Distribution</Title>
+            <DonutChart
+              data={prepareSignalTypeData()}
+              category="value"
+              index="name"
+              colors={tremorColors}
+              className={`w-full h-64${prepareSignalTypeData().length === 1 ? ' single-slice' : ''}`}
+            />
+          </Card>
         )}
-        
         {documentCount > 0 && (
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-lg font-semibold mb-4">Document Types Distribution</h3>
-            <div className="h-64">
-              <Pie data={prepareDocumentTypeData()} options={{ maintainAspectRatio: false }} />
-            </div>
-          </div>
+          <Card>
+            <Title className="mb-4">Document Types Distribution</Title>
+            <DonutChart
+              data={prepareDocumentTypeData()}
+              category="value"
+              index="name"
+              colors={tremorColors}
+              className={`w-full h-64${prepareDocumentTypeData().length === 1 ? ' single-slice' : ''}`}
+            />
+          </Card>
         )}
       </div>
-      
-      {/* Recent Signals */}
-      <div className="bg-white p-4 rounded shadow">
-        <h3 className="text-lg font-semibold mb-4">Recent Signals</h3>
-        
+      <Card>
+        <Title className="mb-4">Recent Signals</Title>
         {recentSignals.length > 0 ? (
-          <div className="overflow-x-auto">
-            <table className="min-w-full">
-              <thead>
-                <tr className="bg-gray-100">
-                  <th className="px-4 py-2 text-left">ID</th>
-                  <th className="px-4 py-2 text-left">Type</th>
-                  <th className="px-4 py-2 text-left">Target</th>
-                  <th className="px-4 py-2 text-left">Timestamp</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recentSignals.map((signal, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-4 py-2">{signal.id}</td>
-                    <td className="px-4 py-2">{signal.signalType}</td>
-                    <td className="px-4 py-2">{signal.target || 'N/A'}</td>
-                    <td className="px-4 py-2">{formatTimestamp(signal.timestamp_created)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableHeaderCell>ID</TableHeaderCell>
+                <TableHeaderCell>Type</TableHeaderCell>
+                <TableHeaderCell>Target</TableHeaderCell>
+                <TableHeaderCell>Timestamp</TableHeaderCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {recentSignals.map((signal, index) => (
+                <TableRow key={index}>
+                  <TableCell>{signal.id}</TableCell>
+                  <TableCell>{signal.signalType}</TableCell>
+                  <TableCell>{signal.target || 'N/A'}</TableCell>
+                  <TableCell>{formatTimestamp(signal.timestamp_created)}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         ) : (
-          <p className="text-gray-500">No signals available</p>
+          <Text>No signals available</Text>
         )}
-      </div>
+      </Card>
     </div>
   );
 };

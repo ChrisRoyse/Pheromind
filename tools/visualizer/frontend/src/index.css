@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './single-slice-donut.css';
 
 body {
   margin: 0;
