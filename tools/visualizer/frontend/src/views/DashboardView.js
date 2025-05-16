@@ -1,6 +1,14 @@
 import React from 'react';
 import { usePheromoneData } from '../contexts/PheromoneDataContext';
-import { Card, Title, Text, Metric, DonutChart, Table, TableHead, TableRow, TableHeaderCell, TableBody, TableCell } from '@tremor/react';
+import { Card, Title, Text, Metric, Table, TableHead, TableRow, TableHeaderCell, TableBody, TableCell } from '@tremor/react';
+import { Pie } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend
+} from 'chart.js';
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DashboardView = () => {
   const { pheromoneData, loading, error, getUniqueSignalTypes, getUniqueDocumentTypes } = usePheromoneData();
@@ -10,21 +18,39 @@ const DashboardView = () => {
     "blue", "cyan", "amber", "rose", "emerald", "violet", "fuchsia", "lime", "indigo", "teal"
   ];
 
-  // Prepare signal type distribution data for Tremor DonutChart
+  // Prepare signal type distribution data for ChartJS Pie
   const prepareSignalTypeData = () => {
     const types = getUniqueSignalTypes();
-    return types.map((type) => ({
-      name: type,
-      value: pheromoneData.signals.filter(signal => signal.signalType === type).length,
-    }));
+    const counts = types.map(type => pheromoneData.signals.filter(signal => signal.signalType === type).length);
+    return {
+      labels: types,
+      datasets: [
+        {
+          data: counts,
+          backgroundColor: [
+            '#3b82f6', '#06b6d4', '#f59e42', '#f43f5e', '#10b981', '#8b5cf6', '#e879f9', '#a3e635', '#6366f1', '#14b8a6'
+          ].slice(0, types.length),
+          borderWidth: 1,
+        }
+      ]
+    };
   };
-  // Prepare document type distribution data for Tremor DonutChart
+  // Prepare document type distribution data for ChartJS Pie
   const prepareDocumentTypeData = () => {
     const types = getUniqueDocumentTypes();
-    return types.map((type) => ({
-      name: type,
-      value: Object.values(pheromoneData.documentationRegistry).filter(doc => doc.type === type).length,
-    }));
+    const counts = types.map(type => Object.values(pheromoneData.documentationRegistry).filter(doc => doc.type === type).length);
+    return {
+      labels: types,
+      datasets: [
+        {
+          data: counts,
+          backgroundColor: [
+            '#3b82f6', '#06b6d4', '#f59e42', '#f43f5e', '#10b981', '#8b5cf6', '#e879f9', '#a3e635', '#6366f1', '#14b8a6'
+          ].slice(0, types.length),
+          borderWidth: 1,
+        }
+      ]
+    };
   };
   
   // Get recent signals
@@ -95,25 +121,17 @@ const DashboardView = () => {
         {signalCount > 0 && (
           <Card>
             <Title className="mb-4">Signal Types Distribution</Title>
-            <DonutChart
-              data={prepareSignalTypeData()}
-              category="value"
-              index="name"
-              colors={tremorColors}
-              className={`w-full h-64${prepareSignalTypeData().length === 1 ? ' single-slice' : ''}`}
-            />
+            <div className="w-full h-64">
+              <Pie data={prepareSignalTypeData()} options={{ maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }} />
+            </div>
           </Card>
         )}
         {documentCount > 0 && (
           <Card>
             <Title className="mb-4">Document Types Distribution</Title>
-            <DonutChart
-              data={prepareDocumentTypeData()}
-              category="value"
-              index="name"
-              colors={tremorColors}
-              className={`w-full h-64${prepareDocumentTypeData().length === 1 ? ' single-slice' : ''}`}
-            />
+            <div className="w-full h-64">
+              <Pie data={prepareDocumentTypeData()} options={{ maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }} />
+            </div>
           </Card>
         )}
       </div>
