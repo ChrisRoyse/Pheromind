@@ -246,7 +246,7 @@ Pheromind is an evolving framework. We welcome contributions!
 *   Enhanced Analytics on signal/documentation patterns for project health.
 
 ---
-
+Github MCP: https://github.com/github/github-mcp-server
 ## 🤝 Support & Contribution
 
 This is an open-source project under the MIT License.
