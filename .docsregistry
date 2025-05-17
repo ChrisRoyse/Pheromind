@@ -1,0 +1,22 @@
+{
+  "documentation_registry": [
+    {
+      "file_path": "docs/user_blueprint.md",
+      "description": "The initial user requirements and project vision.",
+      "type": "User Blueprint",
+      "timestamp": "2023-10-26T10:05:00Z"
+    },
+    {
+      "file_path": "docs/master_project_plan.md",
+      "description": "The high-level plan with AI-verifiable tasks and phases for project execution. (Initial draft pending SPARC Specification completion)",
+      "type": "Master Project Plan",
+      "timestamp": "2023-10-26T10:15:00Z"
+    },
+    {
+      "file_path": "docs/research/initial_strategic_research_report.md",
+      "description": "Findings from the initial strategic research phase.",
+      "type": "Research Report",
+      "timestamp": "2023-10-26T10:30:00Z"
+    }
+  ]
+}
