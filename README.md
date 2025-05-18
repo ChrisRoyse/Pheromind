@@ -87,11 +87,11 @@ Pheromind is positioned to:
 Pheromind is at an exciting stage of development. We are seeking partners, collaborators, and visionary investors who want to be part of this transformative journey.
 
 *   **💬 Discuss & Learn:** Join our Discord community to engage with the team and other enthusiasts:
-    *   [Link to Your Pheromind Discord Server - e.g., https://discord.gg/rTq3PBeThX]
+    *   [https://discord.gg/FqbaHzdq]
 *   **🤝 Partner with Us:** Have ideas for collaboration or want to explore how Pheromind can revolutionize your projects?
-    *   Contact us: [your_email@example.com]
+    *   Contact us: [chris@frontiertechstrategies.com]
 *   **💸 Invest in the Vision:** We are currently seeking seed funding to accelerate development, expand our agent ecosystem, and build out the Pheromind AI IDE platform.
-    *   Serious investor inquiries: Please reach out to [investor_relations_email@example.com or your_email@example.com] for a detailed discussion and private demonstration.
+    *   Serious investor inquiries: Please reach out to [chris@frontiertechstrategies.com] for a detailed discussion and private demonstration.
 *   **🌟 Stay Updated:** Follow this repository for high-level announcements and progress on our mission.
 
 ## 🌱 High-Level Roadmap (Our Aspirational Journey)
@@ -102,20 +102,6 @@ Pheromind is at an exciting stage of development. We are seeking partners, colla
 *   **Phase 4 (The Vision):** Full Pheromind AI IDE Platform Development & Market Entry.
 
 *Our roadmap is ambitious and will be shaped by innovation, collaboration, and strategic partnerships.*
-
----
-
-## ❤️ Support the Vision
-
-Pheromind is currently a pioneering effort driven by a dedicated team. Your support can help us accelerate the development of this groundbreaking technology and bring autonomous AI orchestration to the world.
-
-<div align="center">
-  <p><b>Help fund continued development and new features!</b></p>
-  <a href="https://paypal.me/ChrisRoyseAI" target="_blank">
-    <img src="https://img.shields.io/badge/DONATE_NOW-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate Now" width="300"/>
-  </a>
-  <h3>Your contribution makes a huge difference in this pioneering effort!</h3>
-</div>
 
 ---
 
