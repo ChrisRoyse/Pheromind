@@ -8,8 +8,7 @@
 ---
 
 <p align="center">
-    <img src="[./Pherominddigital.png]" alt="Pheromind Conceptual Visual" width="600">
-  </a>
+  <img src="./Pherominddigital.png" alt="Pheromind Conceptual Visual" width="600">
 </p>
 
 **Pheromind is a revolutionary framework leveraging emergent AI swarm intelligence for the autonomous management and execution of complex projects, starting with the intricate lifecycle of software development. We are building the future where intelligent agent swarms act as tireless, highly skilled partners, transforming how software is conceived, built, and maintained.**
