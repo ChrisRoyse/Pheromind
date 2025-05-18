@@ -3,6 +3,7 @@
 [![Coordination: Swarm Intelligence](https://img.shields.io/badge/Coordination-Swarm%20Intelligence-red)](.)
 [![Methodology: AI-Verifiable Outcomes](https://img.shields.io/badge/Methodology-AI--Verifiable%20Outcomes-dodgerblue)](.)
 [![LLM: Advanced AI Compatible](https://img.shields.io/badge/LLM-Advanced%20AI%20Compatible-orange)](.)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-critical)](.)
 [![Status: Visionary Development](https://img.shields.io/badge/Status-Visionary%20Development-brightgreen)](.)
 
 ---
@@ -102,6 +103,21 @@ Pheromind is at an exciting stage of development. We are seeking partners, colla
 *   **Phase 4 (The Vision):** Full Pheromind AI IDE Platform Development & Market Entry.
 
 *Our roadmap is ambitious and will be shaped by innovation, collaboration, and strategic partnerships.*
+
+---
+
+## 🔒 Intellectual Property & Availability
+
+Pheromind is a **proprietary framework** and represents significant intellectual property developed by Frontier Tech Strategies. It is **not an open-source project.**
+
+Access to the Pheromind technology, framework, and deeper technical insights is available exclusively through:
+*   **Strategic Partnerships**
+*   **Commercial Licensing Agreements**
+*   **Direct Investment Opportunities**
+
+We are focused on collaborating with entities that share our vision for the future of autonomous software development and are positioned to leverage Pheromind's transformative capabilities.
+
+For all inquiries regarding access, collaboration, or investment, please use the contact information provided in the "Join the Colony" section.
 
 ---
 
