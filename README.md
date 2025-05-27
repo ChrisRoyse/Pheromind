@@ -88,7 +88,7 @@ Pheromind is positioned to:
 Pheromind is at an exciting stage of development. We are seeking partners, collaborators, and visionary investors who want to be part of this transformative journey.
 
 *   **💬 Discuss & Learn:** Join our Discord community to engage with the team and other enthusiasts:
-    *   [https://discord.gg/FqbaHzdq]
+    *   [https://discord.gg/rTq3PBeThX]
 *   **🤝 Partner with Us:** Have ideas for collaboration or want to explore how Pheromind can revolutionize your projects?
     *   Contact us: [chris@frontiertechstrategies.com]
 *   **💸 Invest in the Vision:** We are currently seeking seed funding to accelerate development, expand our agent ecosystem, and build out the Pheromind AI IDE platform.
