@@ -2,10 +2,6 @@
 
 **Overall Project Goal (for LLM context):** To create a comprehensive, multi-part code comprehension and quality assessment report for an entire codebase. The report is broken into multiple files (e.g., `code_comprehension_report_PART_X.md`), each aiming for approximately 500-700 lines to accommodate the expanded analysis.
 
-**Project Context (To be provided by the user when initiating the task):**
-*   **Project Name:** [User will specify the project name here]
-*   **Primary Purpose/Domain:** [User will describe the project's main goal, type of application, or domain here, e.g., "Web-based e-commerce platform," "Data processing pipeline for scientific research," "Mobile application for social networking," "Embedded system for device control"]
-
 **Your Task (Iterative Refinement Process for the provided files):**
 
 You will process the codebase in batches. For each batch:
@@ -35,16 +31,11 @@ You will process the codebase in batches. For each batch:
         *   **Secrets Management:** Check for hardcoded secrets, API keys, or insecure handling of sensitive data.
         *   **Input Validation & Sanitization:** Assess how inputs from all sources (user, file, network, other modules) are validated and outputs are sanitized, especially if interacting with external systems, databases, or UIs.
         *   **Error Handling & Logging:** Evaluate the robustness of error handling mechanisms and the adequacy of logging for security event monitoring.
-        *   **Post-Quantum Security (PQC) Implications:**
-            *   Identify any classical cryptographic primitives currently used (e.g., RSA, ECC, DH for key exchange/signatures/encryption; AES, ChaCha20 for symmetric encryption; SHA-2, SHA-3 for hashing).
-            *   Assess if these classical cryptographic operations protect data or processes that could be vulnerable to a future quantum adversary (e.g., long-term secrets, digital identities, secure communication channels, data at rest requiring long-term confidentiality).
-            *   Pinpoint specific functions, modules, or data flows where introducing PQC algorithms would be most impactful for future-proofing the system's security.
     *   **E. Improvement Recommendations & Technical Debt:**
         *   **Refactoring Opportunities:** Suggest specific areas for code refactoring to improve clarity, performance, maintainability, or security.
         *   **Potential Bugs/Edge Cases:** Note any logic that seems fragile, prone to race conditions, or potential unhandled edge cases.
         *   **Technical Debt:** Explicitly identify instances of technical debt (e.g., quick fixes, outdated libraries/practices, commented-out code, TODOs needing action, lack of documentation). Estimate the impact if possible.
         *   **Performance Considerations:** Highlight any obvious performance bottlenecks or areas where optimization might be beneficial (e.g., inefficient algorithms, excessive I/O).
-        *   **PQC Integration Points:** Based on the PQC implications, suggest *where* in the code PQC algorithms (e.g., for key encapsulation mechanisms (KEMs), digital signatures) could be integrated. Be specific about the functions, modules, or protocols involved.
 
 3.  **Inter-File Relationships (Within the current batch):**
     *   Describe how the files in this current batch interact, depend on each other, or form a cohesive module.
@@ -95,7 +86,7 @@ Based on your self-critique in Phase 2, revise and refine your draft to produce 
 *   **Report Part Files:** These are named `code_comprehension_report_PART_X.md`.
 *   **Summary File (`code_comprehension_summary.md`):**
     *   **Your Responsibility:** After each `code_comprehension_report_PART_X.md` is finalized by the Agent, you will be asked to *append* a brief summary to `code_comprehension_summary.md`.
-    *   **Content:** For each report part, list the files/directories covered and a one-sentence high-level description of the content of that report part (e.g., "Part 3: Analysis of core [module/feature name] logic including [key components], with focus on maintainability and PQC readiness of [specific aspect like data serialization/authentication].").
+    *   **Content:** For each report part, list the files/directories covered and a one-sentence high-level description of the content of that report part (e.g., "Part 3: Analysis of core [module/feature name] logic including [key components].").
     *   **Purpose:** This summary helps track progress and provides context for future analyses, especially regarding inter-module dependencies. **Do not rewrite the entire summary file; only append new entries.**
 *   **Full Codebase Coverage:** You will continue this process for every single file and directory/subdirectory in the project, excluding the `/codereport` directory itself. Do not stop until the entire codebase is documented.
 
