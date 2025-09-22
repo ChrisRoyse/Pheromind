@@ -1,0 +1,52 @@
+{
+  "name": "source-secure",
+  "version": "2.4.0",
+  "description": "Advanced local secret scanner and security analyzer for source code",
+  "main": "source-secure.js",
+  "bin": {
+    "source-secure": "./source-secure.js",
+    "ss-scan": "./source-secure.js",
+    "scan-secrets": "./scan-secrets.js"
+  },
+  "scripts": {
+    "test": "node source-secure.js .",
+    "scan": "node source-secure.js .",
+    "scan-verbose": "node source-secure.js . --verbose",
+    "scan-history": "node source-secure.js . --history",
+    "scan-ai": "node source-secure.js . --ai --verbose",
+    "scan-external": "node source-secure.js . --verbose"
+  },
+  "keywords": [
+    "security",
+    "secrets",
+    "scanner",
+    "git",
+    "api-keys",
+    "credential-scanning",
+    "security-scanner",
+    "code-security",
+    "devsecops",
+    "secret-detection"
+  ],
+  "author": "Brian",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianmcaudill/source-secure.git"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "yauzl": "^3.0.0",
+    "node-7z": "^3.0.0",
+    "tar": "^7.0.1"
+  },
+  "files": [
+    "source-secure.js",
+    "scan-secrets.js",
+    "README.md",
+    "LICENSE"
+  ]
+}
